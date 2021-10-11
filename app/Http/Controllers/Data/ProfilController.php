@@ -74,37 +74,6 @@ class ProfilController extends Controller
      */
     public function index()
     {
-        // $host = config('app.host_pantau');
-        // $token = config('app.token');
-        // try {
-        //     $response = $this->client->get("{$host}/index.php/api/wilayah/list_wilayah", [
-        //         'query' => [
-        //             'token' => $token,
-        //             'provinsi' => 'SULAWESI SELATAN',
-        //             'kabupaten' => 'WAJO',
-        //             'kecamatan' => 'PITUMPANUA',
-        //         ]
-        //     ]);
-
-        //     if ($response->getStatusCode() === 200) {
-        //         $response = json_decode($response->getBody(), true);
-        //     }
-        // } catch (RequestException $e) {
-        //     $response = $e->getResponse();
-        // }
-
-
-        // dd ($response);
-
-        // $result = $res->getBody();
-
-        // $profil = Profil::find(1);
-        // $profil->nama_provinsi = $data->nama_provinsi;
-        // $profil->nama_kabupaten = $data->nama_kabupaten;
-        // $profil->nama_kecamatan = $data->nama_kecamatan;
-        // $profil->update();
-
-        // echo $result;
         $profil = $this->profil;
 
         $profil->file_struktur_organisasi = is_img($this->profil->file_struktur_organisasi);
@@ -113,122 +82,6 @@ class ProfilController extends Controller
 
         $page_title       = 'Ubah Profil';
         $page_description = ucwords(strtolower($this->sebutan_wilayah).' : ' . $this->profil->namae_kecamatan);
-        return view('data.profil.edit', compact('page_title', 'page_description', 'profil'));
-
-        // $profil = Profil::find(1);
-        // $profil->nama_provinsi = DB::table('ref_wilayah')->where('provinsi_id', $profil->provinsi_id)->first()->nama;
-        // $profil->nama_kabupaten = DB::table('ref_wilayah')->where('kabupaten_id', $profil->kabupaten_id)->first()->nama;
-        // $profil->nama_kecamatan = DB::table('ref_wilayah')->where('kecamatan_id', $profil->kecamatan_id)->first()->nama;
-        // $profil->update();
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        $page_title       = 'Tambah';
-        $page_description = 'Tambah Profil';
-        $profil           = new Profil();
-
-        return view('data.profil.create', compact('page_title', 'page_description', 'profil'));
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @return Response
-     */
-    public function store(Request $request)
-    {
-        // Save Request
-        try {
-            request()->validate([
-                'kecamatan_id' => 'required',
-                'alamat'       => 'required',
-                'kode_pos'     => 'required',
-                'email'        => 'email',
-                'nama_camat'   => 'required',
-            ]);
-
-            $profil = new Profil();
-            $profil->fill($request->all());
-            $profil->kabupaten_id = substr($profil->kecamatan_id, 0, 5);
-            $profil->provinsi_id  = substr($profil->kecamatan_id, 0, 2);
-
-            if ($request->hasFile('file_struktur_organisasi')) {
-                $file     = $request->file('file_struktur_organisasi');
-                $fileName = $file->getClientOriginalName();
-                $request->file('file_struktur_organisasi')->move("storage/profil/struktur_organisasi/", $fileName);
-                $profil->file_struktur_organisasi = 'storage/profil/struktur_organisasi/' . $fileName;
-            }
-
-            if ($request->hasFile('file_logo')) {
-                $target_dir        = "uploads/";
-                $target_file       = $target_dir . basename($_FILES["file_logo"]["name"]);
-                $imageFileType     = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-                $profil->file_logo = $target_file . $imageFileType;
-            }
-
-            if ($profil->save()) {
-                $id = DataUmum::create(['profil_id' => $profil->id, 'kecamatan_id' => $profil->kecamatan_id, 'embed_peta' => 'Edit Peta Pada Menu Data Umum.'])->id;
-            }
-            $desa      = Desa::where('kecamatan_id', '=', $profil->kecamatan_id)->get();
-            $data_desa = [];
-            foreach ($desa as $val) {
-                $data_desa[] = [
-                    'desa_id'      => $val->id,
-                    'kecamatan_id' => strval($profil->kecamatan_id),
-                    'nama'         => $val->nama,
-                ];
-            }
-
-            DataDesa::insert($data_desa);
-            return redirect()->route('data.profil.success', $id)->with('success', 'Profil berhasil disimpan!');
-        } catch (Exception $e) {
-            return back()->withInput()->with('error', 'Profil gagal disimpan!');
-        }
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int $id
-     * @return Response
-     */
-    public function show()
-    {
-        $desa              = Desa::where('kecamatan_id', '=', '1107062')->get();
-        $data_desa = [];
-        foreach ($desa as $val) {
-            $data_desa[] = [
-                'desa_id'      => strval($val->id),
-                'kecamatan_id' => strval('1107062'),
-                'nama'         => $val->nama,
-            ];
-        }
-
-        DataDesa::insert($data_desa);
-        return $data_desa;
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int $id
-     * @return Response
-     */
-    public function edit($id)
-    {
-        $profil = Profil::findOrFail($id);
-        if ($profil->file_struktur_organisasi == '') {
-            $profil->file_struktur_organisasi = 'http://placehold.it/600x400';
-        }
-        $page_title       = 'Ubah';
-        $page_description = 'Ubah Profil Kecamatan';
-
         return view('data.profil.edit', compact('page_title', 'page_description', 'profil'));
     }
 
@@ -295,26 +148,6 @@ class ProfilController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int $id
-     * @return Response
-     */
-    public function destroy($id)
-    {
-        try {
-            $profil = Profil::findOrFail($id);
-            $profil->dataUmum()->delete();
-            $profil->dataDesa()->delete();
-            $profil->delete();
-
-            return redirect()->route('data.profil.index')->with('success', 'Profil sukses dihapus!');
-        } catch (Exception $e) {
-            return redirect()->route('data.profil.index')->with('error', 'Profil gagal dihapus!');
-        }
-    }
-
-    /**
      * Redirect to edit Data Umum if success
      *
      * @param  int $id
@@ -324,6 +157,7 @@ class ProfilController extends Controller
     {
         $page_title       = 'Konfirmasi?';
         $page_description = '';
+        
         return view('data.profil.save_success', compact('id', 'page_title', 'page_description'));
     }
 }
