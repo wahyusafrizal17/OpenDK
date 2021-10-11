@@ -1,7 +1,7 @@
 @extends('layouts.dashboard_template')
 
 @section('content')
-        <!-- Content Header (Page header) -->
+<!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
         {{ $page_title ?? "Page Title" }}
@@ -10,7 +10,7 @@
     <ol class="breadcrumb">
         <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li><a href="{{route('data.profil.index')}}">Profil</a></li>
-        <li class="active">{{$page_title}}</li>
+        <li class="active">{{ $page_title }}</li>
     </ol>
 </section>
 
@@ -73,9 +73,78 @@
 @push('scripts')
 <script>
     $(function () {
-        $('#kecamatan_id').select2({
-            placeholder: "Pilih Kecamatan",
-            allowClear: true
+
+        const host = '<?= config('app.host_pantau'); ?>';
+        const token = '<?= config('app.token_pantau'); ?>';
+
+        $.ajax({
+            type: 'GET',
+            url: host + '/index.php/api/wilayah/list_wilayah?token=' + token,
+            dataType: 'json',
+            success: function(data) {
+                var html = '<option value="" selected>-- Pilih Provinsi --</option>';
+                var i;
+                for(i=0; i<data.length; i++) {
+                    html += '<option value="' + data[i].kode_prov + '" data-nama="' + data[i].nama_prov + '">' + data[i].nama_prov + '</option>';
+                }
+                $('#list_provinsi').html(html);
+            }
+        });
+        $('#list_provinsi').select2();
+
+        $("#list_provinsi").change(function () {
+
+            id_provinsi = $('#list_provinsi option:selected').val();
+            nama_provinsi = $('#list_provinsi option:selected').data('nama');
+            $('#id_provinsi').val(id_provinsi);
+            $('#nama_provinsi').val(nama_provinsi);
+
+            $.ajax({
+                type: 'GET',
+                url: host + '/index.php/api/wilayah/list_wilayah?token=' + token + '&provinsi=' + nama_provinsi,
+                dataType: 'json',
+                success: function(data) {
+                    var html = '<option value="" selected>-- Pilih Kabupaten --</option>';
+                    var i;
+                    for(i=0; i<data.length; i++) {
+                        html += '<option value="' + data[i].kode_kab + '" data-nama="' + data[i].nama_kab + '">'+data[i].nama_kab + '</option>';
+                    }
+                    $('#list_kabupaten').html(html);
+                    $('#list_kabupaten').removeAttr("disabled");
+                }
+            });
+        });
+        $('#list_kabupaten').select2();
+
+        $("#list_kabupaten").change(function () {
+
+            id_kabupaten = $('#list_kabupaten option:selected').val();
+            nama_kabupaten = $('#list_kabupaten option:selected').data('nama');
+            $('#id_kabupaten').val(id_kabupaten);
+            $('#nama_kabupaten').val(nama_kabupaten);
+
+            $.ajax({
+                type: 'GET',
+                url: host + '/index.php/api/wilayah/list_wilayah?token=' + token + '&provinsi=' + nama_provinsi + '&kabupaten=' + nama_kabupaten,
+                dataType: 'json',
+                success: function(data) {
+                    var html = '<option value="" selected>-- Pilih {{ $sebutan_wilayah }} --</option>';
+                    var i;
+                    for(i=0; i<data.length; i++) {
+                        html += '<option value="' + data[i].kode_kec + '"data-nama="' + data[i].nama_kec + '">'+data[i].nama_kec + '</option>';
+                    }
+                    $('#list_kecamatan').html(html);
+                    $('#list_kecamatan').removeAttr("disabled");
+                }
+            });
+        });
+        $('#list_kecamatan').select2();
+
+        $("#list_kecamatan").change(function () {
+            id_kecamatan = $('#list_kecamatan option:selected').val();
+            nama_kecamatan = $('#list_kecamatan option:selected').data('nama');
+            $('#id_kecamatan').val(id_kecamatan);
+            $('#nama_kecamatan').val(nama_kecamatan);
         });
 
         function readURL(input) {
@@ -117,8 +186,8 @@
         $("#file_struktur").change(function () {
             readURL(this);
         });
-
-      $("#foto_kepala_wilayah").change(function () {
+        
+        $("#foto_kepala_wilayah").change(function () {
             readURL2(this);
         });
 
