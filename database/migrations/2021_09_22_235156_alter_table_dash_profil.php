@@ -25,9 +25,9 @@ class AlterTableDashProfil extends Migration
 
         // Isi data
         $profil = Profil::find(1);
-        $profil->nama_provinsi = DB::table('ref_wilayah')->where('provinsi_id', $profil->provinsi_id)->first()->nama;
-        $profil->nama_kabupaten = DB::table('ref_wilayah')->where('kabupaten_id', $profil->kabupaten_id)->first()->nama;
-        $profil->nama_kecamatan = DB::table('ref_wilayah')->where('kecamatan_id', $profil->kecamatan_id)->first()->nama;
+        $profil->nama_provinsi = DB::table('ref_wilayah')->where('kode', $profil->provinsi_id)->first()->nama;
+        $profil->nama_kabupaten = DB::table('ref_wilayah')->where('kode', $profil->kabupaten_id)->first()->nama;
+        $profil->nama_kecamatan = DB::table('ref_wilayah')->where('kode', $profil->kecamatan_id)->first()->nama;
         $profil->update();
     }
 
