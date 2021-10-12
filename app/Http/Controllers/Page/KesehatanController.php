@@ -36,7 +36,6 @@ use App\Http\Controllers\Controller;
 use function array_add;
 
 use function compact;
-use function config;
 use Illuminate\Support\Facades\DB;
 use function kuartal_bulan;
 use function request;

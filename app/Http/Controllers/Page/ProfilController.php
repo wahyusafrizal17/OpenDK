@@ -37,7 +37,6 @@ use App\Models\Profil;
 use function array_merge;
 
 use function compact;
-use function config;
 use function date;
 use Illuminate\Support\Facades\DB;
 use function strtolower;
