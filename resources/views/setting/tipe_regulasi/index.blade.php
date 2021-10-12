@@ -31,7 +31,6 @@
                 <thead>
                 <tr>
                     <th style="max-width: 80px;">Aksi</th>
-                    <th>ID</th>
                     <th>Nama Kategori</th>
                 </tr>
                 </thead>
@@ -54,7 +53,6 @@
             ajax: "{!! route( 'setting.tipe-regulasi.getdata' ) !!}",
             columns: [
                 {data: 'action', name: 'action', class: 'text-center', searchable: false, orderable: false},
-                {data: 'id', name: 'id'},
                 {data: 'nama', name: 'nama'}
             ],
             order: [[0, 'desc']]

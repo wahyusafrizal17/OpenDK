@@ -51,19 +51,18 @@ class TipeRegulasiController extends Controller
     {
         $page_title       = 'Tipe Regulasi';
         $page_description = 'Daftar TIpe Regulasi';
+
         return view('setting.tipe_regulasi.index', compact('page_title', 'page_description'));
     }
 
     // Get Data Kategori Komplain
     public function getData()
     {
-        return DataTables::of(TipeRegulasi::select(['id', 'nama'])->orderBy('id'))
+        return DataTables::of(TipeRegulasi::all()->last()->get())
             ->addColumn('action', function ($row) {
-                $edit_url   = route('setting.tipe-regulasi.edit', $row->id);
-                $delete_url = route('setting.tipe-regulasi.destroy', $row->id);
 
-                $data['edit_url']   = $edit_url;
-                $data['delete_url'] = $delete_url;
+                $data['edit_url']   = route('setting.tipe-regulasi.edit', $row->id);
+                $data['delete_url'] = route('setting.tipe-regulasi.destroy', $row->id);
 
                 return view('forms.action', $data);
             })
@@ -73,7 +72,7 @@ class TipeRegulasiController extends Controller
     // Create Action
     public function create()
     {
-        $page_title       = 'Tambah';
+        $page_title       = 'Tipe Regulasi';
         $page_description = 'Tambah Tipe Regulasi';
 
         return view('setting.tipe_regulasi.create', compact('page_title', 'page_description'));
@@ -99,9 +98,10 @@ class TipeRegulasiController extends Controller
 
     public function edit($id)
     {
-        $tipe             = TipeRegulasi::findOrFail($id);
-        $page_title       = 'Edit';
-        $page_description = 'Edit Tipe Regulasi' . $tipe->nama;
+        $tipe             = TipeRegulasi::FindOrFail($id);
+        $page_title       = 'Tipe Regulasi';
+        $page_description = 'Ubah Tipe Regulasi : ' . $tipe->nama;
+
         return view('setting.tipe_regulasi.edit', compact('page_title', 'page_description', 'tipe'));
     }
 
@@ -109,7 +109,7 @@ class TipeRegulasiController extends Controller
     {
         // Save Request
         try {
-            $tipe = TipeRegulasi::findOrFail($id);
+            $tipe = TipeRegulasi::FindOrFail($id);
             $tipe->fill($request->all());
 
             request()->validate([
@@ -126,7 +126,7 @@ class TipeRegulasiController extends Controller
     public function destroy($id)
     {
         try {
-            TipeRegulasi::findOrFail($id)->delete();
+            TipeRegulasi::destroy($id);
 
             return redirect()->route('setting.tipe-regulasi.index')->with('success', 'Tipe Regulasi berhasil dihapus!');
         } catch (Exception $e) {
