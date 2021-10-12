@@ -33,35 +33,30 @@
                                 <th>Judul Regulasi</th>
                                 <th style="width: 150px">Aksi</th>
                             </tr>
+
                             @foreach($regulasi as $item)
                             <tr>
 
-                                <td><a href="{{ route('informasi.regulasi.show', $item->id) }}">{{ $item->judul }}</a></td>
+                                <td>{{ $item->judul }}</td>
 
-                                    @unless(!Sentinel::check())
-                                    <td>
-                                            <a href="{{ route('informasi.regulasi.edit', $item->id) }}">
-                                                <button type="submit"
-                                                        class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> Ubah
-                                                </button>
-                                            </a>&nbsp;
-                                            <a href="javascript:void(0)" class="" title="Hapus"
-                                               data-href="{!! route('informasi.regulasi.destroy', $item->id) !!}"
-                                               data-button="delete"
-                                               id="deleteModal">
-                                                <button type="button" class="btn btn-icon btn-danger btn-xs"><i class="fa fa-trash"
-                                                                                                                aria-hidden="true"></i>
-                                                    Hapus
-                                                </button>
-                                            </a>
-                                    </td>
-                                    @endunless
+                                @unless(!Sentinel::check())
+                                <td>
+                                    <?php
+
+                                        // TODO : Pindahkan ke controller dan gunakan datatable
+                                        $data['show_url']   = route('informasi.regulasi.show', $item->id);
+                                        $data['edit_url']   = route('informasi.regulasi.edit', $item->id);
+                                        $data['delete_url'] = route('informasi.regulasi.destroy', $item->id);
+
+                                        echo view('forms.action', $data);
+                                    ?>
+                                </td>
+                                @endunless
 
                             </tr>
                             @endforeach
                         </table>
                     </div>
-
 
                     <!-- /.box-body -->
                     <div class="box-footer clearfix">
@@ -79,7 +74,7 @@
                         </div>
                     </div>
                     @endif
-                            <!-- /.box-footer -->
+                    <!-- /.box-footer -->
             </div>
         </div>
         <!-- /.col -->
@@ -90,6 +85,8 @@
 <!-- /.content -->
 @endsection
 
+@push('scripts')
 @include('forms.delete-modal')
+@endpush
 
 

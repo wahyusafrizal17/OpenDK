@@ -20,8 +20,8 @@
         <div class="col-md-12">
             <div class="box box-primary">
                 {{-- <div class="box-header with-border">
-                     <h3 class="box-title">Aksi</h3>
-                 </div>--}}
+                    <h3 class="box-title">Aksi</h3>
+                </div>--}}
                 <!-- /.box-header -->
 
                 @if (count($errors) > 0)
@@ -37,7 +37,7 @@
 
                     @endif
 
-                            <!-- form start -->
+                    <!-- form start -->
                     {!!  Form::model($regulasi, [ 'route' => ['informasi.regulasi.update', $regulasi->id], 'method' => 'put','id' => 'form-visimisi', 'class' => 'form-horizontal form-label-left', 'files'=>true] ) !!}
 
                     <div class="box-body">
@@ -69,21 +69,3 @@
 </section>
 <!-- /.content -->
 @endsection
-
-@push('css')
-        <!-- WYSIHTML5 -->
-<link rel="stylesheet"
-      href="{{ asset ("/bower_components/admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css") }}">
-@endpush
-
-@push('scripts')
-        <!-- WYSIHTML5 -->
-<script src="{{ asset ("/bower_components/admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js") }}"></script>
-<script>
-    $(function () {
-        // Replace the <textarea id="editor1"> with a CKEditor
-        //bootstrap WYSIHTML5 - text editor
-        $('.textarea').wysihtml5()
-    })
-</script>
-@endpush

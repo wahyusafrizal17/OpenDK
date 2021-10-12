@@ -88,7 +88,7 @@ class RegulasiController extends Controller
             ]);
 
             $regulasi               = new Regulasi($request->input());
-            $regulasi->kecamatan_id = $this->profil->kecamatan_id;
+            $regulasi->profil_id    = 1;
 
             if ($request->hasFile('file_regulasi')) {
                 $lampiran1 = $request->file('file_regulasi');
@@ -114,9 +114,9 @@ class RegulasiController extends Controller
      */
     public function show($id)
     {
-        $regulasi         = Regulasi::findOrFail($id);
-        $page_title       = "Detail Regulasi";
-        $page_description = "Detail Regulasi: " . $page_title;
+        $regulasi         = Regulasi::FindOrFail($id);
+        $page_title       = "Regulasi";
+        $page_description = "Detail Regulasi : " . $page_title;
 
         return view('informasi.regulasi.show', compact('page_title', 'page_description', 'regulasi'));
     }
@@ -129,9 +129,9 @@ class RegulasiController extends Controller
      */
     public function edit($id)
     {
-        $regulasi         = Regulasi::findOrFail($id);
-        $page_title       = 'Edit Regulasi';
-        $page_description = 'Edit Regulasi: ' . $regulasi->judul;
+        $regulasi         = Regulasi::FindOrFail($id);
+        $page_title       = 'Regulasi';
+        $page_description = 'Ubah Regulasi : ' . $regulasi->judul;
 
         return view('informasi.regulasi.edit', compact('page_title', 'page_description', 'regulasi'));
     }
@@ -145,15 +145,15 @@ class RegulasiController extends Controller
     public function update(Request $request, $id)
     {
         try {
-            $regulasi = Regulasi::findOrFail($id);
+            $regulasi = Regulasi::FindOrFail($id);
             $regulasi->fill($request->all());
+            $regulasi->profil_id    = 1;
 
             request()->validate([
-                //'kecamatan_id' => 'required|integer',
                 'tipe_regulasi' => 'required',
                 'judul'         => 'required',
                 'deskripsi'     => 'required',
-                'file_regulasi' => 'required|file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
+                'file_regulasi' => 'file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
             ]);
 
             if ($request->hasFile('file_regulasi')) {
@@ -182,7 +182,7 @@ class RegulasiController extends Controller
     public function destroy($id)
     {
         try {
-            Regulasi::findOrFail($id)->delete();
+            Regulasi::destroy($id);
 
             return redirect()->route('informasi.regulasi.index')->with('success', 'Regulasi sukses dihapus!');
         } catch (Exception $e) {
