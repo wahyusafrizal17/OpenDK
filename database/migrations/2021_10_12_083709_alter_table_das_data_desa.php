@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterTableDashDataUmum extends Migration
+class AlterTableDasDataDesa extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class AlterTableDashDataUmum extends Migration
      */
     public function up()
     {
-        Schema::table('das_data_umum', function($table) {
+        Schema::table('das_data_desa', function($table) {
             $table->dropColumn('kecamatan_id');
+        });
+
+        Schema::table('das_data_desa', function (Blueprint $table) {
+            $table->integer('profil_id')->after('id')->nullable()->default(1);
         });
     }
 
@@ -25,8 +29,12 @@ class AlterTableDashDataUmum extends Migration
      */
     public function down()
     {
-        Schema::table('das_data_umum', function (Blueprint $table) {
+        Schema::table('das_data_desa', function (Blueprint $table) {
             $table->char('kecamatan_id', 8);
+        });
+
+        Schema::table('das_data_desa', function($table) {
+            $table->dropColumn('profil_id');
         });
     }
 }

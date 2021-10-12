@@ -21,8 +21,8 @@
             @include( 'partials.flash_message' )
             <div class="box box-primary">
                 {{-- <div class="box-header with-border">
-                     <h3 class="box-title">Aksi</h3>
-                 </div>--}}
+                    <h3 class="box-title">Aksi</h3>
+                </div>--}}
                 <!-- /.box-header -->
 
                 <!-- form start -->
@@ -67,65 +67,36 @@
 <!-- /.content -->
 @endsection
 @include(('partials.asset_select2'))
-@include('partials.asset_datetimepicker')
 @push('scripts')
 <script>
+
     $(function () {
-        $('#penduduk_id').select2({
-            ajax: {
-                url: '{!! route('api.penduduk') !!}',
-                dataType: 'json',
-                delay: 200,
-                data: function (params) {
-                    return {
-                        q: params.term,
-                        page: params.page
-                    };
-                },
-                processResults: function (data, params) {
-                    params.page = params.page || 1;
-                    return {
-                        results: data.data,
-                        pagination: {
-                            more: (params.page * 10) < data.total
-                        }
-                    };
+
+        const host = '<?= config('app.host_pantau'); ?>';
+        const token = '<?= config('app.token_pantau'); ?>';
+        const nama_provinsi = '<?= $profil->nama_provinsi ?>';
+        const nama_kabupaten = '<?= $profil->nama_kabupaten ?>';
+        const nama_kecamatan = '<?= $profil->nama_kecamatan ?>';
+
+        $.ajax({
+            type: 'GET',
+            url: host + '/index.php/api/wilayah/list_wilayah?token=' + token + '&provinsi=' + nama_provinsi + '&kabupaten=' + nama_kabupaten + '&kecamatan=' + nama_kecamatan,
+            dataType: 'json',
+            success: function(data) {
+                var html = '<option value="" selected>-- Pilih Desa --</option>';
+                var i;
+                for(i=0; i<data.length; i++) {
+                    html += '<option value="' + data[i].nama_desa + '" data-kode="' + data[i].kode_desa + '">' + data[i].nama_desa + '</option>';
                 }
-            },
-            minimumInputLength: 1,
-            templateResult: function (repo) {
-                if (repo.loading) return repo.nama;
-                var markup = repo.nama;
-                return markup;
-            },
-            templateSelection: function (repo) {
-                return repo.nama;
-            },
-            escapeMarkup: function (markup) {
-                return markup;
-            },
-            placeholder: "Nama Penduduk",
-            allowClear: true,
+                $('#list_desa').html(html);
+            }
         });
+        $('#list_desa').select2();
 
-        $('#penduduk_id').on('select2:select', function (e) {
-            var data = e.params.data;
-
-            console.log(data);
-            $('#alamat').val(data.alamat_sekarang);
-
+        $("#list_desa").change(function () {
+            desa_id = $('#list_desa option:selected').data('kode');
+            $('#desa_id').val(desa_id);
         });
-
-        //Datetimepicker
-        $('.datepicker').each(function () {
-            var $this = $(this);
-            $this.datetimepicker({
-                format: 'YYYY-MM-D'
-            });
-        });
-
     })
-
-
 </script>
 @endpush

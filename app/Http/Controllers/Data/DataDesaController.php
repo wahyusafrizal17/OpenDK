@@ -56,10 +56,28 @@ class DataDesaController extends Controller
      */
     public function index()
     {
-        $page_title       = 'Data Desa';
-        $page_description = 'Daftar Desa';
+        $page_title       = 'Desa';
+        $page_description = 'Data Desa';
 
         return view('data.data_desa.index', compact('page_title', 'page_description'));
+    }
+
+    public function getDataDesa()
+    {
+        return DataTables::of(DataDesa::all())
+            ->addColumn('action', function ($row) {
+                $edit_url   = route('data.data-desa.edit', $row->id);
+                $delete_url = route('data.data-desa.destroy', $row->id);
+
+                $data['edit_url']   = $edit_url;
+                $data['delete_url'] = $delete_url;
+
+                return view('forms.action', $data);
+            })
+            ->editColumn('website', function ($row) {
+                return '<a href="' . $row->website . '" target="_blank">' . $row->website . '</a>';
+            })
+            ->rawColumns(['website', 'action'])->make();
     }
 
     /**
@@ -69,11 +87,11 @@ class DataDesaController extends Controller
      */
     public function create()
     {
-        $page_title       = 'Tambah';
-        $page_description = 'Tambah Data Desa';
-        $list_kecamatan   = Profil::with('kecamatan')->orderBy('kecamatan_id', 'desc')->get();
-        $defaultProfil    = config('app.default_profile');
-        return view('data.data_desa.create', compact('page_title', 'page_description', 'list_kecamatan', 'defaultProfil'));
+        $page_title       = 'Desa';
+        $page_description = 'Tambah Desa';
+        $profil           = $this->profil;
+        
+        return view('data.data_desa.create', compact('page_title', 'page_description', 'profil'));
     }
 
     /**
@@ -86,7 +104,7 @@ class DataDesaController extends Controller
         try {
             $desa = new DataDesa();
             $desa->fill($request->all());
-            $desa->kecamatan_id = config('app.default_profile');
+            $desa->profil_id = 1;
 
             request()->validate([
                 'desa_id'      => 'required|regex:/^[0-9.]+$/|min:13|max:13|unique:das_data_desa,desa_id',
@@ -103,16 +121,6 @@ class DataDesaController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -121,11 +129,13 @@ class DataDesaController extends Controller
     public function edit($id)
     {
         $desa             = DataDesa::findOrFail($id);
-        $page_title       = 'Ubah';
-        $page_description = 'Ubah Data Desa : ' . $desa->nama;
-        $list_kecamatan   = Profil::with('kecamatan')->orderBy('kecamatan_id', 'desc')->get();
-        $defaultProfil    = config('app.default_profile');
-        return view('data.data_desa.edit', compact('page_title', 'page_description', 'desa', 'list_kecamatan', 'defaultProfil'));
+        $page_title       = 'Desa';
+        $page_description = 'Ubah Desa : ' . $desa->nama;
+        $profil           = $this->profil;
+
+        // dd($desa);
+        
+        return view('data.data_desa.edit', compact('page_title', 'page_description', 'desa', 'profil'));
     }
 
     /**
@@ -138,7 +148,7 @@ class DataDesaController extends Controller
     {
         $desa = DataDesa::findOrFail($id);
         $desa->fill($request->all());
-        $desa->kecamatan_id = config('app.default_profile');
+        $desa->profil_id = 1;
         try {
             request()->validate([
                 'nama'         => 'required',
@@ -168,24 +178,5 @@ class DataDesaController extends Controller
         } catch (Exception $e) {
             return redirect()->route('data.data-desa.index')->with('error', 'Data Desa gagal dihapus!');
         }
-    }
-
-    public function getDataDesa()
-    {
-        return DataTables::of(DataDesa::select(['id', 'desa_id', 'nama', 'website', 'luas_wilayah'])
-            ->where('kecamatan_id', config('app.default_profile')))
-            ->addColumn('action', function ($row) {
-                $edit_url   = route('data.data-desa.edit', $row->id);
-                $delete_url = route('data.data-desa.destroy', $row->id);
-
-                $data['edit_url']   = $edit_url;
-                $data['delete_url'] = $delete_url;
-
-                return view('forms.action', $data);
-            })
-            ->editColumn('website', function ($row) {
-                return '<a href="' . $row->website . '" target="_blank">' . $row->website . '</a>';
-            })
-            ->rawColumns(['website', 'action'])->make();
     }
 }

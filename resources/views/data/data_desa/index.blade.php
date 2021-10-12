@@ -32,7 +32,7 @@
                 <thead>
                 <tr>
                     <th style="max-width: 100px;">Aksi</th>
-                    <th>ID</th>
+                    <th>Kode Desa</th>
                     <th>Nama Desa</th>
                     <th>Website</th>
                     <th>Luas Wilayah (km<sup>2</sup>)</th>
@@ -45,9 +45,7 @@
 </section>
 <!-- /.content -->
 @endsection
-
 @include('partials.asset_datatables')
-
 @push('scripts')
 <script type="text/javascript">
     $(document).ready(function () {
@@ -68,5 +66,4 @@
 </script>
 @include('forms.datatable-vertical')
 @include('forms.delete-modal')
-
 @endpush
