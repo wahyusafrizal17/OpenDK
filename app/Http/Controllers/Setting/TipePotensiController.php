@@ -47,7 +47,8 @@ use function view;
 use Yajra\DataTables\DataTables;
 
 class TipePotensiController extends Controller
-{
+{    
+
     /**
      * Display a listing of the resource.
      *
@@ -56,14 +57,15 @@ class TipePotensiController extends Controller
     public function index()
     {
         $page_title       = 'Kategori Potensi';
-        $page_description = 'Daftar Kategori Potensi';
+        $page_description = 'Daftar ' . 'Kategori Potensi';
+
         return view('setting.tipe_potensi.index', compact('page_title', 'page_description'));
     }
 
     // Get Data Tipe Potensi
     public function getData()
     {
-        return DataTables::of(TipePotensi::select(['id', 'nama_kategori'])->orderBy('id'))
+        return DataTables::of(TipePotensi::all()->last()->get())
             ->addColumn('action', function ($row) {
                 $edit_url   = route('setting.tipe-potensi.edit', $row->id);
                 $delete_url = route('setting.tipe-potensi.destroy', $row->id);
@@ -83,7 +85,7 @@ class TipePotensiController extends Controller
      */
     public function create()
     {
-        $page_title       = 'Tambah';
+        $page_title       = 'Kategori Potensi';
         $page_description = 'Tambah Kategori Potensi';
 
         return view('setting.tipe_potensi.create', compact('page_title', 'page_description'));
@@ -129,9 +131,10 @@ class TipePotensiController extends Controller
      */
     public function edit($id)
     {
-        $tipe             = TipePotensi::findOrFail($id);
-        $page_title       = 'Edit';
-        $page_description = 'Edit Kategori Potensi ' . $tipe->nama_kategori;
+        $tipe             = TipePotensi::FindOrFail($id);
+        $page_title       = 'Kategori Potensi';
+        $page_description = 'Ubah  Kategori Potensi : ' . $tipe->nama_kategori;
+
         return view('setting.tipe_potensi.edit', compact('page_title', 'page_description', 'tipe'));
     }
 
@@ -144,7 +147,7 @@ class TipePotensiController extends Controller
     public function update(Request $request, $id)
     {
         try {
-            $tipe = TipePotensi::findOrFail($id);
+            $tipe = TipePotensi::FindOrFail($id);
             $tipe->fill($request->all());
             $tipe->slug = str_slug($tipe->nama_kategori);
 
@@ -168,7 +171,7 @@ class TipePotensiController extends Controller
     public function destroy($id)
     {
         try {
-            TipePotensi::findOrFail($id)->delete();
+            TipePotensi::destroy($id);
 
             return redirect()->route('setting.tipe-potensi.index')->with('success', 'Kategori Potensi berhasil dihapus!');
         } catch (Exception $e) {

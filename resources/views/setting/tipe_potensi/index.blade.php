@@ -31,7 +31,6 @@
                 <thead>
                 <tr>
                     <th style="max-width: 80px;">Aksi</th>
-                    <th>ID</th>
                     <th>Kategori Potensi</th>
                 </tr>
                 </thead>
@@ -54,7 +53,6 @@
             ajax: "{!! route( 'setting.tipe-potensi.getdata' ) !!}",
             columns: [
                 {data: 'action', name: 'action', class: 'text-center', searchable: false, orderable: false},
-                {data: 'id', name: 'id'},
                 {data: 'nama_kategori', name: 'nama_kategori'}
             ],
             order: [[0, 'desc']]
