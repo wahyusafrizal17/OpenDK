@@ -49,20 +49,19 @@ class JenisPenyakitController extends Controller
     public function index()
     {
         $page_title       = 'Jenis Penyakit';
-        $page_description = 'Daftar Jenis Epidemi Penyakit';
+        $page_description = 'Daftar Jenis Penyakit';
+
         return view('setting.jenis_penyakit.index', compact('page_title', 'page_description'));
     }
 
     // Get Data Kategori Komplain
     public function getData()
     {
-        return DataTables::of(JenisPenyakit::select(['id', 'nama'])->orderBy('id'))
+        return DataTables::of(JenisPenyakit::all()->last()->get())
             ->addColumn('action', function ($row) {
-                $edit_url   = route('setting.jenis-penyakit.edit', $row->id);
-                $delete_url = route('setting.jenis-penyakit.destroy', $row->id);
 
-                $data['edit_url']   = $edit_url;
-                $data['delete_url'] = $delete_url;
+                $data['edit_url']   = route('setting.jenis-penyakit.edit', $row->id);
+                $data['delete_url'] = route('setting.jenis-penyakit.destroy', $row->id);
 
                 return view('forms.action', $data);
             })
@@ -72,7 +71,7 @@ class JenisPenyakitController extends Controller
     // Create Action
     public function create()
     {
-        $page_title       = 'Tambah';
+        $page_title       = 'Jenis Penyakit';
         $page_description = 'Tambah Jenis Penyakit';
 
         return view('setting.jenis_penyakit.create', compact('page_title', 'page_description'));
@@ -97,9 +96,10 @@ class JenisPenyakitController extends Controller
 
     public function edit($id)
     {
-        $penyakit         = JenisPenyakit::findOrFail($id);
-        $page_title       = 'Edit Jenis Penyakit';
-        $page_description = 'Edit Jenis Penyakit ' . $penyakit->nama;
+        $penyakit         = JenisPenyakit::FindOrFail($id);
+        $page_title       = 'Jenis Penyakit';
+        $page_description = 'Ubah Jenis Penyakit : ' . $penyakit->nama;
+
         return view('setting.jenis_penyakit.edit', compact('page_title', 'page_description', 'penyakit'));
     }
 
@@ -107,7 +107,7 @@ class JenisPenyakitController extends Controller
     {
         // Save Request
         try {
-            $penyakit = JenisPenyakit::findOrFail($id);
+            $penyakit = JenisPenyakit::FindOrFail($id);
             $penyakit->fill($request->all());
 
             request()->validate([
@@ -124,7 +124,7 @@ class JenisPenyakitController extends Controller
     public function destroy($id)
     {
         try {
-            JenisPenyakit::findOrFail($id)->delete();
+            JenisPenyakit::destroy($id);
 
             return redirect()->route('setting.jenis-penyakit.index')->with('success', 'Data berhasil dihapus!');
         } catch (Exception $e) {
