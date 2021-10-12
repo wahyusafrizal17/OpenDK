@@ -10,7 +10,7 @@
                     <div class="form-group">
                         <label for="list_desa" class="col-sm-4 control-label">Desa</label>
                         <div class="col-sm-8">
-                            <input type="hidden" id="defaultProfil" value="{{ $defaultProfil }}">
+                            <input type="hidden" id="profil_id" value="{{ $profil_id }}">
                             <select class="form-control" id="list_desa">
                                 <option value="ALL">ALL</option>
                                 @foreach($list_desa as $desa)
@@ -87,9 +87,9 @@
         $('#list_desa').select2();
         $('#list_year').select2();
 
-        var kid = $('#defaultProfil').find(":selected").val();
+        var pid = $('#profil_id').find(":selected").val();
         if (kid == null) {
-            kid = $('#defaultProfil').val();
+            kid = $('#profil_id').val();
         }
         var did = $('#list_desa').find(":selected").val();
         var year = $('#list_year').find(":selected").val();
@@ -107,9 +107,9 @@
 
 
         $('#list_desa').on('select2:select', function (e) {
-            var kid = $('#defaultProfil').find(":selected").val();
+            var pid = $('#profil_id').find(":selected").val();
             if (kid == null) {
-                kid = $('#defaultProfil').val();
+                kid = $('#profil_id').val();
             }
             var did = $('#list_desa').find(":selected").val();
             var year = $('#list_year').find(":selected").val();
@@ -117,9 +117,9 @@
         });
 
         $('#list_year').on('select2:select', function (e) {
-            var kid = $('#defaultProfil').find(":selected").val();
+            var pid = $('#profil_id').find(":selected").val();
             if (kid == null) {
-                kid = $('#defaultProfil').val();
+                kid = $('#profil_id').val();
             }
             var did = $('#list_desa').find(":selected").val();
             var year = $('#list_year').find(":selected").val();

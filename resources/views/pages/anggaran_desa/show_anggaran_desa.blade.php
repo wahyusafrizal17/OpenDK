@@ -13,7 +13,7 @@
                         <div class="form-group">
                             <label for="list_desa" class="col-sm-4 control-label">Desa</label>
                             <div class="col-sm-8">
-                                <input type="hidden" id="defaultProfil" value="{{ $defaultProfil }}">
+                                <input type="hidden" id="profil_id" value="{{ $profil_id }}">
                                 <select class="form-control" id="list_desa">
                                     <option value="ALL">ALL</option>
                                     @foreach ($list_desa as $desa)

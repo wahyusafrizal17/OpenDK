@@ -88,7 +88,7 @@ class RegulasiController extends Controller
             ]);
 
             $regulasi               = new Regulasi($request->input());
-            $regulasi->profil_id    = 1;
+            $regulasi->profil_id    = $this->profil->id;
 
             if ($request->hasFile('file_regulasi')) {
                 $lampiran1 = $request->file('file_regulasi');
@@ -147,7 +147,7 @@ class RegulasiController extends Controller
         try {
             $regulasi = Regulasi::FindOrFail($id);
             $regulasi->fill($request->all());
-            $regulasi->profil_id    = 1;
+            $regulasi->profil_id    = $this->profil->id;
 
             request()->validate([
                 'tipe_regulasi' => 'required',

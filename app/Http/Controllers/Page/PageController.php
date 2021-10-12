@@ -139,7 +139,7 @@ class PageController extends Controller
         // Counter::count('desa.show');
         $page_title       = 'Desa';
         $page_description = 'Data Desa';
-        $desa             = DB::table('das_data_desa')->where('nama', str_replace('-', ' ', $slug))->first();
+        $desa             = DataDesa::where('nama', str_replace('-', ' ', $slug))->first();
 
         return view('pages.desa.desa_show', compact(['page_title', 'page_description', 'desa']));
     }

@@ -10,7 +10,7 @@
                     <div class="form-group">
                         <label for="list_desa" class="col-sm-4 control-label">Desa</label>
                         <div class="col-sm-8">
-                            <input type="hidden" id="defaultProfil" value="{{ $defaultProfil }}">
+                            <input type="hidden" id="profil_id" value="{{ $profil_id }}">
                             <select class="form-control" id="list_desa">
                                 <option value="ALL">ALL</option>
                                 @foreach($list_desa as $desa)
@@ -89,7 +89,7 @@
 
         // Change Dashboard when Lsit Desa changed
         $('#list_desa').on('select2:select', function (e) {
-            var kid = $('#defaultProfil').val();
+            var pid = $('#profil_id').val();
             var did = e.params.data;
             var year = $('#list_year').find(":selected").text();
 
@@ -98,7 +98,7 @@
 
         // Change Dashboard when List Year changed
         $('#list_year').on('select2:select', function (e) {
-            var kid = $('#defaultProfil').val();
+            var pid = $('#profil_id').val();
             var did = $('#list_desa').find(":selected").val();
             var year = this.value;
             change_das_bantuan(kid, did, year);
@@ -108,9 +108,9 @@
         /*
          Initial Dashboard
          */
-        var kid = '{{ $defaultProfil }}';
+        var pid = '{{ $profil_id }}';
         if (kid == null) {
-            kid = $('#defaultProfil').val();
+            kid = $('#profil_id').val();
         }
         var did = $('#list_desa').find(":selected").val();
         var year = $('#list_year').find(":selected").text();
