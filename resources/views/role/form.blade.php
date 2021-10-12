@@ -1,11 +1,11 @@
 <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
-	<label class="control-label" for="first-name">Name <span class="required">*</span></label>
-		{!! Form::text( 'name', null, [ 'class' => 'form-control', 'placeholder' => 'Name', 'required' => true] ) !!}
+	<label class="control-label" for="first-name">Nama <span class="required">*</span></label>
+		{!! Form::text( 'name', null, [ 'class' => 'form-control', 'placeholder' => 'Nama', 'required' => true] ) !!}
 </div>
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th>Menu Lists</th>
+			<th>Daftar Menu</th>
 			<th class="non-user text-center">
 				@php
 				if (isset($role)) {
@@ -98,8 +98,8 @@
 <div class="ln_solid"></div>
 <div class="form-group">
 	<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-		<a href="{{ route('setting.role.index') }}"><button class="btn btn-default" type="button">Cancel</button></a>
-		<button type="submit" class="btn btn-primary">Submit</button>
+		<a href="{{ route('setting.role.index') }}"><button class="btn btn-default" type="button">Batal</button></a>
+		<button type="submit" class="btn btn-primary">Simpan</button>
 	</div>
 </div>
 @push( 'scripts' )

@@ -58,8 +58,28 @@ class RoleController extends Controller
      */
     public function index()
     {
-        $page_title = 'Grup Pengguna';
-        return view('role.index', compact('page_title'));
+        $page_title       = 'Group Pengguna';
+        $page_description = 'Daftar Data';
+
+        return view('role.index', compact('page_title', 'page_description'));
+    }
+
+    /**
+     * Gets the data.
+     *
+     * @return     <type>  The data.
+     */
+    public function getData()
+    {
+        return DataTables::of(Role::datatables())
+        ->addColumn('action', function ($role) {
+
+            $data['edit_url']   = route('setting.role.edit', $role->id);
+            $data['delete_url'] = route('setting.role.destroy', $role->id);
+
+            return view('forms.action', $data);
+        })
+        ->make(true);
     }
 
     /**
@@ -70,7 +90,10 @@ class RoleController extends Controller
     public function create()
     {
         $permissions = Role::getListPermission();
-        return view('role.create', compact('permissions'));
+        $page_title       = 'Group Pengguna';
+        $page_description = 'Tambah Data';
+
+        return view('role.create', compact('page_title', 'page_description', 'permissions'));
     }
 
     /**
@@ -107,16 +130,6 @@ class RoleController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -124,10 +137,13 @@ class RoleController extends Controller
      */
     public function edit($id)
     {
-        $role        = Role::find($id);
-        $permissions = Role::getListPermission();
-        $menu        = Menu::get();
-        return view('role.edit', compact('role', 'permissions', 'menu'));
+        $role             = Role::find($id);
+        $permissions      = Role::getListPermission();
+        $menu             = Menu::get();
+        $page_title       = 'Group Pengguna';
+        $page_description = 'Ubah Data';
+
+        return view('role.edit', compact('page_title', 'page_description', 'role', 'permissions', 'menu'));
     }
 
     /**
@@ -192,25 +208,5 @@ class RoleController extends Controller
 
             return back();
         }
-    }
-
-    /**
-     * Gets the data.
-     *
-     * @return     <type>  The data.
-     */
-    public function getData()
-    {
-        return DataTables::of(Role::datatables())
-        ->addColumn('action', function ($role) {
-            $edit_url   = route('setting.role.edit', $role->id);
-            $delete_url = route('setting.role.destroy', $role->id);
-
-            $data['edit_url']   = $edit_url;
-            $data['delete_url'] = $delete_url;
-
-            return view('forms.action', $data);
-        })
-        ->make(true);
     }
 }
