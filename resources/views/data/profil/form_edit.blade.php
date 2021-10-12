@@ -3,39 +3,36 @@
         <div class="form-group">
             <label class="control-label col-md-4 col-sm-3 col-xs-12">Provinsi <span class="required">*</span></label>
             <div class="col-md-2 col-sm-3 col-xs-12">
-                {!! Form::text('id_provinsi', null, ['id' => 'id_provinsi', 'class' => 'form-control', 'placeholder '=> '00', 'readonly' => true]) !!}
+                {!! Form::text('provinsi_id', $profil->provinsi_id, ['id' => 'provinsi_id', 'class' => 'form-control', 'placeholder '=> '00', 'readonly' => true]) !!}
             </div>
             <div class="col-md-5 col-sm-6 col-xs-12">
-                <select class="form-control" id="list_provinsi" name="provinsi_id" required>
+                <select class="form-control" id="list_provinsi" name="nama_provinsi" required>
                     <option value="">-- Pilih Provinsi --</option>
                 </select>
-                {!! Form::hidden('nama_provinsi', $profil->nama_provinsi, ['id' => 'nama_provinsi', 'class' => 'form-control', 'readonly' => true]) !!}
             </div>
         </div>
 
         <div class="form-group">
             <label class="control-label col-md-4 col-sm-3 col-xs-12">Kabupaten <span class="required">*</span></label>
             <div class="col-md-2 col-sm-3 col-xs-12">
-                {!! Form::text('id_kabupaten', null, ['id' => 'id_kabupaten', 'class' => 'form-control', 'placeholder '=> '00.00', 'readonly' => true]) !!}
+                {!! Form::text('kabupaten_id', null, ['id' => 'kabupaten_id', 'class' => 'form-control', 'placeholder '=> '00.00', 'readonly' => true]) !!}
             </div>
             <div class="col-md-5 col-sm-6 col-xs-12">
-                <select class="form-control" id="list_kabupaten" name="kabupaten_id" disabled required>
+                <select class="form-control" id="list_kabupaten" name="nama_kabupaten" disabled required>
                     <option value="">-- Pilih Kabupaten --</option>
                 </select>
-                {!! Form::hidden('nama_kabupaten', $profil->nama_kabupaten, ['id' => 'nama_kabupaten', 'class' => 'form-control', 'readonly' => true]) !!}
             </div>
         </div>
 
         <div class="form-group">
             <label class="control-label col-md-4 col-sm-3 col-xs-12">{{ $sebutan_wilayah }} <span class="required">*</span></label>
             <div class="col-md-2 col-sm-3 col-xs-12">
-                {!! Form::text('id_kecamatan', null, ['id' => 'id_kecamatan', 'class' => 'form-control', 'placeholder '=> '00.00.0000', 'readonly' => true]) !!}
+                {!! Form::text('kecamatan_id', null, ['id' => 'kecamatan_id', 'class' => 'form-control', 'placeholder '=> '00.00.0000', 'readonly' => true]) !!}
             </div>
             <div class="col-md-5 col-sm-6 col-xs-12">
-                <select class="form-control" id="list_kecamatan" name="kecamatan_id" disabled required>
+                <select class="form-control" id="list_kecamatan" name="nama_kecamatan" disabled required>
                     <option value="">-- Pilih {{ $sebutan_wilayah }} --</option>
                 </select>
-                {!! Form::hidden('nama_kecamatan', $profil->nama_kecamatan, ['id' => 'nama_kecamatan', 'class' => 'form-control', 'readonly' => true]) !!}
             </div>
         </div>
         <div class="form-group">

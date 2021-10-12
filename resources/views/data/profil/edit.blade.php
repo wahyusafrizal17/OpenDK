@@ -5,12 +5,11 @@
 <section class="content-header">
     <h1>
         {{ $page_title ?? "Page Title" }}
-        <small>{{ $page_description ?? '' }} </small>
+        <small>{{ $page_description ?? '' }}</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="{{route('data.profil.index')}}">Profil</a></li>
-        <li class="active">{{ $page_title }}</li>
+        <li class="active">Profil</li>
     </ol>
 </section>
 
@@ -20,8 +19,8 @@
         <div class="col-md-12">
             <div class="box box-primary">
                 {{-- <div class="box-header with-border">
-                     <h3 class="box-title">Aksi</h3>
-                 </div>--}}
+                    <h3 class="box-title">Aksi</h3>
+                </div>--}}
                 <!-- /.box-header -->
 
                 @if (count($errors) > 0)
@@ -72,6 +71,7 @@
 @include(('partials.asset_select2'))
 @push('scripts')
 <script>
+
     $(function () {
 
         const host = '<?= config('app.host_pantau'); ?>';
@@ -85,19 +85,19 @@
                 var html = '<option value="" selected>-- Pilih Provinsi --</option>';
                 var i;
                 for(i=0; i<data.length; i++) {
-                    html += '<option value="' + data[i].kode_prov + '" data-nama="' + data[i].nama_prov + '">' + data[i].nama_prov + '</option>';
+                    html += '<option value="' + data[i].nama_prov + '" data-kode="' + data[i].kode_prov + '">' + data[i].nama_prov + '</option>';
                 }
                 $('#list_provinsi').html(html);
+                $("#list_provinsi").val('{{ $profil->nama_provinsi }}').trigger("change");
             }
         });
         $('#list_provinsi').select2();
 
         $("#list_provinsi").change(function () {
 
-            id_provinsi = $('#list_provinsi option:selected').val();
-            nama_provinsi = $('#list_provinsi option:selected').data('nama');
-            $('#id_provinsi').val(id_provinsi);
-            $('#nama_provinsi').val(nama_provinsi);
+            provinsi_id = $('#list_provinsi option:selected').data('kode');
+            nama_provinsi = $('#list_provinsi option:selected').val();
+            $('#provinsi_id').val(provinsi_id);
 
             $.ajax({
                 type: 'GET',
@@ -107,10 +107,12 @@
                     var html = '<option value="" selected>-- Pilih Kabupaten --</option>';
                     var i;
                     for(i=0; i<data.length; i++) {
-                        html += '<option value="' + data[i].kode_kab + '" data-nama="' + data[i].nama_kab + '">'+data[i].nama_kab + '</option>';
+                        html += '<option value="' + data[i].nama_kab + '" data-kode="' + data[i].kode_kab + '">'+data[i].nama_kab + '</option>';
                     }
                     $('#list_kabupaten').html(html);
                     $('#list_kabupaten').removeAttr("disabled");
+                    $('#list_kecamatan').addClass('disabled');
+                    $("#list_kabupaten").val('{{ $profil->nama_kabupaten }}').trigger("change");
                 }
             });
         });
@@ -118,10 +120,9 @@
 
         $("#list_kabupaten").change(function () {
 
-            id_kabupaten = $('#list_kabupaten option:selected').val();
-            nama_kabupaten = $('#list_kabupaten option:selected').data('nama');
-            $('#id_kabupaten').val(id_kabupaten);
-            $('#nama_kabupaten').val(nama_kabupaten);
+            kabupaten_id = $('#list_kabupaten option:selected').data('kode');
+            nama_kabupaten = $('#list_kabupaten option:selected').val();
+            $('#kabupaten_id').val(kabupaten_id);
 
             $.ajax({
                 type: 'GET',
@@ -131,19 +132,20 @@
                     var html = '<option value="" selected>-- Pilih {{ $sebutan_wilayah }} --</option>';
                     var i;
                     for(i=0; i<data.length; i++) {
-                        html += '<option value="' + data[i].kode_kec + '"data-nama="' + data[i].nama_kec + '">'+data[i].nama_kec + '</option>';
+                        html += '<option value="' + data[i].nama_kec + '"data-kode="' + data[i].kode_kec + '">'+data[i].nama_kec + '</option>';
                     }
                     $('#list_kecamatan').html(html);
                     $('#list_kecamatan').removeAttr("disabled");
+                    $("#list_kecamatan").val('{{ $profil->nama_kecamatan }}').trigger("change");
                 }
             });
         });
         $('#list_kecamatan').select2();
 
         $("#list_kecamatan").change(function () {
-            id_kecamatan = $('#list_kecamatan option:selected').val();
-            nama_kecamatan = $('#list_kecamatan option:selected').data('nama');
-            $('#id_kecamatan').val(id_kecamatan);
+            kecamatan_id = $('#list_kecamatan option:selected').data('kode');
+            nama_kecamatan = $('#list_kecamatan option:selected').val();
+            $('#kecamatan_id').val(kecamatan_id);
             $('#nama_kecamatan').val(nama_kecamatan);
         });
 

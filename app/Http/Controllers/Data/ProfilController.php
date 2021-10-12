@@ -41,7 +41,6 @@ use function basename;
 use function compact;
 
 use Exception;
-use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use function is_img;
@@ -59,14 +58,6 @@ use function view;
 
 class ProfilController extends Controller
 {
-    protected $client;
-
-    public function __construct()
-    {
-        parent::__construct();
-        $this->client = new Client();
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -80,8 +71,8 @@ class ProfilController extends Controller
         $profil->file_logo                = is_img($this->profil->file_logo);
         $profil->foto_kepala_wilayah      = is_img($this->profil->foto_kepala_wilayah);
 
-        $page_title       = 'Ubah Profil';
-        $page_description = ucwords(strtolower($this->sebutan_wilayah).' : ' . $this->profil->namae_kecamatan);
+        $page_title       = 'Profil';
+        $page_description = 'Data Profil';
         return view('data.profil.edit', compact('page_title', 'page_description', 'profil'));
     }
 
@@ -95,13 +86,13 @@ class ProfilController extends Controller
     {
         request()->validate([
             'kecamatan_id'             => 'required',
-                'alamat'                   => 'required',
-                'kode_pos'                 => 'required',
-                'email'                    => 'email',
-                'nama_camat'               => 'required',
-                'file_logo'                => 'image|mimes:jpg,jpeg,bmp,png,gif|max:1024',
-                'file_struktur_organisasi' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:1024',
-                'foto_kepala_wilayah'      => 'image|mimes:jpg,jpeg,png,bmp,gif|max:1024',
+            'alamat'                   => 'required',
+            'kode_pos'                 => 'required',
+            'email'                    => 'email',
+            'nama_camat'               => 'required',
+            'file_logo'                => 'image|mimes:jpg,jpeg,bmp,png,gif|max:1024',
+            'file_struktur_organisasi' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:1024',
+            'foto_kepala_wilayah'      => 'image|mimes:jpg,jpeg,png,bmp,gif|max:1024',
             ], []);
 
         try {
@@ -157,7 +148,7 @@ class ProfilController extends Controller
     {
         $page_title       = 'Konfirmasi?';
         $page_description = '';
-        
+
         return view('data.profil.save_success', compact('id', 'page_title', 'page_description'));
     }
 }
