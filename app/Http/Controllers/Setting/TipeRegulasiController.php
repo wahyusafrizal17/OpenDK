@@ -60,7 +60,6 @@ class TipeRegulasiController extends Controller
     {
         return DataTables::of(TipeRegulasi::all()->last()->get())
             ->addColumn('action', function ($row) {
-
                 $data['edit_url']   = route('setting.tipe-regulasi.edit', $row->id);
                 $data['delete_url'] = route('setting.tipe-regulasi.destroy', $row->id);
 
