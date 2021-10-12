@@ -39,7 +39,6 @@ class DataUmum extends Model
     protected $table = 'das_data_umum';
 
     protected $fillable = [
-        'kecamatan_id',
         'tipologi',
         'ketinggian',
         'sumber_luas_wilayah',
@@ -66,9 +65,9 @@ class DataUmum extends Model
 
     protected $appends = ['luas_wilayah_dari_data_desa'];
 
-    public function kecamatan()
+    public function profil()
     {
-        return $this->belongsTo(Wilayah::class, 'kecamatan_id', 'kode');
+        return $this->belongsTo(Profil::class, 'profil_id', 'id');
     }
 
     public function getLuasWilayahValueAttribute()

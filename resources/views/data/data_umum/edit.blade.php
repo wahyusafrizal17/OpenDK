@@ -9,8 +9,7 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="{{route('data.data-umum.index')}}">Data Umum</a></li>
-        <li class="active">{{ $page_title }}</li>
+        <li class="active">Data Umum</a></li>
     </ol>
 </section>
 
@@ -20,8 +19,8 @@
         <div class="col-md-12">
             <div class="box box-primary">
                 {{-- <div class="box-header with-border">
-                     <h3 class="box-title">Aksi</h3>
-                 </div>--}}
+                    <h3 class="box-title">Aksi</h3>
+                </div>--}}
                 <!-- /.box-header -->
 
                 @if (count($errors) > 0)
