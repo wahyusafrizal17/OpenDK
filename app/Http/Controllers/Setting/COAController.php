@@ -53,16 +53,16 @@ class COAController extends Controller
 {
     public function index()
     {
-        $page_title       = 'Daftar Akun';
-        $page_description = 'Daftar Akun COA';
+        $page_title       = 'COA';
+        $page_description = 'Daftar COA';
 
         return view('setting.coa.index', compact('page_title', 'page_description'));
     }
 
     public function create()
     {
-        $page_title       = "Tambah";
-        $page_description = 'Tambah COA Baru';
+        $page_title       = "COA";
+        $page_description = 'Tambah COA';
 
         return view('setting.coa.create', compact('page_title', 'page_description'));
     }

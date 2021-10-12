@@ -20,10 +20,6 @@
         <div class="col-md-12">
             @include( 'partials.flash_message' )
             <div class="box box-primary">
-                {{-- <div class="box-header with-border">
-                     <h3 class="box-title">Aksi</h3>
-                 </div>--}}
-                <!-- /.box-header -->
 
                 <!-- form start -->
                 {!! Form::open( [ 'route' => 'setting.coa.store', 'method' => 'post','id' => 'form-coa', 'class' => 'form-horizontal form-label-left'] ) !!}
