@@ -73,7 +73,6 @@ class RoleController extends Controller
     {
         return DataTables::of(Role::datatables())
         ->addColumn('action', function ($role) {
-
             $data['edit_url']   = route('setting.role.edit', $role->id);
             $data['delete_url'] = route('setting.role.destroy', $role->id);
 
