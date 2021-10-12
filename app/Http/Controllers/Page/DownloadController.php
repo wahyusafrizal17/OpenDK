@@ -39,7 +39,6 @@ use App\Models\Regulasi;
 use function asset;
 use function compact;
 
-use function config;
 use Illuminate\Support\Facades\DB;
 use function request;
 use function response;
@@ -97,18 +96,16 @@ class DownloadController extends Controller
         $page_title       = 'Regulasi';
         $page_description = 'Daftar regulasi Kecamatan';
         $regulasi         = Regulasi::orderBy('id', 'asc')->paginate(10);
+        $profil           = Profil::find($id);
 
-        $defaultProfil = config('app.default_profile');
-
-        $profil = Profil::where(['kecamatan_id' => $defaultProfil])->first();
-
-        return view('pages.unduhan.regulasi', compact('page_title', 'page_description', 'regulasi', 'defaultProfil', 'profil'));
+        return view('pages.unduhan.regulasi', compact('page_title', 'page_description', 'regulasi', 'profil'));
     }
 
     public function showRegulasi($nama_regulasi)
     {
         $regulasi   = Regulasi::where('judul', str_replace('-', ' ', $nama_regulasi))->first();
         $page_title = 'Detail Regulasi :' . $regulasi->judul;
+
         return view('pages.unduhan.regulasi_show', compact('page_title', 'regulasi'));
     }
 

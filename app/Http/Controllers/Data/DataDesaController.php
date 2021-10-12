@@ -33,10 +33,8 @@ namespace App\Http\Controllers\Data;
 
 use App\Http\Controllers\Controller;
 use App\Models\DataDesa;
-use App\Models\Profil;
 use function back;
 use function compact;
-use function config;
 use Exception;
 
 use Illuminate\Http\Request;
@@ -90,7 +88,7 @@ class DataDesaController extends Controller
         $page_title       = 'Desa';
         $page_description = 'Tambah Desa';
         $profil           = $this->profil;
-        
+
         return view('data.data_desa.create', compact('page_title', 'page_description', 'profil'));
     }
 
@@ -133,8 +131,6 @@ class DataDesaController extends Controller
         $page_description = 'Ubah Desa : ' . $desa->nama;
         $profil           = $this->profil;
 
-        // dd($desa);
-        
         return view('data.data_desa.edit', compact('page_title', 'page_description', 'desa', 'profil'));
     }
 

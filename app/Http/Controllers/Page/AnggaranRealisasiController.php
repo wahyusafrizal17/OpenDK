@@ -33,7 +33,6 @@ namespace App\Http\Controllers\Page;
 
 use App\Facades\Counter;
 use App\Http\Controllers\Controller;
-use App\Models\Profil;
 use function array_sort;
 
 use function config;
@@ -54,11 +53,8 @@ class AnggaranRealisasiController extends Controller
 
         $data['page_title']       = 'Anggaran & Realisasi';
         $data['page_description'] = 'Data Anggaran & Realisasi';
-        $defaultProfil            = config('app.default_profile');
-        $data['defaultProfil']    = $defaultProfil;
         $data['year_list']        = years_list();
-        $data['list_kecamatan']   = Profil::with('kecamatan')->orderBy('kecamatan_id', 'desc')->get();
-        /*$data['list_desa'] = DB::table('ref_desa')->select('*')->where('kecamatan_id', '=', $defaultProfil)->get();*/
+        $data['list_desa']        = DataDesa::all();
 
         return view('pages.anggaran_realisasi.show_anggaran_realisasi')->with($data);
     }

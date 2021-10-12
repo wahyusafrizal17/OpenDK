@@ -37,7 +37,6 @@ use App\Models\DataDesa;
 use App\Models\Penduduk;
 use function back;
 use function compact;
-use function config;
 use function convert_born_date_to_age;
 use Exception;
 use Illuminate\Http\Request;
@@ -144,8 +143,8 @@ class PendudukController extends Controller
     {
         $page_title       = 'Impor';
         $page_description = 'Impor Data Penduduk';
+        $list_desa        = DataDesa::all();
 
-        $list_desa = DB::table('das_data_desa')->select('*')->where('kecamatan_id', '=', config('app.default_profile'))->get();
         return view('data.penduduk.import', compact('page_title', 'page_description', 'list_desa'));
     }
 

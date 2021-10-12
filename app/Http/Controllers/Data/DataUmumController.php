@@ -33,21 +33,14 @@ namespace App\Http\Controllers\Data;
 
 use App\Http\Controllers\Controller;
 use App\Models\DataUmum;
-use App\Models\Profil;
 use function back;
 use function compact;
-use function config;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use function json_encode;
 use function redirect;
 use function request;
-use function route;
-use function strtolower;
-use function ucwords;
 use function view;
-use Yajra\DataTables\DataTables;
 
 class DataUmumController extends Controller
 {
@@ -62,7 +55,7 @@ class DataUmumController extends Controller
         $luas_wilayah     = $data_umum['luas_wilayah_value'];
         $page_title       = 'Data Umum';
         $page_description = 'Ubah Data Umum';
-        
+
         return view('data.data_umum.edit', compact('page_title', 'page_description', 'data_umum', 'luas_wilayah'));
     }
 

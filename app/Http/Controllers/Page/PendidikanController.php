@@ -35,7 +35,6 @@ use App\Facades\Counter;
 use App\Http\Controllers\Controller;
 use App\Models\DataDesa;
 use App\Models\Profil;
-use function config;
 
 use Illuminate\Support\Facades\DB;
 use function intval;
@@ -58,18 +57,16 @@ class PendidikanController extends Controller
 
         $data['page_title']       = 'Pendidikan';
         $data['page_description'] = 'Data Pendidikan ' . $this->sebutan_wilayah;
-        $defaultProfil            = config('app.default_profile');
-        $data['defaultProfil']    = $defaultProfil;
         $data['year_list']        = years_list();
-        $data['list_kecamatan']   = Profil::with('kecamatan')->orderBy('kecamatan_id', 'desc')->get();
-        $data['list_desa']        = DB::table('das_data_desa')->select('*')->where('kecamatan_id', '=', $defaultProfil)->get();
+        $data['list_kecamatan']   = Profil::with('kecamatan')->orderBy('profil_id', 'desc')->get();
+        $data['list_desa']        = DataDesa::all();
 
         return view('pages.pendidikan.show_pendidikan')->with($data);
     }
 
     public function getChartTingkatPendidikan()
     {
-        $kid  = request('kid');
+        $pid  = 1; //request('pid');
         $did  = request('did');
         $year = request('y');
 
@@ -80,7 +77,7 @@ class PendidikanController extends Controller
                 // SD
                 $query_pendidikan = DB::table('das_tingkat_pendidikan')
                     ->where('tahun', '=', $yearl)
-                    ->where('kecamatan_id', '=', $kid);
+                    ->where('profil', '=', $pid);
 
                 $data_pendidikan[] = [
                     'year'                    => $yearl,
@@ -94,7 +91,7 @@ class PendidikanController extends Controller
         } elseif ($year != "ALL" && $did == "ALL") {
             $data_tabel = [];
             // Quartal
-            $desa = DataDesa::where('kecamatan_id', $kid)->get();
+            $desa = DataDesa::all();
             foreach ($desa as $value) {
                 $query_pendidikan = DB::table('das_tingkat_pendidikan')
                     ->selectRaw('sum(tidak_tamat_sekolah) as tidak_tamat_sekolah, sum(tamat_sd) as tamat_sd, sum(tamat_smp) as tamat_smp, sum(tamat_sma) as tamat_sma, sum(tamat_diploma_sederajat) as tamat_diploma_sederajat')
@@ -142,7 +139,7 @@ class PendidikanController extends Controller
                 // SD
                 $query_pendidikan = DB::table('das_tingkat_pendidikan')
                     ->where('tahun', '=', $yearl)
-                    ->where('kecamatan_id', '=', $kid)
+                    ->where('profil_id', '=', $pid)
                     ->where('desa_id', $did);
 
                 $data_pendidikan[] = [
@@ -167,7 +164,7 @@ class PendidikanController extends Controller
 
     public function getChartPutusSekolah()
     {
-        $kid  = request('kid');
+        $pid  = 1; //request('pid');
         $did  = request('did');
         $year = request('y');
 
@@ -178,7 +175,7 @@ class PendidikanController extends Controller
                 // SD
                 $query_pendidikan = DB::table('das_putus_sekolah')
                     ->where('tahun', '=', $yearl)
-                    ->where('kecamatan_id', '=', $kid);
+                    ->where('profil_id', '=', $pid);
 
                 $data_pendidikan[] = [
                     'year'           => $yearl,
@@ -197,7 +194,7 @@ class PendidikanController extends Controller
                 // SD
                 $query_pendidikan = DB::table('das_putus_sekolah')
                     ->where('tahun', '=', $yearl)
-                    ->where('kecamatan_id', '=', $kid)
+                    ->where('profil_id', '=', $pid)
                     ->where('desa_id', $did);
 
                 $data_pendidikan[] = [
@@ -213,12 +210,12 @@ class PendidikanController extends Controller
                 ];
             }
         } elseif ($year != 'ALL' && $did == 'ALL') {
-            $desa = DataDesa::where('kecamatan_id', $kid)->get();
+            $desa = DataDesa::all();
             foreach ($desa as $value) {
                 // SD
                 $query_pendidikan = DB::table('das_putus_sekolah')
                     ->where('tahun', '=', $year)
-                    ->where('kecamatan_id', '=', $kid)
+                    ->where('profil_id', '=', $pid)
                     ->where('desa_id', $value->desa_id);
 
                 $data_pendidikan[] = [
@@ -269,7 +266,7 @@ class PendidikanController extends Controller
 
     public function getChartFasilitasPAUD()
     {
-        $kid  = request('kid');
+        $pid  = 1; //request('pid');
         $did  = request('did');
         $year = request('y');
 
@@ -280,7 +277,7 @@ class PendidikanController extends Controller
                 // SD
                 $query_pendidikan = DB::table('das_fasilitas_paud')
                     ->where('tahun', '=', $yearl)
-                    ->where('kecamatan_id', '=', $kid);
+                    ->where('profil_id', '=', $pid);
                 if ($did != 'ALL') {
                     $query_pendidikan->where('desa_id', '=', $did);
                 }

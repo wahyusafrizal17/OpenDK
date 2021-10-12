@@ -32,27 +32,18 @@
 namespace App\Http\Controllers\Data;
 
 use App\Http\Controllers\Controller;
-use App\Models\DataDesa;
 use App\Models\DataUmum;
-use App\Models\Desa;
 use App\Models\Profil;
 use function back;
-use function basename;
 use function compact;
 
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use function is_img;
-use function pathinfo;
-use const PATHINFO_EXTENSION;
 use function redirect;
 use function request;
-use function strtolower;
-use function strval;
-use function substr;
 
-use function ucwords;
 
 use function view;
 
@@ -85,6 +76,8 @@ class ProfilController extends Controller
     public function update(Request $request, $id)
     {
         request()->validate([
+            'provinsi_id'             => 'required',
+            'kabupaten_id'             => 'required',
             'kecamatan_id'             => 'required',
             'alamat'                   => 'required',
             'kode_pos'                 => 'required',
@@ -98,11 +91,8 @@ class ProfilController extends Controller
         try {
             $profil = Profil::find($id);
             $profil->fill($request->all());
-            $profil->kabupaten_id = substr($profil->kecamatan_id, 0, 5);
-            $profil->provinsi_id  = substr($profil->kecamatan_id, 0, 2);
 
             $dataumum               = DataUmum::where('profil_id', $id)->first();
-            $dataumum->kecamatan_id = $profil->kecamatan_id;
 
             if ($request->file('file_struktur_organisasi') == "") {
                 $profil->file_struktur_organisasi = $profil->file_struktur_organisasi;

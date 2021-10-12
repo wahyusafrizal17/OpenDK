@@ -74,7 +74,6 @@ class KependudukanController extends Controller
         $defaultProfil            = config('app.default_profile');
         $data['defaultProfil']    = $defaultProfil;
         $data['year_list']        = $this->years_list();
-        $data['list_kecamatan']   = Profil::with('kecamatan')->orderBy('kecamatan_id', 'desc')->get();
         $data['list_desa']        = DB::table('das_data_desa')->select('*')->where('kecamatan_id', '=', $defaultProfil)->get();
 
         $data = array_merge($data, $this->createDashboardKependudukan($defaultProfil, 'ALL', date('Y')));

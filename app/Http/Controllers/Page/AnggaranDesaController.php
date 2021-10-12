@@ -33,10 +33,8 @@ namespace App\Http\Controllers\Page;
 
 use App\Http\Controllers\Controller;
 use App\Models\CoaType;
-use App\Models\Profil;
 use function compact;
 
-use function config;
 use Illuminate\Support\Facades\DB;
 use function request;
 use function view;
@@ -51,11 +49,8 @@ class AnggaranDesaController extends Controller
     {
         $data['page_title']       = 'Anggaran Desa (APBDes)';
         $data['page_description'] = 'Data Anggaran Desa (APBDes)';
-        $defaultProfil            = config('app.default_profile');
-        $data['defaultProfil']    = $defaultProfil;
         $data['year_list']        = years_list();
-        $data['list_kecamatan']   = Profil::with('kecamatan')->orderBy('kecamatan_id', 'desc')->get();
-        $data['list_desa']        = DB::table('das_data_desa')->select('*')->where('kecamatan_id', '=', $defaultProfil)->get();
+        $data['list_desa']        = DataDesa::all();
 
         return view('pages.anggaran_desa.show_anggaran_desa')->with($data);
     }
