@@ -9,7 +9,7 @@
         <small>{{ $page_description ?? '' }}</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li class="active">{{ $page_title }}</li>
     </ol>
 </section>
@@ -24,7 +24,7 @@
                     <h3 class="box-title">Daftar FAQ</h3>
 
                     <div class="box-tools pull-right">
-                        <a href="{{route('informasi.faq.create')}}"
+                        <a href="{{ route('informasi.faq.create') }}"
                            class="btn btn-primary btn-sm {{Sentinel::guest() ? 'hidden':''}}"><i class="fa fa-plus"></i> Tambah</a>
                     </div>
                 </div>

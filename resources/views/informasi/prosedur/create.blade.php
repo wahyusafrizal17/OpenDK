@@ -8,8 +8,8 @@
         <small>{{ $page_description ?? '' }}</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="{{route('informasi.prosedur.index')}}">Daftar Prosedur</a></li>
+        <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="{{ route('informasi.prosedur.index') }}">Daftar Prosedur</a></li>
         <li class="active">Tambah</li>
     </ol>
 </section>

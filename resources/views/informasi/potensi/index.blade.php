@@ -8,7 +8,7 @@
         <small>{{ $page_description ?? '' }}</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li class="active">{!! $page_title !!}</li>
     </ol>
 </section>
@@ -22,7 +22,7 @@
         <div class="col-md-12">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <a href="{{route('informasi.potensi.create')}}" class="btn btn-primary btn-sm {{Sentinel::guest() ? 'hidden':''}}" title="Tambah Data"><i
+                    <a href="{{ route('informasi.potensi.create') }}" class="btn btn-primary btn-sm {{Sentinel::guest() ? 'hidden':''}}" title="Tambah Data"><i
                     class="fa fa-plus"></i>&ensp;Tambah Data</a>
                     <div class="box-tools pull-right col-sm-4">
                     {!! Form::select('kategori_id', \App\Models\TipePotensi::pluck('nama_kategori', 'id'), (isset($_GET['id'])? $_GET['id']:0),['placeholder'=>'- Kategori', 'class'=>'form-control', 'id'=>'kategori_id', 'required'=>true, 'onchange'=>"changeCategori(this)"]) !!}

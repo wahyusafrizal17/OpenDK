@@ -8,8 +8,8 @@
         <small>{{ $page_description ?? '' }}</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="{{route('data.imunisasi.index')}}">AKI & AKB</a></li>
+        <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="{{ route('data.imunisasi.index') }}">AKI & AKB</a></li>
         <li class="active">{{ $page_title }}</li>
     </ol>
 </section>
@@ -50,7 +50,7 @@
                                 <div class="col-md-8">
                                     <select class="form-control" id="bulan" name="bulan">
                                         @foreach($months_list as $key=> $month)
-                                            <option value="{{$key}}">{{$month}}</option>
+                                            <option value="{{ $key}}">{{$month}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -62,7 +62,7 @@
                                 <div class="col-md-8">
                                     <select class="form-control" id="list_year" name="tahun">
                                         @foreach($years_list as $year)
-                                            <option value="{{$year}}">{{$year}}</option>
+                                            <option value="{{ $year}}">{{$year}}</option>
                                         @endforeach
                                     </select>
                                 </div>

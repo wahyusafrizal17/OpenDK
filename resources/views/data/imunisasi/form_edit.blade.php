@@ -12,9 +12,9 @@
         <select class="form-control" id="bulan" name="bulan">
             @foreach(months_list() as $key=> $month)
                 @if($imunisasi->bulan == $key)
-                <option selected value="{{$key}}">{{$month}}</option>
+                <option selected value="{{ $key}}">{{$month}}</option>
                 @else
-                <option value="{{$key}}">{{$month}}</option>
+                <option value="{{ $key}}">{{$month}}</option>
                 @endif
             @endforeach
         </select>
@@ -28,9 +28,9 @@
         <select class="form-control" id="list_year" name="tahun">
             @foreach(years_list() as $year)
                 @if($imunisasi->tahun == $year)
-                <option selected value="{{$year}}">{{$year}}</option>
+                <option selected value="{{ $year}}">{{$year}}</option>
                 @else
-                <option value="{{$year}}">{{$year}}</option>
+                <option value="{{ $year}}">{{$year}}</option>
                 @endif
             @endforeach
         </select>

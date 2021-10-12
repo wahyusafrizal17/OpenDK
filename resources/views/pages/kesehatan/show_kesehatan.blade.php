@@ -13,7 +13,7 @@
                             <select class="form-control" id="list_desa">
                                 <option value="ALL">ALL</option>
                                 @foreach($list_desa as $desa)
-                                    <option value="{{$desa->desa_id}}">{{$desa->nama}}</option>
+                                    <option value="{{ $desa->desa_id}}">{{$desa->nama}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -28,7 +28,7 @@
                             <select class="form-control" id="list_year">
                                 <option value="ALL">ALL</option>
                                 @foreach($year_list as $year)
-                                    <option value="{{$year}}">{{$year}}</option>
+                                    <option value="{{ $year}}">{{$year}}</option>
                                 @endforeach
                             </select>
                         </div>

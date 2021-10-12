@@ -114,11 +114,11 @@
 			<select class="form-control" id="list_desa" name="desa" style="width: auto;">
 				<option value="ALL">Semua Desa</option>
 				@foreach($list_desa as $desa)
-						<option value="{{$desa->desa_id}}" <?php $cari_desa == $desa->desa_id && print('selected') ?>>{{$desa->nama}} </option>
+						<option value="{{ $desa->desa_id}}" <?php $cari_desa == $desa->desa_id && print('selected') ?>>{{$desa->nama}} </option>
 				@endforeach
 			</select>
 			<div class="input-group input-group-sm" style="display: inline-flex; float: right; padding: 5px;">
-				<input class="form-control" style="width: 200px; height: auto;" type="text" name="cari" placeholder="Ceri berita" value="{{$cari}}"/>
+				<input class="form-control" style="width: 200px; height: auto;" type="text" name="cari" placeholder="Ceri berita" value="{{ $cari}}"/>
 				<button type="submit" class="btn btn-info btn-block" style="width: auto;">
 					<i class="fa fa-search"></i>
 				</button>
