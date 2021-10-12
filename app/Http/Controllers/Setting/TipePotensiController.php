@@ -47,8 +47,7 @@ use function view;
 use Yajra\DataTables\DataTables;
 
 class TipePotensiController extends Controller
-{    
-
+{
     /**
      * Display a listing of the resource.
      *
