@@ -62,8 +62,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        $page_title = 'Pengguna';
-        return view('user.index', compact('page_title'));
+        $page_title       = 'Pengguna';
+        $page_description = 'Daftar Data';
+
+        return view('user.index', compact('page_title', 'page_description'));
     }
 
     /**
@@ -73,9 +75,11 @@ class UserController extends Controller
      */
     public function create()
     {
-        $page_title = 'Tambah Pengguna';
-        $item       = Role::where('slug', '!=', 'super-admin')->pluck('name', 'slug')->toArray();
-        return view('user.create', compact('item', 'page_title'));
+        $page_title       = 'Pengguna';
+        $page_description = 'Tambah Data';
+        $item             = Role::where('slug', '!=', 'super-admin')->pluck('name', 'slug')->toArray();
+
+        return view('user.create', compact('page_title', 'page_description', 'item'));
     }
 
     /**
@@ -112,7 +116,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::find($id);
+        $user = User::FindOrFail($id);
         return view('user.show', compact('user'));
     }
 
@@ -124,11 +128,12 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $page_title = 'Ubah Pengguna';
-        $user       = User::find($id);
-        $title      = ['title' => 'Pengguna'];
-        $item       = Role::where('slug', '!=', 'super-admin')->pluck('name', 'slug')->toArray();
-        return view('user.edit', compact('page_title', 'user', 'title', 'item'));
+        $page_title       = 'Pengguna';
+        $page_description = 'Ubah Data';
+        $user             = User::FindOrFail($id);
+        $item             = Role::where('slug', '!=', 'super-admin')->pluck('name', 'slug')->toArray();
+
+        return view('user.edit', compact('page_title', 'page_description', 'user', 'item'));
     }
 
     /**
@@ -141,7 +146,7 @@ class UserController extends Controller
     public function update(UserUpdateRequest $request, $id)
     {
         try {
-            $user_find = User::find($id);
+            $user_find = User::FindOrFail($id);
 
             $user = Sentinel::update($user_find, $request->all());
             if ($request->hasFile('image')) {
@@ -173,7 +178,7 @@ class UserController extends Controller
     {
         // dd($request->all());
         try {
-            $user_find = User::find($id);
+            $user_find = User::FindOrFail($id);
 
             $user = Sentinel::update($user_find, $request->all());
             $user->update([
