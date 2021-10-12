@@ -60,7 +60,6 @@ class KategoriKomplainController extends Controller
     {
         return DataTables::of(KategoriKomplain::latest()->get())
             ->addColumn('action', function ($row) {
-
                 $data['edit_url']   = route('setting.komplain-kategori.edit', $row->id);
                 $data['delete_url'] = route('setting.komplain-kategori.destroy', $row->id);
 
@@ -101,7 +100,7 @@ class KategoriKomplainController extends Controller
         $kategori         = KategoriKomplain::FindOrFail($id);
         $page_title       = 'Kategori Komplain';
         $page_description = 'Ubah Kategori Komplain : ' . $kategori->nama;
-        
+
         return view('setting.komplain_kategori.edit', compact('page_title', 'page_description', 'kategori'));
     }
 
