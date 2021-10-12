@@ -20,11 +20,7 @@
         <div class="col-md-12">
             @include( 'partials.flash_message' )
             <div class="box box-primary">
-                {{-- <div class="box-header with-border">
-                     <h3 class="box-title">Aksi</h3>
-                 </div>--}}
-                <!-- /.box-header -->
-
+                
                 <!-- form start -->
                 {!! Form::model($slide, [ 'route' => ['setting.slide.update', $slide->id], 'method' => 'put','id' => 'form-slide', 'class' => 'form-horizontal form-label-left'] ) !!}
 

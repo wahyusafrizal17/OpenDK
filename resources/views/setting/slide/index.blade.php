@@ -21,7 +21,7 @@
         <div class="box-header with-border">
             <div class="">
                 <a href="{{ route('setting.slide.create') }}">
-                    <button type="button" class="btn btn-primary btn-sm" title="Tambah Data"><i class="fa fa-plus"></i> Tambah Slide</button>
+                    <button type="button" class="btn btn-primary btn-sm" title="Tambah Data"><i class="fa fa-plus"></i> Tambah</button>
                 </a>
             </div>
         </div>
@@ -30,8 +30,7 @@
             <table class="table table-striped table-bordered" id="data-slide">
                 <thead>
                 <tr>
-                    <th style="max-width: 80px;">Aksi</th>
-                    <th>ID</th>
+                    <th style="max-width: 150px;">Aksi</th>
                     <th>Judul</th>
                     <th>Deskripsi</th>
                 </tr>
@@ -55,7 +54,6 @@
             ajax: "{!! route( 'setting.slide.getdata' ) !!}",
             columns: [
                 {data: 'action', name: 'action', class: 'text-center', searchable: false, orderable: false},
-                {data: 'id', name: 'id'},
                 {data: 'judul', name: 'judul'},
                 {data: 'deskripsi', name: 'deskripsi'}
             ],

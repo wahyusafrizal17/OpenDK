@@ -34,8 +34,6 @@ namespace App\Http\Controllers\Setting;
 use App\Http\Controllers\Controller;
 use App\Models\Slide;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
-
-;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use League\Flysystem\Exception;
@@ -43,12 +41,33 @@ use Yajra\DataTables\DataTables;
 
 class SlideController extends Controller
 {
-    //
+    
     public function index()
     {
         $page_title       = 'Slide';
         $page_description = 'Daftar Slide';
+
         return view('setting.slide.index', compact('page_title', 'page_description'));
+    }
+
+    /**
+    * Get datatable
+    */
+    public function getData()
+    {
+        return DataTables::of(Slide::all())
+            ->addColumn('action', function ($row) {
+                
+                // $data['show_url']   = route('setting.slide.show', $row->id); //TODO : Tambahkan View
+                $data['edit_url']   = route('setting.slide.edit', $row->id);
+                $data['delete_url'] = route('setting.slide.destroy', $row->id);
+
+                return view('forms.action', $data);
+            })
+            ->editColumn('judul', function ($row) {
+                return $row->judul;
+                return $row->deskripsi;
+            })->make();
     }
 
     /**
@@ -58,8 +77,10 @@ class SlideController extends Controller
      */
     public function create()
     {
-        $page_title = 'Tambah Slide';
-        return view('setting.slide.create', compact('page_title'));
+        $page_title       = 'Slide';
+        $page_description = 'Tambah Slide';
+
+        return view('setting.slide.create', compact('page_title', 'page_description'));
     }
 
     /**
@@ -96,10 +117,12 @@ class SlideController extends Controller
      */
     public function show($id)
     {
-        $slide   = Slide::find($id);
+        //TODO : Tambahkan View
+
+        $slide      = Slide::FindOrFail($id);
         $page_title = 'Detail Slide :' . $slide->judul;
 
-        return view('setting.slide.show', compact('page_title', 'slide'));
+        return view('setting.slide.show', compact('page_title', 'page_description', 'slide'));
     }
 
     /**
@@ -110,9 +133,9 @@ class SlideController extends Controller
      */
     public function edit($id)
     {
-        $slide         = Slide::findOrFail($id);
-        $page_title       = 'Ubah';
-        $page_description = 'Ubah Slide : ' . $slide->judul_prosedur;
+        $slide            = Slide::FindOrFail($id);
+        $page_title       = 'Slide';
+        $page_description = 'Ubah Slide : ' . $slide->judul;
 
         return view('setting.slide.edit', compact('page_title', 'page_description', 'slide'));
     }
@@ -126,13 +149,13 @@ class SlideController extends Controller
     public function update(Request $request, $id)
     {
         try {
-            $slide = Slide::findOrFail($id);
+            $slide = Slide::FindOrFail($id);
             $slide->fill($request->all());
 
             request()->validate([
-                'judul' => 'required',
+                'judul'     => 'required',
                 'deskripsi' => 'required|max:100',
-                'gambar'  => 'required|file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
+                'gambar'    => 'file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
             ]);
 
             if ($request->hasFile('gambar')) {
@@ -142,7 +165,6 @@ class SlideController extends Controller
                 $request->file('gambar')->move($path, $fileName);
                 $slide->gambar = $path . $fileName;
             }
-
             $slide->save();
 
             return redirect()->route('setting.slide.index')->with('success', 'Data Slide berhasil disimpan!');
@@ -159,32 +181,12 @@ class SlideController extends Controller
      */
     public function destroy($id)
     {
-        Slide::find($id)->delete();
-        return redirect()->route('setting.slide.index')->with('success', 'Slide Berhasil dihapus!');
-    }
-    /**
-    * Get datatable
-    */
-    public function getData()
-    {
-        return DataTables::of(Slide::select('id', 'judul', 'deskripsi'))
-            ->addColumn('action', function ($row) {
-                // $show_url   = route('setting.slide.show', $row->id);
-                $edit_url   = route('setting.slide.edit', $row->id);
-                $delete_url = route('setting.slide.destroy', $row->id);
+        try {
+            Slide::destroy($id);
 
-                // $data['show_url'] = $show_url;
-
-                if (! Sentinel::guest()) {
-                    $data['edit_url']   = $edit_url;
-                    $data['delete_url'] = $delete_url;
-                }
-
-                return view('forms.action', $data);
-            })
-            ->editColumn('judul', function ($row) {
-                return $row->judul;
-                return $row->deskripsi;
-            })->make();
+            return redirect()->route('setting.slide.index')->with('success', 'Slide berhasil dihapus!');
+        } catch (Exception $e) {
+            return back()->withInput()->with('error', 'Slide gagal dihapus!');
+        }
     }
 }
