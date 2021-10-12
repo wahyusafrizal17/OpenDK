@@ -38,10 +38,8 @@ use App\Models\Profil;
 use function array_merge;
 use function array_sort;
 
-use function config;
 use function convert_born_date_to_age;
 use function date;
-use function env;
 use Illuminate\Support\Facades\DB;
 use function number_format;
 use function random_color;
