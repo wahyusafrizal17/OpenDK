@@ -8,8 +8,8 @@
         <small>{{ $page_description ?? '' }}</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="{{route('informasi.potensi.index')}}">Potensi</a></li>
+        <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="{{ route('informasi.potensi.index') }}">Potensi</a></li>
         <li class="active">{{ $page_title }}</li>
     </ol>
 </section>

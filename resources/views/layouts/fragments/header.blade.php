@@ -1,12 +1,12 @@
 <!-- Main Header -->
 <header class="main-header">
     <!-- Logo -->
-    <a href="{{$app->make('url')->to('/')}}" class="logo">
+    <a href="{{$app->make('url')->to('/') }}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><img src="@if(isset($profil->file_logo)) {{  asset($profil->file_logo) }} @else {{   asset('img/logo.png')}}@endif" alt="KD"  width="42px"></span>
+        <span class="logo-mini"><img src="@if(isset($profil->file_logo)) {{  asset($profil->file_logo) }} @else {{   asset('img/logo.png') }}@endif" alt="KD"  width="42px"></span>
         <!-- logo for regular state and mobile devices -->
         <div class="logo-lg" style="justify-content: flex-start; height: 100%; width:100%; display: flex;">
-            <div><img class="user-image" src="@if(isset($profil->file_logo)) {{  asset($profil->file_logo) }} @else {{   asset('img/logo.png')}}@endif" style="padding-right:5px; max-width:42px" alt="KD" width="42px"></div>
+            <div><img class="user-image" src="@if(isset($profil->file_logo)) {{  asset($profil->file_logo) }} @else {{   asset('img/logo.png') }}@endif" style="padding-right:5px; max-width:42px" alt="KD" width="42px"></div>
             <div style="text-align: left; line-height: 20px; margin-bottom: auto; margin-top: auto;">
                 <div class="" style="font-size:11px;">{{ strtoupper('Kab. ' . $profil->nama_kabupaten) }}</div>
                 <div class="" style="font-size: clamp(10px, 2vw, 10px); font-weight:600; ">{{ strtoupper($sebutan_wilayah.' '.$profil->nama_kecamatan) }}</div>
@@ -27,7 +27,7 @@
             <ul class="nav navbar-nav">
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
-                    <a href="{{$app->make('url')->to('login')}}"><img src="{{ asset("/img/login.png")}}" class="user-image" alt="User Image"><span
+                    <a href="{{$app->make('url')->to('login') }}"><img src="{{ asset("/img/login.png")}}" class="user-image" alt="User Image"><span
                                 class="hidden-xs">Login</span></a>
                 </li>
                 <!-- Control Sidebar Toggle Button -->

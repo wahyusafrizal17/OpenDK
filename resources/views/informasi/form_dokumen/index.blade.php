@@ -8,7 +8,7 @@
         <small>{{ $page_description ?? '' }}</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li class="active">{!! $page_title !!}</li>
     </ol>
 </section>
@@ -22,7 +22,7 @@
         <div class="col-md-12">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <a href="{{route('informasi.form-dokumen.create')}}" class="btn btn-primary btn-sm {{Sentinel::guest() ? 'hidden':''}}" title="Tambah Form Dokumen"><i
+                    <a href="{{ route('informasi.form-dokumen.create') }}" class="btn btn-primary btn-sm {{Sentinel::guest() ? 'hidden':''}}" title="Tambah Form Dokumen"><i
                     class="fa fa-plus"></i>&ensp;Tambah Data</a>
 
                 </div>
