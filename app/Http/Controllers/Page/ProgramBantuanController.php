@@ -54,10 +54,10 @@ class ProgramBantuanController extends Controller
 
         $page_title       = 'Program Bantuan';
         $page_description = 'Data Program Bantuan';
-        $defaultProfil    = config('app.default_profile');
         $year_list        = years_list();
-        $list_desa        = DB::table('das_data_desa')->select('*')->where('kecamatan_id', '=', $defaultProfil)->get();
-        return view('pages.program_bantuan.show_program_bantuan', compact('page_title', 'page_description', 'defaultProfil', 'year_list', 'list_desa'));
+        $list_desa        = DataDesa::all();
+
+        return view('pages.program_bantuan.show_program_bantuan', compact('page_title', 'page_description', 'year_list', 'list_desa'));
     }
 
     public function getChartBantuanPenduduk()

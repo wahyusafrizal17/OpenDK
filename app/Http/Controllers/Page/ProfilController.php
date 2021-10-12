@@ -56,31 +56,26 @@ class ProfilController extends Controller
     {
         Counter::count('profil.letak-geografis');
 
-        $defaultProfil = config('app.default_profile');
-
-        $profil = Profil::where('kecamatan_id', $defaultProfil)->first();
-
+        $profil     = $this->profil;
         $page_title = 'Letak Geografis';
         if (isset($profil)) {
-            $page_description = ucwords(strtolower($profil->kecamatan->nama));
+            $page_description = ucwords(strtolower($profil->nama_kecamatan));
         }
 
-        return view('pages.profil.letakgeografis', compact('page_title', 'page_description', 'profil', 'defaultProfil'));
+        return view('pages.profil.letakgeografis', compact('page_title', 'page_description', 'profil'));
     }
 
     public function StrukturPemerintahan()
     {
         Counter::count('profil.struktur-pemerintahan');
 
-        $defaultProfil = config('app.default_profile');
-        $profil        = Profil::where('kecamatan_id', $defaultProfil)->first();
-
-        $dokumen = DB::table('das_form_dokumen')->take(5)->get();
-
+        $profil     = $this->profil;
+        $dokumen    = DB::table('das_form_dokumen')->take(5)->get();
         $page_title = 'Struktur Pemerintahan';
         if (isset($profil)) {
-            $page_description = ucwords(strtolower($profil->kecamatan->nama));
+            $page_description = ucwords(strtolower($profil->nama_kecamatan));
         }
+
         return view('pages.profil.strukturpemerintahan', compact('page_title', 'page_description', 'profil'));
     }
 
@@ -90,13 +85,10 @@ class ProfilController extends Controller
 
         $data['page_title']       = 'Kependudukan';
         $data['page_description'] = 'Statistik Kependudukan';
-        $defaultProfil            = config('app.default_profile');
-        $data['defaultProfil']    = $defaultProfil;
         $data['year_list']        = years_list();
-        $data['list_kecamatan']   = Profil::with('kecamatan')->orderBy('kecamatan_id', 'desc')->get();
-        $data['list_desa']        = DB::table('das_data_desa')->select('*')->where('kecamatan_id', '=', $defaultProfil)->get();
+        $data['list_desa']        = DataDesa::all();
 
-        $data = array_merge($data, $this->createDashboardKependudukan($defaultProfil, 'ALL', date('Y')));
+        $data = array_merge($data, $this->createDashboardKependudukan($this->profil->id, 'ALL', date('Y')));
 
         return view('pages.kependudukan.show_kependudukan')->with($data);
     }
@@ -105,15 +97,14 @@ class ProfilController extends Controller
     {
         Counter::count('profil.visi-misi');
 
-        $defaultProfil = config('app.default_profile');
-        $profil        = Profil::where('kecamatan_id', $defaultProfil)->first();
-
-        $dokumen = DB::table('das_form_dokumen')->take(5)->get();
+        $profil     = $this->profil;
+        $dokumen    = DB::table('das_form_dokumen')->take(5)->get();
 
         $page_title = 'Visi dan Misi';
         if (isset($profil)) {
-            $page_description = ucwords(strtolower($profil->kecamatan->nama));
+            $page_description = ucwords(strtolower($profil->nama_kecamatan));
         }
+
         return view('pages.profil.visimisi', compact('page_title', 'page_description', 'profil'));
     }
 
@@ -121,12 +112,11 @@ class ProfilController extends Controller
     {
         Counter::count('profil.sejarah');
 
-        $defaultProfil = config('app.default_profile');
+        $profil     = $this->profil;
 
-        $profil     = Profil::where('kecamatan_id', $defaultProfil)->first();
         $page_title = 'Sejarah';
         if (isset($profil)) {
-            $page_description = ucwords(strtolower($profil->kecamatan->nama));
+            $page_description = ucwords(strtolower($profil->nama_kecamatan));
         }
 
         return view('pages.profil.sejarah', compact('page_title', 'page_description', 'profil'));
@@ -134,17 +124,14 @@ class ProfilController extends Controller
 
     public function showProfile()
     {
-        $defaultProfil = config('app.default_profile');
-
-        $profil = Profil::where('kecamatan_id', $defaultProfil)->first();
-
-        $dokumen = DB::table('das_form_dokumen')->take(5)->get();
+        $profil     = $this->profil;
+        $dokumen    = DB::table('das_form_dokumen')->take(5)->get();
 
         $page_title = 'Profil';
         if (isset($profil)) {
-            $page_description = ucwords(strtolower($this->sebutan_wilayah . ' ' . $profil->kecamatan->nama));
+            $page_description = ucwords(strtolower($profil->nama_kecamatan));
         }
 
-        return view('pages.profil.show_profil', compact('page_title', 'page_description', 'profil', 'defaultProfil', 'dokumen'));
+        return view('pages.profil.show_profil', compact('page_title', 'page_description', 'profil', 'dokumen'));
     }
 }
