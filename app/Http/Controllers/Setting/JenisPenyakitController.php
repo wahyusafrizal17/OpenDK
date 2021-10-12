@@ -59,7 +59,6 @@ class JenisPenyakitController extends Controller
     {
         return DataTables::of(JenisPenyakit::all()->last()->get())
             ->addColumn('action', function ($row) {
-
                 $data['edit_url']   = route('setting.jenis-penyakit.edit', $row->id);
                 $data['delete_url'] = route('setting.jenis-penyakit.destroy', $row->id);
 
