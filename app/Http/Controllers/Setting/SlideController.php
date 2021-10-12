@@ -33,7 +33,6 @@ namespace App\Http\Controllers\Setting;
 
 use App\Http\Controllers\Controller;
 use App\Models\Slide;
-use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use League\Flysystem\Exception;
@@ -41,7 +40,6 @@ use Yajra\DataTables\DataTables;
 
 class SlideController extends Controller
 {
-    
     public function index()
     {
         $page_title       = 'Slide';
@@ -57,7 +55,7 @@ class SlideController extends Controller
     {
         return DataTables::of(Slide::all())
             ->addColumn('action', function ($row) {
-                
+
                 // $data['show_url']   = route('setting.slide.show', $row->id); //TODO : Tambahkan View
                 $data['edit_url']   = route('setting.slide.edit', $row->id);
                 $data['delete_url'] = route('setting.slide.destroy', $row->id);
