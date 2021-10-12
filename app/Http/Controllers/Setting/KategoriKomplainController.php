@@ -51,19 +51,18 @@ class KategoriKomplainController extends Controller
     {
         $page_title       = 'Kategori Komplain';
         $page_description = 'Daftar Kategori Komplain';
+
         return view('setting.komplain_kategori.index', compact('page_title', 'page_description'));
     }
 
     // Get Data Kategori Komplain
     public function getData()
     {
-        return DataTables::of(KategoriKomplain::select(['id', 'nama'])->orderBy('id'))
+        return DataTables::of(KategoriKomplain::latest()->get())
             ->addColumn('action', function ($row) {
-                $edit_url   = route('setting.komplain-kategori.edit', $row->id);
-                $delete_url = route('setting.komplain-kategori.destroy', $row->id);
 
-                $data['edit_url']   = $edit_url;
-                $data['delete_url'] = $delete_url;
+                $data['edit_url']   = route('setting.komplain-kategori.edit', $row->id);
+                $data['delete_url'] = route('setting.komplain-kategori.destroy', $row->id);
 
                 return view('forms.action', $data);
             })
@@ -73,7 +72,7 @@ class KategoriKomplainController extends Controller
     // Create Action
     public function create()
     {
-        $page_title       = 'Tambah';
+        $page_title       = 'Kategori Komplain';
         $page_description = 'Tambah Kategori Komplain';
 
         return view('setting.komplain_kategori.create', compact('page_title', 'page_description'));
@@ -99,9 +98,10 @@ class KategoriKomplainController extends Controller
 
     public function edit($id)
     {
-        $kategori         = KategoriKomplain::findOrFail($id);
-        $page_title       = 'Edit Kategori';
-        $page_description = 'Edit Kategori Komplain ' . $kategori->nama;
+        $kategori         = KategoriKomplain::FindOrFail($id);
+        $page_title       = 'Kategori Komplain';
+        $page_description = 'Ubah Kategori Komplain : ' . $kategori->nama;
+        
         return view('setting.komplain_kategori.edit', compact('page_title', 'page_description', 'kategori'));
     }
 
@@ -109,7 +109,7 @@ class KategoriKomplainController extends Controller
     {
         // Save Request
         try {
-            $kategori = KategoriKomplain::findOrFail($id);
+            $kategori = KategoriKomplain::FindOrFail($id);
             $kategori->fill($request->all());
 
             request()->validate([
@@ -126,7 +126,7 @@ class KategoriKomplainController extends Controller
     public function destroy($id)
     {
         try {
-            KategoriKomplain::findOrFail($id)->delete();
+            KategoriKomplain::destroy($id);
 
             return redirect()->route('setting.komplain-kategori.index')->with('success', 'Kategori Komplain berhasil dihapus!');
         } catch (Exception $e) {
