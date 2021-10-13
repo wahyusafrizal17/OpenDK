@@ -54,7 +54,7 @@
             serverSide: true,
             ajax: "{!! route( 'admin-komplain.getdata' ) !!}",
             columns: [
-                {data: 'actions', name: 'actions', class: 'text-center', searchable: false, orderable: false},
+                {data: 'aksi', name: 'aksi', class: 'text-center', searchable: false, orderable: false},
                 {data: 'komplain_id', name: 'komplain_id'},
                 {data: 'nama', name: 'nama'},
                 {data: 'kategori', name: 'kategori'},

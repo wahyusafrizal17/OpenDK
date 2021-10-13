@@ -58,7 +58,7 @@
             serverSide: true,
             ajax: "{!! route( 'data.anggaran-desa.getdata' ) !!}",
             columns: [
-                {data: 'actions', name: 'actions', class: 'text-center', searchable: false, orderable: false},
+                {data: 'aksi', name: 'aksi', class: 'text-center', searchable: false, orderable: false},
                 {data: 'desa.nama', name: 'desa.nama'},
                 {data: 'no_akun', name: 'no_akun'},
                 {data: 'nama_akun', name: 'nama_akun'},

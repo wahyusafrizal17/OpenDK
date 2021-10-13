@@ -57,7 +57,7 @@
             serverSide: true,
             ajax: "{!! route( 'data.aki-akb.getdata' ) !!}",
             columns: [
-                {data: 'actions', name: 'actions', class: 'text-center', searchable: false, orderable: false},
+                {data: 'aksi', name: 'aksi', class: 'text-center', searchable: false, orderable: false},
                 {data: 'desa.nama', name: 'desa.nama'},
                 {data: 'aki', name: 'aki'},
                 {data: 'akb', name: 'akb'},

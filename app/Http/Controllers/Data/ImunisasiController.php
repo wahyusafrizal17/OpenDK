@@ -78,7 +78,7 @@ class ImunisasiController extends Controller
     public function getDataAKIAKB()
     {
         return DataTables::of(Imunisasi::with(['desa']))
-            ->addColumn('actions', function ($row) {
+            ->addColumn('aksi', function ($row) {
                 $edit_url   = route('data.imunisasi.edit', $row->id);
                 $delete_url = route('data.imunisasi.destroy', $row->id);
 
@@ -90,7 +90,7 @@ class ImunisasiController extends Controller
             ->editColumn('bulan', function ($row) {
                 return months_list()[$row->bulan];
             })
-            ->rawColumns(['actions'])->make();
+            ->rawColumns(['aksi'])->make();
     }
 
     /**

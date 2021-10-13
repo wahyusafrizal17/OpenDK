@@ -73,7 +73,7 @@ class AnggaranDesaController extends Controller
     public function getDataAnggaran()
     {
         return DataTables::of(AnggaranDesa::with('desa'))
-            ->addColumn('actions', function ($row) {
+            ->addColumn('aksi', function ($row) {
                 $edit_url   = route('data.anggaran-desa.edit', $row->id);
                 $delete_url = route('data.anggaran-desa.destroy', $row->id);
 
@@ -87,7 +87,7 @@ class AnggaranDesaController extends Controller
             ->editColumn('jumlah', function ($row) {
                 return number_format($row->jumlah, 2);
             })
-            ->rawColumns(['actions'])->make();
+            ->rawColumns(['aksi'])->make();
     }
 
     /**

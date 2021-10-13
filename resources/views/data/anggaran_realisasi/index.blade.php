@@ -60,7 +60,7 @@
             serverSide: true,
             ajax: "{!! route( 'data.anggaran-realisasi.getdata' ) !!}",
             columns: [
-                {data: 'actions', name: 'actions', class: 'text-center', searchable: false, orderable: false},
+                {data: 'aksi', name: 'aksi', class: 'text-center', searchable: false, orderable: false},
                 {data: 'total_anggaran', name: 'total_anggaran'},
                 {data: 'total_belanja', name: 'total_belanja'},
                 {data: 'belanja_pegawai', name: 'belanja_pegawai'},

@@ -63,7 +63,7 @@
             serverSide: true,
             ajax: "{!! route( 'data.putus-sekolah.getdata' ) !!}",
             columns: [
-                {data: 'actions', name: 'actions', class:'text-center', searchable: false, orderable: false},
+                {data: 'aksi', name: 'aksi', class:'text-center', searchable: false, orderable: false},
                 {data: 'desa.nama', name: 'desa.nama'},
                 {data: 'siswa_paud', name: 'siswa_paud'},
                 {data: 'anak_usia_paud', name: 'anak_usia_paud'},

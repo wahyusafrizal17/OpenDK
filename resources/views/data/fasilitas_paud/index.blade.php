@@ -58,7 +58,7 @@
             serverSide: true,
             ajax: "{!! route( 'data.fasilitas-paud.getdata' ) !!}",
             columns: [
-                {data: 'actions', name: 'actions', class: 'text-center', searchable: false, orderable: false},
+                {data: 'aksi', name: 'aksi', class: 'text-center', searchable: false, orderable: false},
                 {data: 'desa.nama', name: 'desa.nama'},
                 {data: 'jumlah_paud', name: 'jumlah_paud'},
                 {data: 'jumlah_guru_paud', name: 'jumlah_guru_paud'},

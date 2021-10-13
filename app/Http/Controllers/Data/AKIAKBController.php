@@ -78,7 +78,7 @@ class AKIAKBController extends Controller
     public function getDataAKIAKB()
     {
         return DataTables::of(AkiAkb::with(['desa']))
-            ->addColumn('actions', function ($row) {
+            ->addColumn('aksi', function ($row) {
                 $edit_url   = route('data.aki-akb.edit', $row->id);
                 $delete_url = route('data.aki-akb.destroy', $row->id);
 
@@ -90,7 +90,7 @@ class AKIAKBController extends Controller
             ->editColumn('bulan', function ($row) {
                 return months_list()[$row->bulan];
             })
-            ->rawColumns(['actions'])->make();
+            ->rawColumns(['aksi'])->make();
     }
 
     /**

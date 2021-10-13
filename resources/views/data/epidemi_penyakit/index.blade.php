@@ -57,7 +57,7 @@
             serverSide: true,
             ajax: "{!! route( 'data.epidemi-penyakit.getdata' ) !!}",
             columns: [
-                {data: 'actions', name: 'actions', class: 'text-center', searchable: false, orderable: false},
+                {data: 'aksi', name: 'aksi', class: 'text-center', searchable: false, orderable: false},
                 {data: 'desa.nama', name: 'desa.nama'},
                 {data: 'penyakit.nama', name: 'penyakit.nama'},
                 {data: 'jumlah_penderita', name: 'jumlah_penderita'},

@@ -60,7 +60,7 @@
             serverSide: true,
             ajax: "{!! route( 'data.tingkat-pendidikan.getdata' ) !!}",
             columns: [
-                {data: 'actions', name: 'actions', class: 'text-center', searchable: false, orderable: false},
+                {data: 'aksi', name: 'aksi', class: 'text-center', searchable: false, orderable: false},
                 {data: 'desa.nama', name: 'desa.nama'},
                 {data: 'tidak_tamat_sekolah', name: 'tidak_tamat_sekolah'},
                 {data: 'tamat_sd', name: 'tamat_sd'},

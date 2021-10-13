@@ -57,7 +57,7 @@
             serverSide: false,
             ajax: "{!! route( 'data.toilet-sanitasi.getdata' ) !!}",
             columns: [
-                {data: 'actions', name: 'actions', class: 'text-center', searchable: false, orderable: false},
+                {data: 'aksi', name: 'aksi', class: 'text-center', searchable: false, orderable: false},
                 {data: 'desa.nama', name: 'desa.nama'},
                 {data: 'toilet', name: 'toilet'},
                 {data: 'sanitasi', name: 'sanitasi'},

@@ -76,7 +76,7 @@ class EpidemiPenyakitController extends Controller
     public function getDataAKIAKB()
     {
         return DataTables::of(EpidemiPenyakit::with(['penyakit', 'desa']))
-            ->addColumn('actions', function ($row) {
+            ->addColumn('aksi', function ($row) {
                 $edit_url   = route('data.epidemi-penyakit.edit', $row->id);
                 $delete_url = route('data.epidemi-penyakit.destroy', $row->id);
 
@@ -88,7 +88,7 @@ class EpidemiPenyakitController extends Controller
             ->editColumn('bulan', function ($row) {
                 return months_list()[$row->bulan];
             })
-            ->rawColumns(['actions'])->make();
+            ->rawColumns(['aksi'])->make();
     }
 
     /**

@@ -56,7 +56,7 @@
             serverSide: true,
             ajax: "{!! route( 'data.imunisasi.getdata' ) !!}",
             columns: [
-                {data: 'actions', name: 'actions', class: 'text-center', searchable: false, orderable: false},
+                {data: 'aksi', name: 'aksi', class: 'text-center', searchable: false, orderable: false},
                 {data: 'desa.nama', name: 'desa.nama'},
                 {data: 'cakupan_imunisasi', name: 'cakupan_imunisasi'},
                 {data: 'bulan', name: 'bulan'},
