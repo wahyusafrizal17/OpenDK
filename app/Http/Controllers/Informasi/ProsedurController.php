@@ -69,7 +69,6 @@ class ProsedurController extends Controller
     {
         return DataTables::of(Prosedur::select('id', 'judul_prosedur'))
             ->addColumn('action', function ($row) {
-                
                 $data['show_url'] = route('informasi.prosedur.show', $row->id);
 
                 if (! Sentinel::guest()) {
