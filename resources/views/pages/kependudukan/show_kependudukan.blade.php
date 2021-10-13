@@ -262,7 +262,7 @@
             var did = e.params.data;
             var year = $('#list_year').find(":selected").text();
 
-            change_das_kependudukan(kid, did.id, year);
+            change_das_kependudukan(pid, did.id, year);
         });
 
         // Change Dashboard when List Year changed
@@ -270,7 +270,7 @@
             var pid = $('#profil_id').val();
             var did = $('#list_desa').find(":selected").val();
             var year = this.value;
-            change_das_kependudukan(kid, did, year);
+            change_das_kependudukan(pid, did, year);
         });
 
 
@@ -284,24 +284,24 @@
         var did = $('#list_desa').find(":selected").val();
         var year = $('#list_year').find(":selected").text();
 
-        change_das_kependudukan(kid, did, year);
+        change_das_kependudukan(pid, did, year);
         /*
         End Initial Dashboard
          */
 
     });
 
-    function change_das_kependudukan(kid, did, year) {
+    function change_das_kependudukan(pid, did, year) {
 
         // Load ajax data penduduk
         $.ajax('{!! route('statistik.show-kependudukan') !!}', {
-            data: {kid: kid, did: did, y: year}
+            data: {kid: pid, did: did, y: year}
         }).done(function (data) {
 
            /* if(data.total_penduduk==0){
                 alert("Data penduduk di tahun " + year + " adalah 0. Data dialihkan ke tahun sebelumnya.");
                 $("#list_year").val(year - 1);
-                change_das_kependudukan(kid, did, year-1);
+                change_das_kependudukan(pid, did, year-1);
             }else{*/
                 $('#total_penduduk').html(data.total_penduduk);
                 $('#total_lakilaki').html(data.total_lakilaki);
@@ -326,49 +326,49 @@
 
         // Load Ajax Chart Pertumbuhan Penduduk
         $.ajax('{!! route('statistik.chart-kependudukan') !!}', {
-            data: {kid: kid, did: did, y: year}
+            data: {kid: pid, did: did, y: year}
         }).done(function (data) {
             create_chart_penduduk(data);
         });
 
         // Load Ajax Chart Penduduk By Usia
         $.ajax('{!! route('statistik.chart-kependudukan-usia') !!}', {
-            data: {kid: kid, did: did, y: year}
+            data: {kid: pid, did: did, y: year}
         }).done(function (data) {
             create_chart_usia(data);
         });
 
         // Load Ajax Chart Penduduk By Pendidikan
         $.ajax('{!! route('statistik.chart-kependudukan-pendidikan') !!}', {
-            data: {kid: kid, did: did, y: year}
+            data: {kid: pid, did: did, y: year}
         }).done(function (data) {
             create_chart_pendidikan(data);
         });
 
         // Load Ajax Chart Penduduk By Golongan Darah
         $.ajax('{!! route('statistik.chart-kependudukan-goldarah') !!}', {
-            data: {kid: kid, did: did, y: year}
+            data: {kid: pid, did: did, y: year}
         }).done(function (data) {
             create_chart_goldarah(data);
         });
 
         // Load Ajax Chart Penduduk By Status Kawin
         $.ajax('{!! route('statistik.chart-kependudukan-kawin') !!}', {
-            data: {kid: kid, did: did, y: year}
+            data: {kid: pid, did: did, y: year}
         }).done(function (data) {
             create_chart_kawin(data);
         });
 
         // Load Ajax Chart Penduduk By Agama
         $.ajax('{!! route('statistik.chart-kependudukan-agama') !!}', {
-            data: {kid: kid, did: did, y: year}
+            data: {kid: pid, did: did, y: year}
         }).done(function (data) {
             create_chart_agama(data);
         });
 
         // Load Ajax Chart Penduduk By Jenis Kelamin
        /* $.ajax('{!! route('statistik.chart-kependudukan-kelamin') !!}', {
-            data: {kid: kid, did: did, y: year}
+            data: {kid: pid, did: did, y: year}
         }).done(function (data) {
             create_chart_kelamin(data);
         }); */
@@ -1284,7 +1284,7 @@
                 ajax: {
                     url: "{!! route( 'statistik.data-penduduk' ) !!}",
                     type: 'GET',
-                    data: {t:type, kid:kid, did:did, year:year},
+                    data: {t:type, kid:pid, did:did, year:year},
                 },
                 columns: [
                     // {data: 'action', name: 'action', class: 'text-center', searchable: false, orderable: false},

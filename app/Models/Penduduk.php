@@ -44,7 +44,7 @@ class Penduduk extends Model
      * Relation Methods
      * */
 
-    public function getPendudukAktif($kid, $did, $year)
+    public function getPendudukAktif($pid, $did, $year)
     {
         $penduduk =  $this
             ->where('status_dasar', 1)

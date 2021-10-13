@@ -10,7 +10,7 @@
                     <div class="form-group">
                         <label for="list_desa" class="col-sm-4 control-label">Desa</label>
                         <div class="col-sm-8">
-                            <input type="hidden" id="profil_id" value="{{ $profil_id }}">
+                            <input type="hidden" id="profil_id" value="{{ $profil->id }}">
                             <select class="form-control" id="list_desa">
                                 <option value="Semua">Semua Desa</option>
                                 @foreach($list_desa as $desa)
@@ -93,7 +93,7 @@
             var did = e.params.data;
             var year = $('#list_year').find(":selected").text();
 
-            change_das_bantuan(kid, did.id, year);
+            change_das_bantuan(pid, did.id, year);
         });
 
         // Change Dashboard when List Year changed
@@ -101,36 +101,35 @@
             var pid = $('#profil_id').val();
             var did = $('#list_desa').find(":selected").val();
             var year = this.value;
-            change_das_bantuan(kid, did, year);
+            change_das_bantuan(pid, did, year);
         });
 
 
         /*
-         Initial Dashboard
+         * Initial Dashboard
          */
-        var pid = '{{ $profil_id }}';
         if (kid == null) {
             kid = $('#profil_id').val();
         }
         var did = $('#list_desa').find(":selected").val();
         var year = $('#list_year').find(":selected").text();
 
-        change_das_bantuan(kid, did, year);
+        change_das_bantuan(pid, did, year);
         /*
-         End Initial Dashboard
+         * End Initial Dashboard
          */
     });
 
-    function change_das_bantuan(kid, did, year)
+    function change_das_bantuan(pid, did, year)
     {
         $.ajax('{!! route('statistik.program-bantuan.chart-penduduk') !!}', {
-            data: {kid: kid, did: did, y: year}
+            data: {kid: pid, did: did, y: year}
         }).done(function (data) {
             create_chart_bantuan_penduduk(data);
         });
 
         $.ajax('{!! route('statistik.program-bantuan.chart-keluarga') !!}', {
-            data: {kid: kid, did: did, y: year}
+            data: {kid: pid, did: did, y: year}
         }).done(function (data) {
             create_chart_bantuan_keluarga(data);
         });
