@@ -68,7 +68,7 @@ $user = Sentinel::getUser();
                         @endif
                         @if($user->hasAnyAccess(['admin', 'data-penduduk']))
                             <li class="treeview {{ (Request::is(['data/penduduk/*', 'data/penduduk/index', 'data/penduduk', 'data/keluarga/*', 'data/keluarga/index', 'data/keluarga', 'data/laporan-penduduk'])? 'active' : '') }}">
-                                <a href="#"><i class="fa fa-users"></i>Kependudukan
+                                <a href="#"><i class="fa fa-circle-o"></i>Kependudukan
                                     <span class="pull-right-container">
                                         <i class="fa fa-angle-left pull-right"></i>
                                     </span>
