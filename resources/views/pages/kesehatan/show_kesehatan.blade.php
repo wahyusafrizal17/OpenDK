@@ -11,7 +11,7 @@
                         <div class="col-sm-8">
                             <input type="hidden" id="profil_id" value="{{ $profil_id }}">
                             <select class="form-control" id="list_desa">
-                                <option value="Semua">Semua</option>
+                                <option value="Semua">Semua Desa</option>
                                 @foreach($list_desa as $desa)
                                     <option value="{{ $desa->desa_id}}">{{$desa->nama}}</option>
                                 @endforeach
