@@ -57,8 +57,9 @@ class DownloadController extends Controller
     {
         return DataTables::of(Prosedur::select('id', 'judul_prosedur'))
             ->addColumn('action', function ($row) {
-                $show_url         = route('unduhan.prosedur.show', ['nama_prosedur' => str_slug($row->judul_prosedur)]);
-                $data['show_url'] = $show_url;
+                
+                $data['show_url'] = route('unduhan.prosedur.show', ['nama_prosedur' => str_slug($row->judul_prosedur)]);
+
                 return view('forms.action', $data);
             })
             ->editColumn('judul_prosedur', function ($row) {
@@ -120,9 +121,9 @@ class DownloadController extends Controller
         $query = DB::table('das_form_dokumen')->selectRaw('id, nama_dokumen, file_dokumen');
         return DataTables::of($query->get())
             ->addColumn('action', function ($row) {
-                // $show_url = route('informasi.form-dokumen.show', $row->id);
-                $download_url         = asset($row->file_dokumen);
-                $data['download_url'] = $download_url;
+                
+                $data['download_url'] = asset($row->file_dokumen);
+                
                 return view('forms.action', $data);
             })->make();
     }

@@ -49,7 +49,7 @@ class KeluargaController extends Controller
     public function index()
     {
         $page_title       = 'Keluarga';
-        $page_description = 'Data Keluarga';
+        $page_description = 'Daftar Keluarga';
 
         return view('data.keluarga.index', compact('page_title', 'page_description'));
     }
@@ -57,13 +57,12 @@ class KeluargaController extends Controller
     /**
      * Return datatable Data Keluarga
      */
-
     public function getKeluarga()
     {
         return DataTables::of(Keluarga::query())
             ->addColumn('action', function ($row) {
-                $show_url   = route('data.keluarga.show', $row->id);
-                $data['show_url']   = $show_url;
+                
+                $data['show_url']   = route('data.keluarga.show', $row->id);
 
                 return view('forms.action', $data);
             })
