@@ -20,8 +20,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
         DB::table('das_keluarga')->truncate();
 
         DB::table('das_keluarga')->insert(array (
-            0 =>
-            array (
+            0 => array (
                 'id' => '1',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070208130002',
@@ -35,8 +34,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            1 =>
-            array (
+            1 => array (
                 'id' => '2',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072808070078',
@@ -50,8 +48,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            2 =>
-            array (
+            2 => array (
                 'id' => '3',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071101128300',
@@ -65,8 +62,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            3 =>
-            array (
+            3 => array (
                 'id' => '4',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072708070041',
@@ -80,8 +76,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            4 =>
-            array (
+            4 => array (
                 'id' => '5',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072409070010',
@@ -95,8 +90,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            5 =>
-            array (
+            5 => array (
                 'id' => '6',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072609070005',
@@ -110,8 +104,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            6 =>
-            array (
+            6 => array (
                 'id' => '7',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070208013000',
@@ -125,8 +118,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            7 =>
-            array (
+            7 => array (
                 'id' => '8',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070712110008',
@@ -140,8 +132,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            8 =>
-            array (
+            8 => array (
                 'id' => '9',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070708150002',
@@ -155,8 +146,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            9 =>
-            array (
+            9 => array (
                 'id' => '10',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072709070005',
@@ -170,8 +160,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            10 =>
-            array (
+            10 => array (
                 'id' => '11',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070705130002',
@@ -185,8 +174,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            11 =>
-            array (
+            11 => array (
                 'id' => '12',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072011150001',
@@ -200,8 +188,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            12 =>
-            array (
+            12 => array (
                 'id' => '13',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071812120005',
@@ -215,8 +202,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            13 =>
-            array (
+            13 => array (
                 'id' => '14',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070807100001',
@@ -230,8 +216,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            14 =>
-            array (
+            14 => array (
                 'id' => '15',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071701170001',
@@ -245,8 +230,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            15 =>
-            array (
+            15 => array (
                 'id' => '16',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708066066',
@@ -260,8 +244,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            16 =>
-            array (
+            16 => array (
                 'id' => '17',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072808070085',
@@ -275,8 +258,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            17 =>
-            array (
+            17 => array (
                 'id' => '18',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072709070017',
@@ -290,8 +272,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            18 =>
-            array (
+            18 => array (
                 'id' => '19',
                 'desa_id' => $desa_id,
                 'no_kk' => '110501708063913',
@@ -305,8 +286,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            19 =>
-            array (
+            19 => array (
                 'id' => '20',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708063998',
@@ -320,8 +300,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            20 =>
-            array (
+            20 => array (
                 'id' => '21',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072609070041',
@@ -335,8 +314,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            21 =>
-            array (
+            21 => array (
                 'id' => '22',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072709070003',
@@ -350,8 +328,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            22 =>
-            array (
+            22 => array (
                 'id' => '23',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072709070012',
@@ -365,8 +342,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            23 =>
-            array (
+            23 => array (
                 'id' => '24',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072709070028',
@@ -380,8 +356,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            24 =>
-            array (
+            24 => array (
                 'id' => '25',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072609070021',
@@ -395,8 +370,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            25 =>
-            array (
+            25 => array (
                 'id' => '26',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072709070001',
@@ -410,8 +384,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            26 =>
-            array (
+            26 => array (
                 'id' => '27',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061810',
@@ -425,8 +398,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            27 =>
-            array (
+            27 => array (
                 'id' => '28',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072609070046',
@@ -440,8 +412,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            28 =>
-            array (
+            28 => array (
                 'id' => '29',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072609070029',
@@ -455,8 +426,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            29 =>
-            array (
+            29 => array (
                 'id' => '30',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072609070035',
@@ -470,8 +440,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            30 =>
-            array (
+            30 => array (
                 'id' => '31',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072709070020',
@@ -485,8 +454,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            31 =>
-            array (
+            31 => array (
                 'id' => '32',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072609077003',
@@ -500,8 +468,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            32 =>
-            array (
+            32 => array (
                 'id' => '33',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105100106110004',
@@ -515,8 +482,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            33 =>
-            array (
+            33 => array (
                 'id' => '34',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072808070076',
@@ -530,8 +496,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            34 =>
-            array (
+            34 => array (
                 'id' => '35',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071308150001',
@@ -545,8 +510,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            35 =>
-            array (
+            35 => array (
                 'id' => '36',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071504110001',
@@ -560,8 +524,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            36 =>
-            array (
+            36 => array (
                 'id' => '37',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065691',
@@ -575,8 +538,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            37 =>
-            array (
+            37 => array (
                 'id' => '38',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070105070004',
@@ -590,8 +552,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            38 =>
-            array (
+            38 => array (
                 'id' => '39',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072509070004',
@@ -605,8 +566,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            39 =>
-            array (
+            39 => array (
                 'id' => '40',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072509070006',
@@ -620,8 +580,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            40 =>
-            array (
+            40 => array (
                 'id' => '41',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072509070008',
@@ -635,8 +594,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            41 =>
-            array (
+            41 => array (
                 'id' => '42',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072609074500',
@@ -650,8 +608,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            42 =>
-            array (
+            42 => array (
                 'id' => '43',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072609070004',
@@ -665,8 +622,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            43 =>
-            array (
+            43 => array (
                 'id' => '44',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072609070008',
@@ -680,8 +636,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            44 =>
-            array (
+            44 => array (
                 'id' => '45',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072708070038',
@@ -695,8 +650,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            45 =>
-            array (
+            45 => array (
                 'id' => '46',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072709070009',
@@ -710,8 +664,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            46 =>
-            array (
+            46 => array (
                 'id' => '47',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072808070075',
@@ -725,8 +678,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            47 =>
-            array (
+            47 => array (
                 'id' => '48',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072808070084',
@@ -740,8 +692,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            48 =>
-            array (
+            48 => array (
                 'id' => '49',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073010070015',
@@ -755,8 +706,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            49 =>
-            array (
+            49 => array (
                 'id' => '50',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070110070069',
@@ -770,8 +720,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            50 =>
-            array (
+            50 => array (
                 'id' => '51',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072107170001',
@@ -785,8 +734,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            51 =>
-            array (
+            51 => array (
                 'id' => '52',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070910140001',
@@ -800,8 +748,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            52 =>
-            array (
+            52 => array (
                 'id' => '53',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072408070006',
@@ -815,8 +762,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            53 =>
-            array (
+            53 => array (
                 'id' => '54',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072007070004',
@@ -830,8 +776,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            54 =>
-            array (
+            54 => array (
                 'id' => '55',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708062764',
@@ -845,8 +790,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            55 =>
-            array (
+            55 => array (
                 'id' => '56',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072809070076',
@@ -860,8 +804,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            56 =>
-            array (
+            56 => array (
                 'id' => '57',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072708070046',
@@ -875,8 +818,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            57 =>
-            array (
+            57 => array (
                 'id' => '58',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073112090001',
@@ -890,8 +832,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            58 =>
-            array (
+            58 => array (
                 'id' => '59',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071605070004',
@@ -905,8 +846,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            59 =>
-            array (
+            59 => array (
                 'id' => '60',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072708070036',
@@ -920,8 +860,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            60 =>
-            array (
+            60 => array (
                 'id' => '61',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070110070015',
@@ -935,8 +874,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            61 =>
-            array (
+            61 => array (
                 'id' => '62',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073105070002',
@@ -950,8 +888,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            62 =>
-            array (
+            62 => array (
                 'id' => '63',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708062333',
@@ -965,8 +902,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            63 =>
-            array (
+            63 => array (
                 'id' => '64',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072408070026',
@@ -980,8 +916,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            64 =>
-            array (
+            64 => array (
                 'id' => '65',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072809070073',
@@ -995,8 +930,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            65 =>
-            array (
+            65 => array (
                 'id' => '66',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073010070027',
@@ -1010,8 +944,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            66 =>
-            array (
+            66 => array (
                 'id' => '67',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070110070056',
@@ -1025,8 +958,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            67 =>
-            array (
+            67 => array (
                 'id' => '68',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061777',
@@ -1040,8 +972,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            68 =>
-            array (
+            68 => array (
                 'id' => '69',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070401110003',
@@ -1055,8 +986,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            69 =>
-            array (
+            69 => array (
                 'id' => '70',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071110130001',
@@ -1070,8 +1000,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            70 =>
-            array (
+            70 => array (
                 'id' => '71',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071411110001',
@@ -1085,8 +1014,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            71 =>
-            array (
+            71 => array (
                 'id' => '72',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071605070003',
@@ -1100,8 +1028,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            72 =>
-            array (
+            72 => array (
                 'id' => '73',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073010070023',
@@ -1115,8 +1042,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            73 =>
-            array (
+            73 => array (
                 'id' => '74',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070706130002',
@@ -1130,8 +1056,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            74 =>
-            array (
+            74 => array (
                 'id' => '75',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072408070030',
@@ -1145,8 +1070,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            75 =>
-            array (
+            75 => array (
                 'id' => '76',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072910070009',
@@ -1160,8 +1084,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            76 =>
-            array (
+            76 => array (
                 'id' => '77',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072408070034',
@@ -1175,8 +1098,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            77 =>
-            array (
+            77 => array (
                 'id' => '78',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072910070010',
@@ -1190,8 +1112,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            78 =>
-            array (
+            78 => array (
                 'id' => '79',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072308070037',
@@ -1205,8 +1126,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            79 =>
-            array (
+            79 => array (
                 'id' => '80',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072809070056',
@@ -1220,8 +1140,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            80 =>
-            array (
+            80 => array (
                 'id' => '81',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071404100003',
@@ -1235,8 +1154,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            81 =>
-            array (
+            81 => array (
                 'id' => '82',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105010509060025',
@@ -1250,8 +1168,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            82 =>
-            array (
+            82 => array (
                 'id' => '83',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072302090002',
@@ -1265,8 +1182,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            83 =>
-            array (
+            83 => array (
                 'id' => '84',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072809070031',
@@ -1280,8 +1196,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            84 =>
-            array (
+            84 => array (
                 'id' => '85',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070110070011',
@@ -1295,8 +1210,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            85 =>
-            array (
+            85 => array (
                 'id' => '86',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070110070022',
@@ -1310,8 +1224,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            86 =>
-            array (
+            86 => array (
                 'id' => '87',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072809070008',
@@ -1325,8 +1238,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            87 =>
-            array (
+            87 => array (
                 'id' => '88',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072106170001',
@@ -1340,8 +1252,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            88 =>
-            array (
+            88 => array (
                 'id' => '89',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070401110004',
@@ -1355,8 +1266,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            89 =>
-            array (
+            89 => array (
                 'id' => '90',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071607070001',
@@ -1370,8 +1280,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            90 =>
-            array (
+            90 => array (
                 'id' => '91',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065304',
@@ -1385,8 +1294,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            91 =>
-            array (
+            91 => array (
                 'id' => '92',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072809070044',
@@ -1400,8 +1308,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            92 =>
-            array (
+            92 => array (
                 'id' => '93',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072904080002',
@@ -1415,8 +1322,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            93 =>
-            array (
+            93 => array (
                 'id' => '94',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072408070037',
@@ -1430,8 +1336,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            94 =>
-            array (
+            94 => array (
                 'id' => '95',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070110070028',
@@ -1445,8 +1350,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            95 =>
-            array (
+            95 => array (
                 'id' => '96',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070110070036',
@@ -1460,8 +1364,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            96 =>
-            array (
+            96 => array (
                 'id' => '97',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072408070002',
@@ -1475,8 +1378,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            97 =>
-            array (
+            97 => array (
                 'id' => '98',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072408070023',
@@ -1490,8 +1392,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            98 =>
-            array (
+            98 => array (
                 'id' => '99',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061566',
@@ -1505,8 +1406,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            99 =>
-            array (
+            99 => array (
                 'id' => '100',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060038',
@@ -1520,8 +1420,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            100 =>
-            array (
+            100 => array (
                 'id' => '101',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072809070079',
@@ -1535,8 +1434,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            101 =>
-            array (
+            101 => array (
                 'id' => '102',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060972',
@@ -1550,8 +1448,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            102 =>
-            array (
+            102 => array (
                 'id' => '103',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070110070007',
@@ -1565,8 +1462,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            103 =>
-            array (
+            103 => array (
                 'id' => '104',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072708070047',
@@ -1580,8 +1476,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            104 =>
-            array (
+            104 => array (
                 'id' => '105',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072809070066',
@@ -1595,8 +1490,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            105 =>
-            array (
+            105 => array (
                 'id' => '106',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072302090004',
@@ -1610,8 +1504,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            106 =>
-            array (
+            106 => array (
                 'id' => '107',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070401110002',
@@ -1625,8 +1518,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            107 =>
-            array (
+            107 => array (
                 'id' => '108',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072308070036',
@@ -1640,8 +1532,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            108 =>
-            array (
+            108 => array (
                 'id' => '109',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708062616',
@@ -1655,8 +1546,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            109 =>
-            array (
+            109 => array (
                 'id' => '110',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708063375',
@@ -1670,8 +1560,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            110 =>
-            array (
+            110 => array (
                 'id' => '111',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071412100003',
@@ -1685,8 +1574,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            111 =>
-            array (
+            111 => array (
                 'id' => '112',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072708070034',
@@ -1700,8 +1588,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            112 =>
-            array (
+            112 => array (
                 'id' => '113',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060117',
@@ -1715,8 +1602,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            113 =>
-            array (
+            113 => array (
                 'id' => '114',
                 'desa_id' => $desa_id,
                 'no_kk' => '110507260308001',
@@ -1730,8 +1616,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            114 =>
-            array (
+            114 => array (
                 'id' => '115',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060770',
@@ -1745,8 +1630,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            115 =>
-            array (
+            115 => array (
                 'id' => '116',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071912170001',
@@ -1760,8 +1644,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            116 =>
-            array (
+            116 => array (
                 'id' => '117',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072809070037',
@@ -1775,8 +1658,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            117 =>
-            array (
+            117 => array (
                 'id' => '118',
                 'desa_id' => $desa_id,
                 'no_kk' => '1107070309070003',
@@ -1790,8 +1672,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            118 =>
-            array (
+            118 => array (
                 'id' => '119',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072310070006',
@@ -1805,8 +1686,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            119 =>
-            array (
+            119 => array (
                 'id' => '120',
                 'desa_id' => $desa_id,
                 'no_kk' => '1100570912110017',
@@ -1820,8 +1700,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            120 =>
-            array (
+            120 => array (
                 'id' => '121',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708064481',
@@ -1835,8 +1714,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            121 =>
-            array (
+            121 => array (
                 'id' => '122',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065316',
@@ -1850,8 +1728,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            122 =>
-            array (
+            122 => array (
                 'id' => '123',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060455',
@@ -1865,8 +1742,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            123 =>
-            array (
+            123 => array (
                 'id' => '124',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065100',
@@ -1880,8 +1756,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            124 =>
-            array (
+            124 => array (
                 'id' => '125',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070405110009',
@@ -1895,8 +1770,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            125 =>
-            array (
+            125 => array (
                 'id' => '126',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070309077004',
@@ -1910,8 +1784,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            126 =>
-            array (
+            126 => array (
                 'id' => '127',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708063320',
@@ -1925,8 +1798,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            127 =>
-            array (
+            127 => array (
                 'id' => '128',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070912110015',
@@ -1940,8 +1812,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            128 =>
-            array (
+            128 => array (
                 'id' => '129',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070309070055',
@@ -1955,8 +1826,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            129 =>
-            array (
+            129 => array (
                 'id' => '130',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070912110024',
@@ -1970,8 +1840,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            130 =>
-            array (
+            130 => array (
                 'id' => '131',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070605100002',
@@ -1985,8 +1854,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            131 =>
-            array (
+            131 => array (
                 'id' => '132',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071502160001',
@@ -2000,8 +1868,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            132 =>
-            array (
+            132 => array (
                 'id' => '133',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708062742',
@@ -2015,8 +1882,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            133 =>
-            array (
+            133 => array (
                 'id' => '134',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072212110004',
@@ -2030,8 +1896,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            134 =>
-            array (
+            134 => array (
                 'id' => '135',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072212110003',
@@ -2045,8 +1910,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            135 =>
-            array (
+            135 => array (
                 'id' => '136',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070309070006',
@@ -2060,8 +1924,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            136 =>
-            array (
+            136 => array (
                 'id' => '137',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071404110003',
@@ -2075,8 +1938,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            137 =>
-            array (
+            137 => array (
                 'id' => '138',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072010150003',
@@ -2090,8 +1952,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            138 =>
-            array (
+            138 => array (
                 'id' => '139',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070910070014',
@@ -2105,8 +1966,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            139 =>
-            array (
+            139 => array (
                 'id' => '140',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070912110005',
@@ -2120,8 +1980,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            140 =>
-            array (
+            140 => array (
                 'id' => '141',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708062449',
@@ -2135,8 +1994,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            141 =>
-            array (
+            141 => array (
                 'id' => '142',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072202110001',
@@ -2150,8 +2008,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            142 =>
-            array (
+            142 => array (
                 'id' => '143',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072810140003',
@@ -2165,8 +2022,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            143 =>
-            array (
+            143 => array (
                 'id' => '144',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061068',
@@ -2180,8 +2036,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            144 =>
-            array (
+            144 => array (
                 'id' => '145',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708063369',
@@ -2195,8 +2050,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            145 =>
-            array (
+            145 => array (
                 'id' => '146',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070109140001',
@@ -2210,8 +2064,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            146 =>
-            array (
+            146 => array (
                 'id' => '147',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072302150002',
@@ -2225,8 +2078,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            147 =>
-            array (
+            147 => array (
                 'id' => '148',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070912110004',
@@ -2240,8 +2092,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            148 =>
-            array (
+            148 => array (
                 'id' => '149',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060100',
@@ -2255,8 +2106,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            149 =>
-            array (
+            149 => array (
                 'id' => '150',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070309070004',
@@ -2270,8 +2120,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            150 =>
-            array (
+            150 => array (
                 'id' => '151',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071105120001',
@@ -2285,8 +2134,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '01',
                 'id_cluster' => NULL,
             ),
-            151 =>
-            array (
+            151 => array (
                 'id' => '152',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072408110002',
@@ -2300,8 +2148,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            152 =>
-            array (
+            152 => array (
                 'id' => '153',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070109140002',
@@ -2315,8 +2162,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            153 =>
-            array (
+            153 => array (
                 'id' => '154',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070011200004',
@@ -2330,8 +2176,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            154 =>
-            array (
+            154 => array (
                 'id' => '155',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708062687',
@@ -2345,8 +2190,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            155 =>
-            array (
+            155 => array (
                 'id' => '156',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070401120007',
@@ -2360,8 +2204,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            156 =>
-            array (
+            156 => array (
                 'id' => '157',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065578',
@@ -2375,8 +2218,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            157 =>
-            array (
+            157 => array (
                 'id' => '158',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708062862',
@@ -2390,8 +2232,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            158 =>
-            array (
+            158 => array (
                 'id' => '159',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708063488',
@@ -2405,8 +2246,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            159 =>
-            array (
+            159 => array (
                 'id' => '160',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070912110009',
@@ -2420,8 +2260,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            160 =>
-            array (
+            160 => array (
                 'id' => '161',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073108070026',
@@ -2435,8 +2274,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            161 =>
-            array (
+            161 => array (
                 'id' => '162',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071812120002',
@@ -2450,8 +2288,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            162 =>
-            array (
+            162 => array (
                 'id' => '163',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070912110001',
@@ -2465,8 +2302,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            163 =>
-            array (
+            163 => array (
                 'id' => '164',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070107110002',
@@ -2480,8 +2316,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            164 =>
-            array (
+            164 => array (
                 'id' => '165',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070401120003',
@@ -2495,8 +2330,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            165 =>
-            array (
+            165 => array (
                 'id' => '166',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070801130001',
@@ -2510,8 +2344,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            166 =>
-            array (
+            166 => array (
                 'id' => '167',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708063294',
@@ -2525,8 +2358,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            167 =>
-            array (
+            167 => array (
                 'id' => '168',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708062298',
@@ -2540,8 +2372,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            168 =>
-            array (
+            168 => array (
                 'id' => '169',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070912110019',
@@ -2555,8 +2386,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            169 =>
-            array (
+            169 => array (
                 'id' => '170',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071702160004',
@@ -2570,8 +2400,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            170 =>
-            array (
+            170 => array (
                 'id' => '171',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060161',
@@ -2585,8 +2414,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            171 =>
-            array (
+            171 => array (
                 'id' => '172',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065272',
@@ -2600,8 +2428,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            172 =>
-            array (
+            172 => array (
                 'id' => '173',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072701120002',
@@ -2615,8 +2442,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            173 =>
-            array (
+            173 => array (
                 'id' => '174',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708062268',
@@ -2630,8 +2456,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            174 =>
-            array (
+            174 => array (
                 'id' => '175',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070603150003',
@@ -2645,8 +2470,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            175 =>
-            array (
+            175 => array (
                 'id' => '176',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072612110002',
@@ -2660,8 +2484,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            176 =>
-            array (
+            176 => array (
                 'id' => '177',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073008070016',
@@ -2675,8 +2498,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            177 =>
-            array (
+            177 => array (
                 'id' => '178',
                 'desa_id' => $desa_id,
                 'no_kk' => '1111111111111111',
@@ -2690,8 +2512,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            178 =>
-            array (
+            178 => array (
                 'id' => '179',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072312110010',
@@ -2705,8 +2526,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            179 =>
-            array (
+            179 => array (
                 'id' => '180',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070912110018',
@@ -2720,8 +2540,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            180 =>
-            array (
+            180 => array (
                 'id' => '181',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071810100001',
@@ -2735,8 +2554,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            181 =>
-            array (
+            181 => array (
                 'id' => '182',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071706064233',
@@ -2750,8 +2568,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            182 =>
-            array (
+            182 => array (
                 'id' => '183',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061905',
@@ -2765,8 +2582,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            183 =>
-            array (
+            183 => array (
                 'id' => '184',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071010070012',
@@ -2780,8 +2596,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            184 =>
-            array (
+            184 => array (
                 'id' => '185',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072306110001',
@@ -2795,8 +2610,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            185 =>
-            array (
+            185 => array (
                 'id' => '186',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070407110001',
@@ -2810,8 +2624,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            186 =>
-            array (
+            186 => array (
                 'id' => '187',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071812120001',
@@ -2825,8 +2638,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            187 =>
-            array (
+            187 => array (
                 'id' => '188',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065290',
@@ -2840,8 +2652,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            188 =>
-            array (
+            188 => array (
                 'id' => '189',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071504110002',
@@ -2855,8 +2666,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            189 =>
-            array (
+            189 => array (
                 'id' => '190',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708063947',
@@ -2870,8 +2680,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            190 =>
-            array (
+            190 => array (
                 'id' => '191',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071010070010',
@@ -2885,8 +2694,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            191 =>
-            array (
+            191 => array (
                 'id' => '192',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070602120003',
@@ -2900,8 +2708,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            192 =>
-            array (
+            192 => array (
                 'id' => '193',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708063239',
@@ -2915,8 +2722,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            193 =>
-            array (
+            193 => array (
                 'id' => '194',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065935',
@@ -2930,8 +2736,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            194 =>
-            array (
+            194 => array (
                 'id' => '195',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072312110001',
@@ -2945,8 +2750,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            195 =>
-            array (
+            195 => array (
                 'id' => '196',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072002140002',
@@ -2960,8 +2764,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            196 =>
-            array (
+            196 => array (
                 'id' => '197',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071080600164',
@@ -2975,8 +2778,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            197 =>
-            array (
+            197 => array (
                 'id' => '198',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070601120002',
@@ -2990,8 +2792,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            198 =>
-            array (
+            198 => array (
                 'id' => '199',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072210140005',
@@ -3005,8 +2806,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            199 =>
-            array (
+            199 => array (
                 'id' => '200',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070912110014',
@@ -3020,8 +2820,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            200 =>
-            array (
+            200 => array (
                 'id' => '201',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072101140001',
@@ -3035,8 +2834,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            201 =>
-            array (
+            201 => array (
                 'id' => '202',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071201120002',
@@ -3050,8 +2848,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            202 =>
-            array (
+            202 => array (
                 'id' => '203',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072312110006',
@@ -3065,8 +2862,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            203 =>
-            array (
+            203 => array (
                 'id' => '204',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065850',
@@ -3080,8 +2876,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            204 =>
-            array (
+            204 => array (
                 'id' => '205',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070509070020',
@@ -3095,8 +2890,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            205 =>
-            array (
+            205 => array (
                 'id' => '206',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070601120003',
@@ -3110,8 +2904,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            206 =>
-            array (
+            206 => array (
                 'id' => '207',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070912110011',
@@ -3125,8 +2918,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            207 =>
-            array (
+            207 => array (
                 'id' => '208',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061988',
@@ -3140,8 +2932,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            208 =>
-            array (
+            208 => array (
                 'id' => '209',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070912110010',
@@ -3155,8 +2946,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            209 =>
-            array (
+            209 => array (
                 'id' => '210',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073008070014',
@@ -3170,8 +2960,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            210 =>
-            array (
+            210 => array (
                 'id' => '211',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070111110008',
@@ -3185,8 +2974,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            211 =>
-            array (
+            211 => array (
                 'id' => '212',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070409070016',
@@ -3200,8 +2988,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            212 =>
-            array (
+            212 => array (
                 'id' => '213',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070110100001',
@@ -3215,8 +3002,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            213 =>
-            array (
+            213 => array (
                 'id' => '214',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070110100002',
@@ -3230,8 +3016,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            214 =>
-            array (
+            214 => array (
                 'id' => '215',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073008070029',
@@ -3245,8 +3030,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            215 =>
-            array (
+            215 => array (
                 'id' => '216',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072612110001',
@@ -3260,8 +3044,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            216 =>
-            array (
+            216 => array (
                 'id' => '217',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070912110013',
@@ -3275,8 +3058,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            217 =>
-            array (
+            217 => array (
                 'id' => '218',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072701120005',
@@ -3290,8 +3072,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            218 =>
-            array (
+            218 => array (
                 'id' => '219',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070912110020',
@@ -3305,8 +3086,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            219 =>
-            array (
+            219 => array (
                 'id' => '220',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070903150001',
@@ -3320,8 +3100,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            220 =>
-            array (
+            220 => array (
                 'id' => '221',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072410070005',
@@ -3335,8 +3114,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            221 =>
-            array (
+            221 => array (
                 'id' => '222',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105092712120005',
@@ -3350,8 +3128,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            222 =>
-            array (
+            222 => array (
                 'id' => '223',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061685',
@@ -3365,8 +3142,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            223 =>
-            array (
+            223 => array (
                 'id' => '224',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071612080001',
@@ -3380,8 +3156,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            224 =>
-            array (
+            224 => array (
                 'id' => '225',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070502080001',
@@ -3395,8 +3170,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            225 =>
-            array (
+            225 => array (
                 'id' => '226',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070912110016',
@@ -3410,8 +3184,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            226 =>
-            array (
+            226 => array (
                 'id' => '227',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070808110005',
@@ -3425,8 +3198,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            227 =>
-            array (
+            227 => array (
                 'id' => '228',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072310070001',
@@ -3440,8 +3212,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            228 =>
-            array (
+            228 => array (
                 'id' => '229',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070311110002',
@@ -3455,8 +3226,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            229 =>
-            array (
+            229 => array (
                 'id' => '230',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070808110006',
@@ -3470,8 +3240,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            230 =>
-            array (
+            230 => array (
                 'id' => '231',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708063936',
@@ -3485,8 +3254,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '2',
                 'id_cluster' => NULL,
             ),
-            231 =>
-            array (
+            231 => array (
                 'id' => '232',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708062638',
@@ -3500,8 +3268,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            232 =>
-            array (
+            232 => array (
                 'id' => '233',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708064469',
@@ -3515,8 +3282,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            233 =>
-            array (
+            233 => array (
                 'id' => '234',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060288',
@@ -3530,8 +3296,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            234 =>
-            array (
+            234 => array (
                 'id' => '235',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070912110022',
@@ -3545,8 +3310,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            235 =>
-            array (
+            235 => array (
                 'id' => '236',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072312110003',
@@ -3560,8 +3324,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            236 =>
-            array (
+            236 => array (
                 'id' => '237',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071808110001',
@@ -3575,8 +3338,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            237 =>
-            array (
+            237 => array (
                 'id' => '238',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060278',
@@ -3590,8 +3352,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            238 =>
-            array (
+            238 => array (
                 'id' => '239',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072009130001',
@@ -3605,8 +3366,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            239 =>
-            array (
+            239 => array (
                 'id' => '240',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071612080002',
@@ -3620,8 +3380,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            240 =>
-            array (
+            240 => array (
                 'id' => '241',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071809150001',
@@ -3635,8 +3394,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            241 =>
-            array (
+            241 => array (
                 'id' => '242',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072010150002',
@@ -3650,8 +3408,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            242 =>
-            array (
+            242 => array (
                 'id' => '243',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708062461',
@@ -3665,8 +3422,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            243 =>
-            array (
+            243 => array (
                 'id' => '244',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072701120003',
@@ -3680,8 +3436,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            244 =>
-            array (
+            244 => array (
                 'id' => '245',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708064654',
@@ -3695,8 +3450,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            245 =>
-            array (
+            245 => array (
                 'id' => '246',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071010110001',
@@ -3710,8 +3464,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            246 =>
-            array (
+            246 => array (
                 'id' => '247',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072701120006',
@@ -3725,8 +3478,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            247 =>
-            array (
+            247 => array (
                 'id' => '248',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070703120001',
@@ -3740,8 +3492,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            248 =>
-            array (
+            248 => array (
                 'id' => '249',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072312110004',
@@ -3755,8 +3506,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            249 =>
-            array (
+            249 => array (
                 'id' => '250',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708641224',
@@ -3770,8 +3520,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            250 =>
-            array (
+            250 => array (
                 'id' => '251',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070311110001',
@@ -3785,8 +3534,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            251 =>
-            array (
+            251 => array (
                 'id' => '252',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073008070003',
@@ -3800,8 +3548,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            252 =>
-            array (
+            252 => array (
                 'id' => '253',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072312110002',
@@ -3815,8 +3562,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            253 =>
-            array (
+            253 => array (
                 'id' => '254',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070701140002',
@@ -3830,8 +3576,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            254 =>
-            array (
+            254 => array (
                 'id' => '255',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072312110007',
@@ -3845,8 +3590,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            255 =>
-            array (
+            255 => array (
                 'id' => '256',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070809160001',
@@ -3860,8 +3604,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            256 =>
-            array (
+            256 => array (
                 'id' => '257',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070304120001',
@@ -3875,8 +3618,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            257 =>
-            array (
+            257 => array (
                 'id' => '258',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060880',
@@ -3890,8 +3632,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            258 =>
-            array (
+            258 => array (
                 'id' => '259',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708064991',
@@ -3905,8 +3646,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            259 =>
-            array (
+            259 => array (
                 'id' => '260',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070509110002',
@@ -3920,8 +3660,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            260 =>
-            array (
+            260 => array (
                 'id' => '261',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061908',
@@ -3935,8 +3674,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            261 =>
-            array (
+            261 => array (
                 'id' => '262',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071212110007',
@@ -3950,8 +3688,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            262 =>
-            array (
+            262 => array (
                 'id' => '263',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071212110005',
@@ -3965,8 +3702,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            263 =>
-            array (
+            263 => array (
                 'id' => '264',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071212110006',
@@ -3980,8 +3716,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            264 =>
-            array (
+            264 => array (
                 'id' => '265',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070910070001',
@@ -3995,8 +3730,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            265 =>
-            array (
+            265 => array (
                 'id' => '266',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072404830002',
@@ -4010,8 +3744,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            266 =>
-            array (
+            266 => array (
                 'id' => '267',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072808070092',
@@ -4025,8 +3758,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            267 =>
-            array (
+            267 => array (
                 'id' => '268',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065523',
@@ -4040,8 +3772,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            268 =>
-            array (
+            268 => array (
                 'id' => '269',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070210070012',
@@ -4055,8 +3786,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            269 =>
-            array (
+            269 => array (
                 'id' => '270',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708063943',
@@ -4070,8 +3800,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            270 =>
-            array (
+            270 => array (
                 'id' => '271',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072208070015',
@@ -4085,8 +3814,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            271 =>
-            array (
+            271 => array (
                 'id' => '272',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073007100001',
@@ -4100,8 +3828,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            272 =>
-            array (
+            272 => array (
                 'id' => '273',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072908070014',
@@ -4115,8 +3842,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            273 =>
-            array (
+            273 => array (
                 'id' => '274',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070310070011',
@@ -4130,8 +3856,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            274 =>
-            array (
+            274 => array (
                 'id' => '275',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065708',
@@ -4145,8 +3870,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            275 =>
-            array (
+            275 => array (
                 'id' => '276',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060776',
@@ -4160,8 +3884,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            276 =>
-            array (
+            276 => array (
                 'id' => '277',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070505140005',
@@ -4175,8 +3898,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            277 =>
-            array (
+            277 => array (
                 'id' => '278',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708062270',
@@ -4190,8 +3912,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            278 =>
-            array (
+            278 => array (
                 'id' => '279',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070210070022',
@@ -4205,8 +3926,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            279 =>
-            array (
+            279 => array (
                 'id' => '280',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060005',
@@ -4220,8 +3940,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            280 =>
-            array (
+            280 => array (
                 'id' => '281',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708062269',
@@ -4235,8 +3954,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            281 =>
-            array (
+            281 => array (
                 'id' => '282',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061120',
@@ -4250,8 +3968,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            282 =>
-            array (
+            282 => array (
                 'id' => '283',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072808070119',
@@ -4265,8 +3982,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            283 =>
-            array (
+            283 => array (
                 'id' => '284',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070310070017',
@@ -4280,8 +3996,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            284 =>
-            array (
+            284 => array (
                 'id' => '285',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061681',
@@ -4295,8 +4010,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            285 =>
-            array (
+            285 => array (
                 'id' => '286',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070310070022',
@@ -4310,8 +4024,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            286 =>
-            array (
+            286 => array (
                 'id' => '287',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072808070111',
@@ -4325,8 +4038,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            287 =>
-            array (
+            287 => array (
                 'id' => '288',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708063376',
@@ -4340,8 +4052,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            288 =>
-            array (
+            288 => array (
                 'id' => '289',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060837',
@@ -4355,8 +4066,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            289 =>
-            array (
+            289 => array (
                 'id' => '290',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065909',
@@ -4370,8 +4080,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            290 =>
-            array (
+            290 => array (
                 'id' => '291',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072808070122',
@@ -4385,8 +4094,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            291 =>
-            array (
+            291 => array (
                 'id' => '292',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073112720001',
@@ -4400,8 +4108,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            292 =>
-            array (
+            292 => array (
                 'id' => '293',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072108070042',
@@ -4415,8 +4122,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            293 =>
-            array (
+            293 => array (
                 'id' => '294',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072303090002',
@@ -4430,8 +4136,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            294 =>
-            array (
+            294 => array (
                 'id' => '295',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072908070024',
@@ -4445,8 +4150,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            295 =>
-            array (
+            295 => array (
                 'id' => '296',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070810070012',
@@ -4460,8 +4164,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            296 =>
-            array (
+            296 => array (
                 'id' => '297',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072808070110',
@@ -4475,8 +4178,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            297 =>
-            array (
+            297 => array (
                 'id' => '298',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061897',
@@ -4490,8 +4192,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            298 =>
-            array (
+            298 => array (
                 'id' => '299',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070210070019',
@@ -4505,8 +4206,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            299 =>
-            array (
+            299 => array (
                 'id' => '300',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073110130004',
@@ -4520,8 +4220,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            300 =>
-            array (
+            300 => array (
                 'id' => '301',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070210070016',
@@ -4535,8 +4234,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            301 =>
-            array (
+            301 => array (
                 'id' => '302',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065847',
@@ -4550,8 +4248,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            302 =>
-            array (
+            302 => array (
                 'id' => '303',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060723',
@@ -4565,8 +4262,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            303 =>
-            array (
+            303 => array (
                 'id' => '304',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061733',
@@ -4580,8 +4276,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            304 =>
-            array (
+            304 => array (
                 'id' => '305',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072212110001',
@@ -4595,8 +4290,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            305 =>
-            array (
+            305 => array (
                 'id' => '306',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060146',
@@ -4610,8 +4304,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            306 =>
-            array (
+            306 => array (
                 'id' => '307',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071907080001',
@@ -4625,8 +4318,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            307 =>
-            array (
+            307 => array (
                 'id' => '308',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070410070005',
@@ -4640,8 +4332,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            308 =>
-            array (
+            308 => array (
                 'id' => '309',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708062078',
@@ -4655,8 +4346,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            309 =>
-            array (
+            309 => array (
                 'id' => '310',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071207170002',
@@ -4670,8 +4360,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            310 =>
-            array (
+            310 => array (
                 'id' => '311',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073005170001',
@@ -4685,8 +4374,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            311 =>
-            array (
+            311 => array (
                 'id' => '312',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072810140003',
@@ -4700,8 +4388,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            312 =>
-            array (
+            312 => array (
                 'id' => '313',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070503080001',
@@ -4715,8 +4402,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            313 =>
-            array (
+            313 => array (
                 'id' => '314',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071705130001',
@@ -4730,8 +4416,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            314 =>
-            array (
+            314 => array (
                 'id' => '315',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071910100002',
@@ -4745,8 +4430,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            315 =>
-            array (
+            315 => array (
                 'id' => '316',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072401120007',
@@ -4760,8 +4444,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            316 =>
-            array (
+            316 => array (
                 'id' => '317',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708066105',
@@ -4775,8 +4458,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            317 =>
-            array (
+            317 => array (
                 'id' => '318',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061887',
@@ -4790,8 +4472,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            318 =>
-            array (
+            318 => array (
                 'id' => '319',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072208070010',
@@ -4805,8 +4486,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            319 =>
-            array (
+            319 => array (
                 'id' => '320',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072306150001',
@@ -4820,8 +4500,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            320 =>
-            array (
+            320 => array (
                 'id' => '321',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061124',
@@ -4835,8 +4514,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            321 =>
-            array (
+            321 => array (
                 'id' => '322',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105102001110006',
@@ -4850,8 +4528,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            322 =>
-            array (
+            322 => array (
                 'id' => '323',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708063350',
@@ -4865,8 +4542,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            323 =>
-            array (
+            323 => array (
                 'id' => '324',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070810070004',
@@ -4880,8 +4556,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            324 =>
-            array (
+            324 => array (
                 'id' => '325',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070510070017',
@@ -4895,8 +4570,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            325 =>
-            array (
+            325 => array (
                 'id' => '326',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065328',
@@ -4910,8 +4584,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            326 =>
-            array (
+            326 => array (
                 'id' => '327',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070510070021',
@@ -4925,8 +4598,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            327 =>
-            array (
+            327 => array (
                 'id' => '328',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708060789',
@@ -4940,8 +4612,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            328 =>
-            array (
+            328 => array (
                 'id' => '329',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071612110002',
@@ -4955,8 +4626,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            329 =>
-            array (
+            329 => array (
                 'id' => '330',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071612110000',
@@ -4970,8 +4640,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            330 =>
-            array (
+            330 => array (
                 'id' => '331',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065103',
@@ -4985,8 +4654,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            331 =>
-            array (
+            331 => array (
                 'id' => '332',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065515',
@@ -5000,8 +4668,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            332 =>
-            array (
+            332 => array (
                 'id' => '333',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072808070117',
@@ -5015,8 +4682,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            333 =>
-            array (
+            333 => array (
                 'id' => '334',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070510070010',
@@ -5030,8 +4696,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            334 =>
-            array (
+            334 => array (
                 'id' => '335',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072908130002',
@@ -5045,8 +4710,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            335 =>
-            array (
+            335 => array (
                 'id' => '336',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708062716',
@@ -5060,8 +4724,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            336 =>
-            array (
+            336 => array (
                 'id' => '337',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070410070028',
@@ -5075,8 +4738,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            337 =>
-            array (
+            337 => array (
                 'id' => '338',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065532',
@@ -5090,8 +4752,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            338 =>
-            array (
+            338 => array (
                 'id' => '339',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070704150001',
@@ -5105,8 +4766,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            339 =>
-            array (
+            339 => array (
                 'id' => '340',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072805070001',
@@ -5120,8 +4780,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            340 =>
-            array (
+            340 => array (
                 'id' => '341',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070304100006',
@@ -5135,8 +4794,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            341 =>
-            array (
+            341 => array (
                 'id' => '342',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070910070028',
@@ -5150,8 +4808,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            342 =>
-            array (
+            342 => array (
                 'id' => '343',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072601110001',
@@ -5165,8 +4822,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            343 =>
-            array (
+            343 => array (
                 'id' => '344',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072309130002',
@@ -5180,8 +4836,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            344 =>
-            array (
+            344 => array (
                 'id' => '345',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070810070006',
@@ -5195,8 +4850,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            345 =>
-            array (
+            345 => array (
                 'id' => '346',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708063516',
@@ -5210,8 +4864,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            346 =>
-            array (
+            346 => array (
                 'id' => '347',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072203100001',
@@ -5225,8 +4878,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            347 =>
-            array (
+            347 => array (
                 'id' => '348',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073010090007',
@@ -5240,8 +4892,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            348 =>
-            array (
+            348 => array (
                 'id' => '349',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073001120001',
@@ -5255,8 +4906,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            349 =>
-            array (
+            349 => array (
                 'id' => '350',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071304090001',
@@ -5270,8 +4920,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            350 =>
-            array (
+            350 => array (
                 'id' => '351',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072901070001',
@@ -5285,8 +4934,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            351 =>
-            array (
+            351 => array (
                 'id' => '352',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070405100001',
@@ -5300,8 +4948,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            352 =>
-            array (
+            352 => array (
                 'id' => '353',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070510070022',
@@ -5315,8 +4962,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            353 =>
-            array (
+            353 => array (
                 'id' => '354',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072411080003',
@@ -5330,8 +4976,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            354 =>
-            array (
+            354 => array (
                 'id' => '355',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708065687',
@@ -5345,8 +4990,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            355 =>
-            array (
+            355 => array (
                 'id' => '356',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071712080002',
@@ -5360,8 +5004,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            356 =>
-            array (
+            356 => array (
                 'id' => '357',
                 'desa_id' => $desa_id,
                 'no_kk' => '110507112090001',
@@ -5375,8 +5018,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            357 =>
-            array (
+            357 => array (
                 'id' => '358',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708063596',
@@ -5390,8 +5032,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            358 =>
-            array (
+            358 => array (
                 'id' => '359',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070410070001',
@@ -5405,8 +5046,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            359 =>
-            array (
+            359 => array (
                 'id' => '360',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071109130001',
@@ -5420,8 +5060,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            360 =>
-            array (
+            360 => array (
                 'id' => '361',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070310070028',
@@ -5435,8 +5074,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            361 =>
-            array (
+            361 => array (
                 'id' => '362',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070510070014',
@@ -5450,8 +5088,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            362 =>
-            array (
+            362 => array (
                 'id' => '363',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072404080002',
@@ -5465,8 +5102,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            363 =>
-            array (
+            363 => array (
                 'id' => '364',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061492',
@@ -5480,8 +5116,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            364 =>
-            array (
+            364 => array (
                 'id' => '365',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071102090001',
@@ -5495,8 +5130,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            365 =>
-            array (
+            365 => array (
                 'id' => '366',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071708061882',
@@ -5510,8 +5144,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            366 =>
-            array (
+            366 => array (
                 'id' => '367',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105077804100004',
@@ -5525,8 +5158,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            367 =>
-            array (
+            367 => array (
                 'id' => '368',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072404120002',
@@ -5540,8 +5172,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            368 =>
-            array (
+            368 => array (
                 'id' => '369',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070910070018',
@@ -5555,8 +5186,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            369 =>
-            array (
+            369 => array (
                 'id' => '370',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071501090002',
@@ -5570,8 +5200,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            370 =>
-            array (
+            370 => array (
                 'id' => '371',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072307850001',
@@ -5585,8 +5214,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            371 =>
-            array (
+            371 => array (
                 'id' => '372',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070204900001',
@@ -5600,8 +5228,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            372 =>
-            array (
+            372 => array (
                 'id' => '373',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105075003990001',
@@ -5615,8 +5242,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            373 =>
-            array (
+            373 => array (
                 'id' => '374',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105074603780001',
@@ -5630,8 +5256,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '02',
                 'id_cluster' => NULL,
             ),
-            374 =>
-            array (
+            374 => array (
                 'id' => '375',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105074604560001',
@@ -5645,8 +5270,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            375 =>
-            array (
+            375 => array (
                 'id' => '376',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070207960002',
@@ -5660,8 +5284,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            376 =>
-            array (
+            376 => array (
                 'id' => '377',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070110820001',
@@ -5675,8 +5298,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            377 =>
-            array (
+            377 => array (
                 'id' => '378',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105074202910001',
@@ -5690,8 +5312,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            378 =>
-            array (
+            378 => array (
                 'id' => '379',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105074708750002',
@@ -5705,8 +5326,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            379 =>
-            array (
+            379 => array (
                 'id' => '380',
                 'desa_id' => $desa_id,
                 'no_kk' => '1112034304680002',
@@ -5720,8 +5340,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            380 =>
-            array (
+            380 => array (
                 'id' => '381',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105075911630014',
@@ -5735,8 +5354,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            381 =>
-            array (
+            381 => array (
                 'id' => '382',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070609890001',
@@ -5750,8 +5368,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            382 =>
-            array (
+            382 => array (
                 'id' => '383',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070206940001',
@@ -5765,8 +5382,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            383 =>
-            array (
+            383 => array (
                 'id' => '384',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073112600043',
@@ -5780,8 +5396,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            384 =>
-            array (
+            384 => array (
                 'id' => '385',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105071011650005',
@@ -5795,8 +5410,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            385 =>
-            array (
+            385 => array (
                 'id' => '386',
                 'desa_id' => $desa_id,
                 'no_kk' => '1114020310120001',
@@ -5810,8 +5424,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            386 =>
-            array (
+            386 => array (
                 'id' => '387',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105075505010001',
@@ -5825,8 +5438,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            387 =>
-            array (
+            387 => array (
                 'id' => '388',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105074609100001',
@@ -5840,8 +5452,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            388 =>
-            array (
+            388 => array (
                 'id' => '389',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070705930001',
@@ -5855,8 +5466,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            389 =>
-            array (
+            389 => array (
                 'id' => '390',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070505950001',
@@ -5870,8 +5480,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            390 =>
-            array (
+            390 => array (
                 'id' => '391',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105010608860011',
@@ -5885,8 +5494,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            391 =>
-            array (
+            391 => array (
                 'id' => '392',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105077112840075',
@@ -5900,8 +5508,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            392 =>
-            array (
+            392 => array (
                 'id' => '393',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105077007100001',
@@ -5915,8 +5522,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '3',
                 'id_cluster' => NULL,
             ),
-            393 =>
-            array (
+            393 => array (
                 'id' => '394',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105076403840001',
@@ -5930,8 +5536,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            394 =>
-            array (
+            394 => array (
                 'id' => '395',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105074507780002',
@@ -5945,8 +5550,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            395 =>
-            array (
+            395 => array (
                 'id' => '396',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105078805050002',
@@ -5960,8 +5564,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            396 =>
-            array (
+            396 => array (
                 'id' => '397',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072605070001',
@@ -5975,8 +5578,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            397 =>
-            array (
+            397 => array (
                 'id' => '398',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105090107480044',
@@ -5990,8 +5592,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            398 =>
-            array (
+            398 => array (
                 'id' => '399',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070508930001',
@@ -6005,8 +5606,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            399 =>
-            array (
+            399 => array (
                 'id' => '400',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105072508090001',
@@ -6020,8 +5620,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            400 =>
-            array (
+            400 => array (
                 'id' => '401',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070102910001',
@@ -6035,8 +5634,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            401 =>
-            array (
+            401 => array (
                 'id' => '402',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105074903940002',
@@ -6050,8 +5648,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            402 =>
-            array (
+            402 => array (
                 'id' => '403',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105074610970001',
@@ -6065,8 +5662,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            403 =>
-            array (
+            403 => array (
                 'id' => '404',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105074211090002',
@@ -6080,8 +5676,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            404 =>
-            array (
+            404 => array (
                 'id' => '405',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105076707560002',
@@ -6095,8 +5690,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            405 =>
-            array (
+            405 => array (
                 'id' => '406',
                 'desa_id' => $desa_id,
                 'no_kk' => '1112075403890001',
@@ -6110,8 +5704,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            406 =>
-            array (
+            406 => array (
                 'id' => '407',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070108780003',
@@ -6125,8 +5718,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            407 =>
-            array (
+            407 => array (
                 'id' => '408',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073112780035',
@@ -6140,8 +5732,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            408 =>
-            array (
+            408 => array (
                 'id' => '409',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070907790002',
@@ -6155,8 +5746,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            409 =>
-            array (
+            409 => array (
                 'id' => '410',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105073004070001',
@@ -6170,8 +5760,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            410 =>
-            array (
+            410 => array (
                 'id' => '411',
                 'desa_id' => $desa_id,
                 'no_kk' => '1105070510960001',
@@ -6185,8 +5774,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '4',
                 'id_cluster' => NULL,
             ),
-            411 =>
-            array (
+            411 => array (
                 'id' => '725',
                 'desa_id' => $desa_id,
                 'no_kk' => '1.10507040879e15',
@@ -6200,8 +5788,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            412 =>
-            array (
+            412 => array (
                 'id' => '726',
                 'desa_id' => $desa_id,
                 'no_kk' => '1.10507630577e15',
@@ -6215,8 +5802,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            413 =>
-            array (
+            413 => array (
                 'id' => '727',
                 'desa_id' => $desa_id,
                 'no_kk' => '1.10507470771e15',
@@ -6230,8 +5816,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
                 'rw' => '1',
                 'id_cluster' => NULL,
             ),
-            414 =>
-            array (
+            414 => array (
                 'id' => '728',
                 'desa_id' => $desa_id,
                 'no_kk' => '1.10507050562e15',
