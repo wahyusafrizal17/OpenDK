@@ -31,18 +31,19 @@
 
 namespace App\Http\Controllers\Informasi;
 
-use App\Http\Controllers\Controller;
-use App\Models\Potensi;
-use function back;
-use function compact;
 use Exception;
-use Illuminate\Database\QueryException;
-use Illuminate\Http\Request;
-
-use Illuminate\Http\Response;
-use function redirect;
-use function request;
+use function back;
 use function view;
+use function compact;
+use function request;
+use function redirect;
+use App\Models\Potensi;
+
+use App\Models\TipePotensi;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use App\Http\Controllers\Controller;
+use Illuminate\Database\QueryException;
 
 class PotensiController extends Controller
 {
@@ -68,13 +69,16 @@ class PotensiController extends Controller
     public function kategori()
     {
         $page_title       = 'Potensi';
-        $page_description = 'Potensi-Potensi';
 
         if ($_GET['id'] != null) {
             $potensis = Potensi::where('kategori_id', $_GET['id'])->latest()->paginate(10);
+            $kategori = TipePotensi::FindOrFail($_GET['id'])->nama_kategori;
         } else {
             $potensis = Potensi::latest()->paginate(10);
+            $kategori = 'Semua';
         }
+
+        $page_description = 'Kategori Potensi : ' . $kategori;
 
         return view('informasi.potensi.index', compact(['page_title', 'page_description', 'potensis']));
     }
