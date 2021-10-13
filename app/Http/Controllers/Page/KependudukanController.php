@@ -31,12 +31,13 @@
 
 namespace App\Http\Controllers\Page;
 
-use App\Facades\Counter;
-use App\Http\Controllers\Controller;
-use App\Models\Penduduk;
 use App\Models\Profil;
-use Illuminate\Support\Facades\DB;
+use App\Facades\Counter;
+use App\Models\DataDesa;
+use App\Models\Penduduk;
 use Yajra\DataTables\DataTables;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class KependudukanController extends Controller
 {
