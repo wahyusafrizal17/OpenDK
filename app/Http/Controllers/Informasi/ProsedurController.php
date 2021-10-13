@@ -69,6 +69,7 @@ class ProsedurController extends Controller
     {
         return DataTables::of(Prosedur::select('id', 'judul_prosedur'))
             ->addColumn('action', function ($row) {
+                
                 $data['show_url'] = route('informasi.prosedur.show', $row->id);
 
                 if (! Sentinel::guest()) {
@@ -91,7 +92,7 @@ class ProsedurController extends Controller
     public function create()
     {
         $page_title       = 'Prosedur';
-        $page_description = 'Tambah Data';
+        $page_description = 'Tambah Prosedur';
 
         return view('informasi.prosedur.create', compact('page_title', 'page_description'));
     }
@@ -103,23 +104,28 @@ class ProsedurController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate([
-            'judul_prosedur' => 'required',
-            'file_prosedur'  => 'required|file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
-        ]);
-        $prosedur = new Prosedur($request->input());
+        try {
+            request()->validate([
+                'judul_prosedur' => 'required',
+                'file_prosedur'  => 'required|file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
+            ]);
+            $prosedur = new Prosedur($request->input());
 
-        if ($request->hasFile('file_prosedur')) {
-            $file     = $request->file('file_prosedur');
-            $fileName = $file->getClientOriginalName();
-            $path     = "storage/regulasi/";
-            $request->file('file_prosedur')->move($path, $fileName);
-            $prosedur->file_prosedur = $path . $fileName;
-            $prosedur->mime_type     = $file->getClientOriginalExtension();
+            if ($request->hasFile('file_prosedur')) {
+                $file     = $request->file('file_prosedur');
+                $fileName = $file->getClientOriginalName();
+                $path     = "storage/regulasi/";
+                $request->file('file_prosedur')->move($path, $fileName);
+                $prosedur->file_prosedur = $path . $fileName;
+                $prosedur->mime_type     = $file->getClientOriginalExtension();
+            }
+
+            $prosedur->save();
+
+            return redirect()->route('informasi.prosedur.index')->with('success', 'Prosedur berhasil disimpan!');
+        } catch (Exception $e) {
+            return back()->with('error', 'Prosedur gagal disimpan!' . $e->getMessage());
         }
-        $prosedur->save();
-
-        return redirect()->route('informasi.prosedur.index')->with('success', 'Prosedur berhasil ditambah!');
     }
 
     /**
@@ -180,9 +186,9 @@ class ProsedurController extends Controller
 
             $prosedur->save();
 
-            return redirect()->route('informasi.prosedur.index')->with('success', 'Data Prosedur berhasil disimpan!');
+            return redirect()->route('informasi.prosedur.index')->with('success', 'Prosedur berhasil disimpan!');
         } catch (Exception $e) {
-            return back()->with('error', 'Data Prosedur gagal disimpan!' . $e->getMessage());
+            return back()->with('error', 'Prosedur gagal disimpan!' . $e->getMessage());
         }
     }
 
