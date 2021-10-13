@@ -11,8 +11,7 @@
         <br/>
 
         @if(isset($prosedur->file_prosedur) && $prosedur->mime_type != 'pdf')
-            <img class="" src="@if(isset($prosedur->file_prosedur)) {{ asset($prosedur->file_prosedur) }} @else {{ "http://placehold.it/1000x600" }} @endif" id="showgambar"
-                 style="width:400px;max-height:250px;float:left;"/>
+            <img class="" src="@if(isset($prosedur->file_prosedur)) {{ asset($prosedur->file_prosedur) }} @else {{ "http://placehold.it/1000x600" }} @endif" id="showgambar" style="width:400px;max-height:250px;float:left;"/>
         @endif
 
         @if(isset($prosedur->file_prosedur) && $prosedur->mime_type == 'pdf')
