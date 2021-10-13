@@ -120,7 +120,7 @@
                 {data: 'pekerjaan', name: 'ref_pekerjaan.nama'},
                 {data: 'status_kawin', name: 'ref_kawin.nama'},
             ],
-            order: [[0, 'desc']]
+            order: [[3, 'asc']]
         });
 
         $('#list_desa').on('select2:select', function (e) {
