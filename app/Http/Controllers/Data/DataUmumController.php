@@ -33,10 +33,10 @@ namespace App\Http\Controllers\Data;
 
 use App\Http\Controllers\Controller;
 use App\Models\DataUmum;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-
 use Exception;
+use Illuminate\Http\Request;
+
+use Illuminate\Http\Response;
 
 class DataUmumController extends Controller
 {

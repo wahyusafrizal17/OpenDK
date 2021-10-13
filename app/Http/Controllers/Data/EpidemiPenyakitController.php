@@ -35,11 +35,11 @@ use App\Http\Controllers\Controller;
 use App\Imports\ImporEpidemiPenyakit;
 use App\Models\EpidemiPenyakit;
 use App\Models\JenisPenyakit;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Yajra\DataTables\Facades\DataTables;
 
-use Exception;
+use Yajra\DataTables\Facades\DataTables;
 
 class EpidemiPenyakitController extends Controller
 {

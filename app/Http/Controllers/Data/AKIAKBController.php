@@ -34,11 +34,11 @@ namespace App\Http\Controllers\Data;
 use App\Http\Controllers\Controller;
 use App\Imports\ImporAKIAKB;
 use App\Models\AkiAkb;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Yajra\DataTables\Facades\DataTables;
 
-use Exception;
+use Yajra\DataTables\Facades\DataTables;
 
 class AKIAKBController extends Controller
 {

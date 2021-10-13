@@ -35,13 +35,13 @@ use App\Http\Controllers\Controller;
 use App\Imports\ImporPenduduk;
 use App\Models\DataDesa;
 use App\Models\Penduduk;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use Yajra\DataTables\DataTables;
 
-use Exception;
+use Yajra\DataTables\DataTables;
 use ZipArchive;
 
 class PendudukController extends Controller

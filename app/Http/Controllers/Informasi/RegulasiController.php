@@ -33,10 +33,10 @@ namespace App\Http\Controllers\Informasi;
 
 use App\Http\Controllers\Controller;
 use App\Models\Regulasi;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-
 use Exception;
+use Illuminate\Http\Request;
+
+use Illuminate\Http\Response;
 
 class RegulasiController extends Controller
 {

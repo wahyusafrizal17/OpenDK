@@ -35,10 +35,10 @@ use App\Http\Controllers\Controller;
 use App\Models\Coa;
 use App\Models\SubCoa;
 use App\Models\SubSubCoa;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-
 use Exception;
+use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\DB;
 
 class COAController extends Controller
 {
