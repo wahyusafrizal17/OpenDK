@@ -67,7 +67,7 @@ class EventController extends Controller
     public function create()
     {
         $page_title       = 'Event';
-        $page_description = 'Tambah Data';
+        $page_description = 'Tambah Event';
 
         return view('informasi.event.create', compact('page_title', 'page_description'));
     }
@@ -114,7 +114,7 @@ class EventController extends Controller
     public function edit($id)
     {
         $page_title       = 'Event';
-        $page_description = 'Ubah Data';
+        $page_description = 'Ubah Event';
         $event            = Event::FindOrFail($id);
 
         return view('informasi.event.edit', compact('page_title', 'page_description', 'event'));
@@ -147,11 +147,12 @@ class EventController extends Controller
                 $request->file('attachment')->move($path, $fileName);
                 $event->attachment = $path . $fileName;
             }
+
             $event->save();
 
-            return redirect()->route('informasi.event.index')->with('success', 'Update Event sukses!');
+            return redirect()->route('informasi.event.index')->with('success', 'Ubah Event sukses!');
         } catch (Exception $e) {
-            return back()->withInput()->with('error', 'Update Event gagal!');
+            return back()->withInput()->with('error', 'Ubah Event gagal!');
         }
     }
 
