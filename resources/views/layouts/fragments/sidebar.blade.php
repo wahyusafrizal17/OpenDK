@@ -36,9 +36,7 @@ $user = Sentinel::getUser();
                         <li {{ (Request::is(['informasi/faq/*', 'informasi/faq/index', 'informasi/faq'])? 'class=active' : '') }}>
                             <a href="{{ route('informasi.faq.index') }}"><i class="fa fa-circle-o"></i>FAQ</a></li>
                         <li {{ (Request::is(['informasi/form-dokumen/*', 'informasi/form-dokumen/index', 'informasi/form-dokumen'])? 'class=active' : '') }}>
-                            <a
-                                    href="{{ route('informasi.form-dokumen.index') }}"><i class="fa fa-circle-o"></i>Form
-                                Dokumen</a></li>
+                            <a href="{{ route('informasi.form-dokumen.index') }}"><i class="fa fa-circle-o"></i>Dokumen</a></li>
                     </ul>
                 </li>
                 <li class="treeview {{ (Request::is(['data/*'])? 'active' : '') }}">
