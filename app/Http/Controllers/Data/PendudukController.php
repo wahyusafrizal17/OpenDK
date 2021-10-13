@@ -97,7 +97,6 @@ class PendudukController extends Controller
 
         return DataTables::of($query)
             ->addColumn('action', function ($row) {
-                
                 $data['show_url']   = route('data.penduduk.show', $row->id);
 
                 return view('forms.action', $data);

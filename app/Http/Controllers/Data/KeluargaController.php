@@ -61,7 +61,6 @@ class KeluargaController extends Controller
     {
         return DataTables::of(Keluarga::query())
             ->addColumn('action', function ($row) {
-                
                 $data['show_url']   = route('data.keluarga.show', $row->id);
 
                 return view('forms.action', $data);
