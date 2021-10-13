@@ -1,7 +1,5 @@
 <div class="form-group">
-    <label for="peserta" class="control-label col-md-3 col-sm-3 col-xs-12">NO. KK / Nama Kepala Keluarga <span
-                class="required">*</span></label>
-
+    <label for="peserta" class="control-label col-md-3 col-sm-3 col-xs-12">NO. KK / Nama Kepala Keluarga <span class="required">*</span></label>
     <div class="col-md-4 col-sm-6 col-xs-12">
         {!! Form::hidden('program_id', $program->id) !!}
         {!! Form::hidden('sasaran', $program->sasaran) !!}
@@ -114,9 +112,6 @@
                 format: 'YYYY-MM-DD'
             });
         });
-
     })
-
-
 </script>
 @endpush

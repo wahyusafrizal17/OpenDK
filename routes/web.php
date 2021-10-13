@@ -29,9 +29,10 @@
  * @link	    https://github.com/OpenSID/opendk
  */
 
-use Illuminate\Support\Facades\Cookie;
+use App\Models\Penduduk;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Cookie;
 
 /**
  * Group Routing for Front End
@@ -617,7 +618,7 @@ Route::group(['middleware' => 'installed'], function () {
 
     // All Penduduk Select2
     Route::get('/api/penduduk', function () {
-        return \App\Models\Penduduk::where('nama', 'LIKE', '%' . strtoupper(request('q')) . '%')->paginate(10);
+        return Penduduk::where('nama', 'LIKE', '%' . strtoupper(request('q')) . '%')->paginate(10);
     })->name('api.penduduk');
 
     // Penduduk By id
@@ -644,13 +645,15 @@ Route::group(['middleware' => 'installed'], function () {
     });
 
     Route::get('/api/list-peserta-penduduk', function () {
-        return \App\Models\Penduduk::selectRaw('nik as id, nama as text, nik, nama, alamat, rt, rw, tempat_lahir, tanggal_lahir')
-            ->whereRaw('lower(nama) LIKE \'%' . strtolower(request('q')) . '%\' or lower(nik) LIKE \'%' . strtolower(request('q')) . '%\'')->paginate(10);
+        return Penduduk::selectRaw('nik as id, nama as text, nik, nama, alamat, rt, rw, tempat_lahir, tanggal_lahir')
+            ->whereRaw('lower(nama) LIKE \'%' . strtolower(request('q')) . '%\' or lower(nik) LIKE \'%' . strtolower(request('q')) . '%\'')
+            ->paginate(10);
     });
 
     Route::get('/api/list-peserta-kk', function () {
-        return \App\Models\Penduduk::selectRaw('no_kk as id, nama as text, nik, nama, alamat, rt, rw, tempat_lahir, tanggal_lahir')
+        return Penduduk::selectRaw('no_kk as id, nama as text, nik, nama, alamat, rt, rw, tempat_lahir, tanggal_lahir')
             ->whereRaw('lower(nama) LIKE \'%' . strtolower(request('q')) . '%\' or lower(no_kk) LIKE \'%' . strtolower(request('q')) . '%\'')
-            ->where('kk_level', 1)->paginate(10);
+            ->where('kk_level', 1)
+            ->paginate(10);
     });
 });

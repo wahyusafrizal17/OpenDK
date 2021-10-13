@@ -34,23 +34,24 @@ namespace App\Http\Controllers\Data;
 use App\Http\Controllers\Controller;
 use App\Models\PesertaProgram;
 use App\Models\Program;
-use Exception;
 use Illuminate\Http\Request;
-
 use Yajra\DataTables\Facades\DataTables;
+
+use Exception;
 
 class ProgramBantuanController extends Controller
 {
     public function index()
     {
         $page_title       = 'Program Bantuan';
-        $page_description = 'Data Program Bantuan';
+        $page_description = 'Daftar Program Bantuan';
+
         return view('data.program_bantuan.index', compact('page_title', 'page_description'));
     }
 
     public function getaProgramBantuan()
     {
-        return DataTables::of(Program::query())
+        return DataTables::of(Program::all())
             ->addColumn('action', function ($row) {
                 $data['detail_url'] = route('data.program-bantuan.show', $row->id);
                 $data['edit_url']   = route('data.program-bantuan.edit', $row->id);
@@ -96,7 +97,7 @@ class ProgramBantuanController extends Controller
 
     public function show($id)
     {
-        $program          = Program::find($id);
+        $program          = Program::FindOrFail($id);
         $page_title       = 'Detail Program';
         $page_description = 'Program Bantuan ' . $program->nama;
         $sasaran          = [1 => 'Penduduk/Perorangan', 2 => 'Keluarga-KK'];
@@ -115,7 +116,7 @@ class ProgramBantuanController extends Controller
                 'end_date'   => 'required|date',
             ]);
 
-            $program = Program::find($id);
+            $program = Program::FindOrFail($id);
             $program->fill($request->all());
             $program->update();
 
@@ -127,7 +128,7 @@ class ProgramBantuanController extends Controller
 
     public function edit($id)
     {
-        $program          = Program::find($id);
+        $program          = Program::FindOrFail($id);
         $page_title       = 'Edit Program';
         $page_description = 'Program Bantuan ' . $program->nama;
         $sasaran          = [1 => 'Penduduk/Perorangan', 2 => 'Keluarga-KK'];
@@ -139,7 +140,7 @@ class ProgramBantuanController extends Controller
     public function destroy($id)
     {
         try {
-            Program::find($id)->delete();
+            Program::destroy($id)->delete();
             PesertaProgram::where('program_id', $id)->delete();
 
             return redirect()->route('data.program-bantuan.index')->with('success', 'Data berhasil dihapus!');
@@ -150,7 +151,7 @@ class ProgramBantuanController extends Controller
 
     public function createPeserta($id)
     {
-        $program          = Program::findOrFail($id);
+        $program          = Program::FindOrFail($id);
         $page_title       = 'Tambah Peserta';
         $page_description = 'Program Bantuan ' . $program->nama;
         $sasaran          = [1 => 'Penduduk/Perorangan', 2 => 'Keluarga-KK'];
