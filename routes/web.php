@@ -30,9 +30,9 @@
  */
 
 use App\Models\Penduduk;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Cookie;
 
 /**
  * Group Routing for Front End
