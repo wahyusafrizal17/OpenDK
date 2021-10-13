@@ -72,7 +72,6 @@ class AnggaranRealisasiController extends Controller
     {
         return DataTables::of(AnggaranRealisasi::query())
             ->addColumn('aksi', function ($row) {
-
                 $data['edit_url']   = route('data.anggaran-realisasi.edit', $row->id);
                 $data['delete_url'] = route('data.anggaran-realisasi.destroy', $row->id);
 

@@ -71,7 +71,6 @@ class PutusSekolahController extends Controller
     {
         return DataTables::of(PutusSekolah::with(['desa']))
             ->addColumn('aksi', function ($row) {
-
                 $data['edit_url']   = route('data.putus-sekolah.edit', $row->id);
                 $data['delete_url'] = route('data.putus-sekolah.destroy', $row->id);
 

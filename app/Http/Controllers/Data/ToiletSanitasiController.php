@@ -79,7 +79,6 @@ class ToiletSanitasiController extends Controller
     {
         return DataTables::of(ToiletSanitasi::with(['desa']))
             ->addColumn('aksi', function ($row) {
-
                 $data['edit_url']   = route('data.toilet-sanitasi.edit', $row->id);
                 $data['delete_url'] = route('data.toilet-sanitasi.destroy', $row->id);
 

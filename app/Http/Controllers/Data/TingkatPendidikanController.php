@@ -70,7 +70,6 @@ class TingkatPendidikanController extends Controller
     {
         return DataTables::of(TingkatPendidikan::with(['desa']))
             ->addColumn('aksi', function ($row) {
-
                 $data['edit_url']   = route('data.tingkat-pendidikan.edit', $row->id);
                 $data['delete_url'] = route('data.tingkat-pendidikan.destroy', $row->id);
 

@@ -69,7 +69,6 @@ class AdminKomplainController extends Controller
     {
         return DataTables::of(Komplain::with(['kategori_komplain']))
             ->addColumn('aksi', function ($row) {
-
                 if ($row->status == 'REVIEW' || $row->status == 'DITOLAK' | $row->status == 'BELUM') {
                     $data['agree_url'] = route('admin-komplain.setuju', $row->id);
                 }

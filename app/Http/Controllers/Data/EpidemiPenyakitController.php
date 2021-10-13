@@ -77,7 +77,6 @@ class EpidemiPenyakitController extends Controller
     {
         return DataTables::of(EpidemiPenyakit::with(['penyakit', 'desa']))
             ->addColumn('aksi', function ($row) {
-
                 $data['edit_url']   = route('data.epidemi-penyakit.edit', $row->id);
                 $data['delete_url'] = route('data.epidemi-penyakit.destroy', $row->id);
 

@@ -79,7 +79,6 @@ class AKIAKBController extends Controller
     {
         return DataTables::of(AkiAkb::with(['desa']))
             ->addColumn('aksi', function ($row) {
-
                 $data['edit_url']   = route('data.aki-akb.edit', $row->id);
                 $data['delete_url'] = route('data.aki-akb.destroy', $row->id);
 
