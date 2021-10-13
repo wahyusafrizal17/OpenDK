@@ -246,19 +246,15 @@ class UserController extends Controller
         })
         ->addColumn('action', function ($user) {
             if ($user->id != 1) {
-                $edit_url = route('setting.user.edit', $user->id);
                 if ($user->status == 1) {
-                    $suspend_url         = route('setting.user.destroy', $user->id);
-                    $data['suspend_url'] = $suspend_url;
+                    $data['suspend_url'] = route('setting.user.destroy', $user->id);
                 } else {
-                    $active_url         = route('setting.user.active', $user->id);
-                    $data['active_url'] = $active_url;
+                    $data['active_url'] = route('setting.user.active', $user->id);
                 }
 
-                $data['edit_url'] = $edit_url;
+                $data['edit_url'] = route('setting.user.edit', $user->id);
             } else {
-                $edit_url         = route('setting.user.edit', $user->id);
-                $data['edit_url'] = $edit_url;
+                $data['edit_url'] = route('setting.user.edit', $user->id);
             }
 
             return view('forms.action', $data);

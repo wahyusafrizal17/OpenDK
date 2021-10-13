@@ -58,13 +58,10 @@ class ProgramBantuanController extends Controller
     {
         return DataTables::of(Program::query())
             ->addColumn('action', function ($row) {
-                $edit_url   = route('data.program-bantuan.edit', $row->id);
-                $delete_url = route('data.program-bantuan.destroy', $row->id);
-                $show_url   = route('data.program-bantuan.show', $row->id);
 
-                $data['detail_url'] = $show_url;
-                $data['edit_url']   = $edit_url;
-                $data['delete_url'] = $delete_url;
+                $data['detail_url'] = route('data.program-bantuan.show', $row->id);
+                $data['edit_url']   = route('data.program-bantuan.edit', $row->id);
+                $data['delete_url'] = route('data.program-bantuan.destroy', $row->id);
 
                 return view('forms.action', $data);
             })

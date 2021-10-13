@@ -69,15 +69,13 @@ class AdminKomplainController extends Controller
     {
         return DataTables::of(Komplain::with(['kategori_komplain']))
             ->addColumn('aksi', function ($row) {
-                $edit_url   = route('admin-komplain.edit', $row->id);
-                $delete_url = route('admin-komplain.destroy', $row->id);
+
                 if ($row->status == 'REVIEW' || $row->status == 'DITOLAK' | $row->status == 'BELUM') {
-                    $agree_url         = route('admin-komplain.setuju', $row->id);
-                    $data['agree_url'] = $agree_url;
+                    $data['agree_url'] = route('admin-komplain.setuju', $row->id);
                 }
 
-                $data['edit_url']   = $edit_url;
-                $data['delete_url'] = $delete_url;
+                $data['edit_url']   = route('admin-komplain.edit', $row->id);
+                $data['delete_url'] = route('admin-komplain.destroy', $row->id);
 
                 return view('forms.action', $data);
             })

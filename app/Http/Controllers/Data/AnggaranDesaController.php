@@ -74,11 +74,9 @@ class AnggaranDesaController extends Controller
     {
         return DataTables::of(AnggaranDesa::with('desa'))
             ->addColumn('aksi', function ($row) {
-                $edit_url   = route('data.anggaran-desa.edit', $row->id);
-                $delete_url = route('data.anggaran-desa.destroy', $row->id);
 
-                $data['edit_url']   = $edit_url;
-                $data['delete_url'] = $delete_url;
+                $data['edit_url']   = route('data.anggaran-desa.edit', $row->id);
+                $data['delete_url'] = route('data.anggaran-desa.destroy', $row->id);
 
                 return view('forms.action', $data);
             })->editColumn('bulan', function ($row) {

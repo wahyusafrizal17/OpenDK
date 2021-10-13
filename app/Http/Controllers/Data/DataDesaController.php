@@ -64,11 +64,9 @@ class DataDesaController extends Controller
     {
         return DataTables::of(DataDesa::all())
             ->addColumn('action', function ($row) {
-                $edit_url   = route('data.data-desa.edit', $row->id);
-                $delete_url = route('data.data-desa.destroy', $row->id);
-
-                $data['edit_url']   = $edit_url;
-                $data['delete_url'] = $delete_url;
+                
+                $data['edit_url']   = route('data.data-desa.edit', $row->id);
+                $data['delete_url'] = route('data.data-desa.destroy', $row->id);
 
                 return view('forms.action', $data);
             })

@@ -84,6 +84,25 @@ class PotensiController extends Controller
     }
 
     /**
+     * Get datatable
+     */
+    // public function getDataPotensi()
+    // {
+    //     return DataTables::of(Potensi::select('id', 'nama_potensi', 'lokasi'))
+    //         ->addColumn('action', function($row) {
+    //
+    //             $data['show_url'] = $show_url;
+    //
+    //             if(!Sentinel::guest()){
+    //                 $data['edit_url'] = route('informasi.potensi.edit', $row->id);
+    //                 $data['delete_url'] = route('informasi.potensi.destroy', $row->id);
+    //             }
+    //
+    //             return view('forms.action', $data);
+    //         })->make();
+    // }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return Response
@@ -211,26 +230,4 @@ class PotensiController extends Controller
         Potensi::find($id)->delete();
         return redirect()->route('informasi.potensi.index')->with('success', 'Potensi Berhasil dihapus!');
     }
-
-    /**
-     * Get datatable
-     */
-    // public function getDataPotensi()
-    // {
-    //     return DataTables::of(Potensi::select('id', 'nama_potensi', 'lokasi'))
-    //         ->addColumn('action', function($row){
-    //             $show_url = route('informasi.potensi.show', $row->id);
-    //             $edit_url = route('informasi.potensi.edit', $row->id);
-    //             $delete_url = route('informasi.potensi.destroy', $row->id);
-    //
-    //             $data['show_url'] = $show_url;
-    //
-    //             if(!Sentinel::guest()){
-    //                 $data['edit_url'] = $edit_url;
-    //                 $data['delete_url'] = $delete_url;
-    //             }
-    //
-    //             return view('forms.action', $data);
-    //         })->make();
-    // }
 }

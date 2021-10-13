@@ -79,11 +79,9 @@ class ImunisasiController extends Controller
     {
         return DataTables::of(Imunisasi::with(['desa']))
             ->addColumn('aksi', function ($row) {
-                $edit_url   = route('data.imunisasi.edit', $row->id);
-                $delete_url = route('data.imunisasi.destroy', $row->id);
 
-                $data['edit_url']   = $edit_url;
-                $data['delete_url'] = $delete_url;
+                $data['edit_url']   = route('data.imunisasi.edit', $row->id);
+                $data['delete_url'] = route('data.imunisasi.destroy', $row->id);
 
                 return view('forms.action', $data);
             })
