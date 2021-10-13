@@ -70,7 +70,7 @@
                 {data: 'semester', name: 'semester'},
                 {data: 'tahun', name: 'tahun'},
             ],
-            order: [[0, 'desc']]
+            order: [[1, 'asc']]
         });
     });
 </script>
