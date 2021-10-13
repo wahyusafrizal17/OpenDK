@@ -33,10 +33,10 @@ namespace App\Http\Controllers\Setting;
 
 use App\Http\Controllers\Controller;
 use App\Models\KategoriKomplain;
-use Illuminate\Http\Request;
-use Yajra\DataTables\DataTables;
-
 use Exception;
+use Illuminate\Http\Request;
+
+use Yajra\DataTables\DataTables;
 
 class KategoriKomplainController extends Controller
 {

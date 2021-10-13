@@ -36,11 +36,11 @@ use App\Http\Requests\PendudukRequest;
 use App\Imports\SinkronPenduduk;
 use App\Jobs\PendudukQueueJob;
 use App\Models\Penduduk;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 
-use Exception;
+use Illuminate\Support\Str;
 use ZipArchive;
 
 class PendudukController extends Controller

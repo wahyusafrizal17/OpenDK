@@ -34,10 +34,10 @@ namespace App\Http\Controllers\Informasi;
 use App\Http\Controllers\Controller;
 use App\Models\FormDokumen;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
-use Illuminate\Http\Request;
-use Yajra\DataTables\DataTables;
-
 use Exception;
+use Illuminate\Http\Request;
+
+use Yajra\DataTables\DataTables;
 
 class FormDokumenController extends Controller
 {

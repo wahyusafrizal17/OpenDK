@@ -36,11 +36,11 @@ use App\Models\JawabKomplain;
 use App\Models\Komplain;
 use App\Models\Penduduk;
 use App\Models\Wilayah;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Validator;
 
-use Exception;
+use Illuminate\Support\Facades\Validator;
 
 class SistemKomplainController extends Controller
 {

@@ -34,11 +34,11 @@ namespace App\Http\Controllers\Data;
 use App\Http\Controllers\Controller;
 use App\Imports\ImporPutusSekolah;
 use App\Models\PutusSekolah;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Yajra\DataTables\DataTables;
 
-use Exception;
+use Yajra\DataTables\DataTables;
 
 class PutusSekolahController extends Controller
 {

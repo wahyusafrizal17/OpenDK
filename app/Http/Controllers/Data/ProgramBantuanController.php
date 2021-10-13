@@ -34,10 +34,10 @@ namespace App\Http\Controllers\Data;
 use App\Http\Controllers\Controller;
 use App\Models\PesertaProgram;
 use App\Models\Program;
-use Illuminate\Http\Request;
-use Yajra\DataTables\Facades\DataTables;
-
 use Exception;
+use Illuminate\Http\Request;
+
+use Yajra\DataTables\Facades\DataTables;
 
 class ProgramBantuanController extends Controller
 {

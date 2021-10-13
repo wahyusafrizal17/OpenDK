@@ -33,10 +33,10 @@ namespace App\Http\Controllers\Informasi;
 
 use App\Http\Controllers\Controller;
 use App\Models\Faq;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-
 use Exception;
+use Illuminate\Http\Request;
+
+use Illuminate\Http\Response;
 
 class FaqController extends Controller
 {

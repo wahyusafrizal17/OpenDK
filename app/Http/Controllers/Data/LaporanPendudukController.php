@@ -35,14 +35,14 @@ use App\Http\Controllers\Controller;
 use App\Imports\ImporLaporanPenduduk;
 use App\Models\DataDesa;
 use App\Models\LaporanPenduduk;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Yajra\DataTables\DataTables;
 
-use Exception;
+use Yajra\DataTables\DataTables;
 use ZipArchive;
 
 class LaporanPendudukController extends Controller

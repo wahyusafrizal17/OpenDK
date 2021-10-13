@@ -34,11 +34,11 @@ namespace App\Http\Controllers\Data;
 use App\Http\Controllers\Controller;
 use App\Imports\ImporImunisasi;
 use App\Models\Imunisasi;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Yajra\DataTables\DataTables;
 
-use Exception;
+use Yajra\DataTables\DataTables;
 
 class ImunisasiController extends Controller
 {
