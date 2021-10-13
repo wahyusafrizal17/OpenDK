@@ -80,7 +80,6 @@ class Controller extends BaseController
             'profil'                 => $this->profil,
             'sebutan_wilayah'        => $this->sebutan_wilayah,
             'sebutan_kepala_wilayah' => $this->sebutan_kepala_wilayah,
-            'nama_wil_kecamatan'     => 'jjj',
             'events'                 => $events,
             'navdesa'                => $navdesa,
             'navpotensi'             => $navpotensi,
