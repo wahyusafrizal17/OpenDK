@@ -89,7 +89,7 @@ class LaporanPendudukController extends Controller
                 'das_laporan_penduduk.imported_at',
             ])
             ->when($desa, function ($query) use ($desa) {
-                return $desa === 'ALL'
+                return $desa === 'Semua'
                     ? $query
                     : $query->where('das_data_desa.desa_id', $desa);
             });

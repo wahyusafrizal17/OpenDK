@@ -65,12 +65,12 @@ class AnggaranDesaController extends Controller
         $data_anggaran = [];
         $type          = CoaType::all();
 
-        if ($mid == 'ALL' && $year == 'ALL') {
+        if ($mid == 'Semua' && $year == 'Semua') {
             $tmp = [];
             foreach ($type as $val) {
                 $query_anggaran = DB::table('das_anggaran_desa')->select('*')
                     ->where('no_akun', 'LIKE', $val->id . '%');
-                if ($did != 'ALL') {
+                if ($did != 'Semua') {
                     $query_anggaran->where('desa_id', $did);
                 }
                 $tmp[] = [
@@ -80,13 +80,13 @@ class AnggaranDesaController extends Controller
             }
 
             $data_anggaran['grafik'] = $tmp;
-        } elseif ($mid != 'ALL' && $year == 'ALL') {
+        } elseif ($mid != 'Semua' && $year == 'Semua') {
             $tmp = [];
             foreach ($type as $val) {
                 $query_anggaran = DB::table('das_anggaran_desa')->select('*')
                     ->where('no_akun', 'LIKE', $val->id . '%')
                     ->where('bulan', $mid);
-                if ($did != 'ALL') {
+                if ($did != 'Semua') {
                     $query_anggaran->where('desa_id', $did);
                 }
                 $tmp[] = [
@@ -96,13 +96,13 @@ class AnggaranDesaController extends Controller
             }
 
             $data_anggaran['grafik'] = $tmp;
-        } elseif ($mid == 'ALL' && $year != 'ALL') {
+        } elseif ($mid == 'Semua' && $year != 'Semua') {
             $tmp = [];
             foreach ($type as $val) {
                 $query_anggaran = DB::table('das_anggaran_desa')->select('*')
                     ->where('no_akun', 'LIKE', $val->id . '%')
                     ->where('tahun', $year);
-                if ($did != 'ALL') {
+                if ($did != 'Semua') {
                     $query_anggaran->where('desa_id', $did);
                 }
                 $tmp[] = [
@@ -111,14 +111,14 @@ class AnggaranDesaController extends Controller
                 ];
             }
             $data_anggaran['grafik'] = $tmp;
-        } elseif ($mid != 'ALL' && $year != 'ALL') {
+        } elseif ($mid != 'Semua' && $year != 'Semua') {
             $tmp = [];
             foreach ($type as $val) {
                 $query_anggaran = DB::table('das_anggaran_desa')->select('*')
                     ->where('no_akun', 'LIKE', $val->id . '%')
                     ->where('bulan', $mid)
                     ->where('tahun', $year);
-                if ($did != 'ALL') {
+                if ($did != 'Semua') {
                     $query_anggaran->where('desa_id', $did);
                 }
                 $tmp[] = [

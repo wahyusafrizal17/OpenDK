@@ -38,7 +38,7 @@
                                 <div class="form-group">
                                     <label>Desa</label>
                                         <select class="form-control" id="list_desa">
-                                            <option value="ALL">ALL</option>
+                                            <option value="Semua">Semua</option>
                                             @foreach($list_desa as $desa)
                                                 <option value="{{ $desa->desa_id}}">{{$desa->nama}}</option>
                                             @endforeach

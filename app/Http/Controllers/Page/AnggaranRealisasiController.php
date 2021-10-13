@@ -66,7 +66,7 @@ class AnggaranRealisasiController extends Controller
 
         // Grafik Data Pendidikan
         $data_pendidikan = [];
-        if ($year == 'ALL') {
+        if ($year == 'Semua') {
             $total_anggaran         = 0;
             $total_belanja          = 0;
             $belanja_pegawai        = 0;
@@ -78,7 +78,7 @@ class AnggaranRealisasiController extends Controller
                 $query_result = DB::table('das_anggaran_realisasi')
                     ->select('*')
                     ->where('kecamatan_id', '=', config('app.default_profile'));
-                if ($mid != 'ALL') {
+                if ($mid != 'Semua') {
                     $query_result->where('bulan', '=', $mid);
                 }
                 $query_result->where('tahun', '=', $yearls);
@@ -148,7 +148,7 @@ class AnggaranRealisasiController extends Controller
                 sum(belanja_modal) as belanja_modal, sum(belanja_tidak_langsung) as belanja_tidak_langsung')
                 ->where('kecamatan_id', '=', config('app.default_profile'));
 
-            if ($mid != 'ALL') {
+            if ($mid != 'Semua') {
                 $query_result->where('bulan', '=', $mid);
             }
             $query_result->where('tahun', '=', $year);

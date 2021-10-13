@@ -50,7 +50,7 @@ class Penduduk extends Model
             ->where('status_dasar', 1)
             ->where('kecamatan_id', $kid)
             ->whereRaw('YEAR(created_at) <= ?', $year);
-        if ($did != 'ALL') {
+        if ($did != 'Semua') {
             $penduduk->where('desa_id', $did);
         }
         return $penduduk;

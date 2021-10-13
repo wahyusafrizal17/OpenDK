@@ -96,7 +96,7 @@ class PageController extends Controller
         $this->data = $this->GetFeeds();
 
         $req = $request->cari;
-        $cari_desa = $request->desa != 'ALL' ? $request->desa : null;
+        $cari_desa = $request->desa != 'Semua' ? $request->desa : null;
         if ($req || $cari_desa) {
             $feeds = collect($this->data)->filter(function ($value, $key) use ($req, $cari_desa) {
                 $hasil = $req ? stripos($value['title'], $req) !== false : true;

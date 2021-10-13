@@ -76,13 +76,13 @@ class ProgramBantuanController extends Controller
                 ->where('das_penduduk.kecamatan_id', '=', $kid)
                 ->where('das_peserta_program.sasaran', '=', 1)
                 ->where('das_peserta_program.program_id', '=', $prog->id);
-            if ($year == 'ALL') {
+            if ($year == 'Semua') {
                 $query_result->whereRaw('YEAR(das_peserta_program.created_at) in (?)', $this->where_year_helper());
             } else {
                 $query_result->where('das_penduduk.tahun', $year);
             }
 
-            if ($did != 'ALL') {
+            if ($did != 'Semua') {
                 $query_result->where('das_penduduk.desa_id', '=', $did);
             }
 
@@ -107,13 +107,13 @@ class ProgramBantuanController extends Controller
                 ->where('das_penduduk.kecamatan_id', '=', $kid)
                 ->where('das_peserta_program.sasaran', '=', 2)
                 ->where('das_peserta_program.program_id', '=', $prog->id);
-            if ($year == 'ALL') {
+            if ($year == 'Semua') {
                 $query_result->whereRaw('YEAR(das_peserta_program.created_at) in (?)', $this->where_year_helper());
             } else {
                 $query_result->where('das_penduduk.tahun', $year);
             }
 
-            if ($did != 'ALL') {
+            if ($did != 'Semua') {
                 $query_result->where('das_penduduk.desa_id', '=', $did);
             }
             $query_result->groupBy('das_penduduk.no_kk');

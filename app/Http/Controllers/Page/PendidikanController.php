@@ -72,7 +72,7 @@ class PendidikanController extends Controller
 
         // Grafik Data TIngkat Pendidikan
         $data_pendidikan = [];
-        if ($year == 'ALL' && $did == 'ALL') {
+        if ($year == 'Semua' && $did == 'Semua') {
             foreach (years_list() as $yearl) {
                 // SD
                 $query_pendidikan = DB::table('das_tingkat_pendidikan')
@@ -111,7 +111,7 @@ class PendidikanController extends Controller
             }
 
             $data_pendidikan = $data_tabel;
-        } elseif ($year != 'ALL' && $did != 'ALL') {
+        } elseif ($year != 'Semua' && $did != 'Semua') {
             $data_tabel = [];
             // Quartal
             foreach (semester() as $key => $value) {
@@ -134,7 +134,7 @@ class PendidikanController extends Controller
             }
 
             $data_pendidikan = $data_tabel;
-        } elseif ($year == 'ALL' && $did != 'ALL') {
+        } elseif ($year == 'Semua' && $did != 'Semua') {
             foreach (years_list() as $yearl) {
                 // SD
                 $query_pendidikan = DB::table('das_tingkat_pendidikan')
@@ -170,7 +170,7 @@ class PendidikanController extends Controller
 
         // Grafik Data Siswa PAUD
         $data_pendidikan = [];
-        if ($year == 'ALL' && $did == 'ALL') {
+        if ($year == 'Semua' && $did == 'Semua') {
             foreach (years_list() as $yearl) {
                 // SD
                 $query_pendidikan = DB::table('das_putus_sekolah')
@@ -189,7 +189,7 @@ class PendidikanController extends Controller
                     'anak_usia_sma'  => $query_pendidikan->sum('anak_usia_sma'),
                 ];
             }
-        } elseif ($year == 'ALL' && $did != 'ALL') {
+        } elseif ($year == 'Semua' && $did != 'Semua') {
             foreach (years_list() as $yearl) {
                 // SD
                 $query_pendidikan = DB::table('das_putus_sekolah')
@@ -209,7 +209,7 @@ class PendidikanController extends Controller
                     'anak_usia_sma'  => $query_pendidikan->sum('anak_usia_sma'),
                 ];
             }
-        } elseif ($year != 'ALL' && $did == 'ALL') {
+        } elseif ($year != 'Semua' && $did == 'Semua') {
             $desa = DataDesa::all();
             foreach ($desa as $value) {
                 // SD
@@ -230,7 +230,7 @@ class PendidikanController extends Controller
                     'anak_usia_sma'  => $query_pendidikan->sum('anak_usia_sma'),
                 ];
             }
-        } elseif ($year != 'ALL' && $did != 'ALL') {
+        } elseif ($year != 'Semua' && $did != 'Semua') {
             $data_tabel = [];
             // Quartal
             foreach (semester() as $key => $kuartal) {
@@ -272,13 +272,13 @@ class PendidikanController extends Controller
 
         // Grafik Data Fasilitas PAUD
         $data_pendidikan = [];
-        if ($year == 'ALL') {
+        if ($year == 'Semua') {
             foreach (years_list() as $yearl) {
                 // SD
                 $query_pendidikan = DB::table('das_fasilitas_paud')
                     ->where('tahun', '=', $yearl)
                     ->where('profil_id', '=', $pid);
-                if ($did != 'ALL') {
+                if ($did != 'Semua') {
                     $query_pendidikan->where('desa_id', '=', $did);
                 }
 
@@ -296,7 +296,7 @@ class PendidikanController extends Controller
                 $query_pendidikan = DB::table('das_fasilitas_paud')
                     ->whereRaw('semester in (' . $this->getIdsSemester($key) . ')')
                     ->where('tahun', $year);
-                if ($did != 'ALL') {
+                if ($did != 'Semua') {
                     $query_pendidikan->where('desa_id', '=', $did);
                 }
                 $data_tabel[] = [

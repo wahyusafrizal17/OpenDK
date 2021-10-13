@@ -97,7 +97,7 @@ class PendudukController extends Controller
                 'ref_pekerjaan.nama as pekerjaan',
             ])
             ->when($desa, function ($query) use ($desa) {
-                return $desa === 'ALL'
+                return $desa === 'Semua'
                     ? $query
                     : $query->where('das_data_desa.desa_id', $desa);
             })

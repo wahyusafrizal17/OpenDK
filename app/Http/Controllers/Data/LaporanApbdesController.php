@@ -89,7 +89,7 @@ class LaporanApbdesController extends Controller
                 'das_apbdes.imported_at',
             ])
             ->when($desa, function ($query) use ($desa) {
-                return $desa === 'ALL'
+                return $desa === 'Semua'
                     ? $query
                     : $query->where('das_data_desa.desa_id', $desa);
             });

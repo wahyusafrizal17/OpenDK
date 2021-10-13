@@ -77,7 +77,7 @@ class KependudukanController extends Controller
         return view('pages.kependudukan.show_kependudukan')->with($data);
     }
 
-    /* Menghasilkan array berisi semua tahun di mana penduduk tercatat sampai tahun sekarang */
+    /* Menghasilkan array berisi Semua tahun di mana penduduk tercatat sampai tahun sekarang */
     protected function years_list()
     {
         if (DB::table('das_penduduk')->first() == null) {
@@ -253,7 +253,7 @@ class KependudukanController extends Controller
 
         // Grafik Data Pendidikan
         $data_pendidikan = [];
-        if ($year == 'ALL') {
+        if ($year == 'Semua') {
             foreach ($this->years_list() as $yearl) {
                 $query_pendidikan = $this->penduduk->getPendudukAktif($pid, $did, $yearl)
                     ->leftJoin('ref_pendidikan_kk', 'pendidikan_kk_id', '=', 'ref_pendidikan_kk.id');
@@ -355,7 +355,7 @@ class KependudukanController extends Controller
                 $query_total->whereRaw('das_penduduk.golongan_darah_id = 13 or das_penduduk.golongan_darah_id is null');
             }
 
-            if ($did != 'ALL') {
+            if ($did != 'Semua') {
                 $query_total->where('das_penduduk.desa_id', '=', $did);
             }
             $total  = $query_total->count();
@@ -432,7 +432,7 @@ class KependudukanController extends Controller
                 ->whereRaw('YEAR(das_penduduk.created_at) <= ?', $year)
                 ->where('das_penduduk.sex', '=', $val['id']);
 
-            if ($did != 'ALL') {
+            if ($did != 'Semua') {
                 $query_total->where('das_penduduk.desa_id', '=', $did);
             }
             $total  = $query_total->count();
@@ -461,7 +461,7 @@ class KependudukanController extends Controller
             $query->where('das_penduduk.kecamatan_id', '=', $pid)
                 //->whereRaw('year(das_keluarga.tgl_daftar)= ?', $year);
                 ->whereRaw('YEAR(das_penduduk.created_at) <= ?', $year);
-            if ($did != 'ALL') {
+            if ($did != 'Semua') {
                 $query->where('das_penduduk.desa_id', '=', $did);
             }
         }
@@ -470,7 +470,7 @@ class KependudukanController extends Controller
                 ->where('das_penduduk.sex', '=', 1)
                // ->whereRaw('year(das_keluarga.tgl_daftar)= ?', $year);
                 ->whereRaw('YEAR(das_penduduk.created_at) <= ?', $year);
-            if ($did != 'ALL') {
+            if ($did != 'Semua') {
                 $query->where('das_penduduk.desa_id', '=', $did);
             }
         }
@@ -479,7 +479,7 @@ class KependudukanController extends Controller
                 ->where('das_penduduk.sex', '=', 2)
                 //->whereRaw('year(das_keluarga.tgl_daftar)= ?', $year);
                 ->whereRaw('YEAR(das_penduduk.created_at) <= ?', $year);
-            if ($did != 'ALL') {
+            if ($did != 'Semua') {
                 $query->where('das_penduduk.desa_id', '=', $did);
             }
         }
@@ -488,7 +488,7 @@ class KependudukanController extends Controller
                 ->where('das_penduduk.cacat_id', '<>', 7)
                 //->whereRaw('year(das_keluarga.tgl_daftar)= ?', $year);
                 ->whereRaw('YEAR(das_penduduk.created_at) <= ?', $year);
-            if ($did != 'ALL') {
+            if ($did != 'Semua') {
                 $query->where('das_penduduk.desa_id', '=', $did);
             }
         }

@@ -11,7 +11,7 @@
                         <div class="col-sm-8">
                             <input type="hidden" id="profil_id" value="{{ $profil_id }}">
                             <select class="form-control" id="list_desa">
-                                <option value="ALL">ALL</option>
+                                <option value="Semua">Semua</option>
                                 @foreach($list_desa as $desa)
                                     <option value="{{ $desa->desa_id}}">{{$desa->nama}}</option>
                                 @endforeach
@@ -26,7 +26,7 @@
 
                         <div class="col-sm-8">
                             <select class="form-control" id="list_year">
-                                <option value="ALL">ALL</option>
+                                <option value="Semua">Semua</option>
                                 @foreach($year_list as $year)
                                     <option value="{{ $year}}">{{$year}}</option>
                                 @endforeach
@@ -210,7 +210,7 @@
         $.ajax('{!! route('statistik.kesehatan.chart-penyakit') !!}', {
             data: {kid: kid, did: did, y: year}
         }).done(function (data) {
-             if (year=='ALL'){
+             if (year== 'Semua'){
                 create_chart_penyakit(data['grafik']);
              }else{
                  create_chart_penyakit2(data['grafik']);
