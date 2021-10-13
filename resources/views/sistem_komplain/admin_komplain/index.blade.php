@@ -1,7 +1,5 @@
 @extends('layouts.dashboard_template')
 
-@section('title') Data Umum @endsection
-
 @section('content')
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -29,10 +27,9 @@
                 <thead>
                 <tr>
                     <th style="max-width: 150px;">Aksi</th>
-                    <th>ID</th>
-                    <th>Pelapor</th>
-                    <th>Kategori</th>
                     <th>Judul</th>
+                    <th>Pelapor</th>
+                    <th>Kategori</th>                    
                     <th>Status</th>
                 </tr>
                 </thead>
@@ -55,13 +52,12 @@
             ajax: "{!! route( 'admin-komplain.getdata' ) !!}",
             columns: [
                 {data: 'aksi', name: 'aksi', class: 'text-center', searchable: false, orderable: false},
-                {data: 'komplain_id', name: 'komplain_id'},
+                {data: 'judul', name: 'judul'},
                 {data: 'nama', name: 'nama'},
                 {data: 'kategori', name: 'kategori'},
-                {data: 'judul', name: 'judul'},
                 {data: 'status', name: 'status'},
             ],
-            order: [[0, 'desc']]
+            order: [[1, 'asc']]
         });
     });
 </script>
