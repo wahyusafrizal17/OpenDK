@@ -93,7 +93,7 @@ class DataDesaController extends Controller
         try {
             $desa = new DataDesa();
             $desa->fill($request->all());
-            $desa->profil_id = 1;
+            $desa->profil_id = $this->profil->id;
 
             request()->validate([
                 'desa_id'      => 'required|regex:/^[0-9.]+$/|min:13|max:13|unique:das_data_desa,desa_id',
@@ -135,7 +135,7 @@ class DataDesaController extends Controller
     {
         $desa = DataDesa::findOrFail($id);
         $desa->fill($request->all());
-        $desa->profil_id = 1;
+        $desa->profil_id = $this->profil->id;
         try {
             request()->validate([
                 'nama'         => 'required',
