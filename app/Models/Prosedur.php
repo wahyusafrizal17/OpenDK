@@ -35,7 +35,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Prosedur extends Model
 {
-
     protected $table = 'das_prosedur';
 
     protected $fillable = [
