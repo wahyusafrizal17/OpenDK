@@ -14,9 +14,9 @@ class RefKawinTableSeeder extends Seeder
     {
         
 
-        \DB::table('ref_kawin')->delete();
+        DB::table('ref_kawin')->delete();
         
-        \DB::table('ref_kawin')->insert(array (
+        DB::table('ref_kawin')->insert(array (
             0 => 
             array (
                 'id' => 1,

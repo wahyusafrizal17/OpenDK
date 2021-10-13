@@ -14,9 +14,9 @@ class RefSubSubCoaTableSeeder extends Seeder
     {
         
 
-        \DB::table('ref_sub_sub_coa')->delete();
+        DB::table('ref_sub_sub_coa')->delete();
         
-        \DB::table('ref_sub_sub_coa')->insert(array (
+        DB::table('ref_sub_sub_coa')->insert(array (
             0 => 
             array (
                 'id' => 1,

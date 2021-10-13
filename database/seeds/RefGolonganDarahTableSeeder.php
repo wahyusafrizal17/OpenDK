@@ -14,9 +14,9 @@ class RefGolonganDarahTableSeeder extends Seeder
     {
 
 
-        \DB::table('ref_golongan_darah')->delete();
+        DB::table('ref_golongan_darah')->delete();
 
-        \DB::table('ref_golongan_darah')->insert(array (
+        DB::table('ref_golongan_darah')->insert(array (
             0 =>
             array (
                 'id' => 1,

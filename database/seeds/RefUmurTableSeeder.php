@@ -14,9 +14,9 @@ class RefUmurTableSeeder extends Seeder
     {
 
 
-        \DB::table('ref_umur')->delete();
+        DB::table('ref_umur')->delete();
 
-        \DB::table('ref_umur')->insert(array (
+        DB::table('ref_umur')->insert(array (
             0 =>
             array (
                 'id' => 1,

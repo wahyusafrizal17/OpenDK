@@ -14,9 +14,9 @@ class RefPendidikanKkTableSeeder extends Seeder
     {
         
 
-        \DB::table('ref_pendidikan_kk')->delete();
+        DB::table('ref_pendidikan_kk')->delete();
         
-        \DB::table('ref_pendidikan_kk')->insert(array (
+        DB::table('ref_pendidikan_kk')->insert(array (
             0 => 
             array (
                 'id' => 1,

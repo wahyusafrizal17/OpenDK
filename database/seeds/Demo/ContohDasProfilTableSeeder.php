@@ -15,8 +15,6 @@ class ContohDasProfilTableSeeder extends Seeder
     public function run()
     {
 
-        $kecamatan_id = config('app.default_profile');
-
         DB::table('das_profil')->truncate();
 
         DB::table('das_profil')->insert([
@@ -29,9 +27,9 @@ class ContohDasProfilTableSeeder extends Seeder
             'nama_kecamatan'                  => 'Ile Boleng',
             'alamat'                          => 'Jl. Koperasi No. 1, Kab Lombok Barat, Provinsi Nusa Tenggara Barat',
             'kode_pos'                        => '83653',
-            'telepon'                         => '021-2345234',
+            'telepon'                         => '0212345234',
             'email'                           => 'admin@mail.com',
-            'tahun_pembentukan'               => 1990,
+            'tahun_pembentukan'               => now()->year,
             'dasar_pembentukan'               => 'PEREGUB No 4 1990',
             'nama_camat'                      => 'H. Hadi Fathurrahman, S.Sos, M.AP',
             'sekretaris_camat'                => 'Drs. Zaenal Abidin',

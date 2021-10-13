@@ -14,9 +14,9 @@ class RefCacatTableSeeder extends Seeder
     {
         
 
-        \DB::table('ref_cacat')->delete();
+        DB::table('ref_cacat')->delete();
         
-        \DB::table('ref_cacat')->insert(array (
+        DB::table('ref_cacat')->insert(array (
             0 => 
             array (
                 'id' => 1,

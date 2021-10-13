@@ -14,9 +14,9 @@ class DasMenuTableSeeder extends Seeder
     {
 
 
-        \DB::table('das_menu')->delete();
+        DB::table('das_menu')->delete();
 
-        \DB::table('das_menu')->insert(array (
+        DB::table('das_menu')->insert(array (
             0 =>
             array (
                 'id' => 1,

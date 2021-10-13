@@ -14,9 +14,9 @@ class RefCoaTypeTableSeeder extends Seeder
     {
         
 
-        \DB::table('ref_coa_type')->delete();
+        DB::table('ref_coa_type')->delete();
         
-        \DB::table('ref_coa_type')->insert(array (
+        DB::table('ref_coa_type')->insert(array (
             0 => 
             array (
                 'id' => 4,

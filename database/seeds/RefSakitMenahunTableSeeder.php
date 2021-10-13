@@ -14,9 +14,9 @@ class RefSakitMenahunTableSeeder extends Seeder
     {
         
 
-        \DB::table('ref_sakit_menahun')->delete();
+        DB::table('ref_sakit_menahun')->delete();
         
-        \DB::table('ref_sakit_menahun')->insert(array (
+        DB::table('ref_sakit_menahun')->insert(array (
             0 => 
             array (
                 'id' => 1,

@@ -14,9 +14,9 @@ class RefAgamaTableSeeder extends Seeder
     {
         
 
-        \DB::table('ref_agama')->delete();
+        DB::table('ref_agama')->delete();
         
-        \DB::table('ref_agama')->insert(array (
+        DB::table('ref_agama')->insert(array (
             0 => 
             array (
                 'id' => 1,

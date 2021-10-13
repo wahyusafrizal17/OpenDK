@@ -14,9 +14,9 @@ class RefHubunganKeluargaTableSeeder extends Seeder
     {
         
 
-        \DB::table('ref_hubungan_keluarga')->delete();
+        DB::table('ref_hubungan_keluarga')->delete();
         
-        \DB::table('ref_hubungan_keluarga')->insert(array (
+        DB::table('ref_hubungan_keluarga')->insert(array (
             0 => 
             array (
                 'id' => 1,

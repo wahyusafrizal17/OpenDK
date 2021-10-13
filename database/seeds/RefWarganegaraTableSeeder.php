@@ -14,9 +14,9 @@ class RefWarganegaraTableSeeder extends Seeder
     {
         
 
-        \DB::table('ref_warganegara')->delete();
+        DB::table('ref_warganegara')->delete();
         
-        \DB::table('ref_warganegara')->insert(array (
+        DB::table('ref_warganegara')->insert(array (
             0 => 
             array (
                 'id' => 1,

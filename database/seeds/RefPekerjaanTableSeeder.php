@@ -14,9 +14,9 @@ class RefPekerjaanTableSeeder extends Seeder
     {
         
 
-        \DB::table('ref_pekerjaan')->delete();
+        DB::table('ref_pekerjaan')->delete();
         
-        \DB::table('ref_pekerjaan')->insert(array (
+        DB::table('ref_pekerjaan')->insert(array (
             0 => 
             array (
                 'id' => 1,

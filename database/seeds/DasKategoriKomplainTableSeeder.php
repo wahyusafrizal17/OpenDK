@@ -14,9 +14,9 @@ class DasKategoriKomplainTableSeeder extends Seeder
     {
         
 
-        \DB::table('das_kategori_komplain')->delete();
+        DB::table('das_kategori_komplain')->delete();
         
-        \DB::table('das_kategori_komplain')->insert(array (
+        DB::table('das_kategori_komplain')->insert(array (
             0 => 
             array (
                 'id' => '1',

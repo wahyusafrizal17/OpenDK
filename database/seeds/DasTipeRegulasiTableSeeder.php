@@ -14,9 +14,9 @@ class DasTipeRegulasiTableSeeder extends Seeder
     {
         
 
-        \DB::table('das_tipe_regulasi')->delete();
+        DB::table('das_tipe_regulasi')->delete();
         
-        \DB::table('das_tipe_regulasi')->insert(array (
+        DB::table('das_tipe_regulasi')->insert(array (
             0 => 
             array (
                 'id' => 2,

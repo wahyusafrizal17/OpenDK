@@ -14,9 +14,9 @@ class RefCaraKbTableSeeder extends Seeder
     {
         
 
-        \DB::table('ref_cara_kb')->delete();
+        DB::table('ref_cara_kb')->delete();
         
-        \DB::table('ref_cara_kb')->insert(array (
+        DB::table('ref_cara_kb')->insert(array (
             0 => 
             array (
                 'id' => 1,
