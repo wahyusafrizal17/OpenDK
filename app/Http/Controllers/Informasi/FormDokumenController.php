@@ -31,24 +31,22 @@
 
 namespace App\Http\Controllers\Informasi;
 
-use Exception;
-use function back;
-use function view;
+use App\Http\Controllers\Controller;
+use App\Models\FormDokumen;
 use function asset;
-use function route;
-use function unlink;
+use function back;
+use function base_path;
+use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use function compact;
 
-use function request;
-use function redirect;
-use function base_path;
-use App\Models\FormDokumen;
+use Exception;
 use Illuminate\Http\Request;
+use function redirect;
+use function request;
+use function route;
+use function unlink;
+use function view;
 use Yajra\DataTables\DataTables;
-use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Storage;
-use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 
 class FormDokumenController extends Controller
 {
@@ -64,7 +62,6 @@ class FormDokumenController extends Controller
     {
         return DataTables::of(FormDokumen::latest()->get())
             ->addColumn('action', function ($row) {
-
                 if (! Sentinel::guest()) {
                     $data['edit_url']   = route('informasi.form-dokumen.edit', $row->id);
                     $data['delete_url'] = route('informasi.form-dokumen.destroy', $row->id);
@@ -148,7 +145,6 @@ class FormDokumenController extends Controller
     public function destroy($id)
     {
         try {
-            
             $dokumen = FormDokumen::findOrFail($id);
             unlink(base_path('public/' . $dokumen->file_dokumen));
             $dokumen->delete();
