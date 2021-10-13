@@ -57,7 +57,6 @@ class TipePotensiController extends Controller
     {
         return DataTables::of(TipePotensi::all())
             ->addColumn('action', function ($row) {
-
                 $data['edit_url']   = route('setting.tipe-potensi.edit', $row->id);
                 $data['delete_url'] = route('setting.tipe-potensi.destroy', $row->id);
 
