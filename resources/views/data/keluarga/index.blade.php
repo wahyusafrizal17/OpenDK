@@ -74,7 +74,7 @@
                 {data: 'rw', name: 'rw'},
                 {data: 'rt', name: 'rt'},
             ],
-            order: [[0, 'desc']]
+            order: [[2, 'asc']]
         });
     });
 </script>
