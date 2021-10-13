@@ -52,7 +52,7 @@
                                 <table class="table table-striped table-bordered" id="table-data">
                                     <thead>
                                         <tr>
-                                            <th width="100px">Aksi</th>
+                                            <th style="max-width: 100px;">Aksi</th>
                                             <th>Desa</th>
                                             <th>Nama</th>
                                             <th>Bulan</th>
@@ -97,7 +97,7 @@
                 {data: 'imported_at', name: 'imported_at'},
                 
             ],
-            order: [[0, 'nama_desa']]
+            order: [[1, 'asc']]
         });
         $('#list_desa').on('select2:select', function (e) {
             data.ajax.reload();

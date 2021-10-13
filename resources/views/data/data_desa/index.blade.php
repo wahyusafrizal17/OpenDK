@@ -60,7 +60,7 @@
                 {data: 'website', name: 'website'},
                 {data: 'luas_wilayah', name: 'luas_wilayah'},
             ],
-            order: [[0, 'desc']]
+            order: [[2, 'asc']]
         });
     });
 </script>
