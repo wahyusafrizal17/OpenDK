@@ -35,21 +35,11 @@ use App\Http\Controllers\Controller;
 use App\Imports\ImporAPBDesa;
 use App\Models\AnggaranDesa;
 use App\Models\DataDesa;
-use function back;
-use function compact;
-use Exception;
-use Illuminate\Database\QueryException;
-
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use function months_list;
-use function number_format;
-use function redirect;
-use function request;
-use function route;
-use function view;
 use Yajra\DataTables\Facades\DataTables;
-use function years_list;
+
+use Exception;
 
 class AnggaranDesaController extends Controller
 {
@@ -161,7 +151,7 @@ class AnggaranDesaController extends Controller
             AnggaranDesa::find($id)->update($request->all());
 
             return redirect()->route('data.anggaran-desa.index')->with('success', 'Data berhasil disimpan!');
-        } catch (QueryException $e) {
+        } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal disimpan!');
         }
     }
@@ -178,7 +168,7 @@ class AnggaranDesaController extends Controller
             AnggaranDesa::findOrFail($id)->delete();
 
             return redirect()->route('data.anggaran-desa.index')->with('success', 'Data sukses dihapus!');
-        } catch (QueryException $e) {
+        } catch (Exception $e) {
             return redirect()->route('data.anggaran-desa.index')->with('error', 'Data gagal dihapus!');
         }
     }

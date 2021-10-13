@@ -34,15 +34,7 @@ namespace App\Http\Controllers\Page;
 use App\Facades\Counter;
 use App\Http\Controllers\Controller;
 use App\Models\Profil;
-use function array_merge;
-
-use function compact;
-use function date;
 use Illuminate\Support\Facades\DB;
-use function strtolower;
-use function ucwords;
-use function view;
-use function years_list;
 
 class ProfilController extends Controller
 {

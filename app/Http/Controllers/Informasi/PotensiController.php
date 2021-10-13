@@ -34,16 +34,10 @@ namespace App\Http\Controllers\Informasi;
 use App\Http\Controllers\Controller;
 use App\Models\Potensi;
 use App\Models\TipePotensi;
-use function back;
-use function compact;
-use Exception;
-use Illuminate\Database\QueryException;
-
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use function redirect;
-use function request;
-use function view;
+
+use Exception;
 
 class PotensiController extends Controller
 {
@@ -140,7 +134,7 @@ class PotensiController extends Controller
             $potensi->save();
 
             return redirect()->route('informasi.potensi.index')->with('success', 'Potensi berhasil disimpan!');
-        } catch (QueryException $e) {
+        } catch (Exception $e) {
             return back()->withInput()->with('error', 'Simpan Event gagal! ' . $e->getMessage());
         }
     }

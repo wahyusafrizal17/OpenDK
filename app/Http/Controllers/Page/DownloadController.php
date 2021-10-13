@@ -36,16 +36,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Profil;
 use App\Models\Prosedur;
 use App\Models\Regulasi;
-use function asset;
-use function compact;
-
 use Illuminate\Support\Facades\DB;
-use function request;
-use function response;
-use function route;
-use function str_replace;
-use function str_slug;
-use function view;
 use Yajra\DataTables\DataTables;
 
 class DownloadController extends Controller

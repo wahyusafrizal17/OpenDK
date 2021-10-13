@@ -33,17 +33,11 @@ namespace App\Http\Controllers\Data;
 
 use App\Http\Controllers\Controller;
 use App\Models\DataDesa;
-use function back;
-use function compact;
-use Exception;
-
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use function redirect;
-use function request;
-use function route;
-use function view;
 use Yajra\DataTables\DataTables;
+
+use Exception;
 
 class DataDesaController extends Controller
 {

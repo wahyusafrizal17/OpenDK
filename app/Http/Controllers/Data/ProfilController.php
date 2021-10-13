@@ -34,18 +34,10 @@ namespace App\Http\Controllers\Data;
 use App\Http\Controllers\Controller;
 use App\Models\DataUmum;
 use App\Models\Profil;
-use function back;
-use function compact;
-
-use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use function is_img;
-use function redirect;
-use function request;
 
-
-use function view;
+use Exception;
 
 class ProfilController extends Controller
 {

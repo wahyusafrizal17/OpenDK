@@ -34,16 +34,10 @@ namespace App\Http\Controllers\Data;
 use App\Http\Controllers\Controller;
 use App\Models\PesertaProgram;
 use App\Models\Program;
-use function back;
-use function compact;
-use Illuminate\Database\QueryException;
-
 use Illuminate\Http\Request;
-use function redirect;
-use function request;
-use function route;
-use function view;
 use Yajra\DataTables\Facades\DataTables;
+
+use Exception;
 
 class ProgramBantuanController extends Controller
 {
@@ -95,7 +89,7 @@ class ProgramBantuanController extends Controller
             Program::create($request->all());
 
             return redirect()->route('data.program-bantuan.index')->with('success', 'Data berhasil disimpan!');
-        } catch (QueryException $e) {
+        } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal disimpan!' . $e->getMessage());
         }
     }
@@ -126,7 +120,7 @@ class ProgramBantuanController extends Controller
             $program->update();
 
             return redirect()->route('data.program-bantuan.index')->with('success', 'Data berhasil disimpan!');
-        } catch (QueryException $e) {
+        } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal disimpan!' . $e->getMessage());
         }
     }
@@ -149,7 +143,7 @@ class ProgramBantuanController extends Controller
             PesertaProgram::where('program_id', $id)->delete();
 
             return redirect()->route('data.program-bantuan.index')->with('success', 'Data berhasil dihapus!');
-        } catch (QueryException $e) {
+        } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal dihapus!' . $e->getMessage());
         }
     }
@@ -175,7 +169,7 @@ class ProgramBantuanController extends Controller
             PesertaProgram::create($request->all());
 
             return redirect()->route('data.program-bantuan.show', $request->input('program_id'))->with('success', 'Data berhasil disimpan!');
-        } catch (QueryException $e) {
+        } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal disimpan!' . $e->getMessage());
         }
     }

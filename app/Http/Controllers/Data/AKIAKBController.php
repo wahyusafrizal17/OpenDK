@@ -34,19 +34,11 @@ namespace App\Http\Controllers\Data;
 use App\Http\Controllers\Controller;
 use App\Imports\ImporAKIAKB;
 use App\Models\AkiAkb;
-use function back;
-use function compact;
-use Exception;
 use Illuminate\Http\Request;
-
 use Illuminate\Http\Response;
-use function months_list;
-use function redirect;
-use function request;
-use function route;
-use function view;
 use Yajra\DataTables\Facades\DataTables;
-use function years_list;
+
+use Exception;
 
 class AKIAKBController extends Controller
 {

@@ -36,20 +36,11 @@ use App\Models\JawabKomplain;
 use App\Models\Komplain;
 use App\Models\Penduduk;
 use App\Models\Wilayah;
-use function back;
-use function compact;
-use function config;
-use Exception;
-
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
-use function mt_rand;
-use function redirect;
-use function request;
-use function response;
-use function str_slug;
-use function view;
+
+use Exception;
 
 class SistemKomplainController extends Controller
 {

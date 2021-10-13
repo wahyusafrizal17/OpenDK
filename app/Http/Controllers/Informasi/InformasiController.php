@@ -33,8 +33,6 @@ namespace App\Http\Controllers\Informasi;
 
 use App\Http\Controllers\Controller;
 
-use function view;
-
 class InformasiController extends Controller
 {
     /**

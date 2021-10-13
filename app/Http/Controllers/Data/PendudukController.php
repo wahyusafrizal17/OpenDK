@@ -35,21 +35,13 @@ use App\Http\Controllers\Controller;
 use App\Imports\ImporPenduduk;
 use App\Models\DataDesa;
 use App\Models\Penduduk;
-use function back;
-use function compact;
-use function convert_born_date_to_age;
-use Exception;
 use Illuminate\Http\Request;
-
 use Illuminate\Http\Response;
-
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use function route;
-use function strtolower;
-use function ucwords;
-use function view;
 use Yajra\DataTables\DataTables;
+
+use Exception;
 use ZipArchive;
 
 class PendudukController extends Controller

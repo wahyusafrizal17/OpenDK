@@ -33,20 +33,11 @@ namespace App\Http\Controllers\Informasi;
 
 use App\Http\Controllers\Controller;
 use App\Models\FormDokumen;
-use function asset;
-use function back;
-use function base_path;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
-use function compact;
+use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 
 use Exception;
-use Illuminate\Http\Request;
-use function redirect;
-use function request;
-use function route;
-use function unlink;
-use function view;
-use Yajra\DataTables\DataTables;
 
 class FormDokumenController extends Controller
 {

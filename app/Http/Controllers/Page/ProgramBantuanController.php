@@ -34,14 +34,7 @@ namespace App\Http\Controllers\Page;
 use App\Facades\Counter;
 use App\Http\Controllers\Controller;
 use App\Models\Program;
-use function compact;
-
-use function config;
 use Illuminate\Support\Facades\DB;
-use function request;
-use function rtrim;
-use function view;
-use function years_list;
 
 class ProgramBantuanController extends Controller
 {

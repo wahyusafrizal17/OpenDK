@@ -35,20 +35,14 @@ use App\Http\Controllers\Controller;
 use App\Imports\ImporLaporanApbdes;
 use App\Models\DataDesa;
 use App\Models\LaporanApbdes;
-use function back;
-use function compact;
-use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
-
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-
-use function redirect;
-use function route;
-use function view;
 use Yajra\DataTables\DataTables;
+
+use Exception;
 use ZipArchive;
 
 class LaporanApbdesController extends Controller
@@ -122,7 +116,7 @@ class LaporanApbdesController extends Controller
             $apbdes->delete();
 
             return redirect()->route('data.laporan-apbdes.index')->with('success', 'Data sukses dihapus!');
-        } catch (\Illuminate\Database\QueryException $e) {
+        } catch (Exception $e) {
             return redirect()->route('data.laporan-apbdes.index')->with('error', 'Data gagal dihapus!');
         }
     }

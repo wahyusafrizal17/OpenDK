@@ -35,20 +35,14 @@ use App\Http\Controllers\Controller;
 use App\Imports\ImporLaporanPenduduk;
 use App\Models\DataDesa;
 use App\Models\LaporanPenduduk;
-use function back;
-use function compact;
-use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
-
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-
-use function redirect;
-use function route;
-use function view;
 use Yajra\DataTables\DataTables;
+
+use Exception;
 use ZipArchive;
 
 class LaporanPendudukController extends Controller
@@ -119,7 +113,7 @@ class LaporanPendudukController extends Controller
             $penduduk->delete();
 
             return redirect()->route('data.laporan-penduduk.index')->with('success', 'Data sukses dihapus!');
-        } catch (\Illuminate\Database\QueryException $e) {
+        } catch (Exception $e) {
             return redirect()->route('data.laporan-penduduk.index')->with('error', 'Data gagal dihapus!');
         }
     }

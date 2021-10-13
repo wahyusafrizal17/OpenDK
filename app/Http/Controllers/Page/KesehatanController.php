@@ -33,16 +33,7 @@ namespace App\Http\Controllers\Page;
 
 use App\Facades\Counter;
 use App\Http\Controllers\Controller;
-use function array_add;
-
-use function compact;
 use Illuminate\Support\Facades\DB;
-use function kuartal_bulan;
-use function request;
-use function rtrim;
-use function semester;
-use function view;
-use function years_list;
 
 class KesehatanController extends Controller
 {

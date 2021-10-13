@@ -35,15 +35,7 @@ use App\Facades\Counter;
 use App\Http\Controllers\Controller;
 use App\Models\DataDesa;
 use App\Models\Profil;
-
 use Illuminate\Support\Facades\DB;
-use function intval;
-use function kuartal_bulan;
-use function request;
-use function rtrim;
-use function semester;
-use function view;
-use function years_list;
 
 class PendidikanController extends Controller
 {

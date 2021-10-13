@@ -35,19 +35,10 @@ use App\Http\Controllers\Controller;
 use App\Models\Coa;
 use App\Models\SubCoa;
 use App\Models\SubSubCoa;
-use function back;
-use function compact;
-use Exception;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use function intval;
-use function redirect;
-use function request;
-use function str_pad;
-use const STR_PAD_LEFT;
 
-use function view;
+use Exception;
 
 class COAController extends Controller
 {

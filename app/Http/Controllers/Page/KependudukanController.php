@@ -35,18 +35,7 @@ use App\Facades\Counter;
 use App\Http\Controllers\Controller;
 use App\Models\Penduduk;
 use App\Models\Profil;
-use function array_merge;
-use function array_sort;
-
-use function convert_born_date_to_age;
-use function date;
 use Illuminate\Support\Facades\DB;
-use function number_format;
-use function random_color;
-use function request;
-use function strtolower;
-use function ucfirst;
-use function view;
 use Yajra\DataTables\DataTables;
 
 class KependudukanController extends Controller

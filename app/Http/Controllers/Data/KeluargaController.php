@@ -34,15 +34,9 @@ namespace App\Http\Controllers\Data;
 use App\Http\Controllers\Controller;
 use App\Models\Keluarga;
 use App\Models\Penduduk;
-use function compact;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Request as RequestFacade;
-use function ini_set;
-
 use Maatwebsite\Excel\Facades\Excel;
-use function redirect;
-use function route;
-use function view;
 use Yajra\DataTables\DataTables;
 
 class KeluargaController extends Controller

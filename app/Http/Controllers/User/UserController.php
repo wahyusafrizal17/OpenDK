@@ -36,22 +36,13 @@ use App\Http\Requests\UserRequest;
 use App\Http\Requests\UserUpdateRequest;
 use App\Models\Role;
 use App\Models\User;
-use function back;
-use function bcrypt;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
-use function compact;
-use Exception;
-use function flash;
-
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
-use function public_path;
-use function redirect;
-use function route;
-use function trans;
-use function view;
 use Yajra\DataTables\DataTables;
+
+use Exception;
 
 class UserController extends Controller
 {

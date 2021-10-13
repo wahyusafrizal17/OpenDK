@@ -33,14 +33,7 @@ namespace App\Http\Controllers\Page;
 
 use App\Facades\Counter;
 use App\Http\Controllers\Controller;
-use function array_sort;
-
-use function config;
 use Illuminate\Support\Facades\DB;
-use function number_format;
-use function request;
-use function view;
-use function years_list;
 
 class AnggaranRealisasiController extends Controller
 {

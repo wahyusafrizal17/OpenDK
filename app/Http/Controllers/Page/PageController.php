@@ -35,11 +35,8 @@ use App\Facades\Counter;
 use App\Http\Controllers\Controller;
 use App\Models\DataDesa;
 use App\Models\Event;
-use function compact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use function str_replace;
-use function view;
 use willvincent\Feeds\Facades\FeedsFacade;
 
 class PageController extends Controller
