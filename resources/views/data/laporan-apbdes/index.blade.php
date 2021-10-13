@@ -52,7 +52,7 @@
                                 <table class="table table-striped table-bordered" id="apbdes-table">
                                     <thead>
                                         <tr>
-                                            <th width="100px">Aksi</th>
+                                            <th style="max-width: 100px;">Aksi</th>
                                             <th>Desa</th>
                                             <th>Nama</th>
                                             <th>Tahun</th>
@@ -77,7 +77,9 @@
 @push('scripts')
 <script type="text/javascript">
     $(document).ready(function () {
+        
         $('#list_desa').select2();
+
         var data = $('#apbdes-table').DataTable({
             autoWidth: true,
             processing: true,
@@ -97,8 +99,9 @@
                 {data: 'imported_at', name: 'imported_at'},
                 
             ],
-            order: [[0, 'nama_desa']]
+            order: [[1, 'asc']]
         });
+
         $('#list_desa').on('select2:select', function (e) {
             data.ajax.reload();
         });

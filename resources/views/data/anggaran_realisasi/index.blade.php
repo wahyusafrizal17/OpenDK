@@ -1,6 +1,5 @@
 @extends('layouts.dashboard_template')
 
-
 @section('content')
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -70,7 +69,7 @@
                 {data: 'bulan', name: 'bulan'},
                 {data: 'tahun', name: 'tahun'},
             ],
-            order: [[0, 'desc']]
+            order: [[1, 'asc']]
         });
     });
 </script>
