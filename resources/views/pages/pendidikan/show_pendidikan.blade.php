@@ -10,7 +10,7 @@
                     <div class="form-group">
                         <label for="list_desa" class="col-sm-4 control-label">Desa</label>
                         <div class="col-sm-8">
-                            <input type="hidden" id="profil_id" value="{{ $profil_id }}">
+                            <input type="hidden" id="profil_id" value="{{ $profil->id }}">
                             <select class="form-control" id="list_desa">
                                 <option value="Semua">Semua Desa</option>
                                 @foreach($list_desa as $desa)
@@ -51,21 +51,16 @@
                     <div class="active tab-pane" id="jumlah_penduduk">
                         <div class="row">
                             <div class="col-md-12">
-                                <div id="chart_penduduk_pendidikan"
-                                     style="width: 100%; overflow: auto; text-align: left;">
-
-                                </div>
+                                <div id="chart_penduduk_pendidikan" style="width: 100%; overflow: auto; text-align: left;"></div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane" id="jumlah_putus_sekolah">
-                        <div id="chart_putus_sekolah"
-                             style="width:100%; overflow: visible; text-align: left; padding: 10px;;">
+                        <div id="chart_putus_sekolah" style="width:100%; overflow: visible; text-align: left; padding: 10px;;">
                         </div>
                     </div>
                     <div class="tab-pane" id="jumlah_fasilitas">
-                        <div id="chart_fasilitas"
-                             style="width:100%;  overflow: visible; text-align: left; padding: 10px;;">
+                        <div id="chart_fasilitas" style="width:100%;  overflow: visible; text-align: left; padding: 10px;;">
                         </div>
                     </div>
                 </div>
@@ -88,62 +83,60 @@
         $('#list_year').select2();
 
         var pid = $('#profil_id').find(":selected").val();
-        if (kid == null) {
-            kid = $('#profil_id').val();
+        if (pid == null) {
+            pid = $('#profil_id').val();
         }
         var did = $('#list_desa').find(":selected").val();
         var year = $('#list_year').find(":selected").val();
 
         /*
-         Initial Chart Dashboard Pendidikan
+         * Initial Chart Dashboard Pendidikan
          */
-        change_das_pendidikan(kid, did, year);
+        change_das_pendidikan(pid, did, year);
         /*
-         End Initial
+         * End Initial
          */
-
 
         // Change div das_kependudukan when Kecamatan changed
 
-
         $('#list_desa').on('select2:select', function (e) {
             var pid = $('#profil_id').find(":selected").val();
-            if (kid == null) {
-                kid = $('#profil_id').val();
+            if (pid == null) {
+                pid = $('#profil_id').val();
             }
             var did = $('#list_desa').find(":selected").val();
             var year = $('#list_year').find(":selected").val();
-            change_das_pendidikan(kid, did, year);
+            change_das_pendidikan(pid, did, year);
         });
 
         $('#list_year').on('select2:select', function (e) {
             var pid = $('#profil_id').find(":selected").val();
-            if (kid == null) {
-                kid = $('#profil_id').val();
+            if (pid == null) {
+                pid = $('#profil_id').val();
             }
             var did = $('#list_desa').find(":selected").val();
             var year = $('#list_year').find(":selected").val();
 
-            change_das_pendidikan(kid, did, year);
+            change_das_pendidikan(pid, did, year);
         });
     });
 
-    function change_das_pendidikan(kid, did, year) {
+    function change_das_pendidikan(pid, did, year) {
 
         $.ajax('{!! route('statistik.pendidikan.chart-tingkat-pendidikan') !!}', {
-            data: {kid: kid, did: did, y: year}
+            data: {pid: pid, did: did, y: year}
         }).done(function (data) {
             create_chart_tingkat_pendidikan(data['grafik']);
         });
 
         $.ajax('{!! route('statistik.pendidikan.chart-putus-sekolah') !!}', {
-            data: {kid: kid, did: did, y: year}
+            data: {pid: pid, did: did, y: year}
         }).done(function (data) {
             create_chart_putus_sekolah(data['grafik']);
         });
 
         $.ajax('{!! route('statistik.pendidikan.chart-fasilitas-paud') !!}', {
-            data: {kid: kid, did: did, y: year}
+            data: {pid: pid, did: did, y: year}
         }).done(function (data) {
             create_chart_fasilitas_sekolah(data['grafik']);
         });

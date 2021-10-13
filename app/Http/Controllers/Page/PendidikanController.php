@@ -50,7 +50,6 @@ class PendidikanController extends Controller
         $data['page_title']       = 'Pendidikan';
         $data['page_description'] = 'Data Pendidikan ' . $this->sebutan_wilayah;
         $data['year_list']        = years_list();
-        $data['list_kecamatan']   = Profil::with('kecamatan')->orderBy('profil_id', 'desc')->get();
         $data['list_desa']        = DataDesa::all();
 
         return view('pages.pendidikan.show_pendidikan')->with($data);
@@ -58,7 +57,7 @@ class PendidikanController extends Controller
 
     public function getChartTingkatPendidikan()
     {
-        $pid  = 1; //request('pid');
+        $pid  = request('pid');
         $did  = request('did');
         $year = request('y');
 
@@ -80,7 +79,7 @@ class PendidikanController extends Controller
                     'tamat_diploma_sederajat' => $query_pendidikan->sum('tamat_diploma_sederajat'),
                 ];
             }
-        } elseif ($year != "ALL" && $did == "ALL") {
+        } elseif ($year != "Semua" && $did == "Semua") {
             $data_tabel = [];
             // Quartal
             $desa = DataDesa::all();
@@ -156,7 +155,7 @@ class PendidikanController extends Controller
 
     public function getChartPutusSekolah()
     {
-        $pid  = 1; //request('pid');
+        $pid  = request('pid');
         $did  = request('did');
         $year = request('y');
 
@@ -258,7 +257,7 @@ class PendidikanController extends Controller
 
     public function getChartFasilitasPAUD()
     {
-        $pid  = 1; //request('pid');
+        $pid  = request('pid');
         $did  = request('did');
         $year = request('y');
 

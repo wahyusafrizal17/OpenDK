@@ -62,7 +62,7 @@ class KependudukanController extends Controller
         $data['year_list']        = $this->years_list();
         $data['list_desa']        = DataDesa::all();
 
-        $data = array_merge($data, $this->createDashboardKependudukan($this->profil->id, 'ALL', date('Y')));
+        $data = array_merge($data, $this->createDashboardKependudukan($this->profil->id, 'Semua', date('Y')));
 
         return view('pages.kependudukan.show_kependudukan')->with($data);
     }
@@ -93,8 +93,8 @@ class KependudukanController extends Controller
         $data['page_description'] = 'Statistik Kependudukan';
         $data['year_list']        = $this->years_list();
 
-        if (! empty(request('did')) && request('y')) {
-            $data = array_merge($data, $this->createDashboardKependudukan($this->profil->id, request('did'), request('y')));
+        if (! empty(request('pid')) && ! empty(request('did')) && request('y')) {
+            $data = array_merge($data, $this->createDashboardKependudukan(request('pid'), request('did'), request('y')));
         }
 
         return $data;
@@ -197,7 +197,7 @@ class KependudukanController extends Controller
 
     public function getChartPenduduk()
     {
-        $pid  = request('kid');
+        $pid  = request('pid');
         $did  = request('did');
         $year = request('y');
 
@@ -215,7 +215,7 @@ class KependudukanController extends Controller
 
     public function getChartPendudukUsia()
     {
-        $pid  = request('kid');
+        $pid  = request('pid');
         $did  = request('did');
         $year = request('y');
 
@@ -237,7 +237,7 @@ class KependudukanController extends Controller
 
     public function getChartPendudukPendidikan()
     {
-        $pid  = request('kid');
+        $pid  = request('pid');
         $did  = request('did');
         $year = request('y');
 
@@ -324,7 +324,7 @@ class KependudukanController extends Controller
 
     public function getChartPendudukGolDarah()
     {
-        $pid  = request('kid');
+        $pid  = request('pid');
         $did  = request('did');
         $year = request('y');
 
@@ -357,7 +357,7 @@ class KependudukanController extends Controller
 
     public function getChartPendudukKawin()
     {
-        $pid  = request('kid');
+        $pid  = request('pid');
         $did  = request('did');
         $year = request('y');
 
@@ -377,7 +377,7 @@ class KependudukanController extends Controller
 
     public function getChartPendudukAgama()
     {
-        $pid  = request('kid');
+        $pid  = request('pid');
         $did  = request('did');
         $year = request('y');
 
@@ -398,7 +398,7 @@ class KependudukanController extends Controller
 
     public function getChartPendudukKelamin()
     {
-        $pid  = request('kid');
+        $pid  = request('pid');
         $did  = request('did');
         $year = request('y');
 
@@ -435,7 +435,7 @@ class KependudukanController extends Controller
     public function getDataPenduduk()
     {
         $type = request('t');
-        $pid  = request('kid');
+        $pid  = request('pid');
         $did  = request('did');
         $year = request('year');
 

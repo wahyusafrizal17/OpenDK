@@ -39,11 +39,10 @@ use Illuminate\Support\Facades\DB;
 
 class ProfilController extends Controller
 {
+
     /**
      * Menampilkan Halaman Profil Kecamatan
      **/
-
-
     public function LetakGeografis()
     {
         Counter::count('profil.letak-geografis');
@@ -63,6 +62,7 @@ class ProfilController extends Controller
 
         $profil     = $this->profil;
         $dokumen    = DB::table('das_form_dokumen')->take(5)->get();
+
         $page_title = 'Struktur Pemerintahan';
         if (isset($profil)) {
             $page_description = ucwords(strtolower($profil->nama_kecamatan));
@@ -80,7 +80,7 @@ class ProfilController extends Controller
         $data['year_list']        = years_list();
         $data['list_desa']        = DataDesa::all();
 
-        $data = array_merge($data, $this->createDashboardKependudukan($this->profil->id, 'ALL', date('Y')));
+        $data = array_merge($data, $this->createDashboardKependudukan($this->profil->id, 'Semua', date('Y')));
 
         return view('pages.kependudukan.show_kependudukan')->with($data);
     }
