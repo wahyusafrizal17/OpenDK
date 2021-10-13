@@ -25,7 +25,7 @@
                     <a href="{{ route('informasi.regulasi.create') }}" class="btn btn-primary btn-sm {{Sentinel::guest() ? 'hidden':''}}" title="Tambah Data"><i class="fa fa-plus"></i>&ensp; Tambah</a>
                 </div>
                 <!-- /.box-header -->
-                @if(isset($regulasi))
+                @if (count($regulasi) > 0)
                     <div class="box-body no-padding">
 
                         <table class="table table-striped">
@@ -64,10 +64,9 @@
                     </div>
                 @else
                     <div class="box-body">
-                        <h3>Data not found.</h3>
-                        Sorry no data available right now!
+                        <h3>Data tidak ditemukan.</h3>
                     </div>
-                    @endif
+                @endif
                     <!-- /.box-footer -->
             </div>
         </div>

@@ -51,7 +51,7 @@
 
                                 @endforeach
                             @else
-                                <h3>Maaf, FAQ belum tersedia.</h3>
+                                <h3>Data tidak ditemukan.</h3>
                             @endif
 
                         </section>

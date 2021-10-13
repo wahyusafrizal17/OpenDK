@@ -18,7 +18,7 @@
         @else
             <li class="time-label">
                 <span class="bg-gray">
-                    Event tidak tersedia.
+                    Data tidak ditemukan.
                 </span>
             </li>
         @endif

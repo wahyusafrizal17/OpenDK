@@ -61,7 +61,7 @@
                 {data: 'action', name: 'action', class: 'text-center', searchable: false, orderable: false},
                 {data: 'judul_prosedur', name: 'judul_prosedur'},
             ],
-            order: [[0, 'desc']]
+            order: [[1, 'asc']]
         });
     });
 </script>

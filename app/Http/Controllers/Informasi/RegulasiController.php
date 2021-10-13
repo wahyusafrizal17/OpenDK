@@ -54,7 +54,7 @@ class RegulasiController extends Controller
     {
         $page_title       = 'Regulasi';
         $page_description = 'Daftar Regulasi';
-        $regulasi         = Regulasi::orderBy('id', 'asc')->paginate(10); // TODO : Gunakan datatable
+        $regulasi         = Regulasi::latest()->paginate(10); // TODO : Gunakan datatable
 
         return view('informasi.regulasi.index', compact('page_title', 'page_description', 'regulasi'));
     }
