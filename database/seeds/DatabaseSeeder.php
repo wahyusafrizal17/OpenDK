@@ -37,6 +37,5 @@ class DatabaseSeeder extends Seeder
 
         $this->call(DasProfilTableSeeder::class);
         $this->call(DasDataUmumTableSeeder::class);
-        $this->call(DasDataDesaTableSeeder::class);
     }
 }

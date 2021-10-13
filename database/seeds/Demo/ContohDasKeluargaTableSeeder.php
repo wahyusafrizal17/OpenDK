@@ -14,6 +14,8 @@ class ContohDasKeluargaTableSeeder extends Seeder
      */
     public function run()
     {
+        
+        $desa_id = '53.06.13.2001';
 
         DB::table('das_keluarga')->truncate();
 
@@ -21,9 +23,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             0 =>
             array (
                 'id' => '1',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070208130002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -35,9 +38,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             1 =>
             array (
                 'id' => '2',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072808070078',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -49,9 +53,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             2 =>
             array (
                 'id' => '3',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071101128300',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -63,9 +68,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             3 =>
             array (
                 'id' => '4',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072708070041',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -77,9 +83,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             4 =>
             array (
                 'id' => '5',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072409070010',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -91,9 +98,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             5 =>
             array (
                 'id' => '6',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072609070005',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -105,9 +113,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             6 =>
             array (
                 'id' => '7',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070208013000',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -119,9 +128,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             7 =>
             array (
                 'id' => '8',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070712110008',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -133,9 +143,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             8 =>
             array (
                 'id' => '9',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070708150002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -147,9 +158,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             9 =>
             array (
                 'id' => '10',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072709070005',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -161,9 +173,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             10 =>
             array (
                 'id' => '11',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070705130002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -175,9 +188,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             11 =>
             array (
                 'id' => '12',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072011150001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -189,9 +203,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             12 =>
             array (
                 'id' => '13',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071812120005',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -203,9 +218,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             13 =>
             array (
                 'id' => '14',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070807100001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -217,9 +233,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             14 =>
             array (
                 'id' => '15',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071701170001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -231,9 +248,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             15 =>
             array (
                 'id' => '16',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708066066',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -245,9 +263,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             16 =>
             array (
                 'id' => '17',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072808070085',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -259,9 +278,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             17 =>
             array (
                 'id' => '18',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072709070017',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -273,9 +293,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             18 =>
             array (
                 'id' => '19',
+                'desa_id' => $desa_id,
                 'no_kk' => '110501708063913',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -287,9 +308,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             19 =>
             array (
                 'id' => '20',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708063998',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -301,9 +323,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             20 =>
             array (
                 'id' => '21',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072609070041',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -315,9 +338,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             21 =>
             array (
                 'id' => '22',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072709070003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -329,9 +353,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             22 =>
             array (
                 'id' => '23',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072709070012',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -343,9 +368,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             23 =>
             array (
                 'id' => '24',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072709070028',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -357,9 +383,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             24 =>
             array (
                 'id' => '25',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072609070021',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -371,9 +398,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             25 =>
             array (
                 'id' => '26',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072709070001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -385,9 +413,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             26 =>
             array (
                 'id' => '27',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061810',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -399,9 +428,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             27 =>
             array (
                 'id' => '28',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072609070046',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -413,9 +443,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             28 =>
             array (
                 'id' => '29',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072609070029',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -427,9 +458,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             29 =>
             array (
                 'id' => '30',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072609070035',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -441,9 +473,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             30 =>
             array (
                 'id' => '31',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072709070020',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -455,9 +488,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             31 =>
             array (
                 'id' => '32',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072609077003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -469,9 +503,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             32 =>
             array (
                 'id' => '33',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105100106110004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -483,9 +518,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             33 =>
             array (
                 'id' => '34',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072808070076',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -497,9 +533,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             34 =>
             array (
                 'id' => '35',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071308150001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -511,9 +548,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             35 =>
             array (
                 'id' => '36',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071504110001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -525,9 +563,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             36 =>
             array (
                 'id' => '37',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065691',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -539,9 +578,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             37 =>
             array (
                 'id' => '38',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070105070004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -553,9 +593,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             38 =>
             array (
                 'id' => '39',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072509070004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -567,9 +608,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             39 =>
             array (
                 'id' => '40',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072509070006',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -581,9 +623,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             40 =>
             array (
                 'id' => '41',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072509070008',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -595,9 +638,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             41 =>
             array (
                 'id' => '42',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072609074500',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -609,9 +653,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             42 =>
             array (
                 'id' => '43',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072609070004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -623,9 +668,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             43 =>
             array (
                 'id' => '44',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072609070008',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -637,9 +683,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             44 =>
             array (
                 'id' => '45',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072708070038',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -651,9 +698,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             45 =>
             array (
                 'id' => '46',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072709070009',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -665,9 +713,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             46 =>
             array (
                 'id' => '47',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072808070075',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -679,9 +728,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             47 =>
             array (
                 'id' => '48',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072808070084',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Cot Juru Mudi',
@@ -693,9 +743,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             48 =>
             array (
                 'id' => '49',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073010070015',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -707,9 +758,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             49 =>
             array (
                 'id' => '50',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070110070069',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -721,9 +773,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             50 =>
             array (
                 'id' => '51',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072107170001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -735,9 +788,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             51 =>
             array (
                 'id' => '52',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070910140001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -749,9 +803,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             52 =>
             array (
                 'id' => '53',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072408070006',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -763,9 +818,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             53 =>
             array (
                 'id' => '54',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072007070004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -777,9 +833,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             54 =>
             array (
                 'id' => '55',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708062764',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -791,9 +848,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             55 =>
             array (
                 'id' => '56',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072809070076',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -805,9 +863,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             56 =>
             array (
                 'id' => '57',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072708070046',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -819,9 +878,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             57 =>
             array (
                 'id' => '58',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073112090001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -833,9 +893,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             58 =>
             array (
                 'id' => '59',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071605070004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -847,9 +908,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             59 =>
             array (
                 'id' => '60',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072708070036',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -861,9 +923,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             60 =>
             array (
                 'id' => '61',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070110070015',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -875,9 +938,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             61 =>
             array (
                 'id' => '62',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073105070002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -889,9 +953,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             62 =>
             array (
                 'id' => '63',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708062333',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -903,9 +968,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             63 =>
             array (
                 'id' => '64',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072408070026',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -917,9 +983,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             64 =>
             array (
                 'id' => '65',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072809070073',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -931,9 +998,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             65 =>
             array (
                 'id' => '66',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073010070027',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -945,9 +1013,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             66 =>
             array (
                 'id' => '67',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070110070056',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -959,9 +1028,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             67 =>
             array (
                 'id' => '68',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061777',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -973,9 +1043,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             68 =>
             array (
                 'id' => '69',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070401110003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -987,9 +1058,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             69 =>
             array (
                 'id' => '70',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071110130001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1001,9 +1073,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             70 =>
             array (
                 'id' => '71',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071411110001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1015,9 +1088,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             71 =>
             array (
                 'id' => '72',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071605070003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1029,9 +1103,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             72 =>
             array (
                 'id' => '73',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073010070023',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1043,9 +1118,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             73 =>
             array (
                 'id' => '74',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070706130002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1057,9 +1133,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             74 =>
             array (
                 'id' => '75',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072408070030',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1071,9 +1148,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             75 =>
             array (
                 'id' => '76',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072910070009',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1085,9 +1163,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             76 =>
             array (
                 'id' => '77',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072408070034',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1099,9 +1178,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             77 =>
             array (
                 'id' => '78',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072910070010',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1113,9 +1193,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             78 =>
             array (
                 'id' => '79',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072308070037',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1127,9 +1208,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             79 =>
             array (
                 'id' => '80',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072809070056',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1141,9 +1223,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             80 =>
             array (
                 'id' => '81',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071404100003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1155,9 +1238,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             81 =>
             array (
                 'id' => '82',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105010509060025',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1169,9 +1253,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             82 =>
             array (
                 'id' => '83',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072302090002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1183,9 +1268,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             83 =>
             array (
                 'id' => '84',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072809070031',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1197,9 +1283,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             84 =>
             array (
                 'id' => '85',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070110070011',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1211,9 +1298,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             85 =>
             array (
                 'id' => '86',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070110070022',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1225,9 +1313,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             86 =>
             array (
                 'id' => '87',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072809070008',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1239,9 +1328,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             87 =>
             array (
                 'id' => '88',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072106170001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1253,9 +1343,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             88 =>
             array (
                 'id' => '89',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070401110004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1267,9 +1358,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             89 =>
             array (
                 'id' => '90',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071607070001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1281,9 +1373,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             90 =>
             array (
                 'id' => '91',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065304',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1295,9 +1388,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             91 =>
             array (
                 'id' => '92',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072809070044',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1309,9 +1403,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             92 =>
             array (
                 'id' => '93',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072904080002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1323,9 +1418,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             93 =>
             array (
                 'id' => '94',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072408070037',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1337,9 +1433,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             94 =>
             array (
                 'id' => '95',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070110070028',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1351,9 +1448,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             95 =>
             array (
                 'id' => '96',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070110070036',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1365,9 +1463,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             96 =>
             array (
                 'id' => '97',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072408070002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1379,9 +1478,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             97 =>
             array (
                 'id' => '98',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072408070023',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1393,9 +1493,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             98 =>
             array (
                 'id' => '99',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061566',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1407,9 +1508,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             99 =>
             array (
                 'id' => '100',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060038',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1421,9 +1523,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             100 =>
             array (
                 'id' => '101',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072809070079',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1435,9 +1538,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             101 =>
             array (
                 'id' => '102',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060972',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1449,9 +1553,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             102 =>
             array (
                 'id' => '103',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070110070007',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1463,9 +1568,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             103 =>
             array (
                 'id' => '104',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072708070047',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1477,9 +1583,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             104 =>
             array (
                 'id' => '105',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072809070066',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1491,9 +1598,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             105 =>
             array (
                 'id' => '106',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072302090004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1505,9 +1613,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             106 =>
             array (
                 'id' => '107',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070401110002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1519,9 +1628,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             107 =>
             array (
                 'id' => '108',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072308070036',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1533,9 +1643,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             108 =>
             array (
                 'id' => '109',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708062616',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1547,9 +1658,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             109 =>
             array (
                 'id' => '110',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708063375',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1561,9 +1673,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             110 =>
             array (
                 'id' => '111',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071412100003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1575,9 +1688,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             111 =>
             array (
                 'id' => '112',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072708070034',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1589,9 +1703,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             112 =>
             array (
                 'id' => '113',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060117',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1603,9 +1718,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             113 =>
             array (
                 'id' => '114',
+                'desa_id' => $desa_id,
                 'no_kk' => '110507260308001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1617,9 +1733,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             114 =>
             array (
                 'id' => '115',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060770',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1631,9 +1748,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             115 =>
             array (
                 'id' => '116',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071912170001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1645,9 +1763,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             116 =>
             array (
                 'id' => '117',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072809070037',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -1659,9 +1778,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             117 =>
             array (
                 'id' => '118',
+                'desa_id' => $desa_id,
                 'no_kk' => '1107070309070003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1673,9 +1793,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             118 =>
             array (
                 'id' => '119',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072310070006',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1687,9 +1808,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             119 =>
             array (
                 'id' => '120',
+                'desa_id' => $desa_id,
                 'no_kk' => '1100570912110017',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1701,9 +1823,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             120 =>
             array (
                 'id' => '121',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708064481',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1715,9 +1838,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             121 =>
             array (
                 'id' => '122',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065316',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1729,9 +1853,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             122 =>
             array (
                 'id' => '123',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060455',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1743,9 +1868,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             123 =>
             array (
                 'id' => '124',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065100',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1757,9 +1883,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             124 =>
             array (
                 'id' => '125',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070405110009',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1771,9 +1898,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             125 =>
             array (
                 'id' => '126',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070309077004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1785,9 +1913,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             126 =>
             array (
                 'id' => '127',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708063320',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1799,9 +1928,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             127 =>
             array (
                 'id' => '128',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070912110015',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1813,9 +1943,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             128 =>
             array (
                 'id' => '129',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070309070055',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1827,9 +1958,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             129 =>
             array (
                 'id' => '130',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070912110024',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1841,9 +1973,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             130 =>
             array (
                 'id' => '131',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070605100002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1855,9 +1988,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             131 =>
             array (
                 'id' => '132',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071502160001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1869,9 +2003,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             132 =>
             array (
                 'id' => '133',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708062742',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1883,9 +2018,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             133 =>
             array (
                 'id' => '134',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072212110004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1897,9 +2033,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             134 =>
             array (
                 'id' => '135',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072212110003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1911,9 +2048,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             135 =>
             array (
                 'id' => '136',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070309070006',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1925,9 +2063,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             136 =>
             array (
                 'id' => '137',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071404110003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1939,9 +2078,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             137 =>
             array (
                 'id' => '138',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072010150003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1953,9 +2093,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             138 =>
             array (
                 'id' => '139',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070910070014',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1967,9 +2108,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             139 =>
             array (
                 'id' => '140',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070912110005',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1981,9 +2123,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             140 =>
             array (
                 'id' => '141',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708062449',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -1995,9 +2138,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             141 =>
             array (
                 'id' => '142',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072202110001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2009,9 +2153,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             142 =>
             array (
                 'id' => '143',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072810140003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2023,9 +2168,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             143 =>
             array (
                 'id' => '144',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061068',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2037,9 +2183,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             144 =>
             array (
                 'id' => '145',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708063369',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2051,9 +2198,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             145 =>
             array (
                 'id' => '146',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070109140001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2065,9 +2213,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             146 =>
             array (
                 'id' => '147',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072302150002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2079,9 +2228,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             147 =>
             array (
                 'id' => '148',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070912110004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2093,9 +2243,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             148 =>
             array (
                 'id' => '149',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060100',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2107,9 +2258,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             149 =>
             array (
                 'id' => '150',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070309070004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2121,9 +2273,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             150 =>
             array (
                 'id' => '151',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071105120001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2135,9 +2288,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             151 =>
             array (
                 'id' => '152',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072408110002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2149,9 +2303,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             152 =>
             array (
                 'id' => '153',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070109140002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2163,9 +2318,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             153 =>
             array (
                 'id' => '154',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070011200004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2177,9 +2333,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             154 =>
             array (
                 'id' => '155',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708062687',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2191,9 +2348,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             155 =>
             array (
                 'id' => '156',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070401120007',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2205,9 +2363,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             156 =>
             array (
                 'id' => '157',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065578',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2219,9 +2378,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             157 =>
             array (
                 'id' => '158',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708062862',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2233,9 +2393,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             158 =>
             array (
                 'id' => '159',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708063488',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2247,9 +2408,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             159 =>
             array (
                 'id' => '160',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070912110009',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2261,9 +2423,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             160 =>
             array (
                 'id' => '161',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073108070026',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2275,9 +2438,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             161 =>
             array (
                 'id' => '162',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071812120002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2289,9 +2453,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             162 =>
             array (
                 'id' => '163',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070912110001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2303,9 +2468,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             163 =>
             array (
                 'id' => '164',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070107110002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2317,9 +2483,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             164 =>
             array (
                 'id' => '165',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070401120003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2331,9 +2498,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             165 =>
             array (
                 'id' => '166',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070801130001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2345,9 +2513,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             166 =>
             array (
                 'id' => '167',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708063294',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2359,9 +2528,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             167 =>
             array (
                 'id' => '168',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708062298',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2373,9 +2543,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             168 =>
             array (
                 'id' => '169',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070912110019',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2387,9 +2558,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             169 =>
             array (
                 'id' => '170',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071702160004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2401,9 +2573,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             170 =>
             array (
                 'id' => '171',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060161',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2415,9 +2588,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             171 =>
             array (
                 'id' => '172',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065272',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2429,9 +2603,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             172 =>
             array (
                 'id' => '173',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072701120002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2443,9 +2618,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             173 =>
             array (
                 'id' => '174',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708062268',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2457,9 +2633,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             174 =>
             array (
                 'id' => '175',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070603150003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2471,9 +2648,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             175 =>
             array (
                 'id' => '176',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072612110002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2485,9 +2663,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             176 =>
             array (
                 'id' => '177',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073008070016',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2499,9 +2678,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             177 =>
             array (
                 'id' => '178',
+                'desa_id' => $desa_id,
                 'no_kk' => '1111111111111111',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2513,9 +2693,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             178 =>
             array (
                 'id' => '179',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072312110010',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2527,9 +2708,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             179 =>
             array (
                 'id' => '180',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070912110018',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2541,9 +2723,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             180 =>
             array (
                 'id' => '181',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071810100001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2555,9 +2738,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             181 =>
             array (
                 'id' => '182',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071706064233',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2569,9 +2753,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             182 =>
             array (
                 'id' => '183',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061905',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2583,9 +2768,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             183 =>
             array (
                 'id' => '184',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071010070012',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2597,9 +2783,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             184 =>
             array (
                 'id' => '185',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072306110001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2611,9 +2798,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             185 =>
             array (
                 'id' => '186',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070407110001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2625,9 +2813,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             186 =>
             array (
                 'id' => '187',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071812120001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2639,9 +2828,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             187 =>
             array (
                 'id' => '188',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065290',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2653,9 +2843,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             188 =>
             array (
                 'id' => '189',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071504110002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2667,9 +2858,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             189 =>
             array (
                 'id' => '190',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708063947',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2681,9 +2873,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             190 =>
             array (
                 'id' => '191',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071010070010',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2695,9 +2888,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             191 =>
             array (
                 'id' => '192',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070602120003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2709,9 +2903,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             192 =>
             array (
                 'id' => '193',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708063239',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2723,9 +2918,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             193 =>
             array (
                 'id' => '194',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065935',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2737,9 +2933,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             194 =>
             array (
                 'id' => '195',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072312110001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2751,9 +2948,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             195 =>
             array (
                 'id' => '196',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072002140002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2765,9 +2963,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             196 =>
             array (
                 'id' => '197',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071080600164',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2779,9 +2978,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             197 =>
             array (
                 'id' => '198',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070601120002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2793,9 +2993,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             198 =>
             array (
                 'id' => '199',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072210140005',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2807,9 +3008,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             199 =>
             array (
                 'id' => '200',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070912110014',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2821,9 +3023,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             200 =>
             array (
                 'id' => '201',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072101140001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2835,9 +3038,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             201 =>
             array (
                 'id' => '202',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071201120002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2849,9 +3053,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             202 =>
             array (
                 'id' => '203',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072312110006',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2863,9 +3068,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             203 =>
             array (
                 'id' => '204',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065850',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2877,9 +3083,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             204 =>
             array (
                 'id' => '205',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070509070020',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2891,9 +3098,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             205 =>
             array (
                 'id' => '206',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070601120003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2905,9 +3113,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             206 =>
             array (
                 'id' => '207',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070912110011',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2919,9 +3128,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             207 =>
             array (
                 'id' => '208',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061988',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2933,9 +3143,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             208 =>
             array (
                 'id' => '209',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070912110010',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2947,9 +3158,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             209 =>
             array (
                 'id' => '210',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073008070014',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2961,9 +3173,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             210 =>
             array (
                 'id' => '211',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070111110008',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2975,9 +3188,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             211 =>
             array (
                 'id' => '212',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070409070016',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -2989,9 +3203,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             212 =>
             array (
                 'id' => '213',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070110100001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3003,9 +3218,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             213 =>
             array (
                 'id' => '214',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070110100002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3017,9 +3233,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             214 =>
             array (
                 'id' => '215',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073008070029',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3031,9 +3248,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             215 =>
             array (
                 'id' => '216',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072612110001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3045,9 +3263,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             216 =>
             array (
                 'id' => '217',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070912110013',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3059,9 +3278,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             217 =>
             array (
                 'id' => '218',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072701120005',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3073,9 +3293,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             218 =>
             array (
                 'id' => '219',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070912110020',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3087,9 +3308,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             219 =>
             array (
                 'id' => '220',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070903150001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3101,9 +3323,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             220 =>
             array (
                 'id' => '221',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072410070005',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3115,9 +3338,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             221 =>
             array (
                 'id' => '222',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105092712120005',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3129,9 +3353,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             222 =>
             array (
                 'id' => '223',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061685',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3143,9 +3368,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             223 =>
             array (
                 'id' => '224',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071612080001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3157,9 +3383,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             224 =>
             array (
                 'id' => '225',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070502080001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3171,9 +3398,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             225 =>
             array (
                 'id' => '226',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070912110016',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3185,9 +3413,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             226 =>
             array (
                 'id' => '227',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070808110005',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3199,9 +3428,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             227 =>
             array (
                 'id' => '228',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072310070001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3213,9 +3443,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             228 =>
             array (
                 'id' => '229',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070311110002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3227,9 +3458,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             229 =>
             array (
                 'id' => '230',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070808110006',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3241,9 +3473,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             230 =>
             array (
                 'id' => '231',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708063936',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3255,9 +3488,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             231 =>
             array (
                 'id' => '232',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708062638',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3269,9 +3503,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             232 =>
             array (
                 'id' => '233',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708064469',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3283,9 +3518,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             233 =>
             array (
                 'id' => '234',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060288',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3297,9 +3533,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             234 =>
             array (
                 'id' => '235',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070912110022',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3311,9 +3548,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             235 =>
             array (
                 'id' => '236',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072312110003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3325,9 +3563,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             236 =>
             array (
                 'id' => '237',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071808110001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3339,9 +3578,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             237 =>
             array (
                 'id' => '238',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060278',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3353,9 +3593,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             238 =>
             array (
                 'id' => '239',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072009130001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3367,9 +3608,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             239 =>
             array (
                 'id' => '240',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071612080002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3381,9 +3623,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             240 =>
             array (
                 'id' => '241',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071809150001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3395,9 +3638,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             241 =>
             array (
                 'id' => '242',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072010150002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3409,9 +3653,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             242 =>
             array (
                 'id' => '243',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708062461',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3423,9 +3668,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             243 =>
             array (
                 'id' => '244',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072701120003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3437,9 +3683,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             244 =>
             array (
                 'id' => '245',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708064654',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3451,9 +3698,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             245 =>
             array (
                 'id' => '246',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071010110001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3465,9 +3713,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             246 =>
             array (
                 'id' => '247',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072701120006',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3479,9 +3728,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             247 =>
             array (
                 'id' => '248',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070703120001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3493,9 +3743,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             248 =>
             array (
                 'id' => '249',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072312110004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3507,9 +3758,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             249 =>
             array (
                 'id' => '250',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708641224',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3521,9 +3773,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             250 =>
             array (
                 'id' => '251',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070311110001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3535,9 +3788,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             251 =>
             array (
                 'id' => '252',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073008070003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3549,9 +3803,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             252 =>
             array (
                 'id' => '253',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072312110002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3563,9 +3818,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             253 =>
             array (
                 'id' => '254',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070701140002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3577,9 +3833,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             254 =>
             array (
                 'id' => '255',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072312110007',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3591,9 +3848,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             255 =>
             array (
                 'id' => '256',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070809160001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3605,9 +3863,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             256 =>
             array (
                 'id' => '257',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070304120001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3619,9 +3878,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             257 =>
             array (
                 'id' => '258',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060880',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3633,9 +3893,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             258 =>
             array (
                 'id' => '259',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708064991',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3647,9 +3908,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             259 =>
             array (
                 'id' => '260',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070509110002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3661,9 +3923,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             260 =>
             array (
                 'id' => '261',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061908',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3675,9 +3938,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             261 =>
             array (
                 'id' => '262',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071212110007',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3689,9 +3953,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             262 =>
             array (
                 'id' => '263',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071212110005',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3703,9 +3968,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             263 =>
             array (
                 'id' => '264',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071212110006',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Peulanteu Lb.',
@@ -3717,9 +3983,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             264 =>
             array (
                 'id' => '265',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070910070001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3731,9 +3998,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             265 =>
             array (
                 'id' => '266',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072404830002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3745,9 +4013,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             266 =>
             array (
                 'id' => '267',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072808070092',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3759,9 +4028,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             267 =>
             array (
                 'id' => '268',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065523',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3773,9 +4043,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             268 =>
             array (
                 'id' => '269',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070210070012',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3787,9 +4058,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             269 =>
             array (
                 'id' => '270',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708063943',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3801,9 +4073,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             270 =>
             array (
                 'id' => '271',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072208070015',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3815,9 +4088,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             271 =>
             array (
                 'id' => '272',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073007100001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3829,9 +4103,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             272 =>
             array (
                 'id' => '273',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072908070014',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3843,9 +4118,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             273 =>
             array (
                 'id' => '274',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070310070011',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3857,9 +4133,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             274 =>
             array (
                 'id' => '275',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065708',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3871,9 +4148,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             275 =>
             array (
                 'id' => '276',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060776',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3885,9 +4163,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             276 =>
             array (
                 'id' => '277',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070505140005',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3899,9 +4178,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             277 =>
             array (
                 'id' => '278',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708062270',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3913,9 +4193,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             278 =>
             array (
                 'id' => '279',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070210070022',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3927,9 +4208,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             279 =>
             array (
                 'id' => '280',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060005',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3941,9 +4223,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             280 =>
             array (
                 'id' => '281',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708062269',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3955,9 +4238,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             281 =>
             array (
                 'id' => '282',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061120',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3969,9 +4253,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             282 =>
             array (
                 'id' => '283',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072808070119',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3983,9 +4268,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             283 =>
             array (
                 'id' => '284',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070310070017',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -3997,9 +4283,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             284 =>
             array (
                 'id' => '285',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061681',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4011,9 +4298,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             285 =>
             array (
                 'id' => '286',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070310070022',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4025,9 +4313,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             286 =>
             array (
                 'id' => '287',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072808070111',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4039,9 +4328,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             287 =>
             array (
                 'id' => '288',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708063376',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4053,9 +4343,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             288 =>
             array (
                 'id' => '289',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060837',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4067,9 +4358,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             289 =>
             array (
                 'id' => '290',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065909',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4081,9 +4373,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             290 =>
             array (
                 'id' => '291',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072808070122',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4095,9 +4388,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             291 =>
             array (
                 'id' => '292',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073112720001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4109,9 +4403,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             292 =>
             array (
                 'id' => '293',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072108070042',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4123,9 +4418,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             293 =>
             array (
                 'id' => '294',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072303090002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4137,9 +4433,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             294 =>
             array (
                 'id' => '295',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072908070024',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4151,9 +4448,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             295 =>
             array (
                 'id' => '296',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070810070012',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4165,9 +4463,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             296 =>
             array (
                 'id' => '297',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072808070110',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4179,9 +4478,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             297 =>
             array (
                 'id' => '298',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061897',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4193,9 +4493,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             298 =>
             array (
                 'id' => '299',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070210070019',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4207,9 +4508,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             299 =>
             array (
                 'id' => '300',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073110130004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4221,9 +4523,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             300 =>
             array (
                 'id' => '301',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070210070016',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4235,9 +4538,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             301 =>
             array (
                 'id' => '302',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065847',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4249,9 +4553,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             302 =>
             array (
                 'id' => '303',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060723',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4263,9 +4568,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             303 =>
             array (
                 'id' => '304',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061733',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4277,9 +4583,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             304 =>
             array (
                 'id' => '305',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072212110001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4291,9 +4598,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             305 =>
             array (
                 'id' => '306',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060146',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4305,9 +4613,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             306 =>
             array (
                 'id' => '307',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071907080001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4319,9 +4628,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             307 =>
             array (
                 'id' => '308',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070410070005',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4333,9 +4643,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             308 =>
             array (
                 'id' => '309',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708062078',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4347,9 +4658,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             309 =>
             array (
                 'id' => '310',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071207170002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4361,9 +4673,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             310 =>
             array (
                 'id' => '311',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073005170001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4375,9 +4688,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             311 =>
             array (
                 'id' => '312',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072810140003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4389,9 +4703,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             312 =>
             array (
                 'id' => '313',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070503080001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4403,9 +4718,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             313 =>
             array (
                 'id' => '314',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071705130001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4417,9 +4733,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             314 =>
             array (
                 'id' => '315',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071910100002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4431,9 +4748,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             315 =>
             array (
                 'id' => '316',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072401120007',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4445,9 +4763,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             316 =>
             array (
                 'id' => '317',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708066105',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4459,9 +4778,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             317 =>
             array (
                 'id' => '318',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061887',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4473,9 +4793,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             318 =>
             array (
                 'id' => '319',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072208070010',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4487,9 +4808,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             319 =>
             array (
                 'id' => '320',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072306150001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4501,9 +4823,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             320 =>
             array (
                 'id' => '321',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061124',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4515,9 +4838,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             321 =>
             array (
                 'id' => '322',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105102001110006',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4529,9 +4853,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             322 =>
             array (
                 'id' => '323',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708063350',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4543,9 +4868,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             323 =>
             array (
                 'id' => '324',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070810070004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4557,9 +4883,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             324 =>
             array (
                 'id' => '325',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070510070017',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4571,9 +4898,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             325 =>
             array (
                 'id' => '326',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065328',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4585,9 +4913,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             326 =>
             array (
                 'id' => '327',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070510070021',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4599,9 +4928,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             327 =>
             array (
                 'id' => '328',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708060789',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4613,9 +4943,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             328 =>
             array (
                 'id' => '329',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071612110002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4627,9 +4958,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             329 =>
             array (
                 'id' => '330',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071612110000',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4641,9 +4973,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             330 =>
             array (
                 'id' => '331',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065103',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4655,9 +4988,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             331 =>
             array (
                 'id' => '332',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065515',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4669,9 +5003,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             332 =>
             array (
                 'id' => '333',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072808070117',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4683,9 +5018,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             333 =>
             array (
                 'id' => '334',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070510070010',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4697,9 +5033,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             334 =>
             array (
                 'id' => '335',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072908130002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4711,9 +5048,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             335 =>
             array (
                 'id' => '336',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708062716',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4725,9 +5063,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             336 =>
             array (
                 'id' => '337',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070410070028',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4739,9 +5078,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             337 =>
             array (
                 'id' => '338',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065532',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4753,9 +5093,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             338 =>
             array (
                 'id' => '339',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070704150001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4767,9 +5108,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             339 =>
             array (
                 'id' => '340',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072805070001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4781,9 +5123,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             340 =>
             array (
                 'id' => '341',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070304100006',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4795,9 +5138,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             341 =>
             array (
                 'id' => '342',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070910070028',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4809,9 +5153,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             342 =>
             array (
                 'id' => '343',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072601110001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4823,9 +5168,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             343 =>
             array (
                 'id' => '344',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072309130002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4837,9 +5183,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             344 =>
             array (
                 'id' => '345',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070810070006',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4851,9 +5198,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             345 =>
             array (
                 'id' => '346',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708063516',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4865,9 +5213,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             346 =>
             array (
                 'id' => '347',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072203100001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4879,9 +5228,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             347 =>
             array (
                 'id' => '348',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073010090007',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4893,9 +5243,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             348 =>
             array (
                 'id' => '349',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073001120001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4907,9 +5258,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             349 =>
             array (
                 'id' => '350',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071304090001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4921,9 +5273,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             350 =>
             array (
                 'id' => '351',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072901070001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4935,9 +5288,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             351 =>
             array (
                 'id' => '352',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070405100001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4949,9 +5303,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             352 =>
             array (
                 'id' => '353',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070510070022',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4963,9 +5318,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             353 =>
             array (
                 'id' => '354',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072411080003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4977,9 +5333,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             354 =>
             array (
                 'id' => '355',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708065687',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -4991,9 +5348,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             355 =>
             array (
                 'id' => '356',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071712080002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5005,9 +5363,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             356 =>
             array (
                 'id' => '357',
+                'desa_id' => $desa_id,
                 'no_kk' => '110507112090001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5019,9 +5378,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             357 =>
             array (
                 'id' => '358',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708063596',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5033,9 +5393,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             358 =>
             array (
                 'id' => '359',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070410070001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5047,9 +5408,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             359 =>
             array (
                 'id' => '360',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071109130001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5061,9 +5423,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             360 =>
             array (
                 'id' => '361',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070310070028',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5075,9 +5438,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             361 =>
             array (
                 'id' => '362',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070510070014',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5089,9 +5453,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             362 =>
             array (
                 'id' => '363',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072404080002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5103,9 +5468,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             363 =>
             array (
                 'id' => '364',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061492',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5117,9 +5483,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             364 =>
             array (
                 'id' => '365',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071102090001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5131,9 +5498,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             365 =>
             array (
                 'id' => '366',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071708061882',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5145,9 +5513,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             366 =>
             array (
                 'id' => '367',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105077804100004',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5159,9 +5528,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             367 =>
             array (
                 'id' => '368',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072404120002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5173,9 +5543,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             368 =>
             array (
                 'id' => '369',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070910070018',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5187,9 +5558,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             369 =>
             array (
                 'id' => '370',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071501090002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5201,9 +5573,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             370 =>
             array (
                 'id' => '371',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072307850001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5215,9 +5588,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             371 =>
             array (
                 'id' => '372',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070204900001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5229,9 +5603,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             372 =>
             array (
                 'id' => '373',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105075003990001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5243,9 +5618,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             373 =>
             array (
                 'id' => '374',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105074603780001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5257,9 +5633,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             374 =>
             array (
                 'id' => '375',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105074604560001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5271,9 +5648,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             375 =>
             array (
                 'id' => '376',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070207960002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5285,9 +5663,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             376 =>
             array (
                 'id' => '377',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070110820001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5299,9 +5678,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             377 =>
             array (
                 'id' => '378',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105074202910001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5313,9 +5693,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             378 =>
             array (
                 'id' => '379',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105074708750002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5327,9 +5708,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             379 =>
             array (
                 'id' => '380',
+                'desa_id' => $desa_id,
                 'no_kk' => '1112034304680002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5341,9 +5723,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             380 =>
             array (
                 'id' => '381',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105075911630014',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5355,9 +5738,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             381 =>
             array (
                 'id' => '382',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070609890001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5369,9 +5753,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             382 =>
             array (
                 'id' => '383',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070206940001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5383,9 +5768,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             383 =>
             array (
                 'id' => '384',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073112600043',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5397,9 +5783,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             384 =>
             array (
                 'id' => '385',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105071011650005',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5411,9 +5798,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             385 =>
             array (
                 'id' => '386',
+                'desa_id' => $desa_id,
                 'no_kk' => '1114020310120001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5425,9 +5813,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             386 =>
             array (
                 'id' => '387',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105075505010001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5439,9 +5828,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             387 =>
             array (
                 'id' => '388',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105074609100001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5453,9 +5843,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             388 =>
             array (
                 'id' => '389',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070705930001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5467,9 +5858,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             389 =>
             array (
                 'id' => '390',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070505950001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5481,9 +5873,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             390 =>
             array (
                 'id' => '391',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105010608860011',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5495,9 +5888,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             391 =>
             array (
                 'id' => '392',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105077112840075',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5509,9 +5903,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             392 =>
             array (
                 'id' => '393',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105077007100001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5523,9 +5918,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             393 =>
             array (
                 'id' => '394',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105076403840001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5537,9 +5933,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             394 =>
             array (
                 'id' => '395',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105074507780002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5551,9 +5948,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             395 =>
             array (
                 'id' => '396',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105078805050002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5565,9 +5963,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             396 =>
             array (
                 'id' => '397',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072605070001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5579,9 +5978,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             397 =>
             array (
                 'id' => '398',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105090107480044',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5593,9 +5993,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             398 =>
             array (
                 'id' => '399',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070508930001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5607,9 +6008,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             399 =>
             array (
                 'id' => '400',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105072508090001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5621,9 +6023,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             400 =>
             array (
                 'id' => '401',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070102910001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5635,9 +6038,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             401 =>
             array (
                 'id' => '402',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105074903940002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5649,9 +6053,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             402 =>
             array (
                 'id' => '403',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105074610970001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5663,9 +6068,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             403 =>
             array (
                 'id' => '404',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105074211090002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5677,9 +6083,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             404 =>
             array (
                 'id' => '405',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105076707560002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5691,9 +6098,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             405 =>
             array (
                 'id' => '406',
+                'desa_id' => $desa_id,
                 'no_kk' => '1112075403890001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5705,9 +6113,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             406 =>
             array (
                 'id' => '407',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070108780003',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5719,9 +6128,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             407 =>
             array (
                 'id' => '408',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073112780035',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5733,9 +6143,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             408 =>
             array (
                 'id' => '409',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070907790002',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5747,9 +6158,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             409 =>
             array (
                 'id' => '410',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105073004070001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5761,9 +6173,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             410 =>
             array (
                 'id' => '411',
+                'desa_id' => $desa_id,
                 'no_kk' => '1105070510960001',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Seun. Teungoh',
@@ -5775,9 +6188,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             411 =>
             array (
                 'id' => '725',
+                'desa_id' => $desa_id,
                 'no_kk' => '1.10507040879e15',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -5789,9 +6203,10 @@ class ContohDasKeluargaTableSeeder extends Seeder
             412 =>
             array (
                 'id' => '726',
+                'desa_id' => $desa_id,
                 'no_kk' => '1.10507630577e15',
                 'nik_kepala' => NULL,
-                'tgl_daftar' => '2017-01-01',
+                'tgl_daftar' => now(),
                 'kelas_sosial' => NULL,
                 'tgl_cetak_kk' => NULL,
                 'alamat' => 'Kubu',
@@ -5803,6 +6218,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
             413 =>
             array (
                 'id' => '727',
+                'desa_id' => $desa_id,
                 'no_kk' => '1.10507470771e15',
                 'nik_kepala' => NULL,
                 'tgl_daftar' => '2017-01-02',
@@ -5817,6 +6233,7 @@ class ContohDasKeluargaTableSeeder extends Seeder
             414 =>
             array (
                 'id' => '728',
+                'desa_id' => $desa_id,
                 'no_kk' => '1.10507050562e15',
                 'nik_kepala' => NULL,
                 'tgl_daftar' => '2017-01-03',

@@ -15,9 +15,10 @@ class DasDataUmumTableSeeder extends Seeder
     public function run()
     {
 
-        \DB::table('das_data_umum')->delete();
+        DB::table('das_data_umum')->truncate();
 
         DB::table('das_data_umum')->insert([
+            'id'                     => 1,
             'profil_id'              => 1,
             'tipologi'               => null,
             'ketinggian'             => 1,
