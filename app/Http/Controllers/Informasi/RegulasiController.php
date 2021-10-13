@@ -100,7 +100,7 @@ class RegulasiController extends Controller
             }
 
             $regulasi->save();
-            
+
             return redirect()->route('informasi.regulasi.index')->with('success', 'Regulasi berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Regulasi gagal disimpan!!');
