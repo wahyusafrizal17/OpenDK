@@ -49,7 +49,7 @@ class DataDesaController extends Controller
     public function index()
     {
         $page_title       = 'Desa';
-        $page_description = 'Data Desa';
+        $page_description = 'Daftar Desa';
 
         return view('data.data_desa.index', compact('page_title', 'page_description'));
     }
