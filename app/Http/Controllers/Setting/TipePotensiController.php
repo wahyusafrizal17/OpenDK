@@ -33,17 +33,8 @@ namespace App\Http\Controllers\Setting;
 
 use App\Http\Controllers\Controller;
 use App\Models\TipePotensi;
-use function back;
-use function compact;
-use Exception;
 use Illuminate\Http\Request;
-
 use Illuminate\Http\Response;
-use function redirect;
-use function request;
-use function route;
-use function str_slug;
-use function view;
 use Yajra\DataTables\DataTables;
 
 class TipePotensiController extends Controller
@@ -64,13 +55,11 @@ class TipePotensiController extends Controller
     // Get Data Tipe Potensi
     public function getData()
     {
-        return DataTables::of(TipePotensi::all()->last()->get())
+        return DataTables::of(TipePotensi::all())
             ->addColumn('action', function ($row) {
-                $edit_url   = route('setting.tipe-potensi.edit', $row->id);
-                $delete_url = route('setting.tipe-potensi.destroy', $row->id);
 
-                $data['edit_url']   = $edit_url;
-                $data['delete_url'] = $delete_url;
+                $data['edit_url']   = route('setting.tipe-potensi.edit', $row->id);
+                $data['delete_url'] = route('setting.tipe-potensi.destroy', $row->id);
 
                 return view('forms.action', $data);
             })

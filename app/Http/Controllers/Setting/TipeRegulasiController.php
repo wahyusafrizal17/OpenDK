@@ -58,7 +58,7 @@ class TipeRegulasiController extends Controller
     // Get Data Kategori Komplain
     public function getData()
     {
-        return DataTables::of(TipeRegulasi::all()->last()->get())
+        return DataTables::of(TipeRegulasi::all())
             ->addColumn('action', function ($row) {
                 $data['edit_url']   = route('setting.tipe-regulasi.edit', $row->id);
                 $data['delete_url'] = route('setting.tipe-regulasi.destroy', $row->id);
