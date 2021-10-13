@@ -30,7 +30,7 @@
             <table class="table table-striped table-bordered" id="data_tipe_potensi">
                 <thead>
                 <tr>
-                    <th style="max-width: 80px;">Aksi</th>
+                    <th style="max-width: 100px;">Aksi</th>
                     <th>Kategori Potensi</th>
                 </tr>
                 </thead>
@@ -55,7 +55,7 @@
                 {data: 'action', name: 'action', class: 'text-center', searchable: false, orderable: false},
                 {data: 'nama_kategori', name: 'nama_kategori'}
             ],
-            order: [[0, 'desc']]
+            order: [[1, 'asc']]
         });
     });
 </script>

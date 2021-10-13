@@ -33,7 +33,7 @@
                                 <table class="table table-striped table-bordered" id="keluarga-table">
                                     <thead>
                                     <tr>
-                                        <th style="max-width: 80px;">Aksi</th>
+                                        <th style="max-width: 100px;">Aksi</th>
                                         <th>No. KK</th>
                                         <th>Nama Kepala</th>
                                         <th>Tanggal Daftar</th>

@@ -30,7 +30,7 @@
             <table class="table table-striped table-bordered" id="data-penyakit">
                 <thead>
                 <tr>
-                    <th style="max-width: 80px;">Aksi</th>
+                    <th style="max-width: 100px;">Aksi</th>
                     <th>Nama Penyakit</th>
                 </tr>
                 </thead>
@@ -56,7 +56,7 @@
 
                 {data: 'nama', name: 'nama'}
             ],
-            order: [[0, 'desc']]
+            order: [[1, 'asc']]
         });
     });
 </script>

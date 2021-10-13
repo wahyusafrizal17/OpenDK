@@ -30,7 +30,7 @@
             <table class="table table-striped table-bordered" id="data-slide">
                 <thead>
                 <tr>
-                    <th style="max-width: 150px;">Aksi</th>
+                    <th style="max-width: 100px;">Aksi</th>
                     <th>Judul</th>
                     <th>Deskripsi</th>
                 </tr>
@@ -57,7 +57,7 @@
                 {data: 'judul', name: 'judul'},
                 {data: 'deskripsi', name: 'deskripsi'}
             ],
-            order: [[0, 'desc']]
+            order: [[1, 'asc']]
         });
     });
 </script>
