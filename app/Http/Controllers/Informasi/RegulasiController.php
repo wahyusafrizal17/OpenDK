@@ -54,7 +54,7 @@ class RegulasiController extends Controller
     {
         $page_title       = 'Regulasi';
         $page_description = 'Daftar Regulasi';
-        $regulasi         = Regulasi::orderBy('id', 'asc')->paginate(10);
+        $regulasi         = Regulasi::orderBy('id', 'asc')->paginate(10); // TODO : Gunakan datatable
 
         return view('informasi.regulasi.index', compact('page_title', 'page_description', 'regulasi'));
     }
@@ -100,6 +100,7 @@ class RegulasiController extends Controller
             }
 
             $regulasi->save();
+            
             return redirect()->route('informasi.regulasi.index')->with('success', 'Regulasi berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Regulasi gagal disimpan!!');

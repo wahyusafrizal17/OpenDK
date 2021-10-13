@@ -22,7 +22,7 @@
         <div class="col-md-12">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <a href="{{ route('informasi.regulasi.create') }}" class="btn btn-primary btn-sm {{Sentinel::guest() ? 'hidden':''}}" title="Tambah"><i class="fa fa-plus"></i>&ensp;Tambah Data</a>
+                    <a href="{{ route('informasi.regulasi.create') }}" class="btn btn-primary btn-sm {{Sentinel::guest() ? 'hidden':''}}" title="Tambah Data"><i class="fa fa-plus"></i>&ensp; Tambah</a>
                 </div>
                 <!-- /.box-header -->
                 @if(isset($regulasi))
@@ -66,12 +66,6 @@
                     <div class="box-body">
                         <h3>Data not found.</h3>
                         Sorry no data available right now!
-                    </div>
-                    <!-- /.box-body -->
-                    <div class="box-footer clearfix">
-                        <div class="pull-right">
-
-                        </div>
                     </div>
                     @endif
                     <!-- /.box-footer -->

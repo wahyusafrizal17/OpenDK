@@ -66,8 +66,7 @@
                     }
 
                     reader.readAsDataURL(input.files[0]);
-                }
-                else { //no
+                } else { //no
                     //warning
                     $("#file_regulasi").val('');
                     alert('File tersebut tidak diperbolehkan.');
