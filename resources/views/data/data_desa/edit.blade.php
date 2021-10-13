@@ -19,12 +19,7 @@
     <div class="row">
         <div class="col-md-12">
             @include('partials.flash_message')
-            <div class="box box-primary">
-                {{-- <div class="box-header with-border">
-                    <h3 class="box-title">Aksi</h3>
-                </div>--}}
-                <!-- /.box-header -->
-
+            
                 @if (count($errors) > 0)
                     <div class="alert alert-danger">
                         <strong>Oops!</strong> Ada kesalahan pada inputan Anda..<br><br>

@@ -19,12 +19,7 @@
     <div class="row">
         <div class="col-md-12">
             @include( 'partials.flash_message' )
-            <div class="box box-primary">
-                {{-- <div class="box-header with-border">
-                    <h3 class="box-title">Aksi</h3>
-                </div>--}}
-                <!-- /.box-header -->
-
+            
                 <!-- form start -->
                 {!! Form::model($penyakit, [ 'route' => ['setting.jenis-penyakit.update', $penyakit->id], 'method' => 'put','id' => 'form-jenis-penyakit', 'class' => 'form-horizontal form-label-left'] ) !!}
 
