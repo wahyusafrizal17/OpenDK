@@ -15,46 +15,44 @@
 
 <!-- Main content -->
 <section class="content container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            
-                @if (count($errors) > 0)
-                    <div class="alert alert-danger">
-                        <strong>Ups!</strong> Ada beberapa masalah dengan masukan Anda.<br><br>
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
 
-                    </div>
+    <div class="box box-primary">
 
-                    @endif
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <strong>Ups!</strong> Ada beberapa masalah dengan masukan Anda.<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
 
-                            <!-- form start -->
-                    {!!  Form::model($profil, [ 'route' => ['data.profil.update', $profil->id], 'method' => 'put','id' => 'form-profil', 'class' => 'form-horizontal form-label-left', 'files'=>true] ) !!}
+            </div>
 
-                    <div class="box-body">
+        @endif
 
+        <!-- form start -->
+        {!!  Form::model($profil, [ 'route' => ['data.profil.update', $profil->id], 'method' => 'put','id' => 'form-profil', 'class' => 'form-horizontal form-label-left', 'files'=>true] ) !!}
 
-                        @include( 'flash::message' )
-                        @include('data.profil.form_edit')
+        <div class="box-body">
 
-                    </div>
-                    <!-- /.box-body -->
-                    <div class="box-footer">
-                        <div class="pull-right">
-                            <div class="control-group">
-                                <a href="{{ route('data.profil.index') }}">
-                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i> Batal</button>
-                                </a>
-                                <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save"></i> Simpan</button>
-                            </div>
-                        </div>
-                    </div>
-                    {!! Form::close() !!}
+            @include( 'flash::message' )
+            @include('data.profil.form_edit')
+
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+            <div class="pull-center">
+                <div class="control-group">
+                    <a href="{{ route('data.profil.index') }}">
+                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i>&nbsp; Batal</button>
+                    </a>
+                    <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save"></i>&nbsp; Simpan</button>
+                </div>
             </div>
         </div>
+        {!! Form::close() !!}
+
     </div>
     <!-- /.row -->
 
