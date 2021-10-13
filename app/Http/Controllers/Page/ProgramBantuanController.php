@@ -31,11 +31,11 @@
 
 namespace App\Http\Controllers\Page;
 
-use App\Models\Program;
 use App\Facades\Counter;
-use App\Models\DataDesa;
-use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\DataDesa;
+use App\Models\Program;
+use Illuminate\Support\Facades\DB;
 
 class ProgramBantuanController extends Controller
 {
