@@ -62,7 +62,7 @@
                 {data: 'masa_berlaku', name: 'masa_berlaku'},
                 {data: 'sasaran', name: 'sasaran'},
             ],
-            order: [[0, 'desc']]
+            order: [[1, 'asc']]
         });
     });
 </script>
