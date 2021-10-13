@@ -30,14 +30,14 @@
             @include( 'flash::message' )
             <table class="table table-bordered table-hover dataTable" id="aki-table">
                 <thead>
-                <tr>
-                    <th style="max-width: 100px;">Aksi</th>
-                    <th>Desa</th>
-                    <th>Jenis Penyakit</th>
-                    <th>Jumlah Penderita</th>
-                    <th>Bulan</th>
-                    <th>Tahun</th>
-                </tr>
+                    <tr>
+                        <th style="max-width: 100px;">Aksi</th>
+                        <th>Desa</th>
+                        <th>Jenis Penyakit</th>
+                        <th>Jumlah Penderita</th>
+                        <th>Bulan</th>
+                        <th>Tahun</th>
+                    </tr>
                 </thead>
             </table>
         </div>
@@ -64,7 +64,7 @@
                 {data: 'bulan', name: 'bulan'},
                 {data: 'tahun', name: 'tahun'},
             ],
-            order: [[0, 'desc']]
+            order: [[1, 'asc']]
         });
     });
 </script>

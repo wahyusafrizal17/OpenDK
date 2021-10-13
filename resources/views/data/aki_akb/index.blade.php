@@ -64,7 +64,7 @@
                 {data: 'bulan', name: 'bulan', searchable: false,},
                 {data: 'tahun', name: 'tahun', searchable: false,},
             ],
-            order: [[0, 'desc']]
+            order: [[1, 'desc']]
         });
     });
 </script>
