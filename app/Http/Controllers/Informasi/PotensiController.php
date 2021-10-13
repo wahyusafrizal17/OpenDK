@@ -31,19 +31,19 @@
 
 namespace App\Http\Controllers\Informasi;
 
-use Exception;
-use function back;
-use function view;
-use function compact;
-use function request;
-use function redirect;
+use App\Http\Controllers\Controller;
 use App\Models\Potensi;
-
 use App\Models\TipePotensi;
+use function back;
+use function compact;
+use Exception;
+use Illuminate\Database\QueryException;
+
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\Http\Controllers\Controller;
-use Illuminate\Database\QueryException;
+use function redirect;
+use function request;
+use function view;
 
 class PotensiController extends Controller
 {
