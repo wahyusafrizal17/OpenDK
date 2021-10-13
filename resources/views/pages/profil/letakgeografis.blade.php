@@ -28,7 +28,7 @@
                 <div class="col-md-8 col-sm-8">
                     <div class="box box-primary">
                         <div class="box-header with-border text-bold">
-                            <h3 class="box-title text-bold"><i class="fa  fa-arrow-circle-right fa-lg text-blue"></i> LETAK GEOGRAFIS {{ strtoupper($sebutan_wilayah) }} {{ strtoupper($profil->kecamatan->nama) }}</h3>
+                            <h3 class="box-title text-bold"><i class="fa  fa-arrow-circle-right fa-lg text-blue"></i> LETAK GEOGRAFIS {{ strtoupper($sebutan_wilayah) }} {{ strtoupper($profil->nama_kecamatan) }}</h3>
                         </div>
                         <div class="box-body">
                             <div  id="canvas_peta">
@@ -40,11 +40,11 @@
                     </div>
                     <!-- /.row -->
                     <div class="box-footer">
-                        <p style="text-align: justify">{{ $sebutan_wilayah }} {{ ucwords(strtolower($profil->kecamatan->nama)) }} mempunyai <b> Luas {{ number_format($profil->dataumum->luas_wilayah_value) }} km </b> yang mencakup <b> {{ $profil->datadesa->count() }}  Desa/Kelurahan </b>, 
+                        <p style="text-align: justify">{{ $sebutan_wilayah }} {{ ucwords(strtolower($profil->nama_kecamatan)) }} mempunyai <b> Luas {{ number_format($profil->dataumum->luas_wilayah_value) }} km </b> yang mencakup <b> {{ $profil->datadesa->count() }}  Desa/Kelurahan </b>, 
                             Adapun <b> {{ terbilang($profil->datadesa->count()) }} Desa/kelurahan </b> tersebut yaitu @foreach($profil->datadesa as $desa) Desa {{ $desa->nama }}, @endforeach
                             </p>
 
-                        <h4 class="text-primary">Batas wilayah {{ $sebutan_wilayah }} {{ ucwords(strtolower($profil->kecamatan->nama)) }} meliputi :</h4>
+                        <h4 class="text-primary">Batas wilayah {{ $sebutan_wilayah }} {{ ucwords(strtolower($profil->nama_kecamatan)) }} meliputi :</h4>
                         <table>
                             <tbody>
                             <tr>
