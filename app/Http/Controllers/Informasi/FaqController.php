@@ -53,9 +53,9 @@ class FaqController extends Controller
     public function index()
     {
         $page_title       = 'FAQ';
-        $page_description = 'Frequently Ask and Question';
+        $page_description = 'Daftar FAQ';
+        $faqs             = Faq::latest()->paginate(10);
 
-        $faqs = Faq::latest()->paginate(10);
         return view('informasi.faq.index', compact('page_title', 'page_description', 'faqs'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -67,8 +67,8 @@ class FaqController extends Controller
      */
     public function create()
     {
-        $page_title       = 'Tambah FAQ';
-        $page_description = '';
+        $page_title       = 'FAQ';
+        $page_description = 'Tambah FAQ';
 
         return view('informasi.faq.create', compact('page_title', 'page_description'));
     }
@@ -80,13 +80,17 @@ class FaqController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate([
-            'question' => 'required',
-            'answer'   => 'required',
-        ]);
-        Faq::create($request->all());
+        try {
+            request()->validate([
+                'question' => 'required',
+                'answer'   => 'required',
+            ]);
+            Faq::create($request->all());
 
-        return redirect()->route('informasi.faq.index')->with('success', 'FAQ berhasil ditambah!');
+            return redirect()->route('informasi.faq.index')->with('success', 'FAQ berhasil ditambah!');
+        } catch (Exception $e) {
+            return back()->withInput()->with('error', 'FAQ gagal ditambah!');
+        }
     }
 
     /**
@@ -107,9 +111,9 @@ class FaqController extends Controller
      */
     public function edit($id)
     {
-        $faq              = Faq::find($id);
-        $page_title       = 'Ubah FAQ';
-        $page_description = $faq->question;
+        $faq              = Faq::FindOrFail($id);
+        $page_title       = 'FAQ';
+        $page_description = 'Ubah FAQ : ' . $faq->question;
 
         return view('informasi.faq.edit', compact('page_title', 'page_description', 'faq'));
     }
@@ -129,11 +133,11 @@ class FaqController extends Controller
                 'answer'   => 'required',
             ]);
 
-            Faq::find($id)->update($request->all());
+            Faq::FindOrFail($id)->update($request->all());
 
-            return redirect()->route('informasi.faq.index')->with('success', 'Update FAQ sukses!');
+            return redirect()->route('informasi.faq.index')->with('success', 'FAQ berhasil diubah!');
         } catch (Exception $e) {
-            return back()->withInput()->with('error', 'Update FAQ gagal!');
+            return back()->withInput()->with('error', 'FAQ gagal diubah!');
         }
     }
 
@@ -146,9 +150,9 @@ class FaqController extends Controller
     public function destroy($id)
     {
         try {
-            Faq::findOrFail($id)->delete();
+            Faq::destroy($id);
 
-            return redirect()->route('informasi.faq.index')->with('success', 'FAQ sukses dihapus!');
+            return redirect()->route('informasi.faq.index')->with('success', 'FAQ berhasil dihapus!');
         } catch (Exception $e) {
             return redirect()->route('informasi.faq.index')->with('error', 'FAQ gagal dihapus!');
         }

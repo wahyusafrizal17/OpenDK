@@ -21,11 +21,10 @@
         <div class="col-md-12">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Daftar FAQ</h3>
+                    <h3 class="box-title">Daftar FAQ (Frequently Ask and Question)</h3>
 
                     <div class="box-tools pull-right">
-                        <a href="{{ route('informasi.faq.create') }}"
-                           class="btn btn-primary btn-sm {{Sentinel::guest() ? 'hidden':''}}"><i class="fa fa-plus"></i> Tambah</a>
+                        <a href="{{ route('informasi.faq.create') }}" class="btn btn-primary btn-sm {{Sentinel::guest() ? 'hidden':''}}"><i class="fa fa-plus"></i>&nbsp; Tambah</a>
                     </div>
                 </div>
                 <!-- /.box-header -->
@@ -41,16 +40,10 @@
                                         <div class="col-md-12">
                                             <div class="pull-right">
                                                 @unless(!Sentinel::check())
-                                                    <a href="{{ route('informasi.faq.edit', $faq->id) }}">
-                                                        <button type="submit"
-                                                                class="btn btn-sm btn-primary">Ubah
-                                                        </button>
-                                                    </a>&nbsp;
-                                                    {!! Form::open(['method' => 'DELETE','route' => ['informasi.faq.destroy', $faq->id],'style'=>'display:inline']) !!}
-
-                                                    {!! Form::submit('Hapus', ['class' => 'btn btn-sm btn-danger', 'onclick' => 'return confirm("Yakin akan menghapus data tersebut?")']) !!}
-
-                                                    {!! Form::close() !!}
+                                                    <a href="{!! route('informasi.faq.edit', $faq->id) !!}" class="btn btn-xs btn-primary" title="Ubah" data-button="edit"><i class="fa fa-edit"></i>&nbsp; Ubah</a>
+                                                    <a href="javascript:void(0)" class="" title="Hapus" data-href="{!! route('informasi.faq.destroy', $faq->id) !!}" data-button="delete" id="deleteModal">
+                                                        <button type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp; Hapus</button>
+                                                    </a>
                                                 @endunless
                                             </div>
                                         </div>
@@ -78,3 +71,8 @@
 </section>
 <!-- /.content -->
 @endsection
+@push('scripts')
+
+@include('forms.delete-modal')
+
+@endpush
