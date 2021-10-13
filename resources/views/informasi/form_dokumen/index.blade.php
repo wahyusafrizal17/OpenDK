@@ -22,8 +22,8 @@
         <div class="col-md-12">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <a href="{{ route('informasi.form-dokumen.create') }}" class="btn btn-primary btn-sm {{Sentinel::guest() ? 'hidden':''}}" title="Tambah Form Dokumen"><i
-                    class="fa fa-plus"></i>&ensp;Tambah Data</a>
+                    <a href="{{ route('informasi.form-dokumen.create') }}" class="btn btn-primary btn-sm {{Sentinel::guest() ? 'hidden':''}}" title="Tambah Dokumen"><i
+                    class="fa fa-plus"></i>&ensp; Tambah</a>
 
                 </div>
                 <!-- /.box-header -->

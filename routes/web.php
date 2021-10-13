@@ -311,7 +311,7 @@ Route::group(['middleware' => 'installed'], function () {
                     Route::delete('destroy/{id}', ['as' => 'informasi.event.destroy', 'uses' => 'EventController@destroy']);
                 });
 
-                //Routes for Form Dokumen resources
+                //Routes for Dokumen resources
                 Route::group(['prefix' => 'form-dokumen'], function () {
                     Route::get('/', ['as' => 'informasi.form-dokumen.index', 'uses' => 'FormDokumenController@index']);
                     Route::get('show/{id}', ['as' => 'informasi.form-dokumen.show', 'uses' => 'FormDokumenController@show']);
