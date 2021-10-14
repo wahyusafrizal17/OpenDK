@@ -141,7 +141,6 @@ class AnggaranRealisasiController extends Controller
         ]);
 
         try {
-
             AnggaranRealisasi::FindOrFail($id)->update($request->all());
 
             return redirect()->route('data.anggaran-realisasi.index')->with('success', 'Data berhasil diubah!');
@@ -159,7 +158,6 @@ class AnggaranRealisasiController extends Controller
     public function destroy($id)
     {
         try {
-
             AnggaranRealisasi::destroy($id);
 
             return redirect()->route('data.anggaran-realisasi.index')->with('success', 'Data sukses dihapus!');
