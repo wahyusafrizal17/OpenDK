@@ -140,7 +140,6 @@ class TingkatPendidikanController extends Controller
         ]);
 
         try {
-            
             TingkatPendidikan::FindOrFail($id)->update($request->all());
 
             return redirect()->route('data.tingkat-pendidikan.index')->with('success', 'Data berhasil diubah!');
