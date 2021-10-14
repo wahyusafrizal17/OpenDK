@@ -35,7 +35,6 @@ use App\Http\Controllers\Controller;
 use App\Models\JawabKomplain;
 use App\Models\Komplain;
 use App\Models\Penduduk;
-use App\Models\Wilayah;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -340,7 +339,7 @@ class SistemKomplainController extends Controller
     public function getJawabans(Request $request)
     {
         $jawabans = JawabKomplain::where('komplain_id', $request->input('id'))->orderBy('id', 'desc')->get();
-        
+
         return view('sistem_komplain.komplain.jawabans', compact('jawabans'))->render();
     }
 }
