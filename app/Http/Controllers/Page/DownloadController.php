@@ -47,15 +47,14 @@ class DownloadController extends Controller
 
         $page_title       = 'Prosedur';
         $page_description = 'Daftar SOP Kecamatan';
-        $prosedurs        = Prosedur::latest()->paginate(10);
+        $prosedurs        = Prosedur::all();
 
-        return view('pages.unduhan.prosedur', compact(['page_title', 'page_description', 'prosedurs']))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('pages.unduhan.prosedur', compact(['page_title', 'page_description', 'prosedurs']));
     }
 
     public function getDataProsedur()
     {
-        return DataTables::of(Prosedur::select('id', 'judul_prosedur'))
+        return DataTables::of(Prosedur::all())
             ->addColumn('action', function ($row) {
                 $data['show_url'] = route('unduhan.prosedur.show', ['nama_prosedur' => str_slug($row->judul_prosedur)]);
 
@@ -68,9 +67,9 @@ class DownloadController extends Controller
 
     public function showProsedur($nama_prosedur)
     {
-        // $prosedur   = Prosedur::FindOrFail($id);
         $prosedur   = Prosedur::where('judul_prosedur', str_replace('-', ' ', $nama_prosedur))->first();
         $page_title = 'Detail Prosedur :' . $prosedur->judul_prosedur;
+
         return view('pages.unduhan.prosedur_show', compact('page_title', 'prosedur'));
     }
 
