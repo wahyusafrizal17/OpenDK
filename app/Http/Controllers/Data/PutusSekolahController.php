@@ -42,11 +42,6 @@ use Yajra\DataTables\DataTables;
 
 class PutusSekolahController extends Controller
 {
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
     public function index()
     {
         $page_title       = 'Siswa Putus Sekolah';

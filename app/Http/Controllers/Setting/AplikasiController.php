@@ -38,11 +38,6 @@ use Exception;
 
 class AplikasiController extends Controller
 {
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
     public function index()
     {
         $settings = SettingAplikasi::all();

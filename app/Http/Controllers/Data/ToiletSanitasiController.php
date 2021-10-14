@@ -42,14 +42,6 @@ use Yajra\DataTables\Facades\DataTables;
 
 class ToiletSanitasiController extends Controller
 {
-    public $bulan;
-    public $tahun;
-
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
     /**
      * Display a listing of the resource.
      *

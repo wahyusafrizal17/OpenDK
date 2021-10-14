@@ -51,16 +51,6 @@ class dev extends Command
     protected $description = 'Membuat instalasi baru dengan data contoh untuk development';
 
     /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
-    /**
      * Execute the console command.
      *
      * @return mixed
