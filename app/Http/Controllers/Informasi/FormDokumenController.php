@@ -50,7 +50,7 @@ class FormDokumenController extends Controller
 
     public function getDataDokumen()
     {
-        return DataTables::of(FormDokumen::latest()->get())
+        return DataTables::of(FormDokumen::all())
             ->addColumn('action', function ($row) {
                 if (! Sentinel::guest()) {
                     $data['edit_url']   = route('informasi.form-dokumen.edit', $row->id);

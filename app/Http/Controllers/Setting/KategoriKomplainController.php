@@ -49,7 +49,7 @@ class KategoriKomplainController extends Controller
     // Get Data Kategori Komplain
     public function getData()
     {
-        return DataTables::of(KategoriKomplain::latest()->get())
+        return DataTables::of(KategoriKomplain::all())
             ->addColumn('action', function ($row) {
                 $data['edit_url']   = route('setting.komplain-kategori.edit', $row->id);
                 $data['delete_url'] = route('setting.komplain-kategori.destroy', $row->id);
