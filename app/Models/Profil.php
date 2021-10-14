@@ -88,10 +88,10 @@ class Profil extends Model
         return $this->hasOne(DataUmum::class, 'profil_id', 'id');
     }
 
-    // public function dataDesa()
-    // {
-    //     return $this->hasMany(DataDesa::class, 'kecamatan_id', 'kecamatan_id');
-    // }
+    public function dataDesa()
+    {
+        return $this->hasMany(DataDesa::class, 'profil_id', 'id');
+    }
 
     // public function dataPenduduk()
     // {

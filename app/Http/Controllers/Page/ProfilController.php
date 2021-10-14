@@ -47,7 +47,7 @@ class ProfilController extends Controller
         $profil     = Profil::with(['dataUmum'])->first();
         $page_title = 'Sejarah';
         if (isset($profil)) {
-            $page_description = ucwords(strtolower($profil->nama_kecamatan));
+            $page_description = $this->browser_title;
         }
 
         return view('pages.profil.sejarah', compact('page_title', 'page_description', 'profil'));
@@ -60,10 +60,10 @@ class ProfilController extends Controller
     {
         Counter::count('profil.letak-geografis');
 
-        $profil     = $this->profil;
+        $profil     = Profil::with(['dataDesa'])->first();
         $page_title = 'Letak Geografis';
         if (isset($profil)) {
-            $page_description = ucwords(strtolower($profil->nama_kecamatan));
+            $page_description = $this->browser_title;
         }
 
         return view('pages.profil.letakgeografis', compact('page_title', 'page_description', 'profil'));
@@ -78,7 +78,7 @@ class ProfilController extends Controller
 
         $page_title = 'Struktur Pemerintahan';
         if (isset($profil)) {
-            $page_description = ucwords(strtolower($profil->nama_kecamatan));
+            $page_description = $this->browser_title;
         }
 
         return view('pages.profil.strukturpemerintahan', compact('page_title', 'page_description', 'profil'));
@@ -107,7 +107,7 @@ class ProfilController extends Controller
 
         $page_title = 'Visi dan Misi';
         if (isset($profil)) {
-            $page_description = ucwords(strtolower($profil->nama_kecamatan));
+            $page_description = $this->browser_title;
         }
 
         return view('pages.profil.visimisi', compact('page_title', 'page_description', 'profil'));
@@ -120,7 +120,7 @@ class ProfilController extends Controller
 
         $page_title = 'Profil';
         if (isset($profil)) {
-            $page_description = ucwords(strtolower($profil->nama_kecamatan));
+            $page_description = $this->browser_title;
         }
 
         return view('pages.profil.show_profil', compact('page_title', 'page_description', 'profil', 'dokumen'));
