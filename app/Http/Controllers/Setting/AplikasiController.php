@@ -53,24 +53,18 @@ class AplikasiController extends Controller
             $settings = SettingAplikasi::all();
         }
 
-        return view('setting.aplikasi.index', [
-            'page_title'    => 'Pegaturan Aplikasi',
-            'settings'      => $settings,
-        ]);
+        $page_title = 'Pegaturan Aplikasi';
+
+        return view('setting.aplikasi.index', compact('page_title', 'settings'));
     }
 
     public function edit(SettingAplikasi $aplikasi)
     {
-        $page_title             = 'Update Aplikasi';
-        $page_description       = 'Edit Pengaturan Aplikasi Lainnya';
+        $page_title             = 'Pengaturan Aplikasi';
+        $page_description       = 'Ubah Pengaturan Aplikasi';
         $default_browser_title  = $this->default_browser_title;
 
-        return view('setting.aplikasi.edit', compact(
-            'page_title',
-            'aplikasi',
-            'default_browser_title',
-            'page_description'
-        ));
+        return view('setting.aplikasi.edit', compact('page_title', 'aplikasi', 'default_browser_title', 'page_description'));
     }
 
     public function update(UpdateSetingAplikasiRequest $request, SettingAplikasi $aplikasi)
@@ -82,14 +76,10 @@ class AplikasiController extends Controller
             }
 
             $aplikasi->update($data);
-
-            return redirect()
-                ->route('setting.aplikasi.index')
-                ->with('success', 'Pengaturan aplikasi "' . $aplikasi->description . '" berhasil diupdate.');
         } catch (Exception $e) {
-            return redirect()
-                ->route('setting.aplikasi.edit', $aplikasi->id)
-                ->with('error', 'Gagal mengupdate pengaturan ' . $aplikasi->description . ', error: "' . $e->getMessage() . '".');
+            return back()->with('error', 'Pengaturan aplikasi gagal diubah!' . $e->getMessage());
         }
+
+        return redirect()->route('setting.aplikasi.index')->with('success', 'Pengaturan aplikasi berhasil diubah!.');
     }
 }

@@ -21,7 +21,11 @@
                         <td>{!! $desa->desa_id !!}</td>
                         <td>{!! $desa->nama !!}</td>
                         <td><a href="{!! $desa->website !!}" target="_blank">{!! $desa->website !!}</a></td>
-                        <td>{!! $desa->luas_wilayah !!} Km<sup>2</sup></td>
+                        <td>
+                            @if ($desa->luas_wilayah)
+                            {!! $desa->luas_wilayah !!} Km<sup>2</sup>
+                            @endif                            
+                        </td>
                     </tr>
                 </tbody>
             </table>
