@@ -79,13 +79,14 @@ class ProgramBantuanController extends Controller
 
     public function store(Request $request)
     {
+        request()->validate([
+            'sasaran'    => 'required',
+            'nama'       => 'required',
+            'start_date' => 'required|date',
+            'end_date'   => 'required|date',
+        ]);
+        
         try {
-            request()->validate([
-                'sasaran'    => 'required',
-                'nama'       => 'required',
-                'start_date' => 'required|date',
-                'end_date'   => 'required|date',
-            ]);
 
             Program::create($request->all());
 
@@ -108,13 +109,14 @@ class ProgramBantuanController extends Controller
 
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'sasaran'    => 'required',
+            'nama'       => 'required',
+            'start_date' => 'required|date',
+            'end_date'   => 'required|date',
+        ]);
+
         try {
-            request()->validate([
-                'sasaran'    => 'required',
-                'nama'       => 'required',
-                'start_date' => 'required|date',
-                'end_date'   => 'required|date',
-            ]);
 
             $program = Program::FindOrFail($id);
             $program->fill($request->all());
@@ -161,11 +163,12 @@ class ProgramBantuanController extends Controller
 
     public function add_peserta(Request $request)
     {
+        request()->validate([
+            'peserta'       => 'required',
+            'tanggal_lahir' => 'date',
+        ]);
+
         try {
-            request()->validate([
-                'peserta'       => 'required',
-                'tanggal_lahir' => 'date',
-            ]);
 
             PesertaProgram::create($request->all());
 

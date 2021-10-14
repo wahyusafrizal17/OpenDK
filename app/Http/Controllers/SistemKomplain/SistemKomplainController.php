@@ -198,14 +198,14 @@ class SistemKomplainController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // Save Request
+        request()->validate([
+            'nik'      => 'required|numeric',
+            'judul'    => 'required',
+            'kategori' => 'required',
+            'laporan'  => 'required',
+        ], ['captcha.captcha' => 'Invalid captcha code.']);
+
         try {
-            request()->validate([
-                'nik'      => 'required|numeric',
-                'judul'    => 'required',
-                'kategori' => 'required',
-                'laporan'  => 'required',
-            ], ['captcha.captcha' => 'Invalid captcha code.']);
 
             $komplain = Komplain::findOrFail($id);
             $komplain->fill($request->all());
@@ -245,6 +245,7 @@ class SistemKomplainController extends Controller
             }
 
             $komplain->save();
+            
             return redirect()->route('sistem-komplain.index')->with('success', 'Komplain berhasil dikirim!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Komplain gagal dikirim!');

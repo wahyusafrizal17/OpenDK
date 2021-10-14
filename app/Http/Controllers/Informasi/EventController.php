@@ -74,16 +74,19 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+        request()->validate([
+            'event_name' => 'required',
+            'start'      => 'required',
+            'end'        => 'required',
+            'attendants' => 'required',
+        ]);
+
         try {
+
             $event = new Event($request->input());
-            request()->validate([
-                'event_name' => 'required',
-                'start'      => 'required',
-                'end'        => 'required',
-                'attendants' => 'required',
-            ]);
             $event->status = 'OPEN';
             $event->save();
+
             return redirect()->route('informasi.event.index')->with('success', 'Event berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Simpan Event gagal!');
@@ -123,14 +126,15 @@ class EventController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'event_name' => 'required',
+            'start'      => 'required',
+            'end'        => 'required',
+            'attendants' => 'required',
+            'attachment' => 'file|mimes:jpeg,png,jpg,gif,svg,xlsx,xls,doc,docx,pdf,ppt,pptx|max:2048',
+        ]);
+        
         try {
-            request()->validate([
-                'event_name' => 'required',
-                'start'      => 'required',
-                'end'        => 'required',
-                'attendants' => 'required',
-                'attachment' => 'file|mimes:jpeg,png,jpg,gif,svg,xlsx,xls,doc,docx,pdf,ppt,pptx|max:2048',
-            ]);
 
             $event = Event::FindOrFail($id);
             $event->fill($request->all());

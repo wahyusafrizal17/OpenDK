@@ -139,14 +139,15 @@ class AnggaranDesaController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'bulan'     => 'required',
+            'tahun'     => 'required',
+            'no_akun'   => 'required',
+            'nama_akun' => 'required',
+            'jumlah'    => 'required|numeric',
+        ]);
+        
         try {
-            request()->validate([
-                'bulan'     => 'required',
-                'tahun'     => 'required',
-                'no_akun'   => 'required',
-                'nama_akun' => 'required',
-                'jumlah'    => 'required|numeric',
-            ]);
 
             AnggaranDesa::find($id)->update($request->all());
 

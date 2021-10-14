@@ -90,17 +90,16 @@ class DataDesaController extends Controller
      */
     public function store(Request $request)
     {
+        request()->validate([
+            'desa_id'      => 'required|regex:/^[0-9.]+$/|min:13|max:13|unique:das_data_desa,desa_id',
+            'nama'         => 'required',
+            'luas_wilayah' => 'required|numeric',
+        ]);
+        
         try {
             $desa = new DataDesa();
             $desa->fill($request->all());
             $desa->profil_id = $this->profil->id;
-
-            request()->validate([
-                'desa_id'      => 'required|regex:/^[0-9.]+$/|min:13|max:13|unique:das_data_desa,desa_id',
-                'nama'         => 'required',
-                'luas_wilayah' => 'required|numeric',
-            ]);
-
             $desa->save();
 
             return redirect()->route('data.data-desa.index')->with('success', 'Data Desa berhasil disimpan!');
@@ -133,15 +132,16 @@ class DataDesaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $desa = DataDesa::findOrFail($id);
-        $desa->fill($request->all());
-        $desa->profil_id = $this->profil->id;
+        request()->validate([
+            'nama'         => 'required',
+            'luas_wilayah' => 'required|numeric',
+        ]);
+        
         try {
-            request()->validate([
-                'nama'         => 'required',
-                'luas_wilayah' => 'required|numeric',
-            ]);
-
+            
+            $desa = DataDesa::findOrFail($id);
+            $desa->fill($request->all());
+            $desa->profil_id = $this->profil->id;
             $desa->save();
 
             return redirect()->route('data.data-desa.index')->with('success', 'Data Desa berhasil disimpan!');

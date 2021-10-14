@@ -73,15 +73,15 @@ class TipeRegulasiController extends Controller
     // Store Data
     public function store(Request $request)
     {
+        request()->validate([
+            'nama' => 'required',
+        ]);
+        
         try {
             $tipe       = new TipeRegulasi($request->all());
             $tipe->slug = str_slug($tipe->nama);
-
-            request()->validate([
-                'nama' => 'required',
-            ]);
-
             $tipe->save();
+
             return redirect()->route('setting.tipe-regulasi.index')->with('success', 'Tipe Regulasi berhasil dikirim!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Tipe Regulasi gagal dikirim!');
@@ -99,16 +99,15 @@ class TipeRegulasiController extends Controller
 
     public function update(Request $request, $id)
     {
-        // Save Request
+        request()->validate([
+            'nama' => 'required',
+        ]);
+
         try {
             $tipe = TipeRegulasi::FindOrFail($id);
             $tipe->fill($request->all());
-
-            request()->validate([
-                'nama' => 'required',
-            ]);
-
             $tipe->save();
+
             return redirect()->route('setting.tipe-regulasi.index')->with('success', 'Tipe Regulasi berhasil diupdate!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Tipe Regulasi gagal diupdate!');

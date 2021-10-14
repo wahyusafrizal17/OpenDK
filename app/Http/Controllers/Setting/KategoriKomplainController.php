@@ -73,15 +73,16 @@ class KategoriKomplainController extends Controller
     // Store Data
     public function store(Request $request)
     {
+        request()->validate([
+            'nama' => 'required',
+        ]);
+            
         try {
+
             $kategori       = new KategoriKomplain($request->all());
             $kategori->slug = str_slug($kategori->nama);
-
-            request()->validate([
-                'nama' => 'required',
-            ]);
-
             $kategori->save();
+
             return redirect()->route('setting.komplain-kategori.index')->with('success', 'Kategori Komplain berhasil dikirim!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Kategori Komplain gagal dikirim!');
@@ -99,16 +100,16 @@ class KategoriKomplainController extends Controller
 
     public function update(Request $request, $id)
     {
-        // Save Request
+        request()->validate([
+            'nama' => 'required',
+        ]);
+        
         try {
+
             $kategori = KategoriKomplain::FindOrFail($id);
             $kategori->fill($request->all());
-
-            request()->validate([
-                'nama' => 'required',
-            ]);
-
             $kategori->save();
+
             return redirect()->route('setting.komplain-kategori.index')->with('success', 'Kategori Komplain berhasil diupdate!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Kategori Komplain gagal diupdate!');

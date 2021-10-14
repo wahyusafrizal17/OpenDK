@@ -75,11 +75,13 @@ class FaqController extends Controller
      */
     public function store(Request $request)
     {
+        request()->validate([
+            'question' => 'required',
+            'answer'   => 'required',
+        ]);
+        
         try {
-            request()->validate([
-                'question' => 'required',
-                'answer'   => 'required',
-            ]);
+            
             Faq::create($request->all());
 
             return redirect()->route('informasi.faq.index')->with('success', 'FAQ berhasil ditambah!');
@@ -122,11 +124,12 @@ class FaqController extends Controller
 
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'question' => 'required',
+            'answer'   => 'required',
+        ]);
+
         try {
-            request()->validate([
-                'question' => 'required',
-                'answer'   => 'required',
-            ]);
 
             Faq::FindOrFail($id)->update($request->all());
 

@@ -73,14 +73,14 @@ class JenisPenyakitController extends Controller
     // Store Data
     public function store(Request $request)
     {
+        request()->validate([
+            'nama' => 'required',
+        ]);
+        
         try {
             $penyakit = new JenisPenyakit($request->all());
-
-            request()->validate([
-                'nama' => 'required',
-            ]);
-
             $penyakit->save();
+
             return redirect()->route('setting.jenis-penyakit.index')->with('success', 'Data berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal disimpan!');
@@ -98,16 +98,15 @@ class JenisPenyakitController extends Controller
 
     public function update(Request $request, $id)
     {
-        // Save Request
+        request()->validate([
+            'nama' => 'required',
+        ]);
+
         try {
             $penyakit = JenisPenyakit::FindOrFail($id);
             $penyakit->fill($request->all());
-
-            request()->validate([
-                'nama' => 'required',
-            ]);
-
             $penyakit->save();
+
             return redirect()->route('setting.jenis-penyakit.index')->with('success', 'Data berhasil diupdate!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal diupdate!');

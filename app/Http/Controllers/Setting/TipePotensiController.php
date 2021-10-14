@@ -85,15 +85,16 @@ class TipePotensiController extends Controller
      */
     public function store(Request $request)
     {
+        request()->validate([
+            'nama_kategori' => 'required',
+        ]);
+        
         try {
+
             $tipe       = new TipePotensi($request->all());
             $tipe->slug = str_slug($tipe->nama_kategori);
-
-            request()->validate([
-                'nama_kategori' => 'required',
-            ]);
-
             $tipe->save();
+
             return redirect()->route('setting.tipe-potensi.index')->with('success', 'Kategori Potensi berhasil dikirim!');
         } catch (Eception $e) {
             return back()->withInput()->with('error', 'Tipe Potensi gagal dikirim!');
@@ -133,16 +134,16 @@ class TipePotensiController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'nama_kategori' => 'required',
+        ]);
+        
         try {
             $tipe = TipePotensi::FindOrFail($id);
             $tipe->fill($request->all());
             $tipe->slug = str_slug($tipe->nama_kategori);
-
-            request()->validate([
-                'nama_kategori' => 'required',
-            ]);
-
             $tipe->save();
+
             return redirect()->route('setting.tipe-potensi.index')->with('success', 'Kategori Potensi berhasil diupdate!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Kategori Potensi gagal diupdate!');

@@ -60,15 +60,15 @@ class COAController extends Controller
 
     public function store(Request $request)
     {
+        request()->validate([
+            'type_id'    => 'required',
+            'sub_id'     => 'required',
+            'sub_sub_id' => 'required',
+            'coa_name'   => 'required',
+            'id'         => 'required',
+        ]);
+        
         try {
-            request()->validate([
-                'type_id'    => 'required',
-                'sub_id'     => 'required',
-                'sub_sub_id' => 'required',
-                'coa_name'   => 'required',
-                'id'         => 'required',
-            ]);
-
             $data = [
                 'type_id'    => $request->input('type_id'),
                 'sub_id'     => $request->input('sub_id'),

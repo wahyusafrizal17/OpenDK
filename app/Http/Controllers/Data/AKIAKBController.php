@@ -136,11 +136,12 @@ class AKIAKBController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'aki' => 'required',
+            'akb' => 'required',
+        ]);
+        
         try {
-            request()->validate([
-                'aki' => 'required',
-                'akb' => 'required',
-            ]);
 
             AkiAkb::find($id)->update($request->all());
 

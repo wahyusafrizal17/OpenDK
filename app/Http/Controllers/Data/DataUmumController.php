@@ -63,29 +63,30 @@ class DataUmumController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'tipologi'               => 'required',
+            'sumber_luas_wilayah'    => 'required',
+            'luas_wilayah'           => 'required',
+            'bts_wil_utara'          => 'required',
+            'bts_wil_timur'          => 'required',
+            'bts_wil_selatan'        => 'required',
+            'bts_wil_barat'          => 'required',
+            'jml_puskesmas'          => 'required',
+            'jml_puskesmas_pembantu' => 'required',
+            'jml_posyandu'           => 'required',
+            'jml_pondok_bersalin'    => 'required',
+            'jml_paud'               => 'required',
+            'jml_sd'                 => 'required',
+            'jml_smp'                => 'required',
+            'jml_sma'                => 'required',
+            'jml_masjid_besar'       => 'required',
+            'jml_mushola'            => 'required',
+            'jml_gereja'             => 'required',
+            'jml_pasar'              => 'required',
+            'jml_balai_pertemuan'    => 'required',
+        ]);
+        
         try {
-            request()->validate([
-                'tipologi'               => 'required',
-                'sumber_luas_wilayah'    => 'required',
-                'luas_wilayah'           => 'required',
-                'bts_wil_utara'          => 'required',
-                'bts_wil_timur'          => 'required',
-                'bts_wil_selatan'        => 'required',
-                'bts_wil_barat'          => 'required',
-                'jml_puskesmas'          => 'required',
-                'jml_puskesmas_pembantu' => 'required',
-                'jml_posyandu'           => 'required',
-                'jml_pondok_bersalin'    => 'required',
-                'jml_paud'               => 'required',
-                'jml_sd'                 => 'required',
-                'jml_smp'                => 'required',
-                'jml_sma'                => 'required',
-                'jml_masjid_besar'       => 'required',
-                'jml_mushola'            => 'required',
-                'jml_gereja'             => 'required',
-                'jml_pasar'              => 'required',
-                'jml_balai_pertemuan'    => 'required',
-            ]);
 
             $data = $request->sumber_luas_wilayah==1 ? $request->all() : $request->except('luas_wilayah');
 

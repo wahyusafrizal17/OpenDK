@@ -146,15 +146,15 @@ class SlideController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'judul'     => 'required',
+            'deskripsi' => 'required|max:100',
+            'gambar'    => 'file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
+        ]);
+        
         try {
             $slide = Slide::FindOrFail($id);
             $slide->fill($request->all());
-
-            request()->validate([
-                'judul'     => 'required',
-                'deskripsi' => 'required|max:100',
-                'gambar'    => 'file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
-            ]);
 
             if ($request->hasFile('gambar')) {
                 $file     = $request->file('gambar');

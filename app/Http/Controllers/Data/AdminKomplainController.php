@@ -95,10 +95,11 @@ class AdminKomplainController extends Controller
 
     public function disetujui(Request $request, $id)
     {
+        request()->validate([
+            'status' => 'required',
+        ]);
+        
         try {
-            request()->validate([
-                'status' => 'required',
-            ]);
 
             Komplain::find($id)->update($request->all());
 
@@ -129,18 +130,17 @@ class AdminKomplainController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // Save Request
+        request()->validate([
+            'nik'      => 'required|numeric',
+            'judul'    => 'required',
+            'kategori' => 'required',
+            'laporan'  => 'required',
+        ]);
+        
         try {
             $komplain = Komplain::findOrFail($id);
             $komplain->fill($request->all());
             $komplain->nama = Penduduk::where('nik', $komplain->nik)->first()->nama;
-
-            request()->validate([
-                'nik'      => 'required|numeric',
-                'judul'    => 'required',
-                'kategori' => 'required',
-                'laporan'  => 'required',
-            ]);
 
             // Save if lampiran available
             if ($request->hasFile('lampiran1')) {

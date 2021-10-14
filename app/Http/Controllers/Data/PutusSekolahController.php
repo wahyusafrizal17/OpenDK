@@ -134,19 +134,20 @@ class PutusSekolahController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'siswa_paud'     => 'required',
+            'anak_usia_paud' => 'required',
+            'siswa_sd'       => 'required',
+            'anak_usia_sd'   => 'required',
+            'siswa_smp'      => 'required',
+            'anak_usia_smp'  => 'required',
+            'siswa_sma'      => 'required',
+            'anak_usia_sma'  => 'required',
+            'semester'       => 'required',
+            'tahun'          => 'required',
+        ]);
+        
         try {
-            request()->validate([
-                'siswa_paud'     => 'required',
-                'anak_usia_paud' => 'required',
-                'siswa_sd'       => 'required',
-                'anak_usia_sd'   => 'required',
-                'siswa_smp'      => 'required',
-                'anak_usia_smp'  => 'required',
-                'siswa_sma'      => 'required',
-                'anak_usia_sma'  => 'required',
-                'semester'       => 'required',
-                'tahun'          => 'required',
-            ]);
 
             PutusSekolah::FindOrFail($id)->update($request->all());
 

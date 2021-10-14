@@ -112,13 +112,15 @@ class PotensiController extends Controller
      */
     public function store(Request $request)
     {
+        request()->validate([
+            'kategori_id'  => 'required',
+            'nama_potensi' => 'required',
+            'deskripsi'    => 'required',
+            'file_gambar'  => 'image|mimes:bmp,jpg,jpeg,gif,png|max:1024',
+        ]);
+
         try {
-            request()->validate([
-                'kategori_id'  => 'required',
-                'nama_potensi' => 'required',
-                'deskripsi'    => 'required',
-                'file_gambar'  => 'image|mimes:bmp,jpg,jpeg,gif,png|max:1024',
-            ]);
+
             $potensi = new Potensi($request->input());
 
             if ($request->hasFile('file_gambar')) {
@@ -184,13 +186,14 @@ class PotensiController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'kategori_id'  => 'required',
+            'nama_potensi' => 'required',
+            'deskripsi'    => 'required',
+            'file_gambar'  => 'image|mimes:bmp,jpg,jpeg,gif,png|max:1024',
+        ]);
+        
         try {
-            request()->validate([
-                'kategori_id'  => 'required',
-                'nama_potensi' => 'required',
-                'deskripsi'    => 'required',
-                'file_gambar'  => 'image|mimes:bmp,jpg,jpeg,gif,png|max:1024',
-            ]);
 
             $potensi = Potensi::findOrFail($id);
             $potensi->fill($request->all());

@@ -136,10 +136,11 @@ class ImunisasiController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'cakupan_imunisasi' => 'required',
+        ]);
+        
         try {
-            request()->validate([
-                'cakupan_imunisasi' => 'required',
-            ]);
 
             Imunisasi::find($id)->update($request->all());
 

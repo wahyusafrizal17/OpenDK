@@ -128,14 +128,15 @@ class FasilitasPaudController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'jumlaah_paud'       => 'required',
+            'jumlah_guru_paud'  => 'required',
+            'jumlah_siswa_paud' => 'required',
+            'semester'          => 'required',
+            'tahun'             => 'required',
+        ]);
+        
         try {
-            request()->validate([
-                'jumlah_paud'       => 'required',
-                'jumlah_guru_paud'  => 'required',
-                'jumlah_siswa_paud' => 'required',
-                'semester'          => 'required',
-                'tahun'             => 'required',
-            ]);
 
             FasilitasPAUD::FindOrFail($id)->update($request->all());
 

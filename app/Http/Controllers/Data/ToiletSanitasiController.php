@@ -144,11 +144,12 @@ class ToiletSanitasiController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'toilet'   => 'required',
+            'sanitasi' => 'required',
+        ]);
+        
         try {
-            request()->validate([
-                'toilet'   => 'required',
-                'sanitasi' => 'required',
-            ]);
 
             ToiletSanitasi::FindOrFail($id)->update($request->all());
 

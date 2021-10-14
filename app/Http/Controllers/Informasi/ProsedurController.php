@@ -96,11 +96,13 @@ class ProsedurController extends Controller
      */
     public function store(Request $request)
     {
+        request()->validate([
+            'judul_prosedur' => 'required',
+            'file_prosedur'  => 'required|file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
+        ]);
+        
         try {
-            request()->validate([
-                'judul_prosedur' => 'required',
-                'file_prosedur'  => 'required|file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
-            ]);
+            
             $prosedur = new Prosedur($request->input());
 
             if ($request->hasFile('file_prosedur')) {
@@ -158,14 +160,14 @@ class ProsedurController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'judul_prosedur' => 'required',
+            'file_prosedur'  => 'file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
+        ]);
+        
         try {
             $prosedur = Prosedur::FindOrFail($id);
             $prosedur->fill($request->all());
-
-            request()->validate([
-                'judul_prosedur' => 'required',
-                'file_prosedur'  => 'file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
-            ]);
 
             if ($request->hasFile('file_prosedur')) {
                 $file     = $request->file('file_prosedur');

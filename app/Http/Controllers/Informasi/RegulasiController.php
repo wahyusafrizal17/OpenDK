@@ -74,13 +74,14 @@ class RegulasiController extends Controller
      */
     public function store(Request $request)
     {
+        request()->validate([
+            'tipe_regulasi' => 'required',
+            'judul'         => 'required',
+            'deskripsi'     => 'required',
+            'file_regulasi' => 'required|file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
+        ]);
+        
         try {
-            request()->validate([
-                'tipe_regulasi' => 'required',
-                'judul'         => 'required',
-                'deskripsi'     => 'required',
-                'file_regulasi' => 'required|file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
-            ]);
 
             $regulasi               = new Regulasi($request->input());
             $regulasi->profil_id    = $this->profil->id;
@@ -140,17 +141,17 @@ class RegulasiController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'tipe_regulasi' => 'required',
+            'judul'         => 'required',
+            'deskripsi'     => 'required',
+            'file_regulasi' => 'file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
+        ]);
+        
         try {
             $regulasi = Regulasi::FindOrFail($id);
             $regulasi->fill($request->all());
             $regulasi->profil_id    = $this->profil->id;
-
-            request()->validate([
-                'tipe_regulasi' => 'required',
-                'judul'         => 'required',
-                'deskripsi'     => 'required',
-                'file_regulasi' => 'file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
-            ]);
 
             if ($request->hasFile('file_regulasi')) {
                 $lampiran1 = $request->file('file_regulasi');

@@ -74,11 +74,13 @@ class FormDokumenController extends Controller
 
     public function store(Request $request)
     {
+        request()->validate([
+            'nama_dokumen' => 'required',
+            'file_dokumen' => 'required|mimes:jpeg,png,jpg,gif,svg,xlsx,xls,doc,docx,pdf,ppt,pptx|max:2048',
+        ]);
+
         try {
-            request()->validate([
-                'nama_dokumen' => 'required',
-                'file_dokumen' => 'required|mimes:jpeg,png,jpg,gif,svg,xlsx,xls,doc,docx,pdf,ppt,pptx|max:2048',
-            ]);
+            
             $dokumen = new FormDokumen($request->input());
 
             if ($request->hasFile('file_dokumen')) {
@@ -108,14 +110,15 @@ class FormDokumenController extends Controller
 
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'nama_dokumen' => 'required',
+            'file_dokumen' => 'mimes:jpeg,png,jpg,gif,svg,xlsx,xls,doc,docx,pdf,ppt,pptx|max:2048',
+        ]);
+        
         try {
+            
             $dokumen = FormDokumen::FindOrFail($id);
             $dokumen->fill($request->all());
-
-            request()->validate([
-                'nama_dokumen' => 'required',
-                'file_dokumen' => 'mimes:jpeg,png,jpg,gif,svg,xlsx,xls,doc,docx,pdf,ppt,pptx|max:2048',
-            ]);
 
             if ($request->hasFile('file_dokumen')) {
                 $file     = $request->file('file_dokumen');
