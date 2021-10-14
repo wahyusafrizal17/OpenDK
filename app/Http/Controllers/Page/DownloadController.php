@@ -33,7 +33,6 @@ namespace App\Http\Controllers\Page;
 
 use App\Facades\Counter;
 use App\Http\Controllers\Controller;
-use App\Models\Profil;
 use App\Models\Prosedur;
 use App\Models\Regulasi;
 use Illuminate\Support\Facades\DB;
