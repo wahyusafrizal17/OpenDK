@@ -9,8 +9,8 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="{{ route('data.anggaran-realisasi.index') }}">Anggaran & Realisasi</a></li>
-        <li class="active">{{ $page_title }}</li>
+        <li><a href="{{ route('data.anggaran-realisasi.index') }}">Daftar Anggaran & Realisasi</a></li>
+        <li class="active">{{ $page_description ?? '' }}</li>
     </ol>
 </section>
 

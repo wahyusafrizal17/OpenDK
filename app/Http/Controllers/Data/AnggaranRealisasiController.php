@@ -37,20 +37,15 @@ use App\Models\AnggaranRealisasi;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-
 use Yajra\DataTables\Facades\DataTables;
 
 class AnggaranRealisasiController extends Controller
 {
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
     public function index()
     {
         $page_title       = 'Anggran & Realisasi';
         $page_description = 'Data Anggran & Realisasi';
+
         return view('data.anggaran_realisasi.index', compact('page_title', 'page_description'));
     }
 
@@ -61,7 +56,7 @@ class AnggaranRealisasiController extends Controller
      */
     public function getDataAnggaran()
     {
-        return DataTables::of(AnggaranRealisasi::query())
+        return DataTables::of(AnggaranRealisasi::all())
             ->addColumn('aksi', function ($row) {
                 $data['edit_url']   = route('data.anggaran-realisasi.edit', $row->id);
                 $data['delete_url'] = route('data.anggaran-realisasi.destroy', $row->id);
@@ -80,10 +75,11 @@ class AnggaranRealisasiController extends Controller
      */
     public function import()
     {
-        $page_title       = 'Import';
-        $page_description = 'Import Data Anggaran & Realisasi';
+        $page_title       = 'Anggaran & Realisasi';
+        $page_description = 'Import Anggaran & Realisasi' ;
         $years_list       = years_list();
         $months_list      = months_list();
+
         return view('data.anggaran_realisasi.import', compact('page_title', 'page_description', 'years_list', 'months_list'));
     }
 
@@ -118,9 +114,9 @@ class AnggaranRealisasiController extends Controller
      */
     public function edit($id)
     {
-        $anggaran         = AnggaranRealisasi::findOrFail($id);
-        $page_title       = 'Ubah';
-        $page_description = 'Ubah Data Anggaran & Realisasi: ' . $anggaran->id;
+        $anggaran         = AnggaranRealisasi::FindOrFail($id);
+        $page_title       = 'Anggaran & Realisasi';
+        $page_description = 'Ubah Anggaran & Realisasi : ' . $anggaran->id;
 
         return view('data.anggaran_realisasi.edit', compact('page_title', 'page_description', 'anggaran'));
     }
@@ -133,23 +129,24 @@ class AnggaranRealisasiController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'bulan'                  => 'required',
+            'tahun'                  => 'required',
+            'total_anggaran'         => 'required|numeric',
+            'total_belanja'          => 'required|numeric',
+            'belanja_pegawai'        => 'required|numeric',
+            'belanja_barang_jasa'    => 'required|numeric',
+            'belanja_modal'          => 'required|numeric',
+            'belanja_tidak_langsung' => 'required|numeric',
+        ]);
+
         try {
-            request()->validate([
-                'bulan'                  => 'required',
-                'tahun'                  => 'required',
-                'total_anggaran'         => 'required|numeric',
-                'total_belanja'          => 'required|numeric',
-                'belanja_pegawai'        => 'required|numeric',
-                'belanja_barang_jasa'    => 'required|numeric',
-                'belanja_modal'          => 'required|numeric',
-                'belanja_tidak_langsung' => 'required|numeric',
-            ]);
 
-            AnggaranRealisasi::find($id)->update($request->all());
+            AnggaranRealisasi::FindOrFail($id)->update($request->all());
 
-            return redirect()->route('data.anggaran-realisasi.index')->with('success', 'Data berhasil disimpan!');
+            return redirect()->route('data.anggaran-realisasi.index')->with('success', 'Data berhasil diubah!');
         } catch (Exception $e) {
-            return back()->withInput()->with('error', 'Data gagal disimpan!');
+            return back()->withInput()->with('error', 'Data gagal diubah!');
         }
     }
 
@@ -162,7 +159,8 @@ class AnggaranRealisasiController extends Controller
     public function destroy($id)
     {
         try {
-            AnggaranRealisasi::findOrFail($id)->delete();
+
+            AnggaranRealisasi::destroy($id);
 
             return redirect()->route('data.anggaran-realisasi.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {

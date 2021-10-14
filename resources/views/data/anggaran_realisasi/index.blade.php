@@ -48,9 +48,7 @@
 </section>
 <!-- /.content -->
 @endsection
-
 @include('partials.asset_datatables')
-
 @push('scripts')
 <script type="text/javascript">
     $(document).ready(function () {
@@ -75,5 +73,4 @@
 </script>
 @include('forms.datatable-vertical')
 @include('forms.delete-modal')
-
 @endpush
