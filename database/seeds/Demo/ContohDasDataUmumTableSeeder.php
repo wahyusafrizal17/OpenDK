@@ -2,6 +2,7 @@
 
 namespace Database\Seeds\Demo;
 
+use App\Models\Profil;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 

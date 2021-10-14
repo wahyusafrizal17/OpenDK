@@ -26,7 +26,7 @@ class DemoFasilitasPaudSeeder extends Seeder
                 'tahun'    => now()->year,
                 'desa_id'  => DataDesa::first()->desa_id,
             ]),
-            'template_upload/Format_Upload_Failitas_PAUD.xlsx',
+            'template_upload/Format_Upload_Fasilitas_PAUD.xlsx',
             'public'
         );
     }
