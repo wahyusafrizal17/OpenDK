@@ -81,6 +81,19 @@ class ProfilController extends Controller
         return view('pages.profil.strukturpemerintahan', compact('page_title', 'page_description', 'profil'));
     }
 
+    public function VisiMisi()
+    {
+        Counter::count('profil.visi-misi');
+
+        $profil     = $this->profil;
+        $page_title = 'Visi dan Misi';
+        if (isset($profil)) {
+            $page_description = $this->browser_title;
+        }
+
+        return view('pages.profil.visimisi', compact('page_title', 'page_description', 'profil'));
+    }
+
     public function Kependudukan()
     {
         Counter::count('profil.kependudukan');
@@ -93,21 +106,6 @@ class ProfilController extends Controller
         $data = array_merge($data, $this->createDashboardKependudukan($this->profil->id, 'Semua', date('Y')));
 
         return view('pages.kependudukan.show_kependudukan')->with($data);
-    }
-
-    public function VisiMisi()
-    {
-        Counter::count('profil.visi-misi');
-
-        $profil     = $this->profil;
-        $dokumen    = DB::table('das_form_dokumen')->take(5)->get();
-
-        $page_title = 'Visi dan Misi';
-        if (isset($profil)) {
-            $page_description = $this->browser_title;
-        }
-
-        return view('pages.profil.visimisi', compact('page_title', 'page_description', 'profil'));
     }
 
     public function showProfile()
