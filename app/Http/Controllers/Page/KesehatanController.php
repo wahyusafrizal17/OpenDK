@@ -55,7 +55,7 @@ class KesehatanController extends Controller
     // Get Data Chart AKI & AKB
     public function getChartAKIAKB()
     {
-        $kid  = request('kid');
+        $pid  = request('pid');
         $did  = request('did');
         $year = request('y');
         $data = [];
@@ -67,7 +67,7 @@ class KesehatanController extends Controller
                 // SD
                 $query_aki = DB::table('das_akib')
                     ->where('tahun', '=', $yearl)
-                    ->where('kecamatan_id', '=', $kid);
+                    ->where('kecamatan_id', '=', $pid);
                 if ($did != 'Semua') {
                     $query_aki->where('desa_id', '=', $did);
                 }
@@ -155,7 +155,7 @@ class KesehatanController extends Controller
     // Get Data Chart Cakupan Imunisasi
     public function getChartImunisasi()
     {
-        $kid  = request('kid');
+        $pid  = request('pid');
         $did  = request('did');
         $year = request('y');
         $data = [];
@@ -167,7 +167,7 @@ class KesehatanController extends Controller
                 // SD
                 $query = DB::table('das_imunisasi')
                     ->where('tahun', '=', $yearl)
-                    ->where('kecamatan_id', '=', $kid);
+                    ->where('kecamatan_id', '=', $pid);
                 if ($did != 'Semua') {
                     $query->where('desa_id', '=', $did);
                 }
@@ -248,7 +248,7 @@ class KesehatanController extends Controller
     // Get Chart Epidemi Penyakit
     public function getChartEpidemiPenyakit()
     {
-        $kid  = request('kid');
+        $pid  = request('pid');
         $did  = request('did');
         $year = request('y');
         $data = [];
@@ -260,7 +260,7 @@ class KesehatanController extends Controller
                 // SD
                 $query = DB::table('das_epidemi_penyakit')
                     ->where('tahun', '=', $yearl)
-                    ->where('kecamatan_id', '=', $kid);
+                    ->where('kecamatan_id', '=', $pid);
                 if ($did != 'Semua') {
                     $query->where('desa_id', '=', $did);
                 }
@@ -279,7 +279,7 @@ class KesehatanController extends Controller
                 foreach ($penyakit as $value) {
                     $query_total = DB::table('das_epidemi_penyakit')
                         //->join('ref_penyakit', 'das_epidemi_penyakit.penyakit_id', '=', 'ref_penyakit.id')
-                        ->where('das_epidemi_penyakit.kecamatan_id', '=', $kid)
+                        ->where('das_epidemi_penyakit.kecamatan_id', '=', $pid)
                         ->whereRaw('das_epidemi_penyakit.bulan in (' . $this->getIdsSemester($key) . ')')
                         ->where('das_epidemi_penyakit.tahun', $year)
                         ->where('das_epidemi_penyakit.penyakit_id', $value->id);
@@ -354,7 +354,7 @@ class KesehatanController extends Controller
     // Get Chart Toilet & Sanitasi
     public function getChartToiletSanitasi()
     {
-        $kid  = request('kid');
+        $pid  = request('pid');
         $did  = request('did');
         $year = request('y');
         $data = [];
@@ -365,7 +365,7 @@ class KesehatanController extends Controller
             foreach (years_list() as $yearl) {
                 $query = DB::table('das_toilet_sanitasi')
                     ->where('tahun', '=', $yearl)
-                    ->where('kecamatan_id', '=', $kid);
+                    ->where('kecamatan_id', '=', $pid);
                 if ($did != 'Semua') {
                     $query->where('desa_id', '=', $did);
                 }

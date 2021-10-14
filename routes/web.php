@@ -599,9 +599,9 @@ Route::group(['middleware' => 'installed'], function () {
     });
 
     // Desa Select2 By Kecamatan ID
-    Route::get('/api/desa-by-kid', function () {
-        return DB::table('ref_desa')->select('kode', 'nama')->whereRaw('LENGTH(kode) = 2')->where('kecamatan_id', '=', strtoupper(request('kid')))->get();
-    })->name('api.desa-by-kid');
+    Route::get('/api/desa-by-pid', function () {
+        return DB::table('ref_desa')->select('kode', 'nama')->whereRaw('LENGTH(kode) = 2')->where('kecamatan_id', '=', strtoupper(request('pid')))->get();
+    })->name('api.desa-by-pid');
 
     // All Profil Select2
     Route::get('/api/profil', function () {

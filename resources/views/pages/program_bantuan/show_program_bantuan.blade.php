@@ -108,8 +108,8 @@
         /*
          * Initial Dashboard
          */
-        if (kid == null) {
-            kid = $('#profil_id').val();
+        if (pid == null) {
+            pid = $('#profil_id').val();
         }
         var did = $('#list_desa').find(":selected").val();
         var year = $('#list_year').find(":selected").text();
@@ -123,13 +123,13 @@
     function change_das_bantuan(pid, did, year)
     {
         $.ajax('{!! route('statistik.program-bantuan.chart-penduduk') !!}', {
-            data: {kid: pid, did: did, y: year}
+            data: {pid: pid, did: did, y: year}
         }).done(function (data) {
             create_chart_bantuan_penduduk(data);
         });
 
         $.ajax('{!! route('statistik.program-bantuan.chart-keluarga') !!}', {
-            data: {kid: pid, did: did, y: year}
+            data: {pid: pid, did: did, y: year}
         }).done(function (data) {
             create_chart_bantuan_keluarga(data);
         });

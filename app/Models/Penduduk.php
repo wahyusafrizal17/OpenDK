@@ -48,7 +48,7 @@ class Penduduk extends Model
     {
         $penduduk =  $this
             ->where('status_dasar', 1)
-            ->where('kecamatan_id', $kid)
+            ->where('kecamatan_id', $pid)
             ->whereRaw('YEAR(created_at) <= ?', $year);
         if ($did != 'Semua') {
             $penduduk->where('desa_id', $did);

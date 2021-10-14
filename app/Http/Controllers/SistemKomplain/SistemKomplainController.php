@@ -95,15 +95,15 @@ class SistemKomplainController extends Controller
     protected function generateID()
     {
         $id  = mt_rand(100000, 999999);
-        $kid = '';
+        $pid = '';
 
         if (! Komplain::where('komplain_id', '=', $id)->exists()) {
-            $kid = $id;
+            $pid = $id;
         } else {
             $this->generateID();
         }
 
-        return $kid;
+        return $pid;
     }
 
     public function store(Request $request)
