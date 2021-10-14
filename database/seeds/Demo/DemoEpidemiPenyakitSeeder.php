@@ -2,6 +2,7 @@
 
 namespace Database\Seeds\Demo;
 
+use App\Models\JenisPenyakit;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
@@ -22,7 +23,7 @@ class DemoEpidemiPenyakitSeeder extends Seeder
         
         Excel::import(
             new ImporEpidemiPenyakit([
-                'penyakit_id' => 1,
+                'penyakit_id' => JenisPenyakit::first()->id,
                 'bulan'       => now()->month,
                 'tahun'       => now()->year,
             ]),

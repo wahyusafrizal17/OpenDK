@@ -19,7 +19,7 @@ class ContohDasDataUmumTableSeeder extends Seeder
 
         DB::table('das_data_umum')->insert([
             'id'                     => 1,
-            'profil_id'              => 1,
+            'profil_id'              => Profil::first()->id,
             'tipologi'               => 'Kecamatan maju namun terpencil.',
             'ketinggian'             => 1,
             'luas_wilayah'           => 0.0,

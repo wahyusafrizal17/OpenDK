@@ -2,6 +2,7 @@
 
 namespace Database\Seeds\Demo;
 
+use App\Models\DataDesa;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -15,7 +16,8 @@ class ContohDasKeluargaTableSeeder extends Seeder
     public function run()
     {
         
-        $desa_id = '53.06.13.2001';
+        // TODO : Ganti desa_id menjadi id
+        $desa_id = DataDesa::first()->desa_id;
 
         DB::table('das_keluarga')->truncate();
 
