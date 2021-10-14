@@ -39,7 +39,6 @@ use Illuminate\Support\Facades\DB;
 
 class ProfilController extends Controller
 {
-
     public function sejarah()
     {
         Counter::count('profil.sejarah');
