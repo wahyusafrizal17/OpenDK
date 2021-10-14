@@ -134,13 +134,11 @@ class PageController extends Controller
 
     public function DesaShow($slug)
     {
-        // Counter::count('desa.show');
-        $page_title       = 'Desa ' . ucwords(str_replace('-', ' ', $slug));
+        $desa             = DataDesa::nama($slug)->firstOrFail();
+        $page_title       = 'Desa ' . $desa->nama;
         $page_description = 'Data Desa';
 
-        $desa             = DataDesa::where('nama', str_replace('-', ' ', $slug))->first();
-
-        return view('pages.desa.desa_show', compact(['page_title', 'page_description', 'desa']));
+        return view('pages.desa.desa_show', compact('page_title', 'page_description', 'desa'));
     }
 
     public function refresh_captcha()
@@ -150,9 +148,10 @@ class PageController extends Controller
 
     public function eventDetail($slug)
     {
-        $event = Event::where('slug', $slug)->firstOrFail();
+        $event            = Event::slug($slug)->firstOrFail();
         $page_title       = $event->event_name;
         $page_description = $event->description;
-        return view('pages.event.event_detail', compact(['page_title', 'page_description','event']));
+
+        return view('pages.event.event_detail', compact('page_title', 'page_description', 'event'));
     }
 }
