@@ -116,7 +116,7 @@ class TingkatPendidikanController extends Controller
     {
         $pendidikan       = TingkatPendidikan::with(['desa'])->FindOrFail($id);
         $page_title       = 'Tingkat Pendidikan';
-        $page_description = 'Ubah Tingkat Pendidikan : Desa ' .  $pendidikan->desa->nama ;
+        $page_description = 'Ubah Tingkat Pendidikan : Desa ' .  $pendidikan->desa->nama;
 
         return view('data.tingkat_pendidikan.edit', compact('page_title', 'page_description', 'pendidikan'));
     }
@@ -129,17 +129,18 @@ class TingkatPendidikanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        try {
-            request()->validate([
-                'tidak_tamat_sekolah'     => 'required',
-                'tamat_sd'                => 'required',
-                'tamat_smp'               => 'required',
-                'tamat_sma'               => 'required',
-                'tamat_diploma_sederajat' => 'required',
-                'bulan'                   => 'required',
-                'tahun'                   => 'required',
-            ]);
+        request()->validate([
+            'tidak_tamat_sekolah'     => 'required',
+            'tamat_sd'                => 'required',
+            'tamat_smp'               => 'required',
+            'tamat_sma'               => 'required',
+            'tamat_diploma_sederajat' => 'required',
+            'semester'                => 'required',
+            'tahun'                   => 'required',
+        ]);
 
+        try {
+            
             TingkatPendidikan::FindOrFail($id)->update($request->all());
 
             return redirect()->route('data.tingkat-pendidikan.index')->with('success', 'Data berhasil diubah!');

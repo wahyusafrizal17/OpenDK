@@ -144,7 +144,7 @@ class PutusSekolahController extends Controller
                 'anak_usia_smp'  => 'required',
                 'siswa_sma'      => 'required',
                 'anak_usia_sma'  => 'required',
-                'bulan'          => 'required',
+                'semester'       => 'required',
                 'tahun'          => 'required',
             ]);
 

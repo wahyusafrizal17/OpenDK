@@ -39,14 +39,13 @@ class TingkatPendidikan extends Model
 
     protected $fillable = [
         'desa_id',
+        'tahun',
         'semester',
         'tidak_tamat_sekolah',
         'tamat_sd',
         'tamat_smp',
         'tamat_sma',
         'tamat_diploma_sederajat',
-        'bulan',
-        'tahun',
         'import_id',
     ];
 

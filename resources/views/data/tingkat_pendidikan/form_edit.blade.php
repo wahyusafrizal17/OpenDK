@@ -34,16 +34,11 @@
 </div>
 
 <div class="form-group">
-    <label for="bulan" class="control-label col-md-4 col-sm-3 col-xs-12">Bulan</label>
+    <label for="semester" class="control-label col-md-4 col-sm-3 col-xs-12">Semester</label>
     <div class="col-md-4">
-        <select class="form-control" id="bulan" name="bulan">
-            @foreach(months_list() as $key=> $month)
-                @if($pendidikan->bulan == $key)
-                    <option selected value="{{ $key}}">{{$month}}</option>
-                @else
-                    <option value="{{ $key}}">{{$month}}</option>
-                @endif
-            @endforeach
+        <select class="form-control" id="semester" name="semester">
+            <option value="1" @if($pendidikan->semester === 1) {{ 'selected' }} @endif>Semester 1</option>
+            <option value="2" @if($pendidikan->semester === 2) {{ 'selected' }} @endif>Semester 2</option>
         </select>
     </div>
 </div>

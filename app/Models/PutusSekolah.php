@@ -47,7 +47,7 @@ class PutusSekolah extends Model
         'anak_usia_smp',
         'siswa_sma',
         'anak_usia_sma',
-        'bulan',
+        'semester',
         'tahun',
         'semester',
     ];
