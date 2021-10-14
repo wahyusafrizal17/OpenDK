@@ -38,26 +38,29 @@
                 <li style="margin-left:-50px" class="col-sm-3"></li>
               </ul>
           </li>
+
+            @if (count($navdesa) > 0)
             <li class="dropdown @if(Request::is('desa/*'))active @endif">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">DESA <span class="caret"></span></a>
                 <ul class="dropdown-menu fadeIn animated" style="min-width: 400px;" role="menu">
-                  @foreach ($navdesa->chunk(2) as $desa)
-                    @foreach ($desa as $d)
-                    <li class="col-sm-6" style="white-space: normal;"><a href="{{ route('desa.show', ['slug' => str_slug(strtolower($d->nama))]) }}">{{ 'Desa ' .ucfirst($d->nama) }}</a></li>
-                    @endforeach
+                  @foreach ($navdesa as $desa)
+                    <li class="col-sm-6" style="white-space: normal;"><a href="{{ route('desa.show', ['slug' => str_slug(strtolower($desa->nama))]) }}">{{ 'Desa ' .ucfirst($desa->nama) }}</a></li>
                   @endforeach
                 </ul>
             </li>
+            @endif
+
+            @if (count($navpotensi) > 0)
             <li class="dropdown @if(Request::is('potensi/*'))active @endif" >
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">POTENSI <span class="caret"></span></a>
-              <ul class="dropdown-menu fadeIn animated" role="menu">
-                @if (count($navpotensi) > 0)
-                  @foreach ($navpotensi as $d)
-                    <li><a href="{{ route('potensi.kategori', ['slug'=>$d->slug]) }}">{{ ucfirst($d->nama_kategori) }}</a></li>
-                  @endforeach
-                  </ul>
-                @endif
+                <ul class="dropdown-menu fadeIn animated" role="menu">
+                    @foreach ($navpotensi as $d)
+                      <li><a href="{{ route('potensi.kategori', ['slug'=>$d->slug]) }}">{{ ucfirst($d->nama_kategori) }}</a></li>
+                    @endforeach
+                </ul>
             </li>
+            @endif
+
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">STATISTIK <span class="caret"></span></a>
               <ul class="dropdown-menu fadeIn animated" role="menu">
