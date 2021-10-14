@@ -42,7 +42,6 @@ use Yajra\DataTables\Facades\DataTables;
 
 class AKIAKBController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -105,10 +104,8 @@ class AKIAKBController extends Controller
         ]);
 
         try {
-
             (new ImporAKIAKB($request->only(['bulan', 'tahun'])))
                 ->queue($request->file('file'));
-                
         } catch (Exception $e) {
             return back()->with('error', 'Import data gagal. ' . $e->getMessage());
         }
