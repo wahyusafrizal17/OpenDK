@@ -72,11 +72,11 @@ class DataUmum extends Model
 
     public function getLuasWilayahValueAttribute()
     {
-        return $this->sumber_luas_wilayah==1 ? $this->luas_wilayah : DB::table('das_data_desa')->sum('luas_wilayah');
+        return $this->sumber_luas_wilayah==1 ? $this->luas_wilayah : DataDesa::sum('luas_wilayah');
     }
 
     public function getLuasWilayahDariDataDesaAttribute()
     {
-        return DB::table('das_data_desa')->sum('luas_wilayah');
+        return DataDesa::sum('luas_wilayah');
     }
 }

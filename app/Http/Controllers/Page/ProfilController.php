@@ -39,6 +39,20 @@ use Illuminate\Support\Facades\DB;
 
 class ProfilController extends Controller
 {
+
+    public function sejarah()
+    {
+        Counter::count('profil.sejarah');
+
+        $profil     = Profil::with(['dataUmum'])->first();
+        $page_title = 'Sejarah';
+        if (isset($profil)) {
+            $page_description = ucwords(strtolower($profil->nama_kecamatan));
+        }
+
+        return view('pages.profil.sejarah', compact('page_title', 'page_description', 'profil'));
+    }
+
     /**
      * Menampilkan Halaman Profil Kecamatan
      **/
@@ -97,20 +111,6 @@ class ProfilController extends Controller
         }
 
         return view('pages.profil.visimisi', compact('page_title', 'page_description', 'profil'));
-    }
-
-    public function sejarah()
-    {
-        Counter::count('profil.sejarah');
-
-        $profil     = $this->profil;
-
-        $page_title = 'Sejarah';
-        if (isset($profil)) {
-            $page_description = ucwords(strtolower($profil->nama_kecamatan));
-        }
-
-        return view('pages.profil.sejarah', compact('page_title', 'page_description', 'profil'));
     }
 
     public function showProfile()

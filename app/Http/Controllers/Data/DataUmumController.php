@@ -47,7 +47,7 @@ class DataUmumController extends Controller
      */
     public function index()
     {
-        $data_umum        = DataUmum::FindOrFail(1);
+        $data_umum        = DataUmum::first();
         $luas_wilayah     = $data_umum['luas_wilayah_value'];
         $page_title       = 'Data Umum';
         $page_description = 'Ubah Data Umum';

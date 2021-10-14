@@ -85,16 +85,16 @@ class Profil extends Model
 
     public function dataUmum()
     {
-        return $this->hasOne(DataUmum::class, 'kecamatan_id', 'kecamatan_id');
+        return $this->hasOne(DataUmum::class, 'profil_id', 'id');
     }
 
-    public function dataDesa()
-    {
-        return $this->hasMany(DataDesa::class, 'kecamatan_id', 'kecamatan_id');
-    }
+    // public function dataDesa()
+    // {
+    //     return $this->hasMany(DataDesa::class, 'kecamatan_id', 'kecamatan_id');
+    // }
 
-    public function dataPenduduk()
-    {
-        return $this->hasMany(Penduduk::class, 'kecamatan_id', 'kecamatan_id')->where('status_dasar', 1);
-    }
+    // public function dataPenduduk()
+    // {
+    //     return $this->hasMany(Penduduk::class, 'kecamatan_id', 'kecamatan_id')->where('status_dasar', 1);
+    // }
 }

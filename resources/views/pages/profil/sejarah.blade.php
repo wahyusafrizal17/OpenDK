@@ -7,8 +7,9 @@
             <h3 class="box-title text-bold"><i class="fa  fa-arrow-circle-right fa-lg text-blue"></i> SEJARAH {{ strtoupper($sebutan_wilayah) }} {{ strtoupper($profil->nama_kecamatan) }}</h3>
         </div>
         <div class="box-body">
-
-            <img class="img-circle" style="display:block;margin:auto" src="@if(! $profil->file_logo =='') {{ asset($profil->file_logo) }} @else {{ 'http://placehold.it/154x154' }} @endif">
+            <center>
+                <img class="img-responsive" style="display:block;margin:auto" src="@if(! $profil->file_logo =='') {{ asset($profil->file_logo) }} @else {{ 'http://placehold.it/154x154' }} @endif">
+            </center>
             <p> {!! $profil->dataumum->tipologi !!}</p>
         </div>
     </div>
