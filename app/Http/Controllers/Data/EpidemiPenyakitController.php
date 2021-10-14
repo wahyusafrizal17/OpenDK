@@ -38,16 +38,10 @@ use App\Models\JenisPenyakit;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-
 use Yajra\DataTables\Facades\DataTables;
 
 class EpidemiPenyakitController extends Controller
 {
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -56,7 +50,8 @@ class EpidemiPenyakitController extends Controller
     public function index()
     {
         $page_title       = 'Epidemi Penyakit';
-        $page_description = 'Data Epidemi Penyakit';
+        $page_description = 'Daftar Epidemi Penyakit';
+
         return view('data.epidemi_penyakit.index', compact('page_title', 'page_description'));
     }
 
@@ -87,11 +82,12 @@ class EpidemiPenyakitController extends Controller
      */
     public function import()
     {
-        $page_title       = 'Import';
-        $page_description = 'Import Data Epidemi Penyakit';
+        $page_title       = 'Epidemi Penyakit';
+        $page_description = 'Import Epidemi Penyakit';
         $years_list       = years_list();
         $months_list      = months_list();
         $jenis_penyakit   = JenisPenyakit::pluck('nama', 'id');
+
         return view('data.epidemi_penyakit.import', compact('page_title', 'page_description', 'years_list', 'months_list', 'jenis_penyakit'));
     }
 
@@ -126,10 +122,11 @@ class EpidemiPenyakitController extends Controller
      */
     public function edit($id)
     {
-        $epidemi          = EpidemiPenyakit::findOrFail($id);
-        $page_title       = 'Ubah';
-        $page_description = 'Ubah Data Epidemi Penyakit: ' . $epidemi->penyakit->nama;
+        $epidemi          = EpidemiPenyakit::FindOrFail($id);
+        $page_title       = 'Epidemi Penyakit';
+        $page_description = 'Ubah Data Epidemi Penyakit : ' . $epidemi->penyakit->nama;
         $jenis_penyakit   = JenisPenyakit::pluck('nama', 'id');
+
         return view('data.epidemi_penyakit.edit', compact('page_title', 'page_description', 'epidemi', 'jenis_penyakit'));
     }
 
@@ -149,11 +146,11 @@ class EpidemiPenyakitController extends Controller
                 'tahun'            => 'required',
             ]);
 
-            EpidemiPenyakit::find($id)->update($request->all());
+            EpidemiPenyakit::FindOrFail($id)->update($request->all());
 
-            return redirect()->route('data.epidemi-penyakit.index')->with('success', 'Data berhasil disimpan!');
+            return redirect()->route('data.epidemi-penyakit.index')->with('success', 'Data berhasil diubah!');
         } catch (Exception $e) {
-            return back()->withInput()->with('error', 'Data gagal disimpan!');
+            return back()->withInput()->with('error', 'Data gagal diubah!');
         }
     }
 
@@ -166,9 +163,9 @@ class EpidemiPenyakitController extends Controller
     public function destroy($id)
     {
         try {
-            EpidemiPenyakit::findOrFail($id)->delete();
+            EpidemiPenyakit::destroy($id);
 
-            return redirect()->route('data.epidemi-penyakit.index')->with('success', 'Data sukses dihapus!');
+            return redirect()->route('data.epidemi-penyakit.index')->with('success', 'Data berhasil dihapus!');
         } catch (Exception $e) {
             return redirect()->route('data.epidemi-penyakit.index')->with('error', 'Data gagal dihapus!');
         }
