@@ -36,7 +36,8 @@ use App\Models\Keluarga;
 use App\Models\Penduduk;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Request as RequestFacade;
-use Maatwebsite\Excel\Facades\Excel;use Yajra\DataTables\DataTables;
+use Maatwebsite\Excel\Facades\Excel;
+use Yajra\DataTables\DataTables;
 
 class KeluargaController extends Controller
 {

@@ -35,7 +35,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Slide;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use League\Flysystem\Exception;use Yajra\DataTables\DataTables;
+use League\Flysystem\Exception;
+use Yajra\DataTables\DataTables;
 
 class SlideController extends Controller
 {

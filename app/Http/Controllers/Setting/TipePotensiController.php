@@ -34,7 +34,8 @@ namespace App\Http\Controllers\Setting;
 use App\Http\Controllers\Controller;
 use App\Models\TipePotensi;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;use Yajra\DataTables\DataTables;
+use Illuminate\Http\Response;
+use Yajra\DataTables\DataTables;
 
 class TipePotensiController extends Controller
 {

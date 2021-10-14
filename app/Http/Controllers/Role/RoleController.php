@@ -37,7 +37,8 @@ use App\Models\Menu;
 use App\Models\Role;
 use App\Models\RoleUser;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;use Yajra\DataTables\DataTables;
+use Illuminate\Http\Response;
+use Yajra\DataTables\DataTables;
 
 class RoleController extends Controller
 {

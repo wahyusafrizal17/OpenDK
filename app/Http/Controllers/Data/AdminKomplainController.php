@@ -38,7 +38,8 @@ use App\Models\Komplain;
 use App\Models\Penduduk;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\DB;use Yajra\DataTables\DataTables;
+use Illuminate\Support\Facades\DB;
+use Yajra\DataTables\DataTables;
 
 class AdminKomplainController extends Controller
 {

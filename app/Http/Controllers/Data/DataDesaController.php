@@ -158,7 +158,6 @@ class DataDesaController extends Controller
     {
         try {
             DataDesa::destroy($id);
-
         } catch (Exception $e) {
             return redirect()->route('data.data-desa.index')->with('error', 'Data Desa gagal dihapus!');
         }

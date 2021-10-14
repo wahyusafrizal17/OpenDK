@@ -36,7 +36,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Profil;
 use App\Models\Prosedur;
 use App\Models\Regulasi;
-use Illuminate\Support\Facades\DB;use Yajra\DataTables\DataTables;
+use Illuminate\Support\Facades\DB;
+use Yajra\DataTables\DataTables;
 
 class DownloadController extends Controller
 {
