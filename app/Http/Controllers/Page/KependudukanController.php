@@ -36,7 +36,8 @@ use App\Http\Controllers\Controller;
 use App\Models\DataDesa;
 use App\Models\Penduduk;
 use App\Models\Profil;
-use Illuminate\Support\Facades\DB;use Yajra\DataTables\DataTables;
+use Illuminate\Support\Facades\DB;
+use Yajra\DataTables\DataTables;
 
 class KependudukanController extends Controller
 {

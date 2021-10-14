@@ -144,7 +144,7 @@ class EpidemiPenyakitController extends Controller
             'bulan'            => 'required',
             'tahun'            => 'required',
         ]);
-        
+
         try {
             EpidemiPenyakit::FindOrFail($id)->update($request->all());
         } catch (Exception $e) {

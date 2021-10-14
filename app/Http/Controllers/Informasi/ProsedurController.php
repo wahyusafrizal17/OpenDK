@@ -36,7 +36,8 @@ use App\Models\Prosedur;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use League\Flysystem\Exception;use Yajra\DataTables\DataTables;
+use League\Flysystem\Exception;
+use Yajra\DataTables\DataTables;
 
 class ProsedurController extends Controller
 {
