@@ -142,7 +142,7 @@ class ProgramBantuanController extends Controller
     public function destroy($id)
     {
         try {
-            Program::destroy($id)->delete();
+            Program::destroy($id);
             PesertaProgram::where('program_id', $id)->delete();
 
             return redirect()->route('data.program-bantuan.index')->with('success', 'Data berhasil dihapus!');

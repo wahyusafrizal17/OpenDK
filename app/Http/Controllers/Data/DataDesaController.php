@@ -159,7 +159,7 @@ class DataDesaController extends Controller
     public function destroy($id)
     {
         try {
-            DataDesa::findOrFail($id)->delete();
+            DataDesa::destroy($id)
 
             return redirect()->route('data.data-desa.index')->with('success', 'Data Desa sukses dihapus!');
         } catch (Exception $e) {

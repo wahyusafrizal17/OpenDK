@@ -222,7 +222,14 @@ class PotensiController extends Controller
      */
     public function destroy($id)
     {
-        Potensi::find($id)->delete();
-        return redirect()->route('informasi.potensi.index')->with('success', 'Potensi Berhasil dihapus!');
+        try {
+            
+            Potensi::destroy($id);
+
+            return redirect()->route('informasi.potensi.index')->with('success', 'Potensi Berhasil dihapus!');
+        } catch (Exception $e) {
+            return redirect()->route('informasi.form-dokumen.index')->with('error', 'Potensi gagal dihapus!');
+        }
+        
     }
 }

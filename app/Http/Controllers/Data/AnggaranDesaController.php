@@ -166,7 +166,7 @@ class AnggaranDesaController extends Controller
     public function destroy($id)
     {
         try {
-            AnggaranDesa::findOrFail($id)->delete();
+            AnggaranDesa::destroy($id)
 
             return redirect()->route('data.anggaran-desa.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {

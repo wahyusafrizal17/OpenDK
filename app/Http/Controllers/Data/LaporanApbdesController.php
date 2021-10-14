@@ -108,6 +108,7 @@ class LaporanApbdesController extends Controller
     public function destroy($id)
     {
         try {
+            
             $apbdes = LaporanApbdes::findOrFail($id);
 
             // Hapus file apbdes

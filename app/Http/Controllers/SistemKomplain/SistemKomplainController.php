@@ -261,7 +261,7 @@ class SistemKomplainController extends Controller
     public function destroy($id)
     {
         try {
-            Komplain::findOrFail($id)->delete();
+            Komplain::destroy($id)
 
             return redirect()->route('sistem-komplain.index')->with('success', 'Keluhan sukses dihapus!');
         } catch (Exception $e) {
