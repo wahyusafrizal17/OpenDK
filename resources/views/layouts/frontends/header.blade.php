@@ -51,10 +51,12 @@
             <li class="dropdown @if(Request::is('potensi/*'))active @endif" >
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">POTENSI <span class="caret"></span></a>
               <ul class="dropdown-menu fadeIn animated" role="menu">
-                @foreach ($navpotensi as $d)
-                <li><a href="{{ route('potensi.kategori', ['slug'=>$d->slug]) }}">{{ ucfirst($d->nama_kategori) }}</a></li>
-                @endforeach
-                </ul>
+                @if (count($navpotensi) > 0)
+                  @foreach ($navpotensi as $d)
+                    <li><a href="{{ route('potensi.kategori', ['slug'=>$d->slug]) }}">{{ ucfirst($d->nama_kategori) }}</a></li>
+                  @endforeach
+                  </ul>
+                @endif
             </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">STATISTIK <span class="caret"></span></a>

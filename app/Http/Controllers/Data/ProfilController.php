@@ -69,7 +69,7 @@ class ProfilController extends Controller
     public function update(Request $request, $id)
     {
         request()->validate([
-            'provinsi_id'             => 'required',
+            'provinsi_id'              => 'required',
             'kabupaten_id'             => 'required',
             'kecamatan_id'             => 'required',
             'alamat'                   => 'required',
