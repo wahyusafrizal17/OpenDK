@@ -81,7 +81,7 @@ class RoleController extends Controller
     {
         $permissions = Role::getListPermission();
         $page_title       = 'Group Pengguna';
-        $page_description = 'Tambah Data';
+        $page_description = 'Tambah Group Pengguna';
 
         return view('role.create', compact('page_title', 'page_description', 'permissions'));
     }

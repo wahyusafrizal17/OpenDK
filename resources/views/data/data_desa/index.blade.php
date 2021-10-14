@@ -22,7 +22,7 @@
         <div class="box-header with-border">
             <div class="">
                 <a href="{{ route('data.data-desa.create') }}">
-                    <button type="button" class="btn btn-primary btn-sm" title="Tambah Data Desa"><i class="fa fa-plus"></i> Tambah</button>
+                    <button type="button" class="btn btn-primary btn-sm" title="Tambah Data"><i class="fa fa-plus"></i> Tambah</button>
                 </a>
             </div>
         </div>

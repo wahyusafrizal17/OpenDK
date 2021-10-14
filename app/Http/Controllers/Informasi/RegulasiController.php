@@ -62,7 +62,7 @@ class RegulasiController extends Controller
     public function create()
     {
         $page_title       = 'Regulasi';
-        $page_description = 'Tambah Data';
+        $page_description = 'Tambah Regulasi';
 
         return view('informasi.regulasi.create', compact('page_title', 'page_description'));
     }
