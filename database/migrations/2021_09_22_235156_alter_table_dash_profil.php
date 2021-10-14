@@ -24,7 +24,7 @@ class AlterTableDashProfil extends Migration
         });
 
         // Isi data
-        if ($profil = Profil::find(1)) {
+        if ($profil = Profil::first()) {
             $profil->nama_provinsi = DB::table('ref_wilayah')->where('kode', $profil->provinsi_id)->first()->nama;
             $profil->nama_kabupaten = DB::table('ref_wilayah')->where('kode', $profil->kabupaten_id)->first()->nama;
             $profil->nama_kecamatan = DB::table('ref_wilayah')->where('kode', $profil->kecamatan_id)->first()->nama;
