@@ -57,7 +57,6 @@ class TingkatPendidikanController extends Controller
      */
     public function getData()
     {
-        // dd(TingkatPendidikan::with(['desa']));
         return DataTables::of(TingkatPendidikan::with(['desa']))
             ->addColumn('aksi', function ($row) {
                 $data['edit_url']   = route('data.tingkat-pendidikan.edit', $row->id);
@@ -98,10 +97,8 @@ class TingkatPendidikanController extends Controller
         ]);
 
         try {
-
             (new ImporTingkatPendidikan($request->only(['desa_id', 'tahun', 'semester'])))
                 ->queue($request->file('file'));
-
         } catch (Exception $e) {
             return back()->with('error', 'Import data gagal. ' . $e->getMessage());
         }
@@ -160,9 +157,8 @@ class TingkatPendidikanController extends Controller
     public function destroy($id)
     {
         try {
+            TingkatPendidikan::destroy($id);
 
-            TingkatPendidikan::findOrFail($id)->delete();
-            
             return redirect()->route('data.tingkat-pendidikan.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {
             return redirect()->route('data.tingkat-pendidikan.index')->with('error', 'Data gagal dihapus!');
