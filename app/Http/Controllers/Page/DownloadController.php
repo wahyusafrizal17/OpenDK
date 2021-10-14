@@ -110,7 +110,7 @@ class DownloadController extends Controller
 
         $page_title       = 'Dokumen';
         $page_description = 'Daftar Formulir Dokumen';
-        
+
         return view('pages.unduhan.form-dokumen', compact('page_title', 'page_description'));
     }
 
