@@ -35,7 +35,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Faq;
 use Exception;
 use Illuminate\Http\Request;
-
 use Illuminate\Http\Response;
 
 class FaqController extends Controller
@@ -82,21 +81,11 @@ class FaqController extends Controller
 
         try {
             Faq::create($request->all());
-
-            return redirect()->route('informasi.faq.index')->with('success', 'FAQ berhasil ditambah!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'FAQ gagal ditambah!');
         }
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int $id
-     * @return Response
-     */
-    public function show($id)
-    {
+        return redirect()->route('informasi.faq.index')->with('success', 'FAQ berhasil ditambah!');
     }
 
     /**
@@ -130,11 +119,11 @@ class FaqController extends Controller
 
         try {
             Faq::FindOrFail($id)->update($request->all());
-
-            return redirect()->route('informasi.faq.index')->with('success', 'FAQ berhasil diubah!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'FAQ gagal diubah!');
         }
+
+        return redirect()->route('informasi.faq.index')->with('success', 'FAQ berhasil diubah!');
     }
 
     /**
@@ -147,10 +136,10 @@ class FaqController extends Controller
     {
         try {
             Faq::destroy($id);
-
-            return redirect()->route('informasi.faq.index')->with('success', 'FAQ berhasil dihapus!');
         } catch (Exception $e) {
             return redirect()->route('informasi.faq.index')->with('error', 'FAQ gagal dihapus!');
         }
+
+        return redirect()->route('informasi.faq.index')->with('success', 'FAQ berhasil dihapus!');
     }
 }

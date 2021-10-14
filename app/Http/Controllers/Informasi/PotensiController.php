@@ -101,7 +101,9 @@ class PotensiController extends Controller
      */
     public function create()
     {
-        $page_title = 'Tambah Potensi';
+        $page_title = 'Potensi';
+        $page_description = 'Tambah Potensi';
+
         return view('informasi.potensi.create', compact('page_title'));
     }
 
@@ -131,11 +133,11 @@ class PotensiController extends Controller
             }
 
             $potensi->save();
-
-            return redirect()->route('informasi.potensi.index')->with('success', 'Potensi berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Simpan Event gagal! ' . $e->getMessage());
         }
+
+        return redirect()->route('informasi.potensi.index')->with('success', 'Potensi berhasil disimpan!');
     }
 
     /**
@@ -146,8 +148,9 @@ class PotensiController extends Controller
      */
     public function show($id)
     {
-        $potensi    = Potensi::FindOrFail($id);
-        $page_title = 'Potensi :' . $potensi->nama_potensi;
+        $potensi          = Potensi::FindOrFail($id);
+        $page_title       = 'Potensi';
+        $page_description = 'Potensi : ' . $potensi->nama_potensi;
 
         return view('informasi.potensi.show', compact('page_title', 'potensi'));
     }
@@ -161,20 +164,10 @@ class PotensiController extends Controller
     public function edit($id)
     {
         $potensi          = Potensi::FindOrFail($id);
-        $page_title       = 'Ubah';
+        $page_title       = 'Potensi';
         $page_description = 'Ubah Potensi : ' . $potensi->nama_potensi;
 
         return view('informasi.potensi.edit', compact('page_title', 'page_description', 'potensi'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int $id
-     * @return Response
-     */
-    public function download($id)
-    {
     }
 
     /**
@@ -205,11 +198,11 @@ class PotensiController extends Controller
             }
 
             $potensi->save();
-
-            return redirect()->route('informasi.potensi.index')->with('success', 'Data Potensi berhasil disimpan!');
         } catch (Exception $e) {
             return back()->with('error', 'Data Potensi gagal disimpan!' . $e->getMessage());
         }
+
+        return redirect()->route('informasi.potensi.index')->with('success', 'Data Potensi berhasil disimpan!');
     }
 
     /**
@@ -222,10 +215,10 @@ class PotensiController extends Controller
     {
         try {
             Potensi::destroy($id);
-
-            return redirect()->route('informasi.potensi.index')->with('success', 'Potensi Berhasil dihapus!');
         } catch (Exception $e) {
             return redirect()->route('informasi.form-dokumen.index')->with('error', 'Potensi gagal dihapus!');
         }
+
+        return redirect()->route('informasi.potensi.index')->with('success', 'Potensi Berhasil dihapus!');
     }
 }

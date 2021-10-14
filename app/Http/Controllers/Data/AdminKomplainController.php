@@ -38,15 +38,15 @@ use App\Models\Komplain;
 use App\Models\Penduduk;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\DB;
-use Yajra\DataTables\DataTables;
+use Illuminate\Support\Facades\DB;use Yajra\DataTables\DataTables;
 
 class AdminKomplainController extends Controller
 {
     public function index()
     {
-        $page_title       = 'Admin Keluhan';
-        $page_description = 'Data Admin Keluhan';
+        $page_title       = 'Komplain';
+        $page_description = 'Daftar Komplain';
+
         return view('sistem_komplain.admin_komplain.index', compact('page_title', 'page_description'));
     }
 
@@ -101,11 +101,11 @@ class AdminKomplainController extends Controller
 
         try {
             Komplain::FindOrFail($id)->update($request->all());
-
-            return redirect()->route('admin-komplain.index')->with('success', 'Status Komplain berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Status Komplain gagal disimpan!');
         }
+
+        return redirect()->route('admin-komplain.index')->with('success', 'Status Komplain berhasil disimpan!');
     }
 
     /**
@@ -117,8 +117,9 @@ class AdminKomplainController extends Controller
     public function edit($id)
     {
         $komplain         = Komplain::FindOrFail($id);
-        $page_title       = 'Edit Komplain';
-        $page_description = 'Komplain ' . $komplain->komplain_id;
+        $page_title       = 'Komplain';
+        $page_description = 'Ubah Komplain' . $komplain->komplain_id;
+
         return view('sistem_komplain.admin_komplain.edit', compact('page_title', 'page_description', 'komplain'));
     }
 
@@ -175,19 +176,21 @@ class AdminKomplainController extends Controller
             }
 
             $komplain->save();
-            return redirect()->route('admin-komplain.index')->with('success', 'Komplain berhasil dikirim!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Komplain gagal dikirim!');
         }
+
+        return redirect()->route('admin-komplain.index')->with('success', 'Komplain berhasil dikirim!');
     }
 
     public function statistik()
     {
-        $page_title       = 'Statistik Keluhan';
-        $page_description = 'Data Statistik Keluhan Masyarakat';
+        $page_title       = 'Statistik Komplain';
+        $page_description = 'Data Statistik Komplain Masyarakat';
         $chart_kategori   = $this->getChartKategori();
         $chart_status     = $this->getChartStatus();
         $chart_desa       = $this->getChartDesa();
+
         return view('sistem_komplain.admin_komplain.statistik', compact('page_title', 'page_description', 'chart_kategori', 'chart_status', 'chart_desa'));
     }
 

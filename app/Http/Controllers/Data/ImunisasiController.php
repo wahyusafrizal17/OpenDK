@@ -37,7 +37,6 @@ use App\Models\Imunisasi;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-
 use Yajra\DataTables\DataTables;
 
 class ImunisasiController extends Controller
@@ -142,11 +141,11 @@ class ImunisasiController extends Controller
 
         try {
             Imunisasi::FindOrFail($id)->update($request->all());
-
-            return redirect()->route('data.imunisasi.index')->with('success', 'Data berhasil diubah!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal diubah!');
         }
+
+        return redirect()->route('data.imunisasi.index')->with('success', 'Data berhasil diubah!');
     }
 
     /**
@@ -159,10 +158,10 @@ class ImunisasiController extends Controller
     {
         try {
             Imunisasi::destroy($id);
-
-            return redirect()->route('data.imunisasi.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {
             return redirect()->route('data.imunisasi.index')->with('error', 'Data gagal dihapus!');
         }
+
+        return redirect()->route('data.imunisasi.index')->with('success', 'Data sukses dihapus!');
     }
 }

@@ -35,8 +35,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Slide;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use League\Flysystem\Exception;
-use Yajra\DataTables\DataTables;
+use League\Flysystem\Exception;use Yajra\DataTables\DataTables;
 
 class SlideController extends Controller
 {
@@ -55,7 +54,6 @@ class SlideController extends Controller
     {
         return DataTables::of(Slide::all())
             ->addColumn('action', function ($row) {
-
                 // $data['show_url']   = route('setting.slide.show', $row->id); //TODO : Tambahkan View
                 $data['edit_url']   = route('setting.slide.edit', $row->id);
                 $data['delete_url'] = route('setting.slide.destroy', $row->id);
@@ -93,16 +91,21 @@ class SlideController extends Controller
             'deskripsi' => 'required',
             'gambar'    => 'required|file|mimes:jpg,jpeg,png|max:2048',
         ]);
-        $slide = new Slide($request->input());
 
-        if ($request->hasFile('gambar')) {
-            $file     = $request->file('gambar');
-            $fileName = $file->getClientOriginalName();
-            $path     = "storage/slide/";
-            $request->file('gambar')->move($path, $fileName);
-            $slide->gambar = $path . $fileName;
+        try {
+            $slide = new Slide($request->input());
+
+            if ($request->hasFile('gambar')) {
+                $file     = $request->file('gambar');
+                $fileName = $file->getClientOriginalName();
+                $path     = "storage/slide/";
+                $request->file('gambar')->move($path, $fileName);
+                $slide->gambar = $path . $fileName;
+            }
+            $slide->save();
+        } catch (Exception $e) {
+            return back()->withInput()->with('error', 'Slide gagal ditambah!');
         }
-        $slide->save();
 
         return redirect()->route('setting.slide.index')->with('success', 'Slide berhasil ditambah!');
     }
@@ -164,11 +167,11 @@ class SlideController extends Controller
                 $slide->gambar = $path . $fileName;
             }
             $slide->save();
-
-            return redirect()->route('setting.slide.index')->with('success', 'Data Slide berhasil disimpan!');
         } catch (Exception $e) {
             return back()->with('error', 'Data Slide gagal disimpan!' . $e->getMessage());
         }
+
+        return redirect()->route('setting.slide.index')->with('success', 'Data Slide berhasil disimpan!');
     }
 
     /**
@@ -181,10 +184,10 @@ class SlideController extends Controller
     {
         try {
             Slide::destroy($id);
-
-            return redirect()->route('setting.slide.index')->with('success', 'Slide berhasil dihapus!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Slide gagal dihapus!');
         }
+
+        return redirect()->route('setting.slide.index')->with('success', 'Slide berhasil dihapus!');
     }
 }

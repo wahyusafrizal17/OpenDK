@@ -50,7 +50,7 @@ class AKIAKBController extends Controller
     public function index()
     {
         $page_title       = 'AKI & AKB';
-        $page_description = 'Data Kematian Ibu & Bayi';
+        $page_description = 'Daftar Kematian Ibu & Bayi';
 
         return view('data.aki_akb.index', compact('page_title', 'page_description'));
     }
@@ -143,11 +143,11 @@ class AKIAKBController extends Controller
 
         try {
             AkiAkb::FindOrFail($id)->update($request->all());
-
-            return redirect()->route('data.aki-akb.index')->with('success', 'Data berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal disimpan!');
         }
+
+        return redirect()->route('data.aki-akb.index')->with('success', 'Data berhasil disimpan!');
     }
 
     /**
@@ -160,10 +160,10 @@ class AKIAKBController extends Controller
     {
         try {
             AkiAkb::destroy($id);
-
-            return redirect()->route('data.aki-akb.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {
             return redirect()->route('data.aki-akb.index')->with('error', 'Data gagal dihapus!');
         }
+
+        return redirect()->route('data.aki-akb.index')->with('success', 'Data sukses dihapus!');
     }
 }

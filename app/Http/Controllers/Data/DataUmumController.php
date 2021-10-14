@@ -88,13 +88,12 @@ class DataUmumController extends Controller
 
         try {
             $data = $request->sumber_luas_wilayah==1 ? $request->all() : $request->except('luas_wilayah');
-
             DataUmum::FindOrFail($id)->update($data);
-
-            return redirect()->route('data.data-umum.index')->with('success', 'Update Data Umum sukses!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Update Data Umum gagal!');
         }
+
+        return redirect()->route('data.data-umum.index')->with('success', 'Update Data Umum sukses!');
     }
 
     public function getDataUmumAjax(Request $request)

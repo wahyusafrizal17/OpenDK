@@ -35,7 +35,6 @@ use App\Http\Controllers\Controller;
 use App\Models\JenisPenyakit;
 use Exception;
 use Illuminate\Http\Request;
-
 use Yajra\DataTables\DataTables;
 
 class JenisPenyakitController extends Controller
@@ -80,11 +79,11 @@ class JenisPenyakitController extends Controller
         try {
             $penyakit = new JenisPenyakit($request->all());
             $penyakit->save();
-
-            return redirect()->route('setting.jenis-penyakit.index')->with('success', 'Data berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal disimpan!');
         }
+
+        return redirect()->route('setting.jenis-penyakit.index')->with('success', 'Data berhasil disimpan!');
     }
 
     public function edit($id)
@@ -106,21 +105,21 @@ class JenisPenyakitController extends Controller
             $penyakit = JenisPenyakit::FindOrFail($id);
             $penyakit->fill($request->all());
             $penyakit->save();
-
-            return redirect()->route('setting.jenis-penyakit.index')->with('success', 'Data berhasil diupdate!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal diupdate!');
         }
+
+        return redirect()->route('setting.jenis-penyakit.index')->with('success', 'Data berhasil diupdate!');
     }
 
     public function destroy($id)
     {
         try {
             JenisPenyakit::destroy($id);
-
-            return redirect()->route('setting.jenis-penyakit.index')->with('success', 'Data berhasil dihapus!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal dihapus!');
         }
+
+        return redirect()->route('setting.jenis-penyakit.index')->with('success', 'Data berhasil dihapus!');
     }
 }

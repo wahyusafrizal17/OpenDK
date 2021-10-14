@@ -34,8 +34,7 @@ namespace App\Http\Controllers\Setting;
 use App\Http\Controllers\Controller;
 use App\Models\TipePotensi;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Yajra\DataTables\DataTables;
+use Illuminate\Http\Response;use Yajra\DataTables\DataTables;
 
 class TipePotensiController extends Controller
 {
@@ -93,21 +92,11 @@ class TipePotensiController extends Controller
             $tipe       = new TipePotensi($request->all());
             $tipe->slug = str_slug($tipe->nama_kategori);
             $tipe->save();
-
-            return redirect()->route('setting.tipe-potensi.index')->with('success', 'Kategori Potensi berhasil dikirim!');
-        } catch (Eception $e) {
+        } catch (Exception $e) {
             return back()->withInput()->with('error', 'Tipe Potensi gagal dikirim!');
         }
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
+        return redirect()->route('setting.tipe-potensi.index')->with('success', 'Kategori Potensi berhasil dikirim!');
     }
 
     /**
@@ -142,11 +131,11 @@ class TipePotensiController extends Controller
             $tipe->fill($request->all());
             $tipe->slug = str_slug($tipe->nama_kategori);
             $tipe->save();
-
-            return redirect()->route('setting.tipe-potensi.index')->with('success', 'Kategori Potensi berhasil diupdate!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Kategori Potensi gagal diupdate!');
         }
+
+        return redirect()->route('setting.tipe-potensi.index')->with('success', 'Kategori Potensi berhasil diupdate!');
     }
 
     /**
@@ -159,10 +148,10 @@ class TipePotensiController extends Controller
     {
         try {
             TipePotensi::destroy($id);
-
-            return redirect()->route('setting.tipe-potensi.index')->with('success', 'Kategori Potensi berhasil dihapus!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Tipe Potensi gagal dihapus!');
         }
+
+        return redirect()->route('setting.tipe-potensi.index')->with('success', 'Kategori Potensi berhasil dihapus!');
     }
 }

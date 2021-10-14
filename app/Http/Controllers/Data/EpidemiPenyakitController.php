@@ -124,7 +124,7 @@ class EpidemiPenyakitController extends Controller
     {
         $epidemi          = EpidemiPenyakit::FindOrFail($id);
         $page_title       = 'Epidemi Penyakit';
-        $page_description = 'Ubah Data Epidemi Penyakit : ' . $epidemi->penyakit->nama;
+        $page_description = 'Ubah Epidemi Penyakit : ' . $epidemi->penyakit->nama;
         $jenis_penyakit   = JenisPenyakit::pluck('nama', 'id');
 
         return view('data.epidemi_penyakit.edit', compact('page_title', 'page_description', 'epidemi', 'jenis_penyakit'));
@@ -138,20 +138,20 @@ class EpidemiPenyakitController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'jumlah_penderita' => 'required',
+            'penyakit_id'      => 'required',
+            'bulan'            => 'required',
+            'tahun'            => 'required',
+        ]);
+        
         try {
-            request()->validate([
-                'jumlah_penderita' => 'required',
-                'penyakit_id'      => 'required',
-                'bulan'            => 'required',
-                'tahun'            => 'required',
-            ]);
-
             EpidemiPenyakit::FindOrFail($id)->update($request->all());
-
-            return redirect()->route('data.epidemi-penyakit.index')->with('success', 'Data berhasil diubah!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal diubah!');
         }
+
+        return redirect()->route('data.epidemi-penyakit.index')->with('success', 'Data berhasil diubah!');
     }
 
     /**
@@ -164,10 +164,10 @@ class EpidemiPenyakitController extends Controller
     {
         try {
             EpidemiPenyakit::destroy($id);
-
-            return redirect()->route('data.epidemi-penyakit.index')->with('success', 'Data berhasil dihapus!');
         } catch (Exception $e) {
             return redirect()->route('data.epidemi-penyakit.index')->with('error', 'Data gagal dihapus!');
         }
+
+        return redirect()->route('data.epidemi-penyakit.index')->with('success', 'Data berhasil dihapus!');
     }
 }

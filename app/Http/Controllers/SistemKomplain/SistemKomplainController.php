@@ -53,6 +53,7 @@ class SistemKomplainController extends Controller
             ->where('status', '<>', 'DITOLAK')
             ->where('status', '<>', 'REVIEW')
             ->orderBy('created_at', 'desc')->paginate(10);
+
         return view('sistem_komplain.komplain.index', compact('page_title', 'page_description', 'komplains'));
     }
 
@@ -60,8 +61,8 @@ class SistemKomplainController extends Controller
     {
         $page_title       = 'SIKEMA';
         $page_description = 'Sistem Keluhan Masyarakat';
-
         $komplains = Komplain::where('kategori', '=', $slug)->orderBy('created_at', 'desc')->paginate(10);
+
         return view('sistem_komplain.komplain.index', compact('page_title', 'page_description', 'komplains'));
     }
 
@@ -69,8 +70,8 @@ class SistemKomplainController extends Controller
     {
         $page_title       = 'SIKEMA';
         $page_description = 'Sistem Keluhan Masyarakat';
-
         $komplains = Komplain::where('status', '=', 'Belum')->orderBy('created_at', 'desc')->paginate(10);
+
         return view('sistem_komplain.komplain.index', compact('page_title', 'page_description', 'komplains'));
     }
 

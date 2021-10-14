@@ -88,11 +88,11 @@ class ProgramBantuanController extends Controller
 
         try {
             Program::create($request->all());
-
-            return redirect()->route('data.program-bantuan.index')->with('success', 'Data berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal disimpan!' . $e->getMessage());
         }
+
+        return redirect()->route('data.program-bantuan.index')->with('success', 'Data berhasil disimpan!');
     }
 
     public function show($id)
@@ -119,11 +119,11 @@ class ProgramBantuanController extends Controller
             $program = Program::FindOrFail($id);
             $program->fill($request->all());
             $program->update();
-
-            return redirect()->route('data.program-bantuan.index')->with('success', 'Data berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal disimpan!' . $e->getMessage());
         }
+
+        return redirect()->route('data.program-bantuan.index')->with('success', 'Data berhasil disimpan!');
     }
 
     public function edit($id)
@@ -142,11 +142,11 @@ class ProgramBantuanController extends Controller
         try {
             Program::destroy($id);
             PesertaProgram::where('program_id', $id)->delete();
-
-            return redirect()->route('data.program-bantuan.index')->with('success', 'Data berhasil dihapus!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal dihapus!' . $e->getMessage());
         }
+
+        return redirect()->route('data.program-bantuan.index')->with('success', 'Data berhasil dihapus!');
     }
 
     public function createPeserta($id)
@@ -168,10 +168,10 @@ class ProgramBantuanController extends Controller
 
         try {
             PesertaProgram::create($request->all());
-
-            return redirect()->route('data.program-bantuan.show', $request->input('program_id'))->with('success', 'Data berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal disimpan!' . $e->getMessage());
         }
+
+        return redirect()->route('data.program-bantuan.show', $request->input('program_id'))->with('success', 'Data berhasil disimpan!');
     }
 }

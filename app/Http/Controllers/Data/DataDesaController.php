@@ -36,7 +36,6 @@ use App\Models\DataDesa;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-
 use Yajra\DataTables\DataTables;
 
 class DataDesaController extends Controller
@@ -142,11 +141,11 @@ class DataDesaController extends Controller
             $desa->fill($request->all());
             $desa->profil_id = $this->profil->id;
             $desa->save();
-
-            return redirect()->route('data.data-desa.index')->with('success', 'Data Desa berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data Desa gagal disimpan!');
         }
+
+        return redirect()->route('data.data-desa.index')->with('success', 'Data Desa berhasil disimpan!');
     }
 
     /**
@@ -158,11 +157,12 @@ class DataDesaController extends Controller
     public function destroy($id)
     {
         try {
-            DataDesa::destroy($id)
+            DataDesa::destroy($id);
 
-            return redirect()->route('data.data-desa.index')->with('success', 'Data Desa sukses dihapus!');
         } catch (Exception $e) {
             return redirect()->route('data.data-desa.index')->with('error', 'Data Desa gagal dihapus!');
         }
+
+        return redirect()->route('data.data-desa.index')->with('success', 'Data Desa sukses dihapus!');
     }
 }

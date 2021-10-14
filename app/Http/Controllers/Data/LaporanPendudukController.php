@@ -41,7 +41,6 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-
 use Yajra\DataTables\DataTables;
 use ZipArchive;
 
@@ -55,7 +54,7 @@ class LaporanPendudukController extends Controller
     public function index(LaporanPenduduk $penduduk)
     {
         $page_title       = 'Laporan Penduduk';
-        $page_description = 'Data Penduduk';
+        $page_description = 'Daftar Laporan Penduduk';
         $list_desa        = DataDesa::get();
 
         return view('data.laporan-penduduk.index', compact('page_title', 'page_description', 'list_desa'));
@@ -111,11 +110,11 @@ class LaporanPendudukController extends Controller
             Storage::disk('public')->delete('laporan_penduduk/' . $penduduk->nama_file);
 
             $penduduk->delete();
-
-            return redirect()->route('data.laporan-penduduk.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {
             return redirect()->route('data.laporan-penduduk.index')->with('error', 'Data gagal dihapus!');
         }
+
+        return redirect()->route('data.laporan-penduduk.index')->with('success', 'Data sukses dihapus!');
     }
 
     /**
@@ -126,7 +125,7 @@ class LaporanPendudukController extends Controller
     public function import()
     {
         $page_title       = 'Laporan Penduduk';
-        $page_description = 'Import Data';
+        $page_description = 'Import Laporan Penduduk';
 
         return view('data.laporan-penduduk.import', compact('page_title', 'page_description'));
     }

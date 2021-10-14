@@ -35,7 +35,6 @@ use App\Http\Controllers\Controller;
 use App\Models\TipeRegulasi;
 use Exception;
 use Illuminate\Http\Request;
-
 use Yajra\DataTables\DataTables;
 
 class TipeRegulasiController extends Controller
@@ -81,11 +80,11 @@ class TipeRegulasiController extends Controller
             $tipe       = new TipeRegulasi($request->all());
             $tipe->slug = str_slug($tipe->nama);
             $tipe->save();
-
-            return redirect()->route('setting.tipe-regulasi.index')->with('success', 'Tipe Regulasi berhasil dikirim!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Tipe Regulasi gagal dikirim!');
         }
+
+        return redirect()->route('setting.tipe-regulasi.index')->with('success', 'Tipe Regulasi berhasil dikirim!');
     }
 
     public function edit($id)
@@ -107,21 +106,21 @@ class TipeRegulasiController extends Controller
             $tipe = TipeRegulasi::FindOrFail($id);
             $tipe->fill($request->all());
             $tipe->save();
-
-            return redirect()->route('setting.tipe-regulasi.index')->with('success', 'Tipe Regulasi berhasil diupdate!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Tipe Regulasi gagal diupdate!');
         }
+
+        return redirect()->route('setting.tipe-regulasi.index')->with('success', 'Tipe Regulasi berhasil diupdate!');
     }
 
     public function destroy($id)
     {
         try {
             TipeRegulasi::destroy($id);
-
-            return redirect()->route('setting.tipe-regulasi.index')->with('success', 'Tipe Regulasi berhasil dihapus!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Tipe Regulasi gagal dihapus!');
         }
+
+        return redirect()->route('setting.tipe-regulasi.index')->with('success', 'Tipe Regulasi berhasil dihapus!');
     }
 }

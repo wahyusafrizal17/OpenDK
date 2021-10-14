@@ -143,11 +143,11 @@ class ToiletSanitasiController extends Controller
 
         try {
             ToiletSanitasi::FindOrFail($id)->update($request->all());
-
-            return redirect()->route('data.toilet-sanitasi.index')->with('success', 'Data berhasil diubah!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal diubah!');
         }
+
+        return redirect()->route('data.toilet-sanitasi.index')->with('success', 'Data berhasil diubah!');
     }
 
     /**
@@ -160,10 +160,10 @@ class ToiletSanitasiController extends Controller
     {
         try {
             ToiletSanitasi::destroy($id);
-
-            return redirect()->route('data.toilet-sanitasi.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {
             return redirect()->route('data.toilet-sanitasi.index')->with('error', 'Data gagal dihapus!');
         }
+
+        return redirect()->route('data.toilet-sanitasi.index')->with('success', 'Data sukses dihapus!');
     }
 }

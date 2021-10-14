@@ -151,11 +151,11 @@ class AnggaranDesaController extends Controller
 
         try {
             AnggaranDesa::FindOrFail($id)->update($request->all());
-
-            return redirect()->route('data.anggaran-desa.index')->with('success', 'Data berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal disimpan!');
         }
+
+        return redirect()->route('data.anggaran-desa.index')->with('success', 'Data berhasil disimpan!');
     }
 
     /**
@@ -168,10 +168,10 @@ class AnggaranDesaController extends Controller
     {
         try {
             AnggaranDesa::destroy($id)
-
-            return redirect()->route('data.anggaran-desa.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {
             return redirect()->route('data.anggaran-desa.index')->with('error', 'Data gagal dihapus!');
         }
+
+        return redirect()->route('data.anggaran-desa.index')->with('success', 'Data sukses dihapus!');
     }
 }

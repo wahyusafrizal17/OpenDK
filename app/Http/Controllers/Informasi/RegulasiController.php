@@ -95,11 +95,11 @@ class RegulasiController extends Controller
             }
 
             $regulasi->save();
-
-            return redirect()->route('informasi.regulasi.index')->with('success', 'Regulasi berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Regulasi gagal disimpan!!');
         }
+
+        return redirect()->route('informasi.regulasi.index')->with('success', 'Regulasi berhasil disimpan!');
     }
 
     /**
@@ -162,11 +162,11 @@ class RegulasiController extends Controller
             }
 
             $regulasi->save();
-
-            return redirect()->route('informasi.regulasi.show', $id)->with('success', 'Regulasi berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Regulasi gagal disimpan!!');
         }
+
+        return redirect()->route('informasi.regulasi.show', $id)->with('success', 'Regulasi berhasil disimpan!');
     }
 
     /**
@@ -179,10 +179,10 @@ class RegulasiController extends Controller
     {
         try {
             Regulasi::destroy($id);
-
-            return redirect()->route('informasi.regulasi.index')->with('success', 'Regulasi sukses dihapus!');
         } catch (Exception $e) {
             return redirect()->route('informasi.regulasi.index')->with('error', 'Regulasi gagal dihapus!');
         }
+
+        return redirect()->route('informasi.regulasi.index')->with('success', 'Regulasi sukses dihapus!');
     }
 }

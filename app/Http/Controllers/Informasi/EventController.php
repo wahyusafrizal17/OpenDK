@@ -85,21 +85,11 @@ class EventController extends Controller
             $event = new Event($request->input());
             $event->status = 'OPEN';
             $event->save();
-
-            return redirect()->route('informasi.event.index')->with('success', 'Event berhasil disimpan!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Simpan Event gagal!');
         }
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
+        return redirect()->route('informasi.event.index')->with('success', 'Event berhasil disimpan!');
     }
 
     /**
@@ -146,11 +136,11 @@ class EventController extends Controller
             }
 
             $event->save();
-
-            return redirect()->route('informasi.event.index')->with('success', 'Ubah Event sukses!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Ubah Event gagal!');
         }
+
+        return redirect()->route('informasi.event.index')->with('success', 'Ubah Event sukses!');
     }
 
     /**
@@ -163,10 +153,10 @@ class EventController extends Controller
     {
         try {
             Event::destroy($id);
-
-            return redirect()->route('informasi.event.index')->with('success', 'Event sukses dihapus!');
         } catch (Exception $e) {
             return redirect()->route('informasi.event.index')->with('error', 'Event gagal dihapus!');
         }
+
+        return redirect()->route('informasi.event.index')->with('success', 'Event sukses dihapus!');
     }
 }

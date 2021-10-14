@@ -36,7 +36,6 @@ use App\Models\FormDokumen;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Exception;
 use Illuminate\Http\Request;
-
 use Yajra\DataTables\DataTables;
 
 class FormDokumenController extends Controller
@@ -91,11 +90,11 @@ class FormDokumenController extends Controller
             }
 
             $dokumen->save();
-
-            return redirect()->route('informasi.form-dokumen.index')->with('success', 'Dokumen berhasil ditambah!');
         } catch (Exception $e) {
             return back()->with('error', 'Dokumen gagal disimpan!' . $e->getMessage());
         }
+
+        return redirect()->route('informasi.form-dokumen.index')->with('success', 'Dokumen berhasil ditambah!');
     }
 
     public function edit($id)
@@ -127,11 +126,11 @@ class FormDokumenController extends Controller
             }
 
             $dokumen->save();
-
-            return redirect()->route('informasi.form-dokumen.index')->with('success', 'Dokumen berhasil diubah!');
         } catch (Exception $e) {
             return back()->with('error', 'Dokumen gagal diubah!' . $e->getMessage());
         }
+
+        return redirect()->route('informasi.form-dokumen.index')->with('success', 'Dokumen berhasil diubah!');
     }
 
     public function destroy($id)
@@ -142,10 +141,10 @@ class FormDokumenController extends Controller
             unlink(base_path('public/' . $dokumen->file_dokumen));
 
             $dokumen->delete();
-
-            return redirect()->route('informasi.form-dokumen.index')->with('success', 'Dokumen berhasil dihapus!');
         } catch (Exception $e) {
             return redirect()->route('informasi.form-dokumen.index')->with('error', 'Dokumen gagal dihapus!');
         }
+
+        return redirect()->route('informasi.form-dokumen.index')->with('success', 'Dokumen berhasil dihapus!');
     }
 }

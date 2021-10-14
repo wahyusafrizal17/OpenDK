@@ -34,9 +34,7 @@ namespace App\Http\Controllers\Setting;
 use App\Http\Controllers\Controller;
 use App\Models\KategoriKomplain;
 use Exception;
-use Illuminate\Http\Request;
-
-use Yajra\DataTables\DataTables;
+use Illuminate\Http\Request;use Yajra\DataTables\DataTables;
 
 class KategoriKomplainController extends Controller
 {
@@ -81,11 +79,11 @@ class KategoriKomplainController extends Controller
             $kategori       = new KategoriKomplain($request->all());
             $kategori->slug = str_slug($kategori->nama);
             $kategori->save();
-
-            return redirect()->route('setting.komplain-kategori.index')->with('success', 'Kategori Komplain berhasil dikirim!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Kategori Komplain gagal dikirim!');
         }
+
+        return redirect()->route('setting.komplain-kategori.index')->with('success', 'Kategori Komplain berhasil dikirim!');
     }
 
     public function edit($id)
@@ -107,21 +105,21 @@ class KategoriKomplainController extends Controller
             $kategori = KategoriKomplain::FindOrFail($id);
             $kategori->fill($request->all());
             $kategori->save();
-
-            return redirect()->route('setting.komplain-kategori.index')->with('success', 'Kategori Komplain berhasil diupdate!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Kategori Komplain gagal diupdate!');
         }
+
+        return redirect()->route('setting.komplain-kategori.index')->with('success', 'Kategori Komplain berhasil diupdate!');
     }
 
     public function destroy($id)
     {
         try {
             KategoriKomplain::destroy($id);
-
-            return redirect()->route('setting.komplain-kategori.index')->with('success', 'Kategori Komplain berhasil dihapus!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Kategori Komplain gagal dihapus!');
         }
+
+        return redirect()->route('setting.komplain-kategori.index')->with('success', 'Kategori Komplain berhasil dihapus!');
     }
 }

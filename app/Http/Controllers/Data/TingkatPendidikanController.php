@@ -37,7 +37,6 @@ use App\Models\TingkatPendidikan;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-
 use Yajra\DataTables\DataTables;
 
 class TingkatPendidikanController extends Controller
@@ -141,11 +140,11 @@ class TingkatPendidikanController extends Controller
 
         try {
             TingkatPendidikan::FindOrFail($id)->update($request->all());
-
-            return redirect()->route('data.tingkat-pendidikan.index')->with('success', 'Data berhasil diubah!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal diubah!' . $e->getMessage());
         }
+
+        return redirect()->route('data.tingkat-pendidikan.index')->with('success', 'Data berhasil diubah!');
     }
 
     /**
@@ -158,10 +157,10 @@ class TingkatPendidikanController extends Controller
     {
         try {
             TingkatPendidikan::destroy($id);
-
-            return redirect()->route('data.tingkat-pendidikan.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {
             return redirect()->route('data.tingkat-pendidikan.index')->with('error', 'Data gagal dihapus!');
         }
+
+        return redirect()->route('data.tingkat-pendidikan.index')->with('success', 'Data sukses dihapus!');
     }
 }

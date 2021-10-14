@@ -138,11 +138,11 @@ class FasilitasPaudController extends Controller
 
         try {
             FasilitasPAUD::FindOrFail($id)->update($request->all());
-
-            return redirect()->route('data.fasilitas-paud.index')->with('success', 'Data berhasil diubah!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal diubah!' . $e->getMessage());
         }
+
+        return redirect()->route('data.fasilitas-paud.index')->with('success', 'Data berhasil diubah!');
     }
 
     /**
@@ -155,10 +155,10 @@ class FasilitasPaudController extends Controller
     {
         try {
             FasilitasPAUD::destroy($id);
-
-            return redirect()->route('data.fasilitas-paud.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {
             return redirect()->route('data.fasilitas-paud.index')->with('error', 'Data gagal dihapus!');
         }
+
+        return redirect()->route('data.fasilitas-paud.index')->with('success', 'Data sukses dihapus!');
     }
 }

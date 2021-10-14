@@ -41,7 +41,6 @@ use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
-
 use Yajra\DataTables\DataTables;
 
 class UserController extends Controller

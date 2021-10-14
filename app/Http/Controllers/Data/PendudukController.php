@@ -40,7 +40,6 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-
 use Yajra\DataTables\DataTables;
 use ZipArchive;
 
@@ -118,8 +117,8 @@ class PendudukController extends Controller
         if ($penduduk->foto == '') {
             $penduduk->file_struktur_organisasi = 'http://placehold.it/120x150';
         }
-        $page_title       = 'Detail Penduduk';
-        $page_description = 'Detail Data Penduduk: ' . ucwords(strtolower($penduduk->nama));
+        $page_title       = 'Penduduk';
+        $page_description = 'Detail Penduduk: ' . ucwords(strtolower($penduduk->nama));
 
         return view('data.penduduk.show', compact('page_title', 'page_description', 'penduduk'));
     }
@@ -171,7 +170,6 @@ class PendudukController extends Controller
         } catch (Exception $e) {
             return back()->with('error', 'Import data gagal. ' . $e->getMessage());
         }
-
 
         return back()->with('success', 'Import data sukses.');
     }

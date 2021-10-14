@@ -56,6 +56,7 @@ class ProfilController extends Controller
 
         $page_title       = 'Profil';
         $page_description = 'Data Profil';
+
         return view('data.profil.edit', compact('page_title', 'page_description', 'profil'));
     }
 
@@ -78,13 +79,13 @@ class ProfilController extends Controller
             'file_logo'                => 'image|mimes:jpg,jpeg,bmp,png,gif|max:1024',
             'file_struktur_organisasi' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:1024',
             'foto_kepala_wilayah'      => 'image|mimes:jpg,jpeg,png,bmp,gif|max:1024',
-            ], []);
+        ], []);
 
         try {
             $profil = Profil::FindOrFail($id);
             $profil->fill($request->all());
 
-            $dataumum               = DataUmum::where('profil_id', $id)->first();
+            $dataumum = DataUmum::where('profil_id', $id)->first();
 
             if ($request->file('file_struktur_organisasi') == "") {
                 $profil->file_struktur_organisasi = $profil->file_struktur_organisasi;
@@ -114,10 +115,11 @@ class ProfilController extends Controller
 
             $profil->update();
             $dataumum->update();
-            return redirect()->route('data.profil.success', $profil->dataumum->id)->with('success', 'Update Profil sukses!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Update Profil gagal!');
         }
+
+        return redirect()->route('data.profil.success', $profil->dataumum->id)->with('success', 'Update Profil sukses!');
     }
 
     /**
@@ -128,8 +130,8 @@ class ProfilController extends Controller
      */
     public function success($id)
     {
-        $page_title       = 'Konfirmasi?';
-        $page_description = '';
+        $page_title       = 'Profil';
+        $page_description = 'Konfirmasi?';
 
         return view('data.profil.save_success', compact('id', 'page_title', 'page_description'));
     }

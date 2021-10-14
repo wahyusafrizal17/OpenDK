@@ -41,7 +41,6 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-
 use Yajra\DataTables\DataTables;
 use ZipArchive;
 
@@ -55,7 +54,7 @@ class LaporanApbdesController extends Controller
     public function index(LaporanApbdes $apbdes)
     {
         $page_title       = 'Laporan APBDes';
-        $page_description = 'Data APBDes';
+        $page_description = 'Daftar Laporan APBDes';
         $list_desa        = DataDesa::get();
 
         return view('data.laporan-apbdes.index', compact('page_title', 'page_description', 'list_desa'));
@@ -114,11 +113,11 @@ class LaporanApbdesController extends Controller
             Storage::disk('public')->delete('apbdes/' . $apbdes->nama_file);
 
             $apbdes->delete();
-
-            return redirect()->route('data.laporan-apbdes.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {
             return redirect()->route('data.laporan-apbdes.index')->with('error', 'Data gagal dihapus!');
         }
+
+        return redirect()->route('data.laporan-apbdes.index')->with('success', 'Data sukses dihapus!');
     }
 
     /**
@@ -129,7 +128,7 @@ class LaporanApbdesController extends Controller
     public function import()
     {
         $page_title       = 'Laporan APBDes';
-        $page_description = 'Import Data';
+        $page_description = 'Import Laporan APBDes';
 
         return view('data.laporan-apbdes.import', compact('page_title', 'page_description'));
     }

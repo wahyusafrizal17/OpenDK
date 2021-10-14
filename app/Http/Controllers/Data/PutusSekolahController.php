@@ -37,7 +37,6 @@ use App\Models\PutusSekolah;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-
 use Yajra\DataTables\DataTables;
 
 class PutusSekolahController extends Controller
@@ -144,11 +143,11 @@ class PutusSekolahController extends Controller
 
         try {
             PutusSekolah::FindOrFail($id)->update($request->all());
-
-            return redirect()->route('data.putus-sekolah.index')->with('success', 'Data berhasil diubah!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Data gagal diubah!');
         }
+
+        return redirect()->route('data.putus-sekolah.index')->with('success', 'Data berhasil diubah!');
     }
 
     /**
@@ -161,10 +160,10 @@ class PutusSekolahController extends Controller
     {
         try {
             PutusSekolah::destroy($id);
-
-            return redirect()->route('data.putus-sekolah.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {
             return redirect()->route('data.putus-sekolah.index')->with('error', 'Data gagal dihapus!');
         }
+
+        return redirect()->route('data.putus-sekolah.index')->with('success', 'Data sukses dihapus!');
     }
 }

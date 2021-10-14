@@ -36,8 +36,7 @@ use App\Models\Prosedur;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use League\Flysystem\Exception;
-use Yajra\DataTables\DataTables;
+use League\Flysystem\Exception;use Yajra\DataTables\DataTables;
 
 class ProsedurController extends Controller
 {
@@ -50,7 +49,7 @@ class ProsedurController extends Controller
     {
         $page_title       = 'Prosedur';
         $page_description = 'Daftar Prosedur';
-        $prosedurs        = Prosedur::latest()->get();
+        $prosedurs        = Prosedur::all();
 
         return view('informasi.prosedur.index', compact('page_title', 'page_description', 'prosedurs'));
     }
@@ -114,11 +113,11 @@ class ProsedurController extends Controller
             }
 
             $prosedur->save();
-
-            return redirect()->route('informasi.prosedur.index')->with('success', 'Prosedur berhasil disimpan!');
         } catch (Exception $e) {
             return back()->with('error', 'Prosedur gagal disimpan!' . $e->getMessage());
         }
+
+        return redirect()->route('informasi.prosedur.index')->with('success', 'Prosedur berhasil disimpan!');
     }
 
     /**
@@ -178,11 +177,11 @@ class ProsedurController extends Controller
             }
 
             $prosedur->save();
-
-            return redirect()->route('informasi.prosedur.index')->with('success', 'Prosedur berhasil disimpan!');
         } catch (Exception $e) {
             return back()->with('error', 'Prosedur gagal disimpan!' . $e->getMessage());
         }
+
+        return redirect()->route('informasi.prosedur.index')->with('success', 'Prosedur berhasil disimpan!');
     }
 
     /**
@@ -195,10 +194,10 @@ class ProsedurController extends Controller
     {
         try {
             Prosedur::destroy($id);
-
-            return redirect()->route('setting.komplain-kategori.index')->with('success', 'Prosedur berhasil dihapus!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Prosedur gagal dihapus!');
         }
+
+        return redirect()->route('setting.komplain-kategori.index')->with('success', 'Prosedur berhasil dihapus!');
     }
 }
