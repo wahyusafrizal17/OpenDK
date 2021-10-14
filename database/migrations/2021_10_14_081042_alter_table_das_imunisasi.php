@@ -6,6 +6,11 @@ use Illuminate\Support\Facades\Schema;
 
 class AlterTableDasImunisasi extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
         Schema::table('das_imunisasi', function($table) {

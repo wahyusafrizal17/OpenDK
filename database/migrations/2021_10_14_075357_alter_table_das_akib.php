@@ -6,6 +6,11 @@ use Illuminate\Support\Facades\Schema;
 
 class AlterTableDasAkib extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
         Schema::table('das_akib', function($table) {
