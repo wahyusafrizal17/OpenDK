@@ -105,7 +105,6 @@ class LaporanPendudukController extends Controller
     public function destroy($id)
     {
         try {
-
             $penduduk = LaporanPenduduk::FindOrFail($id);
 
             // Hapus file penduduk

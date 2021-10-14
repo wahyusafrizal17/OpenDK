@@ -137,11 +137,10 @@ class FormDokumenController extends Controller
     public function destroy($id)
     {
         try {
-            
             $dokumen = FormDokumen::FindOrFail($id);
 
             unlink(base_path('public/' . $dokumen->file_dokumen));
-            
+
             $dokumen->delete();
 
             return redirect()->route('informasi.form-dokumen.index')->with('success', 'Dokumen berhasil dihapus!');
