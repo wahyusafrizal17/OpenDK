@@ -42,7 +42,6 @@ use Yajra\DataTables\DataTables;
 
 class ImunisasiController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
