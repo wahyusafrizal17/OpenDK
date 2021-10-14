@@ -73,8 +73,6 @@ class ProfilController extends Controller
         Counter::count('profil.struktur-pemerintahan');
 
         $profil     = $this->profil;
-        $dokumen    = DB::table('das_form_dokumen')->take(5)->get();
-
         $page_title = 'Struktur Pemerintahan';
         if (isset($profil)) {
             $page_description = $this->browser_title;
