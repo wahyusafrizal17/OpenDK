@@ -60,7 +60,7 @@ class Controller extends BaseController
     public function __construct()
     {
         $this->profil = Profil::first();
-        
+
         if (in_array($this->profil->provinsi_id, [91, 92])) {
             $this->sebutan_wilayah = 'Distrik';
             $this->sebutan_kepala_wilayah = 'Kepala Distrik';
