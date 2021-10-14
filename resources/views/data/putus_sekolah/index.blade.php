@@ -1,6 +1,5 @@
 @extends('layouts.dashboard_template')
 
-
 @section('content')
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -52,9 +51,7 @@
 </section>
 <!-- /.content -->
 @endsection
-
 @include('partials.asset_datatables')
-
 @push('scripts')
 <script type="text/javascript">
     $(document).ready(function () {
@@ -82,5 +79,4 @@
 </script>
 @include('forms.datatable-vertical')
 @include('forms.delete-modal')
-
 @endpush

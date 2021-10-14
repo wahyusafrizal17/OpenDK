@@ -43,7 +43,7 @@
             <div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#jumlah_penduduk" data-toggle="tab">Tingkat Pendidikan</a></li>
-                    <li><a href="#jumlah_putus_sekolah" data-toggle="tab">Jumlah Anak Putus Sekolah</a></li>
+                    <li><a href="#jumlah_putus_sekolah" data-toggle="tab">Jumlah Siswa Putus Sekolah</a></li>
                     <li><a href="#jumlah_fasilitas" data-toggle="tab">Jumlah Fasilitas PAUD</a></li>
                     {{-- <li><a href="#jumlah_siswa_fasilitas" data-toggle="tab">Jumlah Siswa dan Fasilitas</a></li> --}}
                 </ul>
@@ -562,14 +562,14 @@
             "export": {
                 "enabled": true,
                 "pageorigin": false,
-                "fileName":"Jumlah Anak Putus Sekolah",
+                "fileName":"Jumlah Siswa Putus Sekolah",
             },
             "legend": {
                 "enabled": true,
                 "useGraphSettings": true
             },
             "allLabels": [{
-                "text": "Jumlah Anak Putus Sekolah",
+                "text": "Jumlah Siswa Putus Sekolah",
                 "align": "center",
                 "bold": true,
                 "size": 20,
