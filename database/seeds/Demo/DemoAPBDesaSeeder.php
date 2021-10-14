@@ -18,7 +18,7 @@ class DemoAPBDesaSeeder extends Seeder
     public function run()
     {
         
-        DB::table('das_apbdes')->truncate();
+        DB::table('das_anggaran_desa')->truncate();
 
         Excel::import(
             new ImporAPBDesa([
