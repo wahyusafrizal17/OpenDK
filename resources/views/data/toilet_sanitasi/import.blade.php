@@ -9,8 +9,8 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="{{ route('data.aki-akb.index') }}">AKI & AKB</a></li>
-        <li class="active">{{ $page_title }}</li>
+        <li><a href="{{ route('data.toilet-sanitasi.index') }}">Daftar Toilet & Sanitasi</a></li>
+        <li class="active">{{ $page_description ?? '' }}</li>
     </ol>
 </section>
 
@@ -20,23 +20,22 @@
     <div class="row">
         <div class="col-md-12">
 
-                <!-- form start -->
-                {!! Form::open( [ 'route' => 'data.toilet-sanitasi.do_import', 'method' => 'post','id' => 'form-import', 'class' => 'form-horizontal form-label-left', 'files' => true ] ) !!}
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <strong>Ups!</strong> Ada beberapa masalah dengan masukan Anda.<br><br>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+        
+            <!-- form start -->
+            {!! Form::open( [ 'route' => 'data.toilet-sanitasi.do_import', 'method' => 'post','id' => 'form-import', 'class' => 'form-horizontal form-label-left', 'files' => true ] ) !!}
 
                 <div class="box-body">
-
-                    @if (count($errors) > 0)
-                        <div class="alert alert-danger">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <strong>Ups!</strong> Ada beberapa masalah dengan masukan Anda.<br><br>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -92,8 +91,7 @@
                         </div>
                     </div>
                 </div>
-                {!! Form::close() !!}
-            </div>
+            {!! Form::close() !!}
         </div>
     </div>
     <!-- /.row -->

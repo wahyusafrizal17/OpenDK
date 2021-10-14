@@ -58,7 +58,8 @@ class ToiletSanitasiController extends Controller
     public function index()
     {
         $page_title       = 'Toilet & Sanitasi';
-        $page_description = 'Data Toilet & Sanitasi';
+        $page_description = 'Daftar Toilet & Sanitasi';
+
         return view('data.toilet_sanitasi.index', compact('page_title', 'page_description'));
     }
 
@@ -89,10 +90,11 @@ class ToiletSanitasiController extends Controller
      */
     public function import()
     {
-        $page_title       = 'Import';
-        $page_description = 'Import Data Toilet & Sanitasi';
+        $page_title       = 'Toilet & Sanitasi';
+        $page_description = 'Import Toilet & Sanitasi';
         $years_list       = years_list();
         $months_list      = months_list();
+
         return view('data.toilet_sanitasi.import', compact('page_title', 'page_description', 'years_list', 'months_list'));
     }
 
@@ -110,8 +112,10 @@ class ToiletSanitasiController extends Controller
         ]);
 
         try {
+
             (new ImporToiletSanitasi($request->only(['bulan', 'tahun'])))
                 ->queue($request->file('file'));
+
         } catch (Exception $e) {
             return back()->with('error', 'Import data gagal. ' . $e->getMessage());
         }
@@ -127,9 +131,9 @@ class ToiletSanitasiController extends Controller
      */
     public function edit($id)
     {
-        $toilet           = ToiletSanitasi::findOrFail($id);
-        $page_title       = 'Ubah';
-        $page_description = 'Ubah Data Toilet & Sanitasi: ' . $toilet->id;
+        $toilet           = ToiletSanitasi::with(['desa'])->FindOrFail($id);
+        $page_title       = 'Toilet & Sanitasi';
+        $page_description = 'Ubah Toilet & Sanitasi : ' . $toilet->desa->nama;
 
         return view('data.toilet_sanitasi.edit', compact('page_title', 'page_description', 'toilet'));
     }
@@ -148,11 +152,11 @@ class ToiletSanitasiController extends Controller
                 'sanitasi' => 'required',
             ]);
 
-            ToiletSanitasi::find($id)->update($request->all());
+            ToiletSanitasi::FindOrFail($id)->update($request->all());
 
-            return redirect()->route('data.toilet-sanitasi.index')->with('success', 'Data berhasil disimpan!');
+            return redirect()->route('data.toilet-sanitasi.index')->with('success', 'Data berhasil diubah!');
         } catch (Exception $e) {
-            return back()->withInput()->with('error', 'Data gagal disimpan!');
+            return back()->withInput()->with('error', 'Data gagal diubah!');
         }
     }
 
@@ -165,7 +169,8 @@ class ToiletSanitasiController extends Controller
     public function destroy($id)
     {
         try {
-            ToiletSanitasi::findOrFail($id)->delete();
+
+            ToiletSanitasi::destroy($id);
 
             return redirect()->route('data.toilet-sanitasi.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {
