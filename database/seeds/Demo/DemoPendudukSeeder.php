@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use App\Imports\ImporPenduduk;
 use Illuminate\Database\Seeder;
 
+use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Storage;
 
@@ -20,6 +21,8 @@ class DemoPendudukSeeder extends Seeder
     public function run()
     {
         try {
+
+            DB::table('das_penduduk')->truncate();
             
             $name = 'penduduk_22_12_2020_opendk.zip';
 

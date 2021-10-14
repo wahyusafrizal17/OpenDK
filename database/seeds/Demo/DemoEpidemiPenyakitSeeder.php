@@ -2,10 +2,11 @@
 
 namespace Database\Seeds\Demo;
 
-use App\Imports\ImporEpidemiPenyakit;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\ImporEpidemiPenyakit;
+use Illuminate\Support\Facades\Request;
 
 class DemoEpidemiPenyakitSeeder extends Seeder
 {
@@ -16,6 +17,9 @@ class DemoEpidemiPenyakitSeeder extends Seeder
      */
     public function run()
     {
+        
+        DB::table('das_epidemi_penyakit')->truncate();
+        
         Excel::import(
             new ImporEpidemiPenyakit([
                 'penyakit_id' => 1,
