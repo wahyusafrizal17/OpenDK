@@ -17,7 +17,7 @@ class ContohDasDataDesaTableSeeder extends Seeder
 
         $kecamatan_id = '53.06.13';
 
-        DB::table('das_data_umum')->truncate();
+        DB::table('das_data_desa')->truncate();
 
         DB::table('das_data_desa')->insert(array (
             0 => array (
