@@ -564,93 +564,27 @@ Route::group(['middleware' => 'installed'], function () {
         }
     });
 
-
     Route::get('/sitemap', 'SitemapController@index');
     Route::get('/sitemap/prosedur', 'SitemapController@prosedur');
 
-    /**
-     *
-     * Grouep Routing API Internal for Select2
-     */
-
-    //Users JSON
-    Route::get('/api/users', function () {
-        return \App\Models\User::where('name', 'LIKE', '%' . request('q') . '%')->paginate(10);
-    });
-
-    // All Provinsi Select2
-    Route::get('/api/provinsi', function () {
-        return \App\Models\Wilayah::whereRaw('LENGTH(kode) = 2')->where('nama', 'LIKE', '%' . strtoupper(request('q')) . '%')->paginate(10);
-    });
-
-    // All Kabupaten Select2
-    Route::get('/api/kabupaten', function () {
-        return \App\Models\Wilayah::whereRaw('LENGTH(kode) = 5')->where('nama', 'LIKE', '%' . strtoupper(request('q')) . '%')->paginate(10);
-    });
-
-    //  All Kecamatan Select2
-    Route::get('/api/kecamatan', function () {
-        return \App\Models\Wilayah::whereRaw('LENGTH(kode) = 8')->where('nama', 'LIKE', '%' . strtoupper(request('q')) . '%')->paginate(10);
-    });
-
-    // All Desa Select2
+    // Semua Desa
     Route::get('/api/desa', function () {
-        return \App\Models\Wilayah::whereRaw('LENGTH(kode) = 13')->where('nama', 'LIKE', '%' . strtoupper(request('q')) . '%')->paginate(10);
+        return DataDesa::paginate(10)->name('api.desa');
     });
-
-    // Desa Select2 By Kecamatan ID
-    Route::get('/api/desa-by-pid', function () {
-        return DB::table('ref_desa')->select('kode', 'nama')->whereRaw('LENGTH(kode) = 2')->where('kecamatan_id', '=', strtoupper(request('pid')))->get();
-    })->name('api.desa-by-pid');
-
-    // All Profil Select2
-    Route::get('/api/profil', function () {
-        return Profil::select('kecamatan_id', 'nama_kecamatan')
-            ->where('nama_kecamatan', 'LIKE', '%' . strtoupper(request('q')) . '%')
-            ->paginate(10);
-    })->name('api.profil');
-
-    // Profil By id
-    Route::get('/api/profil-byid', function () {
-        return Profil::select('kecamatan_id', 'nama_kecamatan')
-            ->where('ref_kecamatan.id', '=', request('id'))->get();
-    })->name('api.profil-byid');
-
-    // All Penduduk Select2
-    Route::get('/api/penduduk', function () {
-        return Penduduk::where('nama', 'LIKE', '%' . strtoupper(request('q')) . '%')->paginate(10);
-    })->name('api.penduduk');
-
-    // Penduduk By id
-    Route::get('/api/penduduk-byid', function () {
-        return DB::table('das_penduduk')
-            ->where('id', '=', request('id'))->get();
-    })->name('api.penduduk-byid');
-
-    Route::get('/api/test', function () {
-        $return = [];
-        $a = ['year' => 2018];
-        $return = array_merge($return, $a);
-        $b = ['penyakit1' => 23];
-        $return = array_merge($return, $b);
-        $c = ['penyakit2' => 23];
-        $return = array_merge($return, $c);
-
-        return $return;
-    })->name('api.test');
 
     // Dashboard Kependudukan
     Route::namespace('Dashboard')->group(function () {
         Route::get('/api/dashboard/kependudukan', ['as' => 'dashboard.kependudukan.getdata', 'uses' => 'DashboardController@getDashboardKependudukan']);
     });
 
-    Route::get('/api/list-peserta-penduduk', function () {
+    Route::get('/api/list-penduduk', function () {
         return Penduduk::selectRaw('nik as id, nama as text, nik, nama, alamat, rt, rw, tempat_lahir, tanggal_lahir')
             ->whereRaw('lower(nama) LIKE \'%' . strtolower(request('q')) . '%\' or lower(nik) LIKE \'%' . strtolower(request('q')) . '%\'')
             ->paginate(10);
     });
 
-    Route::get('/api/list-peserta-kk', function () {
+    // TODO : Peserta KK gunakan das_keluarga
+    Route::get('/api/list-kk', function () {
         return Penduduk::selectRaw('no_kk as id, nama as text, nik, nama, alamat, rt, rw, tempat_lahir, tanggal_lahir')
             ->whereRaw('lower(nama) LIKE \'%' . strtolower(request('q')) . '%\' or lower(no_kk) LIKE \'%' . strtolower(request('q')) . '%\'')
             ->where('kk_level', 1)
