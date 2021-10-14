@@ -42,14 +42,11 @@ use Yajra\DataTables\DataTables;
 
 class TingkatPendidikanController extends Controller
 {
-    public function __construct()
-    {
-        parent::__construct();
-    }
     public function index()
     {
         $page_title       = 'Tingkat Pendidikan';
-        $page_description = 'Data Tingkat Pendidikan';
+        $page_description = 'Daftar Tingkat Pendidikan';
+
         return view('data.tingkat_pendidikan.index', compact('page_title', 'page_description'));
     }
 
@@ -58,8 +55,9 @@ class TingkatPendidikanController extends Controller
      *
      * @return Response
      */
-    public function getDataTingkatPendidikan()
+    public function getData()
     {
+        // dd(TingkatPendidikan::with(['desa']));
         return DataTables::of(TingkatPendidikan::with(['desa']))
             ->addColumn('aksi', function ($row) {
                 $data['edit_url']   = route('data.tingkat-pendidikan.edit', $row->id);
@@ -77,10 +75,11 @@ class TingkatPendidikanController extends Controller
      */
     public function import()
     {
-        $page_title       = 'Import';
-        $page_description = 'Import Data Tingkat Pendidikan';
+        $page_title       = 'Tingkat Pendidikan';
+        $page_description = 'Import Tingkat Pendidikan';
         $years_list       = years_list();
         $months_list      = months_list();
+
         return view('data.tingkat_pendidikan.import', compact('page_title', 'page_description', 'years_list', 'months_list'));
     }
 
@@ -99,8 +98,10 @@ class TingkatPendidikanController extends Controller
         ]);
 
         try {
+
             (new ImporTingkatPendidikan($request->only(['desa_id', 'tahun', 'semester'])))
                 ->queue($request->file('file'));
+
         } catch (Exception $e) {
             return back()->with('error', 'Import data gagal. ' . $e->getMessage());
         }
@@ -116,9 +117,10 @@ class TingkatPendidikanController extends Controller
      */
     public function edit($id)
     {
-        $pendidikan       = TingkatPendidikan::findOrFail($id);
-        $page_title       = 'Ubah';
-        $page_description = 'Ubah Data Tingkat Pendidikan';
+        $pendidikan       = TingkatPendidikan::with(['desa'])->FindOrFail($id);
+        $page_title       = 'Tingkat Pendidikan';
+        $page_description = 'Ubah Tingkat Pendidikan : Desa ' .  $pendidikan->desa->nama ;
+
         return view('data.tingkat_pendidikan.edit', compact('page_title', 'page_description', 'pendidikan'));
     }
 
@@ -141,11 +143,11 @@ class TingkatPendidikanController extends Controller
                 'tahun'                   => 'required',
             ]);
 
-            TingkatPendidikan::find($id)->update($request->all());
+            TingkatPendidikan::FindOrFail($id)->update($request->all());
 
-            return redirect()->route('data.tingkat-pendidikan.index')->with('success', 'Data berhasil disimpan!');
+            return redirect()->route('data.tingkat-pendidikan.index')->with('success', 'Data berhasil diubah!');
         } catch (Exception $e) {
-            return back()->withInput()->with('error', 'Data gagal disimpan!');
+            return back()->withInput()->with('error', 'Data gagal diubah!' . $e->getMessage());
         }
     }
 
@@ -158,8 +160,9 @@ class TingkatPendidikanController extends Controller
     public function destroy($id)
     {
         try {
-            TingkatPendidikan::findOrFail($id)->delete();
 
+            TingkatPendidikan::findOrFail($id)->delete();
+            
             return redirect()->route('data.tingkat-pendidikan.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {
             return redirect()->route('data.tingkat-pendidikan.index')->with('error', 'Data gagal dihapus!');
