@@ -148,9 +148,8 @@ class ToiletSanitasiController extends Controller
             'toilet'   => 'required',
             'sanitasi' => 'required',
         ]);
-        
-        try {
 
+        try {
             ToiletSanitasi::FindOrFail($id)->update($request->all());
 
             return redirect()->route('data.toilet-sanitasi.index')->with('success', 'Data berhasil diubah!');

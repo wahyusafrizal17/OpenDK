@@ -98,9 +98,8 @@ class AdminKomplainController extends Controller
         request()->validate([
             'status' => 'required',
         ]);
-        
-        try {
 
+        try {
             Komplain::find($id)->update($request->all());
 
             return redirect()->route('admin-komplain.index')->with('success', 'Status Komplain berhasil disimpan!');
@@ -136,7 +135,7 @@ class AdminKomplainController extends Controller
             'kategori' => 'required',
             'laporan'  => 'required',
         ]);
-        
+
         try {
             $komplain = Komplain::findOrFail($id);
             $komplain->fill($request->all());

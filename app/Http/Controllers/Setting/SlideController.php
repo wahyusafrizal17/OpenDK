@@ -151,7 +151,7 @@ class SlideController extends Controller
             'deskripsi' => 'required|max:100',
             'gambar'    => 'file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
         ]);
-        
+
         try {
             $slide = Slide::FindOrFail($id);
             $slide->fill($request->all());

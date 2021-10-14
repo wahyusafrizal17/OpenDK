@@ -146,9 +146,8 @@ class PutusSekolahController extends Controller
             'semester'       => 'required',
             'tahun'          => 'required',
         ]);
-        
-        try {
 
+        try {
             PutusSekolah::FindOrFail($id)->update($request->all());
 
             return redirect()->route('data.putus-sekolah.index')->with('success', 'Data berhasil diubah!');

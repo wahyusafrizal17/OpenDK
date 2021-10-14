@@ -85,9 +85,8 @@ class ProgramBantuanController extends Controller
             'start_date' => 'required|date',
             'end_date'   => 'required|date',
         ]);
-        
-        try {
 
+        try {
             Program::create($request->all());
 
             return redirect()->route('data.program-bantuan.index')->with('success', 'Data berhasil disimpan!');
@@ -117,7 +116,6 @@ class ProgramBantuanController extends Controller
         ]);
 
         try {
-
             $program = Program::FindOrFail($id);
             $program->fill($request->all());
             $program->update();
@@ -169,7 +167,6 @@ class ProgramBantuanController extends Controller
         ]);
 
         try {
-
             PesertaProgram::create($request->all());
 
             return redirect()->route('data.program-bantuan.show', $request->input('program_id'))->with('success', 'Data berhasil disimpan!');

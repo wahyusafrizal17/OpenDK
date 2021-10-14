@@ -67,7 +67,7 @@ class COAController extends Controller
             'coa_name'   => 'required',
             'id'         => 'required',
         ]);
-        
+
         try {
             $data = [
                 'type_id'    => $request->input('type_id'),

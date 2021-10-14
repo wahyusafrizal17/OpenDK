@@ -79,9 +79,8 @@ class FaqController extends Controller
             'question' => 'required',
             'answer'   => 'required',
         ]);
-        
+
         try {
-            
             Faq::create($request->all());
 
             return redirect()->route('informasi.faq.index')->with('success', 'FAQ berhasil ditambah!');
@@ -130,7 +129,6 @@ class FaqController extends Controller
         ]);
 
         try {
-
             Faq::FindOrFail($id)->update($request->all());
 
             return redirect()->route('informasi.faq.index')->with('success', 'FAQ berhasil diubah!');

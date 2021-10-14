@@ -146,9 +146,8 @@ class AnggaranDesaController extends Controller
             'nama_akun' => 'required',
             'jumlah'    => 'required|numeric',
         ]);
-        
-        try {
 
+        try {
             AnggaranDesa::find($id)->update($request->all());
 
             return redirect()->route('data.anggaran-desa.index')->with('success', 'Data berhasil disimpan!');

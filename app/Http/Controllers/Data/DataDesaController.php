@@ -95,7 +95,7 @@ class DataDesaController extends Controller
             'nama'         => 'required',
             'luas_wilayah' => 'required|numeric',
         ]);
-        
+
         try {
             $desa = new DataDesa();
             $desa->fill($request->all());
@@ -136,9 +136,8 @@ class DataDesaController extends Controller
             'nama'         => 'required',
             'luas_wilayah' => 'required|numeric',
         ]);
-        
+
         try {
-            
             $desa = DataDesa::findOrFail($id);
             $desa->fill($request->all());
             $desa->profil_id = $this->profil->id;

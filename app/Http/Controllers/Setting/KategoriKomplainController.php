@@ -76,9 +76,8 @@ class KategoriKomplainController extends Controller
         request()->validate([
             'nama' => 'required',
         ]);
-            
-        try {
 
+        try {
             $kategori       = new KategoriKomplain($request->all());
             $kategori->slug = str_slug($kategori->nama);
             $kategori->save();
@@ -103,9 +102,8 @@ class KategoriKomplainController extends Controller
         request()->validate([
             'nama' => 'required',
         ]);
-        
-        try {
 
+        try {
             $kategori = KategoriKomplain::FindOrFail($id);
             $kategori->fill($request->all());
             $kategori->save();

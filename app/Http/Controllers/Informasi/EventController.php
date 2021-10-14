@@ -82,7 +82,6 @@ class EventController extends Controller
         ]);
 
         try {
-
             $event = new Event($request->input());
             $event->status = 'OPEN';
             $event->save();
@@ -133,9 +132,8 @@ class EventController extends Controller
             'attendants' => 'required',
             'attachment' => 'file|mimes:jpeg,png,jpg,gif,svg,xlsx,xls,doc,docx,pdf,ppt,pptx|max:2048',
         ]);
-        
-        try {
 
+        try {
             $event = Event::FindOrFail($id);
             $event->fill($request->all());
 
