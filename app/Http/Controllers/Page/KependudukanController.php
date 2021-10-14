@@ -67,7 +67,7 @@ class KependudukanController extends Controller
         return view('pages.kependudukan.show_kependudukan')->with($data);
     }
 
-    /* Menghasilkan array berisi Semua tahun di mana penduduk tercatat sampai tahun sekarang */
+    /* Menghasilkan array berisi semua tahun di mana penduduk tercatat sampai tahun sekarang */
     protected function years_list()
     {
         if (DB::table('das_penduduk')->first() == null) {
