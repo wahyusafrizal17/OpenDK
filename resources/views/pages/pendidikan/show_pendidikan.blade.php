@@ -26,7 +26,7 @@
                         <div class="col-sm-8">
                             <select class="form-control" id="list_year">
                                 @foreach($year_list as $year)
-                                    <option value="{{ $year}}">{{$year}}</option>
+                                    <option value="{{ $year }}">{{ $year }}</option>
                                 @endforeach
                             </select>
                         </div>

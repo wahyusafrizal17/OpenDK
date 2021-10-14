@@ -13,7 +13,7 @@
                                 <select class="form-control" id="list_months" name="m">
                                     <option value="Semua">Semua</option>
                                     @foreach(months_list() as $key=> $month)
-                                        <option value="{{ $key}}">{{$month}}</option>
+                                        <option value="{{ $key }}">{{ $month }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -28,7 +28,7 @@
                                 <select class="form-control" id="list_year">
                                     <option value="Semua">Semua</option>
                                     @foreach($year_list as $year)
-                                        <option value="{{ $year}}">{{$year}}</option>
+                                        <option value="{{ $year }}">{{ $year }}</option>
                                     @endforeach
                                 </select>
                             </div>

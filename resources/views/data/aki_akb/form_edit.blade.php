@@ -1,13 +1,13 @@
 <div class="form-group">
     <label for="aki" class="control-label col-md-4 col-sm-3 col-xs-12">Angka Kematian Ibu <span class="required">*</span></label>
     <div class="col-md-6 col-sm-6 col-xs-12">
-        {!! Form::number('aki', null, ['class' => 'form-control', 'required' => true, 'id'=>'aki']) !!}
+        {!! Form::number('aki', null, ['class' => 'form-control', 'required' => true, 'id' => 'aki']) !!}
     </div>
 </div>
 <div class="form-group">
     <label for="akb" class="control-label col-md-4 col-sm-3 col-xs-12">Angka Kematian Bayi <span class="required">*</span></label>
     <div class="col-md-6 col-sm-6 col-xs-12">
-        {!! Form::number('akb', null, ['class' => 'form-control', 'required' => true, 'id'=>'akb']) !!}
+        {!! Form::number('akb', null, ['class' => 'form-control', 'required' => true, 'id' => 'akb']) !!}
     </div>
 </div>
 <div class="form-group">

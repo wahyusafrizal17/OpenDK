@@ -57,7 +57,7 @@
                                 <label class="control-label col-md-2 col-sm-3 col-xs-12">NIK <span class="required">*</span></label>
 
                                 <div class="col-md-4 col-sm-4 col-xs-12">
-                                    {!! Form::text('nik', null,['placeholder'=>'NIK', 'class'=>'form-control', 'required', 'readonly'=>true]) !!}
+                                    {!! Form::text('nik', null, ['placeholder' => 'NIK', 'class' => 'form-control', 'required', 'readonly'=>true]) !!}
                                     @if ($errors->has('nik'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('nik') }}</strong>
@@ -69,7 +69,7 @@
                                 <label class="control-label col-md-2 col-sm-3 col-xs-12">Nama <span class="required">*</span></label>
 
                                 <div class="col-md-4 col-sm-4 col-xs-12">
-                                    {!! Form::text('nama', null,['placeholder'=>'Nama', 'class'=>'form-control', 'required', 'readonly'=>true ]) !!}
+                                    {!! Form::text('nama', null, ['placeholder' => 'Nama', 'class' => 'form-control', 'required', 'readonly'=>true ]) !!}
                                     @if ($errors->has('nama'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('nama') }}</strong>
@@ -82,7 +82,7 @@
                                 <label class="control-label col-md-2 col-sm-3 col-xs-12">Kategori <span class="required">*</span></label>
 
                                 <div class="col-md-4 col-sm-4 col-xs-12">
-                                    {!! Form::select('kategori', \App\Models\KategoriKomplain::pluck('nama', 'id'), null,['class'=>'form-control', 'id'=>'kategori', 'required']) !!}
+                                    {!! Form::select('kategori', \App\Models\KategoriKomplain::pluck('nama', 'id'), null, ['class' => 'form-control', 'id' => 'kategori', 'required']) !!}
                                     @if ($errors->has('kategori'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('kategori') }}</strong>
@@ -95,7 +95,7 @@
                                 <label class="control-label col-md-2 col-sm-3 col-xs-12">Judul <span class="required">*</span></label>
 
                                 <div class="col-md-8 col-sm-8 col-xs-12">
-                                    {!! Form::text('judul', null,['placeholder'=>'Judul', 'class'=>'form-control', 'required']) !!}
+                                    {!! Form::text('judul', null, ['placeholder' => 'Judul', 'class' => 'form-control', 'required']) !!}
                                     @if ($errors->has('judul'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('judul') }}</strong>
@@ -108,7 +108,7 @@
                                 <label class="control-label col-md-2 col-sm-3 col-xs-12">Laporan <span class="required">*</span></label>
 
                                 <div class="col-md-8 col-sm-8 col-xs-12">
-                                    {!! Form::textArea('laporan', null,['placeholder'=>'Laporan', 'class'=>'form-control', 'required']) !!}
+                                    {!! Form::textArea('laporan', null, ['placeholder' => 'Laporan', 'class' => 'form-control', 'required']) !!}
                                     @if ($errors->has('laporan'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('laporan') }}</strong>
@@ -171,7 +171,7 @@
                                 <label class="control-label col-md-2 col-sm-3 col-xs-12">Status</label>
 
                                 <div class="col-md-2 col-sm-2 col-xs-12">
-                                    {!! Form::select('status', ['BELUM'=>'Belum', 'PROSES'=>'Proses', 'SELESAI'=>'Selesai'], null, ['class'=>'form-control']) !!}
+                                    {!! Form::select('status', ['BELUM' => 'Belum', 'PROSES' => 'Proses', 'SELESAI' => 'Selesai'], null, ['class' => 'form-control']) !!}
                                     @if ($errors->has('status'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('status') }}</strong>

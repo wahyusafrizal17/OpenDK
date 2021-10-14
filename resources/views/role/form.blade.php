@@ -20,7 +20,7 @@
 
 				<div class="checkbox checkbox-custom checkbox-primary" style="margin-top:0px !important;margin-bottom:0px !important;">
 					@if($rolePermission == $roleMenu)
-					{!! Form::checkbox( 'create-all', 1, null,['checked']) !!}
+					{!! Form::checkbox( 'create-all', 1, null, ['checked']) !!}
 					@else
 					{!! Form::checkbox( 'create-all', false, null) !!}
 					@endif

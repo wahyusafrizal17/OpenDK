@@ -44,7 +44,7 @@
                                 <div class="col-md-8">
                                     <select class="form-control" id="bulan" name="bulan">
                                         @foreach($months_list as $key=> $month)
-                                            <option value="{{ $key}}">{{$month}}</option>
+                                            <option value="{{ $key }}">{{ $month }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -56,7 +56,7 @@
                                 <div class="col-md-8">
                                     <select class="form-control" id="list_year" name="tahun">
                                         @foreach($years_list as $year)
-                                            <option value="{{ $year}}">{{$year}}</option>
+                                            <option value="{{ $year }}">{{ $year }}</option>
                                         @endforeach
                                     </select>
                                 </div>

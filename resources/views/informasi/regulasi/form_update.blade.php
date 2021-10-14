@@ -1,7 +1,7 @@
 <div class="form-group">
     <label class="control-label col-md-3 col-sm-3 col-xs-12">Tipe <span class="required">*</span></label>
     <div class="col-md-6 col-sm-6 col-xs-12">
-        {!! Form::select('tipe_regulasi', \App\Models\TipeRegulasi::pluck('nama', 'id'), null,['class' => 'form-control', 'id' => 'tipe', 'required']) !!}
+        {!! Form::select('tipe_regulasi', \App\Models\TipeRegulasi::pluck('nama', 'id'), null, ['class' => 'form-control', 'id' => 'tipe', 'required']) !!}
     </div>
 </div>
 <div class="form-group">
