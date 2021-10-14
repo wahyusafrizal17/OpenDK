@@ -9,8 +9,8 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="{{ route('data.imunisasi.index') }}">AKI & AKB</a></li>
-        <li class="active">{{ $page_title }}</li>
+        <li><a href="{{ route('data.imunisasi.index') }}">Daftar Imunisasi</a></li>
+        <li class="active">{{ $page_description ?? '' }}</li>
     </ol>
 </section>
 

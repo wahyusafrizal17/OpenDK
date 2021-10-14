@@ -42,13 +42,6 @@ use Yajra\DataTables\DataTables;
 
 class ImunisasiController extends Controller
 {
-    public $bulan;
-    public $tahun;
-
-    public function __construct()
-    {
-        parent::__construct();
-    }
 
     /**
      * Display a listing of the resource.
@@ -58,7 +51,8 @@ class ImunisasiController extends Controller
     public function index()
     {
         $page_title       = 'Imunisasi';
-        $page_description = 'Data Cakupan Imunisasi';
+        $page_description = 'Daftar Imunisasi';
+
         return view('data.imunisasi.index', compact('page_title', 'page_description'));
     }
 
@@ -89,10 +83,11 @@ class ImunisasiController extends Controller
      */
     public function import()
     {
-        $page_title       = 'Import';
-        $page_description = 'Import Data Cakupan Imunisasi';
+        $page_title       = 'Imunisasi';
+        $page_description = 'Impor Imunisasi';
         $years_list       = years_list();
         $months_list      = months_list();
+
         return view('data.imunisasi.import', compact('page_title', 'page_description', 'years_list', 'months_list'));
     }
 
@@ -127,9 +122,9 @@ class ImunisasiController extends Controller
      */
     public function edit($id)
     {
-        $imunisasi        = Imunisasi::findOrFail($id);
-        $page_title       = 'Ubah';
-        $page_description = 'Ubah Data Cakupan Imunisasi: ' . $imunisasi->id;
+        $imunisasi        = Imunisasi::FindOrFail($id);
+        $page_title       = 'Imunisasi';
+        $page_description = 'Ubah Imunisasi : Cakupan Imunisasi' . $imunisasi->cakupan_imunisasi;
 
         return view('data.imunisasi.edit', compact('page_title', 'page_description', 'imunisasi'));
     }
@@ -149,9 +144,9 @@ class ImunisasiController extends Controller
 
             Imunisasi::find($id)->update($request->all());
 
-            return redirect()->route('data.imunisasi.index')->with('success', 'Data berhasil disimpan!');
+            return redirect()->route('data.imunisasi.index')->with('success', 'Data berhasil diubah!');
         } catch (Exception $e) {
-            return back()->withInput()->with('error', 'Data gagal disimpan!');
+            return back()->withInput()->with('error', 'Data gagal diubah!');
         }
     }
 
@@ -164,7 +159,7 @@ class ImunisasiController extends Controller
     public function destroy($id)
     {
         try {
-            Imunisasi::findOrFail($id)->delete();
+            Imunisasi::destroy($id);
 
             return redirect()->route('data.imunisasi.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {
