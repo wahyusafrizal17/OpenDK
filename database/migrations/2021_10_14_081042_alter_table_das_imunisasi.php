@@ -13,7 +13,7 @@ class AlterTableDasImunisasi extends Migration
      */
     public function up()
     {
-        Schema::table('das_imunisasi', function($table) {
+        Schema::table('das_imunisasi', function (Blueprint $table) {
             $table->dropColumn('kecamatan_id');
         });
     }

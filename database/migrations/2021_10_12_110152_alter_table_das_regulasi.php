@@ -13,11 +13,8 @@ class AlterTableDasRegulasi extends Migration
      */
     public function up()
     {
-        Schema::table('das_regulasi', function($table) {
-            $table->dropColumn('kecamatan_id');
-        });
-
         Schema::table('das_regulasi', function (Blueprint $table) {
+            $table->dropColumn('kecamatan_id');
             $table->integer('profil_id')->after('id')->nullable()->default(1);
         });
     }
@@ -31,9 +28,6 @@ class AlterTableDasRegulasi extends Migration
     {
         Schema::table('das_regulasi', function (Blueprint $table) {
             $table->char('kecamatan_id', 8);
-        });
-
-        Schema::table('das_regulasi', function($table) {
             $table->dropColumn('profil_id');
         });
     }

@@ -16,7 +16,6 @@ class AlterTableDasKeluarga extends Migration
     public function up()
     {
         $this->charType();
-
         Schema::table('das_keluarga', function (Blueprint $table) {
             $table->char('desa_id', 13)->nullable()->change();
         });

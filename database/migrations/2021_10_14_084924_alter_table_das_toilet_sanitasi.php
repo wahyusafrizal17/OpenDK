@@ -13,7 +13,7 @@ class AlterTableDasToiletSanitasi extends Migration
      */
     public function up()
     {
-        Schema::table('das_toilet_sanitasi', function($table) {
+        Schema::table('das_toilet_sanitasi', function (Blueprint $table) {
             $table->dropColumn('kecamatan_id');
         });
     }

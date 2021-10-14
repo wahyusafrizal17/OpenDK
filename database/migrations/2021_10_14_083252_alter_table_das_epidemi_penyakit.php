@@ -13,7 +13,7 @@ class AlterTableDasEpidemiPenyakit extends Migration
      */
     public function up()
     {
-        Schema::table('das_epidemi_penyakit', function($table) {
+        Schema::table('das_epidemi_penyakit', function (Blueprint $table) {
             $table->dropColumn('kecamatan_id');
         });
     }

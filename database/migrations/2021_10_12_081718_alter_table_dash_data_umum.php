@@ -13,7 +13,7 @@ class AlterTableDashDataUmum extends Migration
      */
     public function up()
     {
-        Schema::table('das_data_umum', function($table) {
+        Schema::table('das_data_umum', function (Blueprint $table) {
             $table->dropColumn('kecamatan_id');
         });
     }

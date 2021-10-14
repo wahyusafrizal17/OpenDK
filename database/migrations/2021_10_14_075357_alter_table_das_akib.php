@@ -13,7 +13,7 @@ class AlterTableDasAkib extends Migration
      */
     public function up()
     {
-        Schema::table('das_akib', function($table) {
+        Schema::table('das_akib', function (Blueprint $table) {
             $table->dropColumn('kecamatan_id');
         });
     }
