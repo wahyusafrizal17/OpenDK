@@ -83,12 +83,12 @@ class DownloadController extends Controller
     {
         Counter::count('unduhan.regulasi');
 
+        // TODO: Gunakan datatables
         $page_title       = 'Regulasi';
         $page_description = 'Daftar regulasi Kecamatan';
         $regulasi         = Regulasi::orderBy('id', 'asc')->paginate(10);
-        $profil           = Profil::FindOrFail($id);
 
-        return view('pages.unduhan.regulasi', compact('page_title', 'page_description', 'regulasi', 'profil'));
+        return view('pages.unduhan.regulasi', compact('page_title', 'page_description', 'regulasi'));
     }
 
     public function showRegulasi($nama_regulasi)
