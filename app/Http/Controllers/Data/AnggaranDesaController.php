@@ -167,7 +167,7 @@ class AnggaranDesaController extends Controller
     public function destroy($id)
     {
         try {
-            AnggaranDesa::destroy($id)
+            AnggaranDesa::destroy($id);
         } catch (Exception $e) {
             return redirect()->route('data.anggaran-desa.index')->with('error', 'Data gagal dihapus!');
         }

@@ -172,10 +172,11 @@ class SistemKomplainController extends Controller
             }
 
             $komplain->save();
-            return redirect()->route('sistem-komplain.index')->with('success', 'Komplain berhasil dikirim. Tunggu Admin untuk di review terlebih dahulu!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Komplain gagal dikirim!');
         }
+
+        return redirect()->route('sistem-komplain.index')->with('success', 'Komplain berhasil dikirim. Tunggu Admin untuk di review terlebih dahulu!');
     }
 
     /**
@@ -187,8 +188,9 @@ class SistemKomplainController extends Controller
     public function edit($id)
     {
         $komplain         = Komplain::where('komplain_id', '=', $id)->first();
-        $page_title       = 'Edit Komplain';
-        $page_description = 'Komplain ' . $komplain->komplain_id;
+        $page_title       = 'Komplain';
+        $page_description = 'Ubah Komplain : ' . $komplain->komplain_id;
+
         return view('sistem_komplain.komplain.edit', compact('page_title', 'page_description', 'komplain'));
     }
 
@@ -245,11 +247,11 @@ class SistemKomplainController extends Controller
             }
 
             $komplain->save();
-
-            return redirect()->route('sistem-komplain.index')->with('success', 'Komplain berhasil dikirim!');
         } catch (Exception $e) {
             return back()->withInput()->with('error', 'Komplain gagal dikirim!');
         }
+
+        return redirect()->route('sistem-komplain.index')->with('success', 'Komplain berhasil dikirim!');
     }
 
     /**
@@ -261,12 +263,12 @@ class SistemKomplainController extends Controller
     public function destroy($id)
     {
         try {
-            Komplain::destroy($id)
-
-            return redirect()->route('sistem-komplain.index')->with('success', 'Keluhan sukses dihapus!');
+            Komplain::destroy($id);
         } catch (Exception $e) {
             return redirect()->route('sistem-komplain.index')->with('error', 'Keluhan gagal dihapus!');
         }
+
+        return redirect()->route('sistem-komplain.index')->with('success', 'Keluhan sukses dihapus!');
     }
 
     /**
@@ -282,9 +284,9 @@ class SistemKomplainController extends Controller
         } catch (Exception $ex) {
             return back()->withInput()->with('error', $ex);
         }
-        $camat            = Wilayah::where('kode', '=', config('app.default_profile'))->first();
-        $page_title       = 'Detail Laporan';
-        $page_description = $komplain->judul;
+        $camat            = Profil::first();
+        $page_title       = 'Laporan';
+        $page_description = 'Detail Laporan : ' . $komplain->judul;
 
         return view('sistem_komplain.komplain.show', compact('page_title', 'page_description', 'komplain', 'camat'));
     }
@@ -338,6 +340,7 @@ class SistemKomplainController extends Controller
     public function getJawabans(Request $request)
     {
         $jawabans = JawabKomplain::where('komplain_id', $request->input('id'))->orderBy('id', 'desc')->get();
+        
         return view('sistem_komplain.komplain.jawabans', compact('jawabans'))->render();
     }
 }
