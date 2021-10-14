@@ -138,7 +138,7 @@ class FormDokumenController extends Controller
     {
         try {
             
-            $dokumen = FormDokumen::findOrFail($id);
+            $dokumen = FormDokumen::FindOrFail($id);
             unlink(base_path('public/' . $dokumen->file_dokumen));
             $dokumen->delete();
 

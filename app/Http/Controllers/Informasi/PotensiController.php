@@ -146,7 +146,7 @@ class PotensiController extends Controller
      */
     public function show($id)
     {
-        $potensi    = Potensi::find($id);
+        $potensi    = Potensi::FindOrFail($id);
         $page_title = 'Potensi :' . $potensi->nama_potensi;
 
         return view('informasi.potensi.show', compact('page_title', 'potensi'));
@@ -160,7 +160,7 @@ class PotensiController extends Controller
      */
     public function edit($id)
     {
-        $potensi          = Potensi::findOrFail($id);
+        $potensi          = Potensi::FindOrFail($id);
         $page_title       = 'Ubah';
         $page_description = 'Ubah Potensi : ' . $potensi->nama_potensi;
 
@@ -193,7 +193,7 @@ class PotensiController extends Controller
         ]);
 
         try {
-            $potensi = Potensi::findOrFail($id);
+            $potensi = Potensi::FindOrFail($id);
             $potensi->fill($request->all());
 
             if ($request->hasFile('file_gambar')) {

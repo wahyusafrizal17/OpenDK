@@ -116,7 +116,7 @@ class DataDesaController extends Controller
      */
     public function edit($id)
     {
-        $desa             = DataDesa::findOrFail($id);
+        $desa             = DataDesa::FindOrFail($id);
         $page_title       = 'Desa';
         $page_description = 'Ubah Desa : ' . $desa->nama;
         $profil           = $this->profil;
@@ -138,7 +138,7 @@ class DataDesaController extends Controller
         ]);
 
         try {
-            $desa = DataDesa::findOrFail($id);
+            $desa = DataDesa::FindOrFail($id);
             $desa->fill($request->all());
             $desa->profil_id = $this->profil->id;
             $desa->save();

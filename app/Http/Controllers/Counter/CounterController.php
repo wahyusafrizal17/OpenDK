@@ -56,7 +56,7 @@ class CounterController extends Controller
 
         $data = [];
         foreach ($sql as $item) {
-            $page = CounterPage::find($item->page_id);
+            $page = CounterPage::FindOrFail($item->page_id);
             $data[] = [
                 'id'    => $item->page_id,
                 'url'   => route($page->page),

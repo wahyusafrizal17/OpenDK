@@ -51,7 +51,8 @@ class AnggaranDesaController extends Controller
     public function index()
     {
         $page_title       = 'APBDes';
-        $page_description = 'Data Anggran Desa';
+        $page_description = 'Data APBDes';
+
         return view('data.anggaran_desa.index', compact('page_title', 'page_description'));
     }
 
@@ -84,11 +85,12 @@ class AnggaranDesaController extends Controller
      */
     public function import()
     {
-        $page_title       = 'Import';
-        $page_description = 'Import Data Anggaran Desa';
+        $page_title       = 'APBDes';
+        $page_description = 'Import APBDes';
         $years_list       = years_list();
         $months_list      = months_list();
         $list_desa        = DataDesa::all();
+
         return view('data.anggaran_desa.import', compact('page_title', 'page_description', 'years_list', 'months_list', 'list_desa'));
     }
 
@@ -124,9 +126,9 @@ class AnggaranDesaController extends Controller
      */
     public function edit($id)
     {
-        $anggaran         = AnggaranDesa::findOrFail($id);
-        $page_title       = 'Ubah';
-        $page_description = 'Ubah Data Anggaran Desa: ' . $anggaran->id;
+        $anggaran         = AnggaranDesa::FindOrFail($id);
+        $page_title       = 'APBDes';
+        $page_description = 'Ubah APBDes : ' . $anggaran->id;
 
         return view('data.anggaran_desa.edit', compact('page_title', 'page_description', 'anggaran'));
     }
@@ -148,7 +150,7 @@ class AnggaranDesaController extends Controller
         ]);
 
         try {
-            AnggaranDesa::find($id)->update($request->all());
+            AnggaranDesa::FindOrFail($id)->update($request->all());
 
             return redirect()->route('data.anggaran-desa.index')->with('success', 'Data berhasil disimpan!');
         } catch (Exception $e) {

@@ -68,7 +68,7 @@ class DownloadController extends Controller
 
     public function showProsedur($nama_prosedur)
     {
-        // $prosedur   = Prosedur::find($id);
+        // $prosedur   = Prosedur::FindOrFail($id);
         $prosedur   = Prosedur::where('judul_prosedur', str_replace('-', ' ', $nama_prosedur))->first();
         $page_title = 'Detail Prosedur :' . $prosedur->judul_prosedur;
         return view('pages.unduhan.prosedur_show', compact('page_title', 'prosedur'));
@@ -87,7 +87,7 @@ class DownloadController extends Controller
         $page_title       = 'Regulasi';
         $page_description = 'Daftar regulasi Kecamatan';
         $regulasi         = Regulasi::orderBy('id', 'asc')->paginate(10);
-        $profil           = Profil::find($id);
+        $profil           = Profil::FindOrFail($id);
 
         return view('pages.unduhan.regulasi', compact('page_title', 'page_description', 'regulasi', 'profil'));
     }

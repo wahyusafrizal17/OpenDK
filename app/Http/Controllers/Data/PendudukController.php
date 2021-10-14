@@ -114,7 +114,7 @@ class PendudukController extends Controller
      */
     public function show($id)
     {
-        $penduduk = Penduduk::findOrFail($id);
+        $penduduk = Penduduk::FindOrFail($id);
         if ($penduduk->foto == '') {
             $penduduk->file_struktur_organisasi = 'http://placehold.it/120x150';
         }

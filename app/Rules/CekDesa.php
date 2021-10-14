@@ -47,7 +47,7 @@ class CekDesa implements Rule
      */
     public function __construct()
     {
-        $this->nama_kecamatan = Profil::findOrFail(1)->nama_kecamatan;
+        $this->nama_kecamatan = Profil::FindOrFail(1)->nama_kecamatan;
     }
 
     /**

@@ -106,7 +106,7 @@ class LaporanPendudukController extends Controller
     {
         try {
             
-            $penduduk = LaporanPenduduk::findOrFail($id);
+            $penduduk = LaporanPenduduk::FindOrFail($id);
 
             // Hapus file penduduk
             Storage::disk('public')->delete('laporan_penduduk/' . $penduduk->nama_file);

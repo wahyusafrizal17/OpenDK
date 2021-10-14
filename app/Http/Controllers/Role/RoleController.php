@@ -127,7 +127,7 @@ class RoleController extends Controller
      */
     public function edit($id)
     {
-        $role             = Role::find($id);
+        $role             = Role::FindOrFail($id);
         $permissions      = Role::getListPermission();
         $menu             = Menu::get();
         $page_title       = 'Group Pengguna';
@@ -151,14 +151,14 @@ class RoleController extends Controller
                 }
 
                 $request['permissions'] = $temp;
-                Role::find($id)->update($request->all());
-                $role = Role::find($id);
+                Role::FindOrFail($id)->update($request->all());
+                $role = Role::FindOrFail($id);
                 flash()->success(trans('message.role.update-success', [
                     'attribute' => trans('island.role'),
                     'detail'    => '#' . $role->id . ' | ' . $role->slug,
                 ]));
             } else {
-                Role::find($id)->update(['name' => $request->name, 'permissions' => []]);
+                Role::FindOrFail($id)->update(['name' => $request->name, 'permissions' => []]);
             }
             return redirect()->route('setting.role.index');
         } catch (Exception $e) {
@@ -186,7 +186,7 @@ class RoleController extends Controller
 
                 return back();
             } else {
-                $role = Role::findOrFail($id);
+                $role = Role::FindOrFail($id);
                 $role->delete();
                 flash()->success(trans('general.destroy-success'));
                 return redirect()->route('setting.role.index');

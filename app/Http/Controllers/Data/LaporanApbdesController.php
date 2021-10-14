@@ -109,7 +109,7 @@ class LaporanApbdesController extends Controller
     {
         try {
             
-            $apbdes = LaporanApbdes::findOrFail($id);
+            $apbdes = LaporanApbdes::FindOrFail($id);
 
             // Hapus file apbdes
             Storage::disk('public')->delete('apbdes/' . $apbdes->nama_file);

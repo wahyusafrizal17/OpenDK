@@ -142,7 +142,7 @@ class AKIAKBController extends Controller
         ]);
 
         try {
-            AkiAkb::find($id)->update($request->all());
+            AkiAkb::FindOrFail($id)->update($request->all());
 
             return redirect()->route('data.aki-akb.index')->with('success', 'Data berhasil disimpan!');
         } catch (Exception $e) {

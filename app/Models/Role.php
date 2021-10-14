@@ -115,7 +115,7 @@ class Role extends Model
     public function getPermissionsKey($id)
     {
         $permissions = [];
-        foreach (static::findOrFail($id)->permissions as $key => $value) {
+        foreach (static::FindOrFail($id)->permissions as $key => $value) {
             $permissions[] = $key;
         }
         return $permissions;

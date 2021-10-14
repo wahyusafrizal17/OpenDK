@@ -100,7 +100,7 @@ class AdminKomplainController extends Controller
         ]);
 
         try {
-            Komplain::find($id)->update($request->all());
+            Komplain::FindOrFail($id)->update($request->all());
 
             return redirect()->route('admin-komplain.index')->with('success', 'Status Komplain berhasil disimpan!');
         } catch (Exception $e) {
@@ -116,7 +116,7 @@ class AdminKomplainController extends Controller
      */
     public function edit($id)
     {
-        $komplain         = Komplain::find($id);
+        $komplain         = Komplain::FindOrFail($id);
         $page_title       = 'Edit Komplain';
         $page_description = 'Komplain ' . $komplain->komplain_id;
         return view('sistem_komplain.admin_komplain.edit', compact('page_title', 'page_description', 'komplain'));
@@ -137,7 +137,7 @@ class AdminKomplainController extends Controller
         ]);
 
         try {
-            $komplain = Komplain::findOrFail($id);
+            $komplain = Komplain::FindOrFail($id);
             $komplain->fill($request->all());
             $komplain->nama = Penduduk::where('nik', $komplain->nik)->first()->nama;
 

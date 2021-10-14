@@ -47,7 +47,7 @@ class DataUmumController extends Controller
      */
     public function index()
     {
-        $data_umum        = DataUmum::findOrFail(1);
+        $data_umum        = DataUmum::FindOrFail(1);
         $luas_wilayah     = $data_umum['luas_wilayah_value'];
         $page_title       = 'Data Umum';
         $page_description = 'Ubah Data Umum';
@@ -89,7 +89,7 @@ class DataUmumController extends Controller
         try {
             $data = $request->sumber_luas_wilayah==1 ? $request->all() : $request->except('luas_wilayah');
 
-            DataUmum::find($id)->update($data);
+            DataUmum::FindOrFail($id)->update($data);
 
             return redirect()->route('data.data-umum.index')->with('success', 'Update Data Umum sukses!');
         } catch (Exception $e) {

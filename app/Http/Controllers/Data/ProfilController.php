@@ -81,7 +81,7 @@ class ProfilController extends Controller
             ], []);
 
         try {
-            $profil = Profil::find($id);
+            $profil = Profil::FindOrFail($id);
             $profil->fill($request->all());
 
             $dataumum               = DataUmum::where('profil_id', $id)->first();

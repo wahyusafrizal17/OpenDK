@@ -86,7 +86,7 @@ class KeluargaController extends Controller
         $page_title       = 'Detail Keluarga';
         $page_description = 'Detail Data Keluarga';
         $penduduk         = Penduduk::select(['nik', 'nama'])->get();
-        $keluarga         = Keluarga::findOrFail($id);
+        $keluarga         = Keluarga::FindOrFail($id);
 
         return view('data.keluarga.show', compact('page_title', 'page_description', 'penduduk', 'keluarga'));
     }

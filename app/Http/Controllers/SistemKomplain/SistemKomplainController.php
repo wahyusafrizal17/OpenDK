@@ -206,7 +206,7 @@ class SistemKomplainController extends Controller
         ], ['captcha.captcha' => 'Invalid captcha code.']);
 
         try {
-            $komplain = Komplain::findOrFail($id);
+            $komplain = Komplain::FindOrFail($id);
             $komplain->fill($request->all());
             $komplain->nama = Penduduk::where('nik', $komplain->nik)->first()->nama;
 

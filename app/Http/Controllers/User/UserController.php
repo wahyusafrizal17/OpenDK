@@ -193,7 +193,7 @@ class UserController extends Controller
     public function destroy($id)
     {
         try {
-            $user         = User::findOrFail($id);
+            $user         = User::FindOrFail($id);
             $user->status = 0;
             $user->save();
 
@@ -214,7 +214,7 @@ class UserController extends Controller
     public function active($id)
     {
         try {
-            $user         = User::findOrFail($id);
+            $user         = User::FindOrFail($id);
             $user->status = 1;
             $user->save();
 
