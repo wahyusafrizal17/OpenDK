@@ -135,9 +135,8 @@ class FasilitasPaudController extends Controller
             'semester'          => 'required',
             'tahun'             => 'required',
         ]);
-        
-        try {
 
+        try {
             FasilitasPAUD::FindOrFail($id)->update($request->all());
 
             return redirect()->route('data.fasilitas-paud.index')->with('success', 'Data berhasil diubah!');

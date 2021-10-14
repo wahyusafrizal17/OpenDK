@@ -80,7 +80,6 @@ class FormDokumenController extends Controller
         ]);
 
         try {
-            
             $dokumen = new FormDokumen($request->input());
 
             if ($request->hasFile('file_dokumen')) {
@@ -114,9 +113,8 @@ class FormDokumenController extends Controller
             'nama_dokumen' => 'required',
             'file_dokumen' => 'mimes:jpeg,png,jpg,gif,svg,xlsx,xls,doc,docx,pdf,ppt,pptx|max:2048',
         ]);
-        
+
         try {
-            
             $dokumen = FormDokumen::FindOrFail($id);
             $dokumen->fill($request->all());
 

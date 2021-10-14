@@ -80,9 +80,8 @@ class RegulasiController extends Controller
             'deskripsi'     => 'required',
             'file_regulasi' => 'required|file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
         ]);
-        
-        try {
 
+        try {
             $regulasi               = new Regulasi($request->input());
             $regulasi->profil_id    = $this->profil->id;
 
@@ -147,7 +146,7 @@ class RegulasiController extends Controller
             'deskripsi'     => 'required',
             'file_regulasi' => 'file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
         ]);
-        
+
         try {
             $regulasi = Regulasi::FindOrFail($id);
             $regulasi->fill($request->all());

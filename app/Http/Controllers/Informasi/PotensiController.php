@@ -120,7 +120,6 @@ class PotensiController extends Controller
         ]);
 
         try {
-
             $potensi = new Potensi($request->input());
 
             if ($request->hasFile('file_gambar')) {
@@ -192,9 +191,8 @@ class PotensiController extends Controller
             'deskripsi'    => 'required',
             'file_gambar'  => 'image|mimes:bmp,jpg,jpeg,gif,png|max:1024',
         ]);
-        
-        try {
 
+        try {
             $potensi = Potensi::findOrFail($id);
             $potensi->fill($request->all());
 

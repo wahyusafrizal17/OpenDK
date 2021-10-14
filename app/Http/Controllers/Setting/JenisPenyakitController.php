@@ -76,7 +76,7 @@ class JenisPenyakitController extends Controller
         request()->validate([
             'nama' => 'required',
         ]);
-        
+
         try {
             $penyakit = new JenisPenyakit($request->all());
             $penyakit->save();

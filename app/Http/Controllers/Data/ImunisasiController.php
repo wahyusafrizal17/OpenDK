@@ -139,9 +139,8 @@ class ImunisasiController extends Controller
         request()->validate([
             'cakupan_imunisasi' => 'required',
         ]);
-        
-        try {
 
+        try {
             Imunisasi::find($id)->update($request->all());
 
             return redirect()->route('data.imunisasi.index')->with('success', 'Data berhasil diubah!');

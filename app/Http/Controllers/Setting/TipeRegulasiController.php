@@ -76,7 +76,7 @@ class TipeRegulasiController extends Controller
         request()->validate([
             'nama' => 'required',
         ]);
-        
+
         try {
             $tipe       = new TipeRegulasi($request->all());
             $tipe->slug = str_slug($tipe->nama);

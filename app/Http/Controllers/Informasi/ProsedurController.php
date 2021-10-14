@@ -100,9 +100,8 @@ class ProsedurController extends Controller
             'judul_prosedur' => 'required',
             'file_prosedur'  => 'required|file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
         ]);
-        
+
         try {
-            
             $prosedur = new Prosedur($request->input());
 
             if ($request->hasFile('file_prosedur')) {
@@ -164,7 +163,7 @@ class ProsedurController extends Controller
             'judul_prosedur' => 'required',
             'file_prosedur'  => 'file|mimes:jpg,jpeg,png,gif,pdf|max:2048',
         ]);
-        
+
         try {
             $prosedur = Prosedur::FindOrFail($id);
             $prosedur->fill($request->all());

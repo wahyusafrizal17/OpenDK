@@ -140,9 +140,8 @@ class AKIAKBController extends Controller
             'aki' => 'required',
             'akb' => 'required',
         ]);
-        
-        try {
 
+        try {
             AkiAkb::find($id)->update($request->all());
 
             return redirect()->route('data.aki-akb.index')->with('success', 'Data berhasil disimpan!');

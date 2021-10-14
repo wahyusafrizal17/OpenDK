@@ -88,9 +88,8 @@ class TipePotensiController extends Controller
         request()->validate([
             'nama_kategori' => 'required',
         ]);
-        
-        try {
 
+        try {
             $tipe       = new TipePotensi($request->all());
             $tipe->slug = str_slug($tipe->nama_kategori);
             $tipe->save();
@@ -137,7 +136,7 @@ class TipePotensiController extends Controller
         request()->validate([
             'nama_kategori' => 'required',
         ]);
-        
+
         try {
             $tipe = TipePotensi::FindOrFail($id);
             $tipe->fill($request->all());
