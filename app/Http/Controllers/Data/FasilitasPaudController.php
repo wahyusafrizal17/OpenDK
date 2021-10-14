@@ -77,6 +77,7 @@ class FasilitasPaudController extends Controller
         $page_description = 'Import Data Fasilitas PAUD';
         $years_list       = years_list();
         $months_list      = months_list();
+
         return view('data.fasilitas_paud.import', compact('page_title', 'page_description', 'years_list', 'months_list'));
     }
 
@@ -112,9 +113,10 @@ class FasilitasPaudController extends Controller
      */
     public function edit($id)
     {
-        $fasilitas        = FasilitasPAUD::findOrFail($id);
-        $page_title       = 'Ubah';
-        $page_description = 'Ubah Data Fasilitas PAUD';
+        $fasilitas        = FasilitasPAUD::with(['desa'])->FindOrFail($id);
+        $page_title       = 'Fasilitas PAUD';
+        $page_description = 'Ubah Fasilitas PAUD : Desa ' . $fasilitas->desa->nama;
+
         return view('data.fasilitas_paud.edit', compact('page_title', 'page_description', 'fasilitas'));
     }
 
@@ -131,15 +133,15 @@ class FasilitasPaudController extends Controller
                 'jumlah_paud'       => 'required',
                 'jumlah_guru_paud'  => 'required',
                 'jumlah_siswa_paud' => 'required',
-                'bulan'             => 'required',
+                'semester'          => 'required',
                 'tahun'             => 'required',
             ]);
 
-            FasilitasPAUD::find($id)->update($request->all());
+            FasilitasPAUD::FindOrFail($id)->update($request->all());
 
-            return redirect()->route('data.fasilitas-paud.index')->with('success', 'Data berhasil disimpan!');
+            return redirect()->route('data.fasilitas-paud.index')->with('success', 'Data berhasil diubah!');
         } catch (Exception $e) {
-            return back()->withInput()->with('error', 'Data gagal disimpan!');
+            return back()->withInput()->with('error', 'Data gagal diubah!' . $e->getMessage());
         }
     }
 
@@ -152,7 +154,7 @@ class FasilitasPaudController extends Controller
     public function destroy($id)
     {
         try {
-            FasilitasPAUD::findOrFail($id)->delete();
+            FasilitasPAUD::destroy($id);
 
             return redirect()->route('data.fasilitas-paud.index')->with('success', 'Data sukses dihapus!');
         } catch (Exception $e) {
