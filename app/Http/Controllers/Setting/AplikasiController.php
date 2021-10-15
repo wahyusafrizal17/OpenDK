@@ -32,8 +32,8 @@
 namespace App\Http\Controllers\Setting;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\UpdateSetingAplikasiRequest;
 use App\Models\SettingAplikasi;
+use Illuminate\Http\Request;
 use Exception;
 
 class AplikasiController extends Controller
@@ -44,7 +44,7 @@ class AplikasiController extends Controller
         if ($settings->isEmpty()) {
             SettingAplikasi::insert([
                 'key'         => SettingAplikasi::KEY_BROWSER_TITLE,
-                'value'       => $this->default_browser_title,
+                'value'       => $this->browser_title,
                 'type'        => "input",
                 'description' => "Judul halaman aplikasi.",
                 'kategori'    => "-",
@@ -53,29 +53,34 @@ class AplikasiController extends Controller
             $settings = SettingAplikasi::all();
         }
 
-        $page_title = 'Pegaturan Aplikasi';
+        $page_title       = 'Pegaturan Aplikasi';
+        $page_description = 'Daftar Pegaturan Aplikasi';
 
-        return view('setting.aplikasi.index', compact('page_title', 'settings'));
+        return view('setting.aplikasi.index', compact('page_title', 'page_description', 'settings'));
     }
 
     public function edit(SettingAplikasi $aplikasi)
     {
         $page_title             = 'Pengaturan Aplikasi';
         $page_description       = 'Ubah Pengaturan Aplikasi';
-        $default_browser_title  = $this->default_browser_title;
 
-        return view('setting.aplikasi.edit', compact('page_title', 'aplikasi', 'default_browser_title', 'page_description'));
+        return view('setting.aplikasi.edit', compact('page_title', 'page_description', 'aplikasi'));
     }
 
-    public function update(UpdateSetingAplikasiRequest $request, SettingAplikasi $aplikasi)
+    public function update(Request $request, $id)
     {
-        try {
-            $data = $request->validated();
-            if ($aplikasi->isBrowserTitle() && !$request->input('value')) {
-                $data['value'] = $this->default_browser_title;
-            }
+        request()->validate([
+            'value' => 'required',
+        ]);
 
-            $aplikasi->update($data);
+        try {
+
+            $penyakit = SettingAplikasi::FindOrFail($id);
+            $penyakit->fill($request->only(['value']));
+            $penyakit->save();
+
+            $this->browser_title = $request->input('value');
+
         } catch (Exception $e) {
             return back()->with('error', 'Pengaturan aplikasi gagal diubah!' . $e->getMessage());
         }

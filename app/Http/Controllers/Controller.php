@@ -56,7 +56,7 @@ class Controller extends BaseController
     protected $profil;
     protected $sebutan_wilayah;
     protected $sebutan_kepala_wilayah;
-    protected $default_browser_title;
+    protected $browser_title;
 
     public function __construct()
     {
@@ -70,7 +70,8 @@ class Controller extends BaseController
             $this->sebutan_kepala_wilayah = 'Camat';
         }
 
-        $this->browser_title = SettingAplikasi::first()->value ?? ucwords($this->sebutan_wilayah . ' ' . $this->profil->nama_kecamatan);
+        // TODO : Gunakan untuk semua pengaturan jika sudah tersedia
+        $this->browser_title = SettingAplikasi::where('key', 'judul_aplikasi')->first()->value ?? ucwords($this->sebutan_wilayah . ' ' . $this->profil->nama_kecamatan);
 
         $events                      = Event::getOpenEvents();
         $navdesa                     = DataDesa::all();
