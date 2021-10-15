@@ -33,8 +33,8 @@ namespace App\Http\Controllers\Setting;
 
 use App\Http\Controllers\Controller;
 use App\Models\SettingAplikasi;
-use Illuminate\Http\Request;
 use Exception;
+use Illuminate\Http\Request;
 
 class AplikasiController extends Controller
 {
@@ -74,13 +74,11 @@ class AplikasiController extends Controller
         ]);
 
         try {
-
             $penyakit = SettingAplikasi::FindOrFail($id);
             $penyakit->fill($request->only(['value']));
             $penyakit->save();
 
             $this->browser_title = $request->input('value');
-
         } catch (Exception $e) {
             return back()->with('error', 'Pengaturan aplikasi gagal diubah!' . $e->getMessage());
         }
